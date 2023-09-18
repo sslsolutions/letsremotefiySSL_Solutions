@@ -52,8 +52,9 @@ router.use(bodyParser.json());
         catch (err) {
             console.log(err);
         }
-        return res.status(201).json({ message: user })
+        return  res.redirect('/contact-us')
     })
+
     
     
 
