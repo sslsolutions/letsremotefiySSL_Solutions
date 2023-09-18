@@ -21,6 +21,7 @@ app.use(express.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
 var router=require('./Controllers/contact_controller.js')
+const signup=require('./Controllers/signup_controller.js')
 
 /////////roles/////////////
 // app.get('/', function (req, res) {
@@ -213,6 +214,7 @@ var router=require('./Controllers/contact_controller.js')
 ////////skills
 
 app.use('/', router);
+app.use('/', signup)
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
