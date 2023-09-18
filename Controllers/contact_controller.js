@@ -37,14 +37,15 @@ router.use(bodyParser.json());
 //         res.end();
 //     })
 
-    router.post('/' , async (req, res, next) => {
+    router.post('/auth' , async (req, res, next) => {
         //destructing 
-        const { name, email, message } = req.body
+        const { name, email, message, Inquiry } = req.body
         //validation for exiting user  
         const user = new contact_model({
             name,
             email,
-            message
+            message,
+            Inquiry
         })
         try {
             await user.save();

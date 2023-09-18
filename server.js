@@ -212,7 +212,7 @@ var router=require('./Controllers/contact_controller.js')
 // });
 ////////skills
 
-app.use('/login', router);
+app.use('/', router);
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
