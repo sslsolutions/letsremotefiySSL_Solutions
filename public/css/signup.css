@@ -151,7 +151,14 @@ input[type=submit]:hover {
 
 
 }
+@media (max-width:575px) {
+    #ONE {
+        display: flex;
+        
+    }
 
+
+}
 
 
 /* ----------------------------------------------------- */
