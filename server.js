@@ -217,6 +217,9 @@ app.get('/', (req, res) => {
 app.get('/about',(req, res)=>{
     res.render('about.ejs')
 })
+app.get('/login',(req, res)=>{
+    res.render('login.ejs')
+})
 
 app.get('/contact-us',(req, res)=>{
     res.render('contact-us.ejs')

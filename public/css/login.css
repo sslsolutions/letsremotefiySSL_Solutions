@@ -1,0 +1,285 @@
+:root {
+    --Main--color: rgb(175, 32, 34);
+    --text--size: 20px;
+    --text--size2: 18px;
+    --color: white;
+    --font-700: 700;
+    --font-family: Arial, Helvetica, sans-serif;
+    /* HZEjeHmj3WjmQKefFKpgLThgUXQcf2vrMbgrbwG9iCn1 */
+    font-family: 'Gordita Regular', Helvetica, Arial, Lucida, sans-serif;
+    /* --bg-color:#1b1f24; */
+    /* font-family: 'Gor'; */
+    /* --second-bg-color:#22282f; */
+    /* --main-color:#13bbff; */
+    /* --other-color:#c3cad5; */
+
+    /* --h1-font:4.5rem; */
+    --font--500: 500;
+    --h-font: 48PX;
+    --line--height: 1.71rem;
+
+}
+
+#WORK {
+    display: flex;
+    margin-top: 60PX;
+    justify-content: center;
+    /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
+    /* line-height: normal; */
+
+}
+
+#WORKH {
+    display: flex;
+    margin-top: -8PX;
+    justify-content: center;
+    position: relative;
+    background-image: url('/images/design-01-01.png');
+    background-size: 100% 100%;
+    color: white;
+    /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
+    /* line-height: normal; */
+
+}
+
+#WORK1 {
+    font-weight: 900;
+    /* display: flex; */
+    margin-top: 110PX;
+    font-size: 30px;
+    /* justify-content: center; */
+    /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
+    line-height: normal;
+
+}
+
+#REMOTLY h1 {
+    font-size: var(--h-font);
+    /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
+}
+
+#REMOTLY p {
+    font-size: var(--text--size);
+    margin-top: 25PX;
+    margin-bottom: 90PX;
+    line-height: var(--line--height);
+
+}
+
+#REMOTLY a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--color);
+    font-size: var(--text--size);
+    padding: 20px 25px;
+    border-radius: 14px;
+    background: rgb(175, 32, 34);
+
+}
+
+#REMOTLY a:hover {
+    background: black;
+}
+
+#JOIN {
+    margin-top: 25PX;
+}
+
+#IMG1 {
+    background-size: auto;
+    /* margin-top: 590PX; */
+}
+
+/* --------------------------------------------   FORM   -------------------------------------- */
+.contant-form {
+    width: 350xp;
+    /* margin:10px 50px; */
+    margin: 50PX 50PX 25PX 50PX;
+    border-radius: 8px;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+}
+
+#class {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid rgb(233, 233, 233);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.HH {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid rgb(233, 233, 233);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+input[type=submit] {
+    width: 100%;
+    background: rgb(175, 32, 34);
+    color: rgb(249, 249, 249);
+    margin: 8px px;
+    padding: 14px 10px;
+    border: 1PX solid black;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background: #000;
+    border: 1PX solid RED;
+}
+
+#IMG22 {
+    background-image: url('/images/hassle-hire-980x959.jpg');
+    background-size: cover;
+}
+
+#UNLOCK {
+    padding-left: 25px;
+    padding: 15px 0px 0px 20px;
+    width: 90%;
+    background-image: url('/images/design-2-01.png');
+    background-size: 100% 100%;
+    color: white;
+    border-radius: 8px;
+    margin-top: 80px;
+    font-family: var(--font-family);
+}
+
+#UNLOCK h4 {
+    font-weight: var(--font-700);
+}
+
+#UNLOCK p {
+    line-height: var(--line--height);
+    width: 710px;
+    font-size: var(--text--size2);
+    font-family: var(--font-family);
+
+}
+
+#II {
+    text-decoration: none;
+    font-size: 18PX;
+
+
+}
+
+#BEST {
+    background-image: url('/images/Newsletter_img.png');
+    background-size: 100% 100%;
+    width: 1100PX;
+    height: 452PX;
+    display: flex;
+    justify-content: center;
+
+}
+
+#COM {
+    font-size: 20PX;
+    font-size: 500;
+    height: 50px;
+    /* border: 2px solid red; */
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background: rgb(175, 32, 34);
+    border-radius: 12PX;
+    /* font-size: 18px; */
+    color: white;
+}
+
+#COM:hover {
+    background: black;
+    cursor: pointer;
+}
+
+/* ----------------------------------  FOOTER----------------------- */
+@media (max-width:991px) {
+    #EX {
+        margin-bottom: 150PX;
+    }
+
+
+}
+
+#EXPLORE2 a {
+    color: black;
+    font-size: var(--text--size);
+    text-align: center;
+    padding: 5px 9px;
+    border-radius: 50px;
+    background: white;
+    text-align: center;
+
+}
+
+#EXPLORE2 a:hover {
+    background: rgb(175, 32, 34);
+    ;
+    color: white;
+}
+
+.NONE {
+    text-decoration: none;
+    color: gray;
+}
+
+.NONE:hover {
+    color: black;
+    cursor: pointer;
+    border-bottom: 2px solid var(--Main--color);
+
+}
+/* ----------------------------------------------------- */
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the form icons */
+  .icon {
+    padding: 10px;
+    background: red;
+    color: blue;
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  /* Style the input fields */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  }
+  
+  .input-field:focus {
+    border: 2px solid black;
+  }
+  
+  /* Set a style for the submit button */
+  .btn {
+    background-color: lightgray;
+    color: blue;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
