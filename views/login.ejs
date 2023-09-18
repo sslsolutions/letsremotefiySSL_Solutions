@@ -12,10 +12,11 @@
     <div class="container-fluid">
         <div class="row">
          
-            <div class="col-lg-5 mt-5" id="IMG1">
+            <div class="col-lg-5 mt-3" id="IMG1">
                 <div class="contant-form">
                     <H2 class="text-center">Welcome Back!</H2>
-                    <P class="text-center"><h5>Enter your credentials to access your account.</h5></P>
+                    <div class="text-center"><P><h5>Enter your credentials to access your account.</h5></P></div>
+
                     <form action="" onSubmit="return validation()">
                         <!--  return validate means it take the T/F value of function then give to action it gives F value & action didnt respond -->
                         <div class="mt-5 mb-4">
@@ -32,22 +33,23 @@
                             <span id="EMAILERROR" style="color: red; align-self: last;"><a href="">Forget Password?</a></span>
                         </div>
 
-                        <input class="mt-1" type="submit" value="Login" >
+                        <input class="mt-1" type="submit" value="Login">
+                        <div class="text-center mt-3" style="font-weight: 500; font-size: 18px;">New here ? <a href="signup.ejs">SignUp </a> for free</div>
                     </form>
                 </div>
             </div>
             <div class="col-lg-7" style="background-color:rgb(175, 32, 34);">
-                <div><img class="img-fluid " src="images/about-letsremotify.png"></div>
-                <div class="text-center" style="color: white;"> <h3>Unlock a World of Opportunities:<br>
+                <div class="mt-5"><img class="img-fluid " src="images/about-letsremotify.png"></div>
+                <div class="text-center mb-5" style="color: white;"> <h3>Unlock a World of Opportunities:<br>
 
                     Leading Companies Want You on Their Team!</h3></div>
-                    <div class="justify-content-center mt-5 mb-5">
-                        <span style="margin: 5%"><img  src="images/google.png" alt=""> </span>
-                        <span style="margin-right: 5%; margin-bottom: 15px;"><img src="images/2.png" alt=""> </span>
-                        <span style="margin-right: 5%; margin-bottom: 15px;"><img src="images/3.png" alt=""> </span>
-                        <span style="margin-right: 5%;"><img src="images/4.png" alt=""> </span>
-                        <span style="margin-right: 5%;"><img src="images/5.png" alt=""> </span>
-                        <span style="margin-right: 5%;"><img src="images/6.png" alt=""> </span>
+                    <div class="row mt-5 mb-5" id="ONE">
+                        <div class="col-sm-2"><img class="img-fluid"  src="images/google.png" alt=""> </div>
+                        <div class="col-sm-2"><img class="img-fluid" src="images/2.png" alt=""> </div>
+                        <div class="col-sm-2"><img class="img-fluid" src="images/3.png" alt=""> </div>
+                        <div class="col-sm-2"><img class="img-fluid" src="images/4.png" alt=""> </div>
+                        <div class="col-sm-2"><img class="img-fluid" src="images/5.png" alt=""> </div>
+                        <div class="col-sm-2"><img class="img-fluid" src="images/6.png" alt=""> </div>
                     </div>
             </div>
         </div>

@@ -20,14 +20,6 @@
 
 }
 
-#WORK {
-    display: flex;
-    margin-top: 60PX;
-    justify-content: center;
-    /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
-    /* line-height: normal; */
-
-}
 
 #WORKH {
     display: flex;
@@ -139,70 +131,16 @@ input[type=submit]:hover {
     border: 1PX solid RED;
 }
 
-#IMG22 {
-    background-image: url('/images/hassle-hire-980x959.jpg');
-    background-size: cover;
-}
-
-#UNLOCK {
-    padding-left: 25px;
-    padding: 15px 0px 0px 20px;
-    width: 90%;
-    background-image: url('/images/design-2-01.png');
-    background-size: 100% 100%;
-    color: white;
-    border-radius: 8px;
-    margin-top: 80px;
-    font-family: var(--font-family);
-}
-
-#UNLOCK h4 {
-    font-weight: var(--font-700);
-}
-
-#UNLOCK p {
-    line-height: var(--line--height);
-    width: 710px;
-    font-size: var(--text--size2);
-    font-family: var(--font-family);
-
-}
-
-#II {
-    text-decoration: none;
-    font-size: 18PX;
 
 
-}
 
-#BEST {
-    background-image: url('/images/Newsletter_img.png');
-    background-size: 100% 100%;
-    width: 1100PX;
-    height: 452PX;
-    display: flex;
-    justify-content: center;
 
-}
 
-#COM {
-    font-size: 20PX;
-    font-size: 500;
-    height: 50px;
-    /* border: 2px solid red; */
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    background: rgb(175, 32, 34);
-    border-radius: 12PX;
-    /* font-size: 18px; */
-    color: white;
-}
 
-#COM:hover {
-    background: black;
-    cursor: pointer;
-}
+
+
+
+
 
 /* ----------------------------------  FOOTER----------------------- */
 @media (max-width:991px) {
@@ -212,7 +150,13 @@ input[type=submit]:hover {
 
 
 }
+@media (max-width:575px) {
+    #ONE {
+        display: none;
+    }
 
+
+}
 #EXPLORE2 a {
     color: black;
     font-size: var(--text--size);
@@ -230,56 +174,3 @@ input[type=submit]:hover {
     color: white;
 }
 
-.NONE {
-    text-decoration: none;
-    color: gray;
-}
-
-.NONE:hover {
-    color: black;
-    cursor: pointer;
-    border-bottom: 2px solid var(--Main--color);
-
-}
-/* ----------------------------------------------------- */
-
-.input-container {
-    display: flex;
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  
-  /* Style the form icons */
-  .icon {
-    padding: 10px;
-    background: red;
-    color: blue;
-    min-width: 50px;
-    text-align: center;
-  }
-  
-  /* Style the input fields */
-  .input-field {
-    width: 100%;
-    padding: 10px;
-    outline: none;
-  }
-  
-  .input-field:focus {
-    border: 2px solid black;
-  }
-  
-  /* Set a style for the submit button */
-  .btn {
-    background-color: lightgray;
-    color: blue;
-    padding: 15px 20px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-  
-  .btn:hover {
-    opacity: 1;
-  }
