@@ -223,6 +223,10 @@ app.get('/about',(req, res)=>{
 app.get('/login',(req, res)=>{
     res.render('login.ejs')
 })
+app.get('/signup',(req, res)=>{
+    res.render('signup.ejs')
+})
+
 
 app.get('/contact-us',(req, res)=>{
     res.render('contact-us.ejs')
