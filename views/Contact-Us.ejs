@@ -28,7 +28,7 @@
             </div>
             <div class="col-lg-5 mt-5" id="IMG1">
                 <div class="contant-form">
-                    <form action="/login" method="post">
+                    <form action="/auth" method="post">
                         <!--  return validate means it take the T/F value of function then give to action it gives F value & action didnt respond -->
                         <div>
                             <lable style="color: black; font-weight: 600;">Your Name</lable>
@@ -43,18 +43,18 @@
                             <span id="EMAILERROR"  style="color: red;"></span>
                         </div>
 
-                        <!-- <div style="margin-bottom: 20px;">
+                        <div style="margin-bottom: 20px;">
                             <lable style="color: black; font-weight: 600;">Inquiry</lable>
-                            <select class="form-select" class="HH" id="SELECT" aria-label="Default select example">
+                            <select class="form-select" name="Inquiry" class="HH" id="SELECT"  aria-label="Default select example">
                                 <option id="class" selected>Select</option>
-                                <option value="1">Hre Developer</option>
-                                <option value="2">Apply for Jobs</option>
-                                <option value="3">General Question</option>
-                                <option value="4">Invester</option>
-                                <option value="5">Media & Jobs</option>
+                                <option value="Hre Developer" name="">Hre Developer</option>
+                                <option value="Apply for Jobs">Apply for Jobs</option>
+                                <option value="General Question">General Question</option>
+                                <option value="Invester">Invester</option>
+                                <option value="Media & Jobs">Media & Jobs</option>
                             </select>
                             <span id="SELECTERROR" style="color: red;"></span>
-                        </div> -->
+                        </div>
 
                         <div>
                             <lable style="color: black; font-weight: 600;">How can I help you?</lable>

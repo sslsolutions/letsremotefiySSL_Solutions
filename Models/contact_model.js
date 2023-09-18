@@ -16,6 +16,10 @@ const contactScheme = new Scheme({
     message: {
         type: String,
         require: true
+    },
+    Inquiry: {
+        type: String,
+        require: true
     }
 })
 module.exports = mongoose.model('contact_us', contactScheme)
