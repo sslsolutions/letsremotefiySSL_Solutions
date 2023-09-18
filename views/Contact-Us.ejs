@@ -28,22 +28,22 @@
             </div>
             <div class="col-lg-5 mt-5" id="IMG1">
                 <div class="contant-form">
-                    <form action="" onSubmit="return validation()">
+                    <form action="/login" method="post">
                         <!--  return validate means it take the T/F value of function then give to action it gives F value & action didnt respond -->
                         <div>
                             <lable style="color: black; font-weight: 600;">Your Name</lable>
-                            <input type="text" class="HH" id="NAME" name="full name" placeholder="Your Name">
+                            <input type="text" class="HH" id="NAME" name="name" placeholder="Your Name">
                             <span id="NAMEERROR" style="color: red;"></span>
                         </div>
 
                         <div>
                             <lable style="color: black; font-weight: 600;">Your Email</lable>
                             <!-- <input type="" class="HH" name="" placeholder="&#xF32C;   Your Email"> -->
-                            <input type="" class="HH"  placeholder="&#xF32C;   Your Email">
-                            <span id="EMAILERROR" style="color: red;"></span>
+                            <input type="" class="HH"  name="email" placeholder="&#xF32C;   Your Email">
+                            <span id="EMAILERROR"  style="color: red;"></span>
                         </div>
 
-                        <div style="margin-bottom: 20px;">
+                        <!-- <div style="margin-bottom: 20px;">
                             <lable style="color: black; font-weight: 600;">Inquiry</lable>
                             <select class="form-select" class="HH" id="SELECT" aria-label="Default select example">
                                 <option id="class" selected>Select</option>
@@ -54,15 +54,20 @@
                                 <option value="5">Media & Jobs</option>
                             </select>
                             <span id="SELECTERROR" style="color: red;"></span>
-                        </div>
+                        </div> -->
 
                         <div>
                             <lable style="color: black; font-weight: 600;">How can I help you?</lable>
-                            <textarea name="" class="HH" id="TEXTAREA" cols="50" rows="3" placeholder="Write your query..."
+                            <textarea name="message" class="HH" id="TEXTAREA" cols="50" rows="3" placeholder="Write your query..."
                                 required></textarea>
                             <span id="TEXTAREAERROR" style="color: red;"></span>
                         </div>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" onclick="click()" >
+                        <script>
+                          function click(){
+                            swal ("You are logged in");
+                          }
+                        </script>
                     </form>
                 </div>
             </div>
