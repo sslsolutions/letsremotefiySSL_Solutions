@@ -11,16 +11,34 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-         
             <div class="col-lg-5" id="IMG1">
                 <div class="contant-form">
                     <H2 class="text-center">Welcome!</H2>
                     <div class="text-center"><P><h5>Please fill in your details below:</h5></P></div>
-                    <form action="" onSubmit="return validation()">
+                    <% if (messages && messages.error) { %>
+                        <div class="alert alert-danger">
+                         <h1> <%= messages.messages %> </h1> 
+                        </div>
+                      <% } %>
+                      <% if (errors && errors.length > 0) { %>
+                        <div class="alert alert-danger">
+                          <ul>
+                            <% errors.forEach(error => { %>
+                              <li><%= error.msg %></li>
+                            <% }); %>
+                          </ul>
+                        </div>
+                      <% } %>
+               
+                    <form action="/signup" method="post">
                         <!--  return validate means it take the T/F value of function then give to action it gives F value & action didnt respond -->
                         <div class="mt-5 mb-5">
                             <lable style="color: black; font-weight: 600;">Email <span  style="color: red;">*</span></lable>
-                            <input type="text" class="HH" id="NAME" name="email" placeholder="Your Email">
+                            <input type="text" class="HH" id="NAME" value="<%= typeof email != 'undefined' ? password : '' %>" name="email" placeholder="Your Email">
+                            <!-- <% errors.forEach(error => { %>
+                                <li><%= error.msg %></li>
+                              <% }); %>
+                         -->
                             <!-- <span id="NAMEERROR" style="color: red;"></span> -->
                         </div>
                         <div class="mb-5">
@@ -33,11 +51,12 @@
                             <lable style="color: black; font-weight: 600;">Confirm Password <span  style="color: red;">*</span></lable>
                             <!-- <input type="" class="HH" name="" placeholder="&#xF32C;   Your Email"> -->
                             <input type="password" class="HH" name="comparepass"  placeholder="Confirm Your Password">
+                          
                             <!-- <span id="EMAILERROR" style="color: red; align-self: last;"><a href="">Forget Password?</a></span> -->
                         </div>
 
                         <input class="mt-1" type="submit" value="Sign Up">
-                        <div class="text-center mt-3" style="font-weight: 500 ; font-size: 18px;">Get an Account? Proceed to <a href="login.ejs">Login</a></div>
+                        <div class="text-center mt-3" style="font-weight: 500 ; font-size: 18px;">Get an Account? Proceed to <a href="login">Login</a></div>
                     </form>
                 </div>
             </div>
