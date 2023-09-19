@@ -6,6 +6,7 @@ const userScheme = new Scheme({
         type: String,
         require: true
     },
+    
     email: {
         type: String,
         require: true

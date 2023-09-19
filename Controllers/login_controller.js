@@ -1,80 +1,48 @@
 var express = require ('express');
-
-var mysql =require('mysql');
 var session = require ('express-session');
-var router = express.Router();
-var bodyParser = require('body-parser');
+const router=express.Router()
+const bcrypt=require('bcryptjs')
+const jwt=require('jsonwebtoken')
+const dotenv=require('dotenv')
+dotenv.config();
 // var  sweetalert = require('sweetalert2');
 const { check, validationResult } = require('express-validator');
+const user_model = require('../Models/user_model');
 
 
 router.get('/', function(req ,res){
     res.render('login.ejs');
 });
 
-var con = mysql.createConnection({
 
-    host : 'localhost',
-    user : 'root',
-    password : '',
-    database : 'github project'
+router.post('/login', async (req, res, next) => {
+    const { email, password } = req.body;
+    let exitingUser;
+    try {
+        exitingUser = await user_model.findOne({ email: email })
+    } catch (error) {
+        return new Error(error)
+    }
+    if (!exitingUser) {
+        return res.status(401).json({ message: 'User will not found! Please Signup' })
+    }
+    const isPasswordCorrect = bcrypt.compareSync(password, exitingUser.password)
+
+    if (!isPasswordCorrect) {
+        return res.status(401).json({ message: 'Invalid Email / Password' })
+    }
+    const token = jwt.sign({ id: exitingUser._id }, process.env.JWT_SCERET_KEY, {
+        expiresIn: "60sec",
+    })
+    // res.cookie(String(exitingUser._id), token, {
+    //     path: '/',
+    //     expires: new Date(Date.now() + 1000 * 30),
+    //     httpOnly: true,
+    //     sameSite: 'lax'
+    // })
+
+    return res.status(200).json({ message: 'Successfully Logged In', user: exitingUser, token })
 });
 
-router.use(session({
-
-    secret: 'secret',
-    resave : true ,
-    saveUninitialized : true 
-
-}));
-
-
-router.use(bodyParser.urlencoded({extended : true}));
-router.use(bodyParser.json());
-
-
-router.post('/',[
-    check('username').notEmpty().withMessage("Username is reequired"),
-    check('password').notEmpty().withMessage("Password is reequired")
-    
-], function(request , response){
-    const errors = validationResult(request);
-    if (!errors.isEmpty()) {
-        return response.status(422).json({ errors: errors.array() });
-      } 
-
-    var username = request.body.username;
-    var password = request.body.password;
-
-    if (username && password){
-        con.query('select * from users where username = ? and password = ?' , [username, password], function(error , results , fields){
-            if (results.length > 0){
-                
-                request.session.loggedin = true ; 
-                request.session.username = username;
-                response.cookie('username' , username);
-                var status = results[0].email_status;
-                if (status=="not_verified" ){
-                    response.send("please verify your email");
-                }
-                else{
-                    sweetalert.fire('logged In!');
-                    response.redirect('/home');
-                }
-               
-            }else{
-                response.send('Incorrect username / password');
-            }
-            response.end();
-        });
-
-    }
-    
-    else{
-        response.send('please enter user name and password');
-        response.end();
-    }
-
-});
 
 module.exports = router;

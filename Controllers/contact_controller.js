@@ -1,6 +1,5 @@
 const bodyParser = require('body-parser');
 const express = require('express')
-const session = require('express-session')
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
 const contact_model = require('../Models/contact_model');
