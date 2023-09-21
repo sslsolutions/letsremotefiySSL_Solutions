@@ -61,14 +61,14 @@ router.post('/login', [
         //     return res.status(401).json({ message: 'Invalid Email / Password' })
         // }
         const token = jwt.sign({ id: exitingUser._id }, process.env.JWT_SCERET_KEY, {
-            expiresIn: "60sec",
+            expiresIn: "120sec",
         })
-        // res.cookie(String(exitingUser._id), token, {
-        //     path: '/',
-        //     expires: new Date(Date.now() + 1000 * 30),
-        //     httpOnly: true,
-        //     sameSite: 'lax'
-        // })
+        res.cookie(String(exitingUser._id), token, {
+            path: '/',
+            expires: new Date(Date.now() + 1000 * 30),
+            httpOnly: true,
+            sameSite: 'lax'
+        })
 
         return res.status(200).json({ message: 'Successfully Logged In', user: exitingUser, token })
         //   req.flash('success', 'login successful! You can now log in.');

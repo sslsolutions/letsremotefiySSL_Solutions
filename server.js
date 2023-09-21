@@ -34,6 +34,7 @@ app.use(function (req, res, next) {
 var router=require('./Controllers/contact_controller.js')
 const signup=require('./Controllers/signup_controller.js')
 const login=require('./Controllers/login_controller.js')
+const verifyToken = require('./Controllers/middleware/auth.js')
 /////////roles/////////////
 app.get('/', function (req, res) {
     var skills = [
@@ -233,7 +234,7 @@ app.use('/', login)
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
-app.get('/about',(req, res)=>{
+app.get('/about' ,verifyToken ,(req, res)=>{
     res.render('about.ejs')
 })
 app.get('/login',(req, res)=>{
