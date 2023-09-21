@@ -21,7 +21,6 @@ router.post('/login', [
     body('email', 'Email is not valid')
         .isEmail()
         .normalizeEmail(),
-
     body('password', 'This password must be 6 characters long')
         .exists()
         .custom(async (value, { req }) => {
