@@ -30,69 +30,6 @@ app.get('/', function (req, res) {
         {
             btnname: 'ASP.NET',
             img: "https://letsremotify.com/wp-content/uploads/2023/05/net.svg",
-<<<<<<< HEAD
-        },
-        {
-            btnname: 'Node / React',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/react-js.svg",
-        },
-        {
-            btnname: 'Laravel',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/laravel.svg",
-        },
-        {
-            btnname: 'MY SQL',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/sql.svg",
-        },
-        {
-            btnname: 'Java',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/java.svg",
-        },
-        {
-            btnname: 'iOS',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/ios.svg",
-        },
-        {
-            btnname: 'React Native',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/react-native.svg",
-        },
-        {
-            btnname: 'React.js',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/react-native.svg",
-        },
-        {
-            btnname: 'Node.js',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/react-js.svg",
-        },
-        {
-            btnname: 'Angular / Node',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/angular.svg",
-        },
-        {
-            btnname: 'PHP',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/php.svg",
-        }, {
-            btnname: 'Python / React',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/react-native.svg",
-        },
-        {
-            btnname: 'Ruby on Rails',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/ruby.svg",
-        },
-        {
-            btnname: 'AI / ML',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/ai-ml.svg",
-        },
-        {
-            btnname: 'Android',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/android.svg",
-        },
-        {
-            btnname: 'AWS',
-            img: "https://letsremotify.com/wp-content/uploads/2023/05/aws.svg",
-        },
-
-=======
 
            
         },
@@ -156,7 +93,6 @@ app.get('/', function (req, res) {
             img: "https://letsremotify.com/wp-content/uploads/2023/05/aws.svg",
         },
 
->>>>>>> ee957c9a1831c4889789eca70c4f9f6b3f31b5c9
         {
             btnname: 'JavaScript',
             img: "https://letsremotify.com/wp-content/uploads/2023/05/javascriptt.svg",
@@ -278,11 +214,7 @@ app.get('/', function (req, res) {
         trajectory:trajectory
     });
 });
-<<<<<<< HEAD
-////////skills
-=======
 //////skills
->>>>>>> ee957c9a1831c4889789eca70c4f9f6b3f31b5c9
 
 app.use('/', router);
 app.use('/', signup)
@@ -290,6 +222,9 @@ app.use('/', login)
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
+})
+app.get('/hire_talents', (req, res) => {
+    res.render('hire_talents.ejs')
 })
 app.get('/about',(req, res)=>{
     res.render('about.ejs')
