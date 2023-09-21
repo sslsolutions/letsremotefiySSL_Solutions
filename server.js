@@ -234,7 +234,10 @@ app.use('/', login)
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
-app.get('/about' ,verifyToken ,(req, res)=>{
+app.get('/hire_talents', (req, res) => {
+    res.render('hire_talents.ejs')
+})
+app.get('/about',(req, res)=>{
     res.render('about.ejs')
 })
 app.get('/login',(req, res)=>{
