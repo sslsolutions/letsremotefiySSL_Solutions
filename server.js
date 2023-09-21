@@ -5,11 +5,13 @@ const passport = require('passport')
 const dotenv = require('dotenv')
 dotenv.config();
 const session = require('express-session')
-const ejs = require('ejs')
+const path =require('path')
 const bodyParser = require('body-parser')
-const flash=require('express-flash')
+const flash=require('connect-flash')
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + '/public'));
+app.set('views', path.join(__dirname, 'views'));
+
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(session({
     secret: "thisismysecretekey",
@@ -21,6 +23,14 @@ app.use(express.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
 app.use(flash());
+app.use(function (req, res, next) {
+    res.locals.success = req.flash('success');
+    res.locals.info = req.flash('info');
+    res.locals.error = req.flash('error');
+    res.locals.user = req.user || null;
+    next();
+  });
+
 var router=require('./Controllers/contact_controller.js')
 const signup=require('./Controllers/signup_controller.js')
 const login=require('./Controllers/login_controller.js')
