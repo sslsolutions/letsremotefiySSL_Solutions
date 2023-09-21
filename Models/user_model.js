@@ -15,6 +15,9 @@ const userScheme = new Scheme({
         type: String,
         require: true
     },
+    token:{
+        type:String
+    }
    
 });
 

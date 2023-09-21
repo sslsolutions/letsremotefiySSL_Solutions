@@ -8,10 +8,13 @@ const session = require('express-session')
 const path =require('path')
 const bodyParser = require('body-parser')
 const flash=require('connect-flash')
+const cookieParser = require('cookie-parser')
+
+
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + '/public'));
 app.set('views', path.join(__dirname, 'views'));
-
+app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(session({
     secret: "thisismysecretekey",
@@ -34,6 +37,7 @@ app.use(function (req, res, next) {
 var router=require('./Controllers/contact_controller.js')
 const signup=require('./Controllers/signup_controller.js')
 const login=require('./Controllers/login_controller.js')
+const verifyToken = require('./Controllers/middleware/auth.js')
 /////////roles/////////////
 app.get('/', function (req, res) {
     var skills = [
@@ -233,7 +237,7 @@ app.use('/', login)
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
-app.get('/hire_talents', (req, res) => {
+app.get('/hire_talents', verifyToken ,(req, res) => {
     res.render('hire_talents.ejs')
 })
 app.get('/about',(req, res)=>{
