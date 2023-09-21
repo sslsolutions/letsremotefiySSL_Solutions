@@ -16,11 +16,18 @@
                 <div class="contant-form">
                     <H2 class="text-center">Welcome Back!</H2>
                     <div class="text-center"><P><h5>Enter your credentials to access your account.</h5></P></div>
+                    <% if(typeof alert != 'undefined') { %>
+                        <% alert.forEach(function(error) { %>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <%= error.msg %>
+                              </div>
+                        <% }) %>
+                    <% } %>
                     <form action="/login" method="post">
                         <!--  return validate means it take the T/F value of function then give to action it gives F value & action didnt respond -->
                         <div class="mt-5 mb-4">
                             <lable style="color: black; font-weight: 600;">Email <span  style="color: red;">*</span></lable>
-                            <input type="text" class="HH" id="NAME"  name="email" placeholder="Your Email">
+                            <input type="text" class="HH" id="email"  name="email" placeholder="Your Email">
                             <!-- <span id="NAMEERROR" style="color: red;"></span> -->
                         </div>
                         
@@ -28,7 +35,7 @@
                         <div class="mb-5">
                             <lable style="color: black; font-weight: 600;">Password <span  style="color: red;">*</span></lable>
                             <!-- <input type="" class="HH" name="" placeholder="&#xF32C;   Your Email"> -->
-                            <input type="password" class="HH"  name="password"  placeholder="Your Password">
+                            <input type="password" class="HH" id="password"  name="password"  placeholder="Your Password">
                             <span id="EMAILERROR" style="color: red; align-self: last;"><a href="">Forget Password?</a></span>
                         </div>
 

@@ -2,36 +2,52 @@
 const bcrypt = require('bcryptjs')
 //const jwt = require('jsonwebtoken');
 const user_model = require('../Models/user_model');
-const bodyParser = require('body-parser');
+
 const express = require('express')
 const router = express.Router();
-const { check, validationResult } = require('express-validator')
+const bodyParser = require('body-parser')
+const { check, validationResult, body } = require('express-validator')
 
-router.use(bodyParser.urlencoded({ extended: true }));
+router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json());
 
-
 router.get('/signup', function (req, res) {
-    res.render('signup.ejs', { errors: [] })
+    res.render('signup.ejs')
 
 });
+
 router.post('/signup', [
-    [
-        check("password").notEmpty().withMessage("Password is required"),
-        check("email").notEmpty().isEmail().withMessage("Valid Email required"),
-    ],
+    body('email', 'Email is not valid')
+        .isEmail()
+        .normalizeEmail().custom(async value => {
+            const existingUser = await user_model.findOne({ email: value });
+            if (existingUser) {
+                // Will use the below as the error message
+                throw new Error('A user already exists with this e-mail address');
+            }
+        }),
+    check('password', 'This password must be 6 characters long')
+        .exists()
+        .isLength({ min: 6 }),
+    check('confirmPassword').custom((value, { req }) => {
+        if (value !== req.body.password) {
+            console.log('Passwords do not match');
+            throw new Error('Passwords do not match');
+        }
+        return true;
+    }),
 ], async (req, res, next) => {
     //destructing 
-    const { email, password, comparepass } = req.body
-    const errors = validationResult(req);
+    const { email, password } = req.body
+    const errors = validationResult(req)
     if (!errors.isEmpty()) {
-        return res.status(422).render('signup', { errors: errors.array() });
+        // return res.status(422).jsonp(errors.array())
+        const alert = errors.array()
+        res.render('signup', {
+            alert
+        })
     }
-    // if (!errors.isEmpty()) {
-    //     errors.array().forEach(error => {
-    //         req.flash('error', error.msg);
-    //     });
-    // }
+
     else {
         //validation for exiting user  
         let exitingUser;
@@ -40,14 +56,16 @@ router.post('/signup', [
         } catch (error) {
             console.log(error);
         }
-        if (exitingUser) {
-            return res.status(400).json({ message: "User Alread Exist with this mail" })
-        }
+        // if (exitingUser) {
+        //     const message="User Alread Exist with this mail" 
+        //     return res.status(400).render('signup', message)
+        // }
         const hashPassword = bcrypt.hashSync(password)
         //  const comparepassword = bcrypt.compare(hashPassword, password)
         const user = new user_model({
             email,
             password: hashPassword
+
         })
         try {
             await user.save();
@@ -57,7 +75,9 @@ router.post('/signup', [
             console.log(err);
         }
     }
-    return res.status(200).json({ message: 'Successfully Logged In' })
+
+    req.flash('success', 'Registration successful! You can now log in.');
+    res.redirect('/login');
 
 })
 
