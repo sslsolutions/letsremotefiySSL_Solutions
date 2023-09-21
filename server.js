@@ -247,7 +247,10 @@ app.get('/login',(req, res)=>{
     res.render('login.ejs')
 })
 
-
+app.get('/logout', (req, res) => {
+    res.clearCookie('token'); // Clear the token cookie
+    res.redirect('/login'); // Redirect to the login page or another suitable destination
+  });
 app.get('/contact-us',(req, res)=>{
     res.render('contact-us.ejs')
 })
