@@ -8,10 +8,13 @@ const session = require('express-session')
 const path =require('path')
 const bodyParser = require('body-parser')
 const flash=require('connect-flash')
+const cookieParser = require('cookie-parser')
+
+
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + '/public'));
 app.set('views', path.join(__dirname, 'views'));
-
+app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(session({
     secret: "thisismysecretekey",
@@ -234,7 +237,7 @@ app.use('/', login)
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
-app.get('/hire_talents', (req, res) => {
+app.get('/hire_talents', verifyToken ,(req, res) => {
     res.render('hire_talents.ejs')
 })
 app.get('/about',(req, res)=>{

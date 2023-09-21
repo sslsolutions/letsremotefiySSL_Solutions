@@ -61,18 +61,13 @@ router.post('/login', [
         //     return res.status(401).json({ message: 'Invalid Email / Password' })
         // }
         const token = jwt.sign({ id: exitingUser._id }, process.env.JWT_SCERET_KEY, {
-            expiresIn: "120sec",
+            expiresIn: "30sec",
         })
-        res.cookie(String(exitingUser._id), token, {
-            path: '/',
-            expires: new Date(Date.now() + 1000 * 30),
-            httpOnly: true,
-            sameSite: 'lax'
-        })
+        res.cookie('token', token, { httpOnly: true });
 
-        return res.status(200).json({ message: 'Successfully Logged In', user: exitingUser, token })
+     //   return res.status(200).json({ message: 'Successfully Logged In', user: exitingUser, token })
         //   req.flash('success', 'login successful! You can now log in.');
-        //     res.redirect('/')
+       res.redirect('/hire_talents')
         //  return    res.status(200).json({  user: exitingUser, token })
     }
 

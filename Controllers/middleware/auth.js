@@ -1,18 +1,21 @@
 const jwt=require('jsonwebtoken')
+const dotenv = require('dotenv')
+dotenv.config();
 const verifyToken = (req, res, next) => {
-    // const headers = req.headers['authorization']
-    const cookies = req.headers.cookie
-    const token = cookies.split('=')[1];
+
+    const token = req.cookies.token;
     if (!token) {
-        res.status(404).json({ message: 'No token found' })
+      return res.redirect('/login'); // Redirect to the login page if no token
     }
-    jwt.verify(String(token), process.env.JWT_SECRET_KEY, (err, user) => {
-        if (err) {
-            return res.status(400).json({ message: 'Invalid Token' })
-        }
-        console.log(user.id);
-        req.id = user.id
-    })
-    next();
+  
+    jwt.verify(token, process.env.JWT_SCERET_KEY, (err, decoded) => {
+      if (err) {
+        return res.redirect('/login'); // Redirect if token is invalid
+      }
+  
+      // Attach user data to the request for use in protected routes
+      req.user = decoded;
+      next(); // Continue to the protected route
+    });
 }
 module.exports =verifyToken
