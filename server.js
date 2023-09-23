@@ -250,15 +250,6 @@ app.get('/createprofile',(req, res)=>{
     res.render('create_profile.ejs')
 })
 
-
-app.get('/contact-us',(req, res)=>{
-    res.render('contact-us.ejs')
-})
-
-app.get('/jobs',(req, res)=>{
-    res.render('jobs.ejs')
-})
-
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     app.listen(process.env.PORT, (req, res) => {
         console.log(`Database is connected! Listening to localhost ${process.env.PORT}`);
