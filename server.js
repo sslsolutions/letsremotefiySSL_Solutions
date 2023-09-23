@@ -248,17 +248,8 @@ app.get('/about',(req, res)=>{
 app.get('/login',(req, res)=>{
     res.render('login.ejs')
 })
-
-app.get('/logout', (req, res) => {
-    res.clearCookie('token'); // Clear the token cookie
-    res.redirect('/login'); // Redirect to the login page or another suitable destination
-  });
-app.get('/contact-us',(req, res)=>{
-    res.render('contact-us.ejs')
-})
-
-app.get('/jobs',(req, res)=>{
-    res.render('jobs.ejs')
+app.get('/createprofile',(req, res)=>{
+    res.render('create_profile.ejs')
 })
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
