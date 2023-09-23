@@ -17,8 +17,7 @@ const userScheme = new Scheme({
     },
     token:{
         type:String
-    }
-   
+    },
 });
 
 module.exports= mongoose.model('user', userScheme)

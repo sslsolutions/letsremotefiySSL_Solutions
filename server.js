@@ -19,7 +19,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(session({
     secret: "thisismysecretekey",
     resave: true,
-    saveUninitialized: true
+    saveUninitialized: true,
+    
 }))
 
 app.use(express.urlencoded({extended : true}));
@@ -38,6 +39,7 @@ var router=require('./Controllers/contact_controller.js')
 const signup=require('./Controllers/signup_controller.js')
 const login=require('./Controllers/login_controller.js')
 const verifyToken = require('./Controllers/middleware/auth.js')
+const userProfileSeller=require('./Controllers/user_profile_seller.js')
 /////////roles/////////////
 app.get('/', function (req, res) {
     var skills = [
@@ -233,7 +235,7 @@ app.get('/', function (req, res) {
 app.use('/', router);
 app.use('/', signup)
 app.use('/', login)
-
+app.use('/user', userProfileSeller)
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })

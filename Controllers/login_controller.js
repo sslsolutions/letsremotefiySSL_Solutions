@@ -1,5 +1,4 @@
 var express = require('express');
-var session = require('express-session');
 const router = express.Router()
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
@@ -16,8 +15,7 @@ router.get('/', function (req, res) {
     res.render('login.ejs');
 });
 
-
-router.post('/login', [
+const validator = [
     body('email', 'Email is not valid')
         .isEmail()
         .normalizeEmail(),
@@ -35,7 +33,8 @@ router.post('/login', [
                 throw new Error('Please enter correct Password');
             }
         })
-], async (req, res, next) => {
+]
+router.post('/login', validator, async (req, res, next) => {
     const { email, password } = req.body;
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
@@ -61,13 +60,15 @@ router.post('/login', [
         //     return res.status(401).json({ message: 'Invalid Email / Password' })
         // }
         const token = jwt.sign({ id: exitingUser._id }, process.env.JWT_SCERET_KEY, {
-            expiresIn: "30sec",
+            expiresIn: "1200sec",
         })
         res.cookie('token', token, { httpOnly: true });
-
-     //   return res.status(200).json({ message: 'Successfully Logged In', user: exitingUser, token })
+        res.cookie('userId', exitingUser._id,{httpOnly:true})
+      const id = req.session.userId = exitingUser._id;
+  console.log(id);
+        //   return res.status(200).json({ message: 'Successfully Logged In', user: exitingUser, token })
         //   req.flash('success', 'login successful! You can now log in.');
-       res.redirect('/hire_talents')
+        res.redirect('/hire_talents')
         //  return    res.status(200).json({  user: exitingUser, token })
     }
 

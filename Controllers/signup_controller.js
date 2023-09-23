@@ -15,8 +15,7 @@ router.get('/signup', function (req, res) {
     res.render('signup.ejs')
 
 });
-
-router.post('/signup', [
+const validation = [
     body('email', 'Email is not valid')
         .isEmail()
         .normalizeEmail().custom(async value => {
@@ -36,7 +35,9 @@ router.post('/signup', [
         }
         return true;
     }),
-], async (req, res, next) => {
+]
+
+router.post('/signup',validation, async (req, res, next) => {
     //destructing 
     const { email, password } = req.body
     const errors = validationResult(req)
@@ -74,10 +75,10 @@ router.post('/signup', [
         catch (err) {
             console.log(err);
         }
+        res.redirect('/login');
     }
 
-    req.flash('success', 'Registration successful! You can now log in.');
-    res.redirect('/login');
+   
 
 })
 
