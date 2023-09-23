@@ -246,6 +246,9 @@ app.get('/about',(req, res)=>{
 app.get('/login',(req, res)=>{
     res.render('login.ejs')
 })
+app.get('/createprofile',(req, res)=>{
+    res.render('create_profile.ejs')
+})
 
 
 app.get('/contact-us',(req, res)=>{
