@@ -6,14 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>create_profile</title>
     <link href="css/create_profile.css" rel="stylesheet" type="text/css" />
+     <!-- Bootstrap CSS -->
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" /> -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- ----------------   CHATGPT     ----------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   
 </head>
 
 <body>
+    <!--  -->
+        <!--  -->
+       <nav class="navbar navbar-expand-lg bg-dark" id="NAV">
+        <div class="container-fluid bg-dark pt-3 pb-3">
+          <a class="navbar-brand text-white" href="#"><img width="200px" height="110px" class="img-fluid" src="images/Logo updeted.png" alt=""></a>
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#"  id="GETNOWNAV">
+                  <i class="bi bi-file-check-fill"></i> Get Hired Now!
+                </a>
+              </li>
+              <li class="nav-item col-">
+                <a class="nav-link  text-light" href="#"  id="GETNOWNAV">
+                  <i class="bi bi-file-earmark-fill"></i> Add Personal Info
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  text-light" href="#" id="GETNOWNAV">
+                    <i class="bi bi-book-fill"></i> Ready, Set, Join!
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  text-light" href="#"  id="GETNOWNAV">
+                  <div class="col-12 text-center justify-content-center" >Valued By:</div>
+                  <div class="col-12  mt-2" id="IFLEXNAV">
+                      <!-- <span>
+                          <img class="img-fluid" width="60px" height="60px" src="images/2.png" alt="" />
+                      </span>
+                      <span>
+                          <img src="images/4.png" width="60px" height="60px" alt="" />
+                      </span>
+                      <span>
+                          <img src="images/3.png" width="60px" height="60px" alt="" />
+                      </span> -->
+                      <div><img width="100px" height="72px" class="img-fluid" src="images/SSL Group logo3.png" alt=""></div>
+                      <!-- <img width="200px" height="145px" class="img-fluid" src="images/SSL Group logo3.png" alt=""> -->
+                  </div>
+                 
+                </a>
+              </li>
+            
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      
+    <!-- ----------------------------       bottom   ------------------- -->
     <div class="container-fluid" id="HAR">
         <div class="row justify-content-around">
             <div class="col-lg-3" id="HIDDEN">
@@ -28,7 +84,7 @@
                                 <img src="images/tick_white-.svg" alt="" /> Get Hired Now!
                             </div>
                             <div class="col-12" id="GETNOW">
-                                <img src="images/persona_info.svg" alt="" /> Add Personal Info
+                                <img src="images/tick_white-.svg" alt="" /> Add Personal Info
                             </div>
                             <div class="col-12" id="GETNOW">
                                 <img src="images/ready_white.svg" alt="" /> Ready, Set, Join!
@@ -36,7 +92,7 @@
                             <div id="MAR"></div>
                             <div class="col-12 text-center" id="GETNOW">Valued By:</div>
                             <div class="col-10" id="IFLEX">
-                                <div>
+                                <!-- <div>
                                     <img class="img-fluid" width="60px" height="60px" src="images/2.png" alt="" />
                                 </div>
                                 <div>
@@ -44,7 +100,9 @@
                                 </div>
                                 <div>
                                     <img src="images/3.png" width="60px" height="60px" alt="" />
-                                </div>
+                                </div> -->
+                                <!-- <img width="100px" height="72px" class="img-fluid" src="images/SSL Group logo3.png" alt=""> -->
+                                <img width="200px" height="145px" class="img-fluid" src="images/SSL Group logo2.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -52,7 +110,7 @@
             </div>
 
             <!---------------------------- RIGHT  ONE  ----------------------  -->
-            <div class="col-lg-8  col-sm-10">
+            <div class="col-lg-8  col-sm-11">
                 <div class="row">
                     <div class="col-lg-12" id="j">
                         <!----------------------------  PART 2----------------------  -->
@@ -95,7 +153,7 @@
 
                              <!----------------------------  PART 3  FORM  ----------------------  -->
                             <div class="row justify-content-around">
-                                <div class="col-lg-5 mt-4 mb-3" id="MAIN">
+                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
                                     <form action="/action_page.php">
                                     <lable>Designation <g>*</g></lable>
                                     <div class="input-container">
@@ -104,13 +162,13 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-5 mt-4 mb-3" id="MAIN">
+                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
                                     <lable>Country <g>*</g></lable>
                                     <div class="input-container">
                                         <i class="fas fa-map-marker-alt"></i>
                                         <!-- <input type="text" placeholder="Select your Country"  name="country"  required> -->
                                         <!-- Country names and Country Name -->
-<select class="form-select"  name="country">
+<select class="form-select" id="country"  name="country" required>
     <option value="">Select Location</option>
     <option value="Afghanistan">Afghanistan</option>
     <option value="Aland Islands">Aland Islands</option>
@@ -369,7 +427,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-5 mt-4 mb-3"  id="MAIN">
+                                <div class="col-lg-5 col-sm-10 mt-4 mb-3"  id="MAIN">
                                     <lable>First Name  <g>*</g></lable>
                                     <div class="input-container">
                                         <i class="fas fa-user"></i>
@@ -377,7 +435,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-5 mt-4 mb-3" id="MAIN">
+                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
                                     <lable >Last Name  <g>*</g></lable>
                                     <div class="input-container">
                                         <i class="fas fa-user"></i>
@@ -385,20 +443,20 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-5 mt-4 mb-3" id="MAIN">
+                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
                                     <lable >Email  <g>*</g></lable>
                                     <div class="input-container" >
                                         <i class="fas fa-envelope"></i> <input class="COLOUR" type="text" placeholder="Enter your Email" name="email"  required>
                                     </div>
                                 </div>
 
-                                <div class="col-lg-5 mt-4 mb-3" id="MAIN">
+                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
                                     <lable>Phone Number <g>*</g></lable>
                                     <div class="input-container">
                                         <!-- <i class="fas fa-phone"></i> -->
                                         <!-- Country names and Phone Code -->
 <select class="form-select" id="phone" name="phone">
-    <option value="">Select Code</option>
+    <option value="">Code</option>
     <option value="93">Afghanistan +93</option>
     <option value="358">Aland Islands +358</option>
     <option value="355">Albania +355</option>
@@ -674,7 +732,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
@@ -682,7 +740,9 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> 
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
 </html>
