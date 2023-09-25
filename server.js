@@ -235,7 +235,7 @@ app.get('/', function (req, res) {
 app.use('/', router);
 app.use('/', signup)
 app.use('/', login)
-app.use('/user', userProfileSeller)
+app.use('/', userProfileSeller)
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
@@ -248,9 +248,10 @@ app.get('/about',(req, res)=>{
 app.get('/login',(req, res)=>{
     res.render('login.ejs')
 })
-app.get('/createprofile',(req, res)=>{
+app.get('/createProfile' ,verifyToken ,(req, res)=>{
     res.render('create_profile.ejs')
 })
+
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     app.listen(process.env.PORT, (req, res) => {
