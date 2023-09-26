@@ -32,7 +32,6 @@ const user_profile_seller= new Schema({
       },
     avatar:{
         type:String
-    }
-    
+    },
 })
 module.exports= mongoose.model('user_profile_seller', user_profile_seller)
