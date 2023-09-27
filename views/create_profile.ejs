@@ -137,9 +137,7 @@
                                     <h5>Upload Profile Image</h5>
                                 </div>
                                 <div class=" mt-3 mb-5 col-lg-5 col-md-5 col-sm-5 mt-3">
-                                    <form action="/action_page.php">
-                                        <input type="file" id="myFile" name="filename" />
-                                    </form>
+                                   
                                 </div>
                                 <div class="col-lg-5 col-md-6 col-sm-7 mb-2" id="RTEXT">
                                     <div>
@@ -160,7 +158,9 @@
                             <!----------------------------  PART 3  FORM  ----------------------  -->
                             <div class="row justify-content-around">
                                 <div class="col-lg-5 mt-4 mb-3" id="MAIN">
-                                    <form action="/createProfile" method="post">
+                                    <form action="/createProfile" method="post" enctype="multipart/form-data">
+                                        <input type="file" id="myFile" accept="image/*" name="profileImage" />
+                                     <img src="/uploads/1695730249001-wp7960658-pm-imran-khan-wallpapers.jpg" alt="User Profile Image" />
                                         <lable>Designation <g>*</g>
                                         </lable>
                                         <div class="input-container">

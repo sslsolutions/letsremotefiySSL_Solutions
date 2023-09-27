@@ -146,7 +146,9 @@
 
                     <div class="col-sm-7 mb-5"> <input class="mt-1" type="submit" value="Continue"></div>
 
-
+                    <h1>Data from Server</h1>
+                    <p>Key 1: <span id="key1">ere</span></p>
+                    <p>Key 2: <span id="key2">qer</span></p>
 
 
 
@@ -159,6 +161,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -168,6 +171,24 @@
                 allowClear: true
             });
         });
+  $(document).ready(function () {
+    // Make an AJAX request to fetch the JSON data
+    $.ajax({
+      url: '/url/api',
+      method: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        // Populate the EJS template with data
+        $('#key1').text(data.password);
+        $('#key2').text(data.email);
+        // Populate additional elements as needed
+      },
+      error: function (error) {
+        console.error('Error:', error);
+      },
+    });
+  });
+
     </script>
 
 

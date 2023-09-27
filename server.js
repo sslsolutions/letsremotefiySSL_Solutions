@@ -242,7 +242,7 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
-app.use('/hire_talents', verifyToken ,(req, res) => {
+app.get('/hire_talents' ,userProfileSeller ,(req, res) => {
     res.render('hire_talents.ejs')
 })
 app.get('/about',(req, res)=>{

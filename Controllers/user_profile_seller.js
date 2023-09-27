@@ -5,6 +5,8 @@ const user_profile_seller = require('../Models/user_profile_seller_models')
 const bodyParser = require('body-parser')
 const { check, body, validator } = require('express-validator')
 const dotenv = require('dotenv')
+const multer= require('multer')
+const path=require('path')
 const user_model = require("../Models/user_model")
 const verifyToken = require("./middleware/auth")
 const user_skill_model = require("../Models/user_skill_model")
@@ -22,12 +24,22 @@ router.get('/createProfile', verifyToken, async (req, res) => {
 //     check('lastName', 'Please Enter Your Last Name1'),
 //     check('phoneNumber', 'Please Select Country Code or Enter Correct Number1')
 // ]
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, 'uploads/'); // Specify the destination folder for uploads
+    },
+    filename: (req, file, cb) => {
+      cb(null, Date.now() + '-' + file.originalname); // Rename the file with a unique name
+    },
+  });
+  const upload = multer({ storage });
 
-
-router.post('/createProfile', async (req, res) => {
+router.post('/createProfile', upload.single('profileImage') ,async (req, res) => {
     const userId = req.session.userId
     console.log(userId);
     const { Designation, country, firstName, lastName, phoneNumber, countryCode } = req.body;
+  /////////user Profile Pics///////////
+  const profileImage = req.file.path;
 
     const userProfile = new user_profile_seller({
         Designation,
@@ -36,7 +48,8 @@ router.post('/createProfile', async (req, res) => {
         lastName,
         phoneNumber,
         countryCode,
-        user: userId
+        user: userId,
+        avatar:profileImage
     })
     try {
 
@@ -96,7 +109,7 @@ router.post('/reaytojoin', async(req, res)=>{
     const user_profile_sellerId = userData._id;
 
     // Assuming you have the skills data in req.body.skills
-    const skills = req.body.skills;
+    const {skills, language, Role,Experiences, Resume, SalaryExpetations }= req.body;
     
     // Create a new user_skill_model document and associate it with the user_profile_seller
     const userProfile = new user_skill_model({
@@ -117,6 +130,18 @@ router.post('/reaytojoin', async(req, res)=>{
     } catch (error) {
       console.error(error);
       return res.status(500).json({ message: 'Internal Server Error' });
+    }
+})
+
+router.get('/url/api', async(req, res)=>{
+const id ="650edffca7270f00088d08cf"
+    try {
+        const userInfo= await user_model.findOne({_id: id})
+     console.log(userInfo)
+     return res.status(200).json(userInfo)
+    } catch (error) {
+      
+        return res.status(500).json({ message: 'Internal Server agi Error' });
     }
 })
 module.exports = router
