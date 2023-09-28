@@ -246,7 +246,7 @@ app.get('/hire_talents' ,userProfileSeller ,(req, res) => {
     res.render('hire_talents.ejs')
 })
 app.get('/about',(req, res)=>{
-    res.render('about.ejs')
+    res.render('About.ejs')
 })
 
 app.use('/createProfile' ,verifyToken ,(req, res)=>{
