@@ -30,6 +30,10 @@
 
 }
 
+h4{
+    font-weight: 500;
+}
+
 @font-face {
     font-family: Gordita-Regular;
     src: url(Gordita-Regular.otf);
@@ -237,20 +241,60 @@ body{
 
 }
 
-#REMOTLY a {
+#JOIN a {
+    /* margin-top: 20px; */
+    text-decoration: none;
+    color: var(--color);
+    font-size: var(--text--size);
+    padding: 13px 55px;
+    border-radius: 14px;
+    color: white;
+    background-color: rgb(175, 32, 34);
+    border: 2PX solid WHITE;
+
+}
+
+#JOIN a:hover {
+    background: black;
+    color: red;
+    /* border:2PX solid white; */
+}
+#JOIN-COL a {
+    /* margin-top: 20px; */
+    text-decoration: none;
+    color: var(--color);
+    font-size: var(--text--size);
+    padding: 13px 55px;
+    border-radius: 14px;
+    color: rgb(175, 32, 34);
+    background-color: white;
+    border: 2PX solid white;
+
+}
+
+#JOIN-COL a:hover {
+    background: black;
+    border:2PX solid white;
+}
+#JOIN-TRANS a {
     margin-top: 20px;
     text-decoration: none;
     color: var(--color);
     font-size: var(--text--size);
-    padding: 12px 5px;
+    padding: 13px 55px;
     border-radius: 14px;
-    background: rgb(175, 32, 34);
+    border: 2PX solid white;
+    background: transparent;
 
 }
 
-#REMOTLY a:hover {
-    background: black;
+#JOIN-TRANS a:hover {
+    background:rgb(175, 32, 34);
 }
+
+
+
+
 
   #WORK1 {
     font-weight: 900;
@@ -350,33 +394,33 @@ body{
     line-height: var(--line--height); 
     
 }
-#REMOTLY a{
-    margin-top: 20px;
-   text-decoration: none;
-   color:var(--color) ;
-   font-size: var(--text--size);
-   padding: 20px 25px;
-   border-radius: 14px;
-    background: rgb(175, 32, 34);
-  
-}
-#REMOTLY a:hover{
-    background: black; 
-}
 #REMOTLY h4{
     font-size: 24px;
     /* font-weight: 600;  */
 }
 #JOIN{
     margin-top: 25PX;
-    padding: 40PX; 
+    /* padding: 40PX;  */
 }
 
 #IMG1{
     /* background-image: url(images/Group.jpg); */
-    background-size: auto;
-    /* margin-top: 1000px; */
+    /* background-size: auto; */
+    /* animation: MoveUpDown 3.5s linear infinite; */
+    /* position: absolute; */
+    /* left: 0; */
+    /* right: 0px; */
+    /* bottom: 500px; */
 }
+
+/* @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 30px;
+    }
+  } */
 #IMGH{
     /* background-image: url(images/Group.jpg); */
     background-size: auto;
