@@ -246,14 +246,14 @@ app.get('/hire_talents' ,userProfileSeller ,(req, res) => {
     res.render('hire_talents.ejs')
 })
 app.get('/about',(req, res)=>{
-    res.render('about.ejs')
+    res.render('About.ejs')
+})
+app.get('/jobs',(req, res)=>{
+    res.render('Jobs.ejs')
 })
 
 app.use('/createProfile' ,verifyToken ,(req, res)=>{
     res.render('create_profile.ejs')
-})
-app.get('/haris',(req, res)=>{
-    res.render('haris.ejs')
 })
 
 
