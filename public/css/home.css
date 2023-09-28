@@ -1,5 +1,283 @@
+/* ----------------------   PATR TILL PURPLE IMAGE--------------------------- */
+
+#WORKH{
+  display: flex;
+  margin-top: -8PX;
+  justify-content: center;
+  position: relative;
+  /* background-image: url('images/design-01.png'); */
+  background-image: url('/images/design.png');
+  /* background-color: BLUE; */
+  background-size: 100% 100%;
+  color: white;
+  /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
+  /* line-height: normal; */
+
+}  
+#WORKC {
+  font-weight: 900;
+  /* display: flex; */
+  margin-top: 110PX;
+  font-size: 30px;
+  /* justify-content: center; */
+  /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
+  line-height: normal;
+
+}
+#REMOTLY h1{
+  /* font-weight: 700;   */
+  font-size: var(--h-font);  
+  /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
+}
+#REMOTLY p{
+  font-size: var(--text--size);
+  margin-top: 10PX; 
+  margin-bottom: 20PX;  
+  line-height: var(--line--height); 
+  
+}
+#REMOTLY a{
+  margin-top: 20px;
+ text-decoration: none;
+ color:var(--color) ;
+ font-size: var(--text--size);
+ padding: 20px 25px;
+ border-radius: 14px;
+  background: rgb(175, 32, 34);
+
+}
+#REMOTLY a:hover{
+  background: black; 
+}
+
+#JOIN{
+  margin-top: 25PX; 
+}
+
+#IMG1{
+  /* background-image: url(images/Group.jpg); */
+  background-size: auto;
+  /* margin-top: 1000px; */
+}
+#IMGH{
+  /* background-image: url(images/Group.jpg); */
+  background-size: auto;
+  margin-top: 160px;
+}
+
+#ALL:hover{
+  color: white;
+  background-color: rgb(175, 32, 34);
+  /* border: 2px solid blue; */
+}
+
+#BAR{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(247, 248, 252);
+  padding: 20px 0px 20px 0px;
+  font-size: 18px ;
+  flex-wrap: wrap;
+}
+#BAR span:hover{
+  color:red;
+}
+.NONE{
+  text-decoration: none;
+  color: gray;
+}
+.NONE:hover{
+  color: black;
+  cursor: pointer;
+  border-bottom: 2px solid var(--Main--color);
+}
+
+#G{
+  background-image: url(images/275-removebg-preview-1.png);
+  /* background-size: cover; */
+  background-size: 100% 100%;
+  /* border: 2px solid black; */
+  /* display: flex;
+  justify-content: flex-end;
+  align-items: flex-start; */
+}
+#IMGW{
+  /* border: 2PX solid black; */
+  margin-top: 60PX;
+  margin-bottom: 60PX;
+}
+
+/* --------------------------------SLIDER       ---------------------------------------- */
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slider-item {
+  flex: 0 0 calc(100% / 6); /* Display 6 images at a time on larger screens */
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  /* Adjust for screens less than 992px (tablet screens) */
+  .slider-item {
+      flex: 0 0 calc(100% / 3); 
+  }
+}
+
+@media (max-width: 575px) {
+  /* Adjust for screens less than 576px (phone screens) */
+  .slider-item {
+      flex: 0 0 100%; /* Display only 1 image at a time on phones */
+  }
+}
+
+/* <!-------------------------     SOFTWARE ENGINREER    -------------------> */
+#CCOLOR p{
+  font-size: 22px;
+  /* width: 40%; */
+  
+}
+#CCOLOR h4{
+  color: rgb(175, 32, 34);;
+}
 
 
+.service-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,  minmax(300px, auto));
+  align-items: center;
+  gap: 2.3rem;
+  margin-top: 4.2rem;
+}
+
+#ICONG1, #ICONG2,#ICONG3,#ICONG4, #ICONG5,#ICONG6{
+  color: black;
+}
+
+.box1{
+  width: 300px;
+  height: 300px;
+  padding: 16PX 8PX 90PX 8PX ;
+  /* margin-left: 45PX; */
+  /* margin-right: 45PX; */
+  background: white;
+  border-radius: 28px;
+  transition: all .50s ease;
+  cursor: pointer;
+  border: 1px solid black;
+}
+.box1:hover{
+  /* padding: 40px 40px 66px; */
+  background: black;
+  border-radius: 28px;
+  transition: all .50s ease;
+  cursor: pointer;
+  color: white;
+}
+.box1 img{
+  margin-bottom: 20px;
+}
+.box1 h3{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color:black;
+}
+.box1 h3:hover{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color:white;
+}
+
+.box1 p{
+  font-size: var(--p-font);
+  font-weight: 400;
+  color: black;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.box1 p:hover{
+  font-size: var(--p-font);
+  font-weight: 400;
+  color: white;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.box1 a{
+  display: inline-block;
+  font-size: 22px;
+  line-height: 1.273rem;
+  font-weight: 700;
+  padding: 7px 0;
+  color: black;
+  border-bottom: 2px solid #5d6c83;
+  transition: all .50s ease;
+}
+.box1 a:hover{
+  display: inline-block;
+  font-size: 22px;
+  line-height: 1.273rem;
+  font-weight: 700;
+  padding: 7px 0;
+  color: black;
+  border-bottom: 2px solid #5d6c83;
+  transition: all .50s ease;
+}
+.box1 i{
+  margin-top: -20PX;
+  vertical-align: middle;
+  font-size: 30px;
+  color: white;
+  margin-left: 5px;
+}
+
+.box1 a:hover{
+  border-bottom: 2px solid white;
+}
+
+/* -----------------------------------    ANIMATION   ----------------------------- */
+#PARENT{
+  position: absolute;
+  
+}
+
+#CHILD{
+  animation: MoveUpDown 3s linear infinite;
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+/* @media(max-width:992px){
+  #PURPLE{
+      height: 1300PX;
+      /* display: flex;
+      flex-direction: column;
+      justify-content: start;
+  }
+}
+ */
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 30px;
+  }
+}
+/* -------------------    FIRST  ENDS HERE  ---------------------------------- */
 #bgimage{
   background-image: url('/images/design.png');
   background-size: 100% 100%; 
@@ -400,40 +678,7 @@ margin-bottom: 10PX;
 
 /* ----------------------------------------------------   SPOTLIGHT ------------------------------------------ */
 
-#WORK{
-display: flex;
-margin-top: 60PX;
-justify-content: center;
-/* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
-/* line-height: normal; */
 
-}
-
-#REMOTLY h1{
-/* font-weight: 700;   */
-font-size: var(--h-font);  
-/* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
-}
-#REMOTLY p{
-font-size: var(--text--size);
-margin-top: 25PX; 
-margin-bottom: 90PX;  
-line-height: var(--line--height); 
-
-}
-#REMOTLY a{
-margin-top: 20px;
-text-decoration: none;
-color:var(--color) ;
-font-size: var(--text--size);
-padding: 20px 25px;
-border-radius: 14px;
-background: rgb(175, 32, 34);
-
-}
-#REMOTLY a:hover{
-background: black; 
-}
 
 
 #WORK1{
@@ -598,12 +843,7 @@ cursor:pointer;
        text-decoration: none;
        color: gray;
     }
-    .NONE:hover{
-       color: black;
-       cursor: pointer;
-       border-bottom: 2px solid var(--Main--color);
-      
-    }
+  
     @media (max-width:991px) {
       #EX {
           margin-bottom: 150PX;

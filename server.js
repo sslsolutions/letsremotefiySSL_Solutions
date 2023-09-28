@@ -42,7 +42,7 @@ const verifyToken = require('./Controllers/middleware/auth.js')
 const userProfileSeller=require('./Controllers/user_profile_seller.js')
 const logout=require('./Controllers/logout.js')
 /////////roles/////////////
-app.get('/', function (req, res) {
+app.get('/haris', function (req, res) {
     var skills = [
         {
             btnname: 'ASP.NET',
@@ -225,7 +225,7 @@ app.get('/', function (req, res) {
 
   ]
 
-    res.render('index.ejs', {
+    res.render('haris.ejs', {
         technologies: technologies,
         skills:skills,
         trajectory:trajectory
@@ -251,6 +251,9 @@ app.get('/about',(req, res)=>{
 
 app.use('/createProfile' ,verifyToken ,(req, res)=>{
     res.render('create_profile.ejs')
+})
+app.get('/haris',(req, res)=>{
+    res.render('haris.ejs')
 })
 
 
