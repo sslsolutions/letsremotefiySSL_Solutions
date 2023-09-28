@@ -24,6 +24,32 @@
 }
 
 
+@media (max-width:1024px) {
+    #now{
+        font-size: 18px;
+    }
+    #MAR{
+        margin-top: 10PX;
+    }
+    #LG1{
+        display: block;
+    }
+    #XL{
+        display: none;
+    }
+    
+#h{
+    margin-top: 5px;
+    border-radius: 120px;
+    /* border: 2px solid black; */
+    height: 200px;
+    /* width: 100%; */
+    position: fixed;
+    background: rgb(175, 32, 34);
+  
+}
+  
+  }
 
 @media (max-width:992px) {
     #NAV{
@@ -34,7 +60,9 @@
       }
   }
 
-
+#LG1{
+    display: none;
+}
 
 
 
@@ -76,7 +104,7 @@ T{
 #GETNOW{
     margin-top: 15px;
     margin-bottom: 7px;
-    font-size: 28PX;
+    font-size: 24PX;
     font-weight: 500;
     color: white;
     /* font-family: sans-serif */
