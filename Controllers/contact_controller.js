@@ -5,7 +5,7 @@ const { check, validationResult } = require('express-validator');
 const contact_model = require('../Models/contact_model');
 
 router.get('/contact-us', function (req, res) {
-    res.render('contact-us.ejs');
+    res.render('Contact-Us.ejs');
 });
 
 
