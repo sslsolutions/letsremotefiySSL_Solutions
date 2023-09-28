@@ -77,9 +77,6 @@ router.post('/signup',validation, async (req, res, next) => {
         }
         res.redirect('/login');
     }
-
-   
-
 })
 
 module.exports = router

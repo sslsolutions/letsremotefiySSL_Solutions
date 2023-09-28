@@ -40,6 +40,7 @@ const signup=require('./Controllers/signup_controller.js')
 const login=require('./Controllers/login_controller.js')
 const verifyToken = require('./Controllers/middleware/auth.js')
 const userProfileSeller=require('./Controllers/user_profile_seller.js')
+const logout=require('./Controllers/logout.js')
 /////////roles/////////////
 app.get('/haris', function (req, res) {
     var skills = [
@@ -235,25 +236,26 @@ app.get('/haris', function (req, res) {
 app.use('/', router);
 app.use('/', signup)
 app.use('/', login)
-app.use('/user', userProfileSeller)
+app.use('/', logout)
+app.use('/', userProfileSeller)
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
-app.get('/hire_talents', verifyToken ,(req, res) => {
+
+app.get('/hire_talents' ,userProfileSeller ,(req, res) => {
     res.render('hire_talents.ejs')
 })
 app.get('/about',(req, res)=>{
     res.render('about.ejs')
 })
-app.get('/login',(req, res)=>{
-    res.render('login.ejs')
-})
-app.get('/createprofile',(req, res)=>{
+
+app.use('/createProfile' ,verifyToken ,(req, res)=>{
     res.render('create_profile.ejs')
 })
 app.get('/haris',(req, res)=>{
     res.render('haris.ejs')
 })
+
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     app.listen(process.env.PORT, (req, res) => {
