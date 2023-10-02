@@ -3,6 +3,7 @@
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <head>
   <meta charset="utf-8" />
@@ -26,6 +27,11 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" />
   </head>
 >>>>>>> ddeaec66959a845323a8a20985f931729b494518
+=======
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+>>>>>>> Stashed changes
 =======
 <head>
   <meta charset="utf-8" />
@@ -657,7 +663,10 @@
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -682,6 +691,7 @@
     </div> 
   </div>
 </div> -->
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
@@ -811,17 +821,60 @@
 
 
 >>>>>>> Stashed changes
+=======
+
+
+  <script>
+    // script.js
+    const slider = document.querySelector('.slider');
+    const images = [
+      '/images/livewire.svg',
+      '/images/smarter-sorting.svg',
+      '/images/eduleaf-1.svg',
+      '/images/zooppa.svg',
+      '/images/kudo.svg',
+      '/images/showgizmo.svg',
+
+    ];
+    const slideInterval = 1000;
+    let currentIndex = 0;
+
+    function slide() {
+
+      const currentItem = document.querySelector('.slider-item');
+      currentItem.remove();
+
+
+      const nextIndex = currentIndex % images.length;
+      const nextImage = document.createElement('div');
+      nextImage.className = 'slider-item';
+      nextImage.innerHTML = `<img src="${images[nextIndex]}" alt="Image ${nextIndex + 1}">`;
+      slider.appendChild(nextImage);
+
+      currentIndex++;
+
+      setTimeout(slide, slideInterval);
+    }
+
+    slide();
+  </script>
+
+
+>>>>>>> Stashed changes
 
 
 
 
 
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 =======
 
 
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

@@ -255,6 +255,10 @@ app.get('/jobs',(req, res)=>{
     res.render('Jobs.ejs')
 })
 
+app.get('/text',(req, res)=>{
+    res.render('text.ejs')
+})
+
 app.use('/createProfile' ,verifyToken ,(req, res)=>{
     res.render('create_profile.ejs')
 })
