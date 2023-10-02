@@ -15,7 +15,7 @@ dotenv.config();
 router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json())
 
-router.get('/createProfile', verifyToken, async (req, res) => {
+router.get('/', verifyToken ,async (req, res) => {
     res.render('create_profile.ejs')
 })
 // const validatorProfile = [
@@ -24,22 +24,23 @@ router.get('/createProfile', verifyToken, async (req, res) => {
 //     check('lastName', 'Please Enter Your Last Name1'),
 //     check('phoneNumber', 'Please Select Country Code or Enter Correct Number1')
 // ]
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, 'uploads/'); // Specify the destination folder for uploads
-    },
-    filename: (req, file, cb) => {
-      cb(null, Date.now() + '-' + file.originalname); // Rename the file with a unique name
-    },
-  });
-  const upload = multer({ storage });
+// const storage = multer.diskStorage({
+//     destination: (req, file, cb) => {
+//       cb(null, 'uploads/'); // Specify the destination folder for uploads
+//     },
+//     filename: (req, file, cb) => {
+//       cb(null, Date.now() + '-' + file.originalname); // Rename the file with a unique name
+//     },
+//   });
+const storage = multer.memoryStorage(); 
+  const upload = multer({storage});
 
 router.post('/createProfile', upload.single('profileImage') ,async (req, res) => {
     const userId = req.session.userId
     console.log(userId);
     const { Designation, country, firstName, lastName, phoneNumber, countryCode } = req.body;
   /////////user Profile Pics///////////
-  const profileImage = req.file.path;
+  const profileImage = req.file.buffer.toString('base64')
 
     const userProfile = new user_profile_seller({
         Designation,
