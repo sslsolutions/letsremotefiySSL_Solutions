@@ -255,16 +255,10 @@ app.get('/jobs',(req, res)=>{
     res.render('Jobs.ejs')
 })
 
-app.get('/text',(req, res)=>{
-    res.render('text.ejs')
-})
-
 app.use('/createProfile' ,verifyToken ,(req, res)=>{
     res.render('create_profile.ejs')
 })
 
-=======
->>>>>>> ddeaec66959a845323a8a20985f931729b494518
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     app.listen(process.env.PORT, (req, res) => {
