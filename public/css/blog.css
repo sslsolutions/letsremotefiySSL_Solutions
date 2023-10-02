@@ -1,0 +1,45 @@
+.social-link {
+    transition: background-color 0.5s, color 1s;
+
+}
+
+.social-icon {
+    font-size: 18px;
+}
+
+.social-icon:hover {
+    transition: 1s;
+    background-color: rgb(239, 241, 243);
+    color: rgb(175, 32, 34);
+}
+
+.social-link:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.horizontal-line {
+    border-top: 0.01px solid rgb(133, 130, 130);
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 20px;
+}
+
+.animation-line {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(175, 32, 34);
+    transition: width 0.3s;
+}
+
+.link-light:hover {
+    color: rgba(214, 207, 207, 0.8);
+}
+
+.link-light:hover .animation-line {
+    width: 100%;
+    background-color: rgb(175, 32, 34);
+}

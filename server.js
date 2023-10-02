@@ -241,8 +241,11 @@ app.use('/', userProfileSeller)
 app.get('/', (req, res) => {
     res.render('haris.ejs')
 })
+app.get('/blogs', (req, res)=>{
+    res.render('blog.ejs')
+})
 
-app.get('/hire_talents' ,userProfileSeller ,(req, res) => {
+app.get('/hire_talents' ,verifyToken ,(req, res) => {
     res.render('hire_talents.ejs')
 })
 app.get('/about',(req, res)=>{
@@ -252,6 +255,7 @@ app.get('/jobs',(req, res)=>{
     res.render('Jobs.ejs')
 })
 
+<<<<<<< HEAD
 app.get('/text',(req, res)=>{
     res.render('text.ejs')
 })
@@ -260,6 +264,8 @@ app.use('/createProfile' ,verifyToken ,(req, res)=>{
     res.render('create_profile.ejs')
 })
 
+=======
+>>>>>>> ddeaec66959a845323a8a20985f931729b494518
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     app.listen(process.env.PORT, (req, res) => {

@@ -19,8 +19,6 @@
 </head>
 
 <body>
-    <!--  -->
-    <!--  -->
     <nav class="navbar navbar-expand-lg bg-dark" id="NAV">
         <div class="container-fluid bg-dark pt-3 pb-3">
             <a class="navbar-brand text-white" href="#"><img width="200px" height="110px" class="img-fluid"
@@ -106,15 +104,9 @@
                                 <div>
                                     <img src="images/3.png" width="60px" height="60px" alt="" />
                                 </div> -->
-<<<<<<< HEAD
-                                <!-- <div id="LG1"><img width="150px" height="100px" class="img-fluid" src="images/SSL Group logo3.png" alt=""></div> -->
-                                <div><img width="200px" height="145px" class="img-fluid"
-                                        src="images/SSL Group logo2.png" alt=""></div>
-=======
                                 <!-- <img width="100px" height="72px" class="img-fluid" src="images/SSL Group logo3.png" alt=""> -->
                                 <img width="200px" height="145px" class="img-fluid" src="images/SSL Group logo2.png"
                                     alt="">
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
                             </div>
                         </div>
                     </div>
@@ -139,69 +131,60 @@
                         <!----------------------------  PART 2----------------------  -->
                         <div class="col-12 mt-5 justify-content-center" id="PART2">
                             <div class="row justify-content-center">
-                                <div class="col-sm-12 mt-3 mb-3 ml-2">
-                                    <h5>Upload Profile Image</h5>
-                                </div>
-                                <div class=" mt-3 mb-5 col-lg-5 col-md-5 col-sm-5 mt-3">
-                                   
-                                </div>
-                                <div class="col-lg-5 col-md-6 col-sm-7 mb-2" id="RTEXT">
-                                    <div>
-                                        <T>*</T> Please Upload Your Profile Image.
-                                    </div>
-                                    <div>
-                                        <T>*</T> Maximum file size should be less than 8MB.
-                                    </div>
-                                    <div>
-                                        <T>*</T> Acceptable Formats: jpg, jpeg, png, bmp.
-                                    </div>
-                                    <div>
-                                        <T>*</T> Recommended Dimensions (px): 300*300px.
+                                <div class="col-sm-12 col-lg-6 col-md-6  pt-3">
+                                    <label for="profileImage">
+                                        <img id="displayImage"  class="img-fluid rounded-circle"
+                                         style="width: 140px; height: 140px;" src="\images\png_profile_dummy.png">
+                                    </label>
+                                </div>                                
+                                <div class="col-lg-5 col-md-6 col-sm-7 pt-3 " >
+                                    <div id="RTEXT">
+                                        <div >
+                                            <T>*</T> Please Upload Your Profile Image.
+                                        </div>
+                                        <div>
+                                            <T>*</T> Maximum file size should be less than 8MB.
+                                        </div>
+                                        <div>
+                                            <T>*</T> Acceptable Formats: jpg, jpeg, png, bmp.
+                                        </div>
+                                        <div>
+                                            <T>*</T> Recommended Dimensions (px): 300*300px.
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                             <!----------------------------  PART 3  FORM  ----------------------  -->
                             <div class="row justify-content-around">
-<<<<<<< HEAD
-                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
-                                    <form action="/action_page.php">
-=======
                                 <div class="col-lg-5 mt-4 mb-3" id="MAIN">
-                                    <form action="/createProfile" method="post" enctype="multipart/form-data">
-                                        <input type="file" id="myFile" accept="image/*" name="profileImage" />
-                                     <img src="/uploads/1695730249001-wp7960658-pm-imran-khan-wallpapers.jpg" alt="User Profile Image" />
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
+                                    <form action="/createProfile" method="post" enctype="multipart/form-data"
+                                        id="uploadForm">
+                                        <!-- <div class="col-sm-12 mt-3 mb-3 ml-2" style="height: 25%; width: 35%;" >
+                                            <label for="profile">
+                                                <img src="images/SSL Group logo3.png" class=" rounded-circle img-fluid" alt="avatar">
+                                            </label>
+                                            <input type="file" id="profile" name="profile" class="d-none">
+                                           
+                                        </div> -->
+                                        <input type="file" id="profileImage" class="d-none" name="profileImage" accept="image/*">
+
                                         <lable>Designation <g>*</g>
                                         </lable>
                                         <div class="input-container">
                                             <i class="fas fa-briefcase"></i>
-<<<<<<< HEAD
-                                            <input type="text" placeholder="Enter your Designation" name="designer"
-                                                required>
-                                        </div>
-                                </div>
-
-                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
-=======
-                                            <input type="text" placeholder="Enter your Designation" name="Designation"
-                                                >
+                                            <input type="text" placeholder="Enter your Designation" name="Designation">
                                         </div>
                                 </div>
 
                                 <div class="col-lg-5 mt-4 mb-3" id="MAIN">
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
                                     <lable>Country <g>*</g>
                                     </lable>
                                     <div class="input-container">
                                         <i class="fas fa-map-marker-alt"></i>
                                         <!-- <input type="text" placeholder="Select your Country"  name="country"  required> -->
                                         <!-- Country names and Country Name -->
-<<<<<<< HEAD
-                                        <select class="form-select" id="country" name="country" required>
-=======
                                         <select class="form-select" name="country">
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
                                             <option value="">Select Location</option>
                                             <option value="Afghanistan">Afghanistan</option>
                                             <option value="Aland Islands">Aland Islands</option>
@@ -476,11 +459,7 @@
                                     </div>
                                 </div>
 
-<<<<<<< HEAD
-                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
-=======
                                 <div class="col-lg-5 mt-4 mb-3" id="MAIN">
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
                                     <lable>First Name <g>*</g>
                                     </lable>
                                     <div class="input-container">
@@ -490,58 +469,33 @@
                                     </div>
                                 </div>
 
-<<<<<<< HEAD
-                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
-=======
                                 <div class="col-lg-5 mt-4 mb-3" id="MAIN">
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
                                     <lable>Last Name <g>*</g>
                                     </lable>
                                     <div class="input-container">
                                         <i class="fas fa-user"></i>
-<<<<<<< HEAD
-                                        <input type="text" placeholder="Enter your last name" name="lname" required>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
-=======
                                         <input type="text" placeholder="Enter your last name" name="lastName"
                                             id="lastName">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-5 mt-4 mb-3" id="MAIN">
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
                                     <lable>Email <g>*</g>
                                     </lable>
                                     <div class="input-container">
-                                        <i class="fas fa-envelope"></i> <input class="COLOUR" type="text"
-<<<<<<< HEAD
-                                            placeholder="Enter your Email" name="email" required>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-5 col-sm-10 mt-4 mb-3" id="MAIN">
-=======
-                                     value="<%=existingUser.email%>"  disabled     placeholder="Enter your Email" name="email" >
+                                        <i class="fas fa-envelope"></i> <input value="<%= existingUser.email%>" class="COLOUR" type="text" disabled
+                                            placeholder="Enter your Email" name="email">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-5 mt-4 mb-3" id="MAIN">
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
                                     <lable>Phone Number <g>*</g>
                                     </lable>
                                     <div class="input-container">
                                         <!-- <i class="fas fa-phone"></i> -->
                                         <!-- Country names and Phone Code -->
-<<<<<<< HEAD
-                                        <select class="form-select" id="phone" name="phone">
-                                            <option value="">Code</option>
-=======
                                         <select class="form-select" id="phone" name="countryCode">
                                             <option value="">Select Code</option>
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
                                             <option value="93">Afghanistan +93</option>
                                             <option value="358">Aland Islands +358</option>
                                             <option value="355">Albania +355</option>
@@ -795,11 +749,7 @@
                                             <option value="260">Zambia +260</option>
                                             <option value="263">Zimbabwe +263</option>
                                         </select>
-<<<<<<< HEAD
-                                        <input type="text" placeholder="(201)-555-0123" name="number" required>
-=======
-                                        <input type="text" placeholder="(201)-555-0123" name="phoneNumber" >
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
+                                        <input type="text" placeholder="(201)-555-0123" name="phoneNumber">
                                     </div>
                                 </div>
 
@@ -829,15 +779,23 @@
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-<<<<<<< HEAD
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+        </script>
+    <script>
+        const imageInput = document.getElementById('profileImage');
+        const displayImage = document.getElementById('displayImage');
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-=======
->>>>>>> 2c8a47b8c0455fe93684e7779c28aae87dd630fa
+        imageInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    displayImage.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 
 </html>
