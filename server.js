@@ -255,7 +255,10 @@ app.get('/jobs',(req, res)=>{
     res.render('Jobs.ejs')
 })
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
 app.get('/text',(req, res)=>{
     res.render('text.ejs')
 })
