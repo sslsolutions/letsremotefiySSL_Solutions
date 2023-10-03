@@ -4,10 +4,11 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 :root{
     --Main--color: rgb(175, 32, 34);
-    --text--size:20px;
-    --text--size2:18px;
+    --text--18size:18px;
+    --text--22size:22px;
     --color:white;
     --font-700:700;
     --font-family:Arial, Helvetica, sans-serif ;
@@ -23,8 +24,69 @@
     --font--500:500;
     --h-font:48PX;
     --line--height:1.71rem;
+    /*  -----------------------     FONT-FAMILY     ---------------------------------- */
+    --Goditas--bold : Gorditas;
+    --Godita--bold : Gordita;
+    --Helvetica--Round:Helvetica Rounded;
+    --subbold--font: Helvetica;
 
 }
+H3{
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+}
+PT{
+    font-size: 16PX;
+}
+SP, #SMALL {
+    font-size: 18PX;;
+}
+
+#LARGE, HP{
+    font-size: 20PX;
+}
+/* HP{
+    font-size: 20PX;
+} */
+
+#SUBH{
+    font-weight: 600;
+    color: rgb(175, 32, 34);;
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    /* color: BLUE; */
+}
+
+body{
+    font-family: lucida, Arial,Lucida, sans-serif;
+}
+p{
+    
+    font-family: lucida, Arial,Lucida, sans-serif;
+}
+heading , #HEAD{
+    font-family: 'Varela Round', sans-serif,Arial, Helvetica,Lucida;
+    
+    
+}
+subheading{
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    color: rgb(175, 32, 34);
+}
+
+@font-face {
+    font-family: Helvetica Rounded;
+    src: url(/public/fonts/Helvetica.ttf);
+    font-family: Helvetica;
+    src: url(Helvetica.ttf);
+    font-family: Gordita;
+    src: url(/public/fonts/Gorditas-Bold.ttf);
+
+    font-family: Gorditas;
+    src: url(/public/fonts/Gorditas.zip/Gorditas-Regular.ttf);
+
+}
+
+
 
 #NAV{
     color: blueviolet;
@@ -39,14 +101,7 @@
 
 }
 
-#AWORK{
-    display: flex;
-    margin-top: 60PX;
-    justify-content: center;
-    /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
-    /* line-height: normal; */
 
-}
 #WORKH{
     display: flex;
     margin-top: -8PX;
@@ -75,7 +130,7 @@
     /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
 }
 #REMOTLY p{
-    font-size: var(--text--size);
+    /* font-size: var(--text--size); */
     margin-top: 25PX; 
     margin-bottom: 90PX;  
     line-height: var(--line--height); 
@@ -96,6 +151,7 @@
 }
 #JOIN{
     margin-top: 25PX; 
+    font-size: 18PX;
 }
 
 #IMG1{
@@ -139,6 +195,10 @@
  #HAR{
     background-color: rgb(121, 113, 113);
  }
+ #DIMG{
+    background-image: url('/images/275-removebg-preview-1.png');
+    background-size: 100% 100%;
+ }
  #G{
     background-image: url('/images/275-removebg-preview-1.png');
     /* background-size: cover; */
@@ -148,11 +208,63 @@
     justify-content: flex-end;
     align-items: flex-start; */
  }
+ 
+@media (max-width: 991px) {
+   #G{
+    background-image:none! important;
+   }
+   #DIMG{
+    background-image:none! important;;
+   }
+}
  #IMGW{
     /* border: 2PX solid black; */
     margin-top: 60PX;
     margin-bottom: 60PX;
  }
+ @media (max-width: 400px) {
+    gh{
+        font-size: 14px;
+    }
+   
+ }
+ 
+
+ /* --------------------------------SLIDER       ---------------------------------------- */
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slider-item {
+    flex: 0 0 calc(100% / 6); 
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 991px) {
+    /* Adjust for screens less than 992px (tablet screens) */
+    .slider-item {
+        flex: 0 0 calc(100% / 3); 
+    }
+}
+
+@media (max-width: 575px) {
+    /* Adjust for screens less than 576px (phone screens) */
+    .slider-item {
+        flex: 0 0 100%; /* Display only 1 image at a time on phones */
+    }
+}
  /* -------------------------------------------------------------------------------------------- */
  #ACCORDIAN{
     margin-top: 130PX;
@@ -364,4 +476,46 @@
     
   }
 
+  
+/* ----------------------------------  CHAT------------------------ */
+.input-container {
+    
+    background-color: rgb(214, 34, 34);
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 90%;
+    /* height: 100px; */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.input-container i {
+    font-size: 24px;
+    /* margin-right: 10px; */
+    /* width: 80%; */
+    color: #333;
+}
+
+#MAIN lable{
+    color: black; 
+    font-weight: 600
+}
+#MAIN g{
+    color: red;
+}
+#MAIN div{
+    background-color: rgb(250, 250, 250);
+}
+#MAIN input{
+    background-color: rgb(250, 250, 250);
+}
+.LABLES div{
+    background-color: rgb(250, 250, 250);
+}
+#INNER{
+    border: none;
+    outline: none;
+}

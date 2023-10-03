@@ -226,7 +226,7 @@ app.get('/', function (req, res) {
 
   ]
 
-    res.render('haris.ejs', {
+    res.render('index.ejs', {
         technologies: technologies,
         skills:skills,
         trajectory:trajectory
@@ -242,7 +242,7 @@ app.use('/', userProfileSeller)
 app.use('/', resetPassword)
 
 app.get('/', (req, res) => {
-    res.render('haris.ejs')
+    res.render('index.ejs')
 })
 app.get('/blogs', (req, res)=>{
     res.render('blog.ejs')
@@ -256,6 +256,10 @@ app.get('/about',(req, res)=>{
 })
 app.get('/jobs',(req, res)=>{
     res.render('Jobs.ejs')
+})
+
+app.use('/createProfile' ,verifyToken ,(req, res)=>{
+    res.render('create_profile.ejs')
 })
 
 
