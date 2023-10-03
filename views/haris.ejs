@@ -20,11 +20,9 @@
 <body>
 
     <!-- -----------------------WORK REMOTLY------------------- -->
-
-    <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary">
-        <%- include('Components/navbar'); %>
-    </nav>
-
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <%- include('Components/navbar'); %>
+        </nav>
 
     <div class="container-fluid">
         <div class="row justify-content-center" id="WORKH">
@@ -43,10 +41,12 @@
                     AI-vetted pool of remote developers, engineers, product designers, and highly competitive
                     engineering talent to effortlessly expand your business.
                 </p>
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-8 col-sm-10 col-sm-8 d-flex justify-content-around mt-2 mb-2">
-                        <div class="mb-3 mt-4" id="JOIN-COL"><a href=""><b>Hire Talent</b></a></div>
-                        <div class="mb-3 mt-4" id="JOIN-TRANS"><a href=""><b>Hire a Team</b></a></div>
+                <div class="row justify-content-center ">
+                    <div class="col-lg-12 col-md-12 ">
+                        <div class="row justify-content-center">
+                            <div class=" col-lg-3 mb-3 mt-4 col-md-4 " id="JOIN-COL"><a href=""><b>Hire Talent</b></a></div>
+                            <div class="col-lg-3 mb-3 mt-4 col-md-4" id="JOIN-TRANS"><a href=""><b>Hire a Team</b></a></div>
+                        </div>
                     </div>
                 </div>
                 <div class="mb-5">
@@ -827,16 +827,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
     <!-- ----------------------------------------------Remote-------------------------------------- -->
     <div class="d-flex justify-content-center">
         <div class="row" id="UNLOCK" style="margin-bottom: 80px">
@@ -1144,7 +1134,7 @@
 
         <div class="container-fluid mb-5">
             <div class="row justify-content-center">
-                <div class="col-8">
+                <div class="col-lg-8 col-md-10 col-sm-12">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item" style="border: 1px solid black; margin-top:10px;">
                             <h2 class="accordion-header" id="flush-headingOne">
@@ -1229,21 +1219,11 @@
             </div>
         </div>
         <div style="height: 100px;"></div>
-
-
-
     </div>
-
-
 
     <footer class="bg-dark text-center p-2">
         <%- include('Components/footor'); %>
     </footer>
-
-
-
-
-
 
 
     <script>

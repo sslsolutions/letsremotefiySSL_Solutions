@@ -41,6 +41,7 @@ const login=require('./Controllers/login_controller.js')
 const verifyToken = require('./Controllers/middleware/auth.js')
 const userProfileSeller=require('./Controllers/user_profile_seller.js')
 const logout=require('./Controllers/logout.js')
+const resetPassword=require('./Controllers/forgetPassword.js')
 /////////roles/////////////
 app.get('/', function (req, res) {
     var skills = [
@@ -238,6 +239,8 @@ app.use('/', signup)
 app.use('/', login)
 app.use('/', logout)
 app.use('/', userProfileSeller)
+app.use('/', resetPassword)
+
 app.get('/', (req, res) => {
     res.render('haris.ejs')
 })
