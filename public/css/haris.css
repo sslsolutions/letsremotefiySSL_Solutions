@@ -4,6 +4,18 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+@font-face {
+    font-family: Helvetica Rounded;
+    src: url(/public/fonts/Helvetica.ttf);
+    font-family: Helvetica;
+    src: url(Helvetica.ttf);
+    font-family: Gordita;
+    src: url(/public/fonts/Gorditas-Bold.ttf);
+
+    font-family: Gorditas;
+    src: url(/public/fonts/Gorditas.zip/Gorditas-Regular.ttf);
+
+}
 :root{
     --Main--color: rgb(175, 32, 34);
     --text--18size:18px;
@@ -32,25 +44,48 @@
     --line--height:1.71rem;
 
 }
+H3{
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+}
 
 PT{
     font-size: 16PX;
+    /* color: red; */
 }
 #SMALL, SP{
-    font-size: var(--text--18size);
+    font-size: 18px;
+    /* color: red; */
+}
+#XLARGE{
+    font-size: 24PX;
+    /* color:rgb(24, 174, 243); */
 }
 
 #LARGE, HP{
-    font-size: 20PX;
+    font-size: 22PX;
+    /* color:rgb(28, 12, 248); */
+    /* font-weight: 500; */
+    letter-spacing: .3px;
+    font-family: Arial, sans-serif,Lucida, Helvetica Rounded;
 }
-/* HP{
-    font-size: 20PX;
-} */
 
 h4{
     font-weight: 600;
+    /* font-size: 24px; */
+    /* color: rgb(223, 29, 136); */
     font-family: Arial, Helvetica, sans-serif,Lucida;
-    /* font-family: var(--Helvetica--Round); */
+    
+}
+heading{
+    font-size: 42px;
+    /* color: purple; */
+}
+SUBHEAD{
+    font-weight: 600;
+    font-size: 24px;
+    color: rgb(175, 32, 34);
+    /* color: rgb(8, 252, 118); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
     
 }
 
@@ -73,6 +108,7 @@ h1{
     font-family: 'Varela Round', sans-serif;
     /* font-family:  var(--subbold--font); */
 }
+
 /* --------------------------------SLIDER       ---------------------------------------- */
 
 .slider-container {
@@ -94,20 +130,108 @@ h1{
     height: auto;
 }
 
+/* =================================        991     ========================================= */
 
 @media (max-width: 991px) {
     /* Adjust for screens less than 992px (tablet screens) */
     .slider-item {
         flex: 0 0 calc(100% / 3); 
     }
+    
+PT{
+    font-size: 16PX;
+    /* color: red; */
 }
-@media (max-width: 767px) {
+#SMALL, SP{
+    font-size: 16px;
+    /* color: red; */
+}
+#XLARGE{
+    font-size: 22PX;
+    /* color:rgb(24, 174, 243); */
+}
 
-    /* #HARIS {
-        background-image:none! important;
-    } */
+#LARGE, HP{
+    font-size: 20PX;
+    /* color:rgb(28, 12, 248); */
+}
+
+h4{
+    font-weight: 600;
+    /* font-size: 24px; */
+    /* color: rgb(223, 29, 136); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    
+}
+heading{
+    font-size: 40px;
+    /* color: purple; */
+}
+SUBHEAD{
+    font-weight: 600;
+    font-size: 20px;
+    /* color: rgb(8, 252, 118); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    
+}
+#NUMBER{
+    font-size: 36PX;
+}
+#NUMBER2{
+    font-size: 14PX;
+}
+  
+}
+/* =================================        786     ========================================= */
+@media (max-width: 786px) {
+
+    PT{
+        font-size: 15PX;
+        /* color: red; */
+    }
+    #SMALL, SP{
+        font-size: 15px;
+        /* color: red; */
+    }
+    #XLARGE{
+        font-size: 20PX;
+        /* color:rgb(24, 174, 243); */
+    }
+    
+    #LARGE, HP{
+        font-size: 18PX;
+        /* color:rgb(28, 12, 248); */
+    }
+    
+    h4{
+        font-weight: 600;
+        /* font-size: 24px; */
+        /* color: rgb(223, 29, 136); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    heading{
+        font-size: 36px;
+        /* color: purple; */
+    }
+    SUBHEAD{
+        font-weight: 600;
+        font-size: 18px;
+        /* color: rgb(8, 252, 118); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    #NUMBER{
+        font-size: 33PX;
+    }
+    #NUMBER2{
+        font-size: 13PX;
+    }
 
 }
+
+
+/* =================================        700     ========================================= */
 @media (max-width: 700px) {
     #HARIS {
         background-image:none! important;
@@ -115,6 +239,8 @@ h1{
    
 }
 
+
+/* =================================        575     ========================================= */
 
 @media (max-width: 575px) {
     /* Adjust for screens less than 576px (phone screens) */
@@ -124,6 +250,77 @@ h1{
     #BUTTONSFLEX{
         display: flex;
         flex-direction: column;
+    }
+    PT{
+        font-size: 14PX;
+        /* color: red; */
+    }
+    #SMALL, SP{
+        font-size: 14px;
+        /* color: red; */
+    }
+    #XLARGE{
+        font-size: 18PX;
+        /* color:rgb(24, 174, 243); */
+    }
+    
+    #LARGE, HP{
+        font-size: 16PX;
+        /* color:rgb(28, 12, 248); */
+    }
+    
+    h4{
+        font-weight: 600;
+        /* font-size: 24px; */
+        /* color: rgb(223, 29, 136); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    heading{
+        font-size: 28px;
+        /* color: purple; */
+    }
+    SUBHEAD{
+        font-weight: 600;
+        font-size: 16px;
+        /* color: rgb(8, 252, 118); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    #NUMBER{
+        font-size: 30PX;
+    }
+    #NUMBER2{
+        font-size: 12PX;
+    }
+    #MAIN i{
+        font-size: 20px;
+    }
+    
+}
+/* ----------------------------------       350   --------------------------- */
+@media (max-width: 350px) {
+   
+    heading{
+        font-size: 24px;
+    }
+    NUM1{
+        font-size: 19PX;
+    }
+    NUM2{
+        font-size: 12PX;
+    }
+    .input-container {
+    
+        width: 100%;
+        /* padding: 10px 15PX 10PX 10PX; */
+        padding: 0PX;
+    }
+    #INNER{
+        border: none;
+        /* outline: none; */
+        width: 80%;
+    
     }
     
 }
@@ -135,7 +332,7 @@ h1{
     
 }
 #CCOLOR h4{
-    color: rgb(175, 32, 34);;
+    color: rgb(175, 32, 34);
 }
 
 
@@ -152,6 +349,11 @@ h1{
 }
 
 .box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
     width: 350px;
     height: 300px;
     padding: 16PX 8PX 90PX 8PX ;
@@ -196,7 +398,7 @@ h1{
     margin-bottom: 20px;
 }
 .box1 h3{
-    font-size: 26px;
+    /* font-size: 26px; */
     font-weight: 600;
     margin-bottom: 10px;
     color:black;
@@ -241,7 +443,7 @@ h1{
 }
 
 #ICONS{
-    font-size: 15px; 
+    /* font-size: 15px;  */
     font-weight: 600;
     /* margin-top: 8PX; */
 }
@@ -285,10 +487,10 @@ h1{
 }
 
 #REMOTLY p {
-    font-size: var(--text--18size);
+    /* font-size: var(--text--18size); */
     margin-top: 25PX;
     margin-bottom: 90PX;
-    line-height: var(--line--height);
+    /* line-height: var(--line--height); */
 
 }
 
@@ -296,12 +498,15 @@ h1{
     /* margin-top: 20px; */
     text-decoration: none;
     color: var(--color);
-    font-size: var(--text--18size);
+    /* font-size: var(--text--18size); */
     padding: 13px 55px;
     border-radius: 14px;
     color: white;
     background-color: rgb(175, 32, 34);
     border: 2PX solid WHITE;
+    font-size: 18px;
+    font-weight: 500;
+    /* font-weight: ; */
 
 }
 
@@ -314,7 +519,7 @@ h1{
     /* margin-top: 20px; */
     text-decoration: none;
     color: var(--color);
-    font-size: var(--text--18size);
+    /* font-size: var(--text--18size); */
     padding: 13px 55px;
     border-radius: 14px;
     color: rgb(175, 32, 34);
@@ -331,7 +536,7 @@ h1{
     margin-top: 20px;
     text-decoration: none;
     color: var(--color);
-    font-size: var(--text--18size);
+    /* font-size: var(--text--18size); */
     padding: 13px 55px;
     border-radius: 14px;
     border: 2PX solid white;
@@ -350,7 +555,7 @@ h1{
   #WORK1 {
     font-weight: 900;
     /* display: flex; */
-    margin-top: 110PX;
+    margin-top: 60PX;
     /* font-size: var(--paragraph--size); */
     /* justify-content: center; */
     /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
@@ -372,7 +577,7 @@ h1{
     font-weight: 900;
     /* display: flex; */
     margin-top: 30PX;
-    font-size: 30px;
+    /* font-size: 30px; */
     /* justify-content: center; */
     /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
     line-height: normal;
@@ -435,7 +640,7 @@ h1{
 }
 #REMOTLY h1{
     /* font-weight: 700;   */
-    font-size: var(--h-font);  
+    /* font-size: var(--h-font);   */
     /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
 }
 #REMOTLY p{
@@ -446,10 +651,7 @@ h1{
     font-family: var(--subheading--font);
     
 }
-#REMOTLY h4{
-    font-size: 24px;
-    /* font-weight: 600;  */
-}
+
 #JOIN{
     margin-top: 25PX;
     /* padding: 40PX;  */
@@ -490,7 +692,7 @@ h1{
     justify-content: space-evenly;
     background-color: rgb(247, 248, 252);
     padding: 20px 0px 20px 0px;
-    font-size: 18px ;
+    /* font-size: 18px ; */
     flex-wrap: wrap;
 }
 #BAR span:hover{
@@ -543,13 +745,11 @@ h1{
     margin-top: 80px;
     /* font-family:var(--font-family) ; */
 }
-#UNLOCK h4{
-    font-weight: var(--font-700);
-}
+
 #UNLOCK p{
     line-height: var(--line--height);
     width: 710px;
-    font-size: var(--text--18size);
+    /* font-size: var(--text--18size); */
     /* font-family:var(--font-family) ; */
 }
 #NUMBER{
@@ -564,7 +764,7 @@ h1{
 /* <!-- ============================================Seamless Talent Solutions===================================================== --> */
 
 #CCOLOR p{
-    font-size: 22px;
+    /* font-size: 22px; */
     /* width: 40%; */
     
 }
@@ -625,7 +825,7 @@ h1{
 }
 .box2 h4{
     font-size: 30px;
-    font-weight: 600;
+    /* font-weight: 600; */
     margin-bottom: 10px;
     color:black;
 }
@@ -761,7 +961,7 @@ h1{
     align-items: center;
     background-color: #fff;
     border: 1px solid #ccc;
-    width: 90%;
+    width: 100%;
     /* height: 100px; */
     padding: 10px;
     border-radius: 5px;
@@ -779,6 +979,11 @@ h1{
     color: black; 
     font-weight: 600
 }
+#MAIN i{
+    color: black; 
+    font-weight: 600;
+    font-size: 30px;
+}
 #MAIN g{
     color: red;
 }
@@ -794,4 +999,5 @@ h1{
 #INNER{
     border: none;
     outline: none;
+
 }

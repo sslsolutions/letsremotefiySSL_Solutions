@@ -248,6 +248,10 @@ app.get('/blogs', (req, res)=>{
     res.render('blog.ejs')
 })
 
+app.get('/details', (req, res)=>{
+    res.render('details.ejs')
+})
+
 app.get('/hire_talents' ,verifyToken ,(req, res) => {
     res.render('hire_talents.ejs')
 })
