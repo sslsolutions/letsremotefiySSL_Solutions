@@ -203,7 +203,7 @@ app.get('/', function (req, res) {
     },
     {
         btnname: 'Software Developer',
-        img: "https://letsremotify.com/wp-content/uploads/2023/05/js.svg",
+        img: "/images/Software Developer.png",
         width:28
     },
     {
@@ -219,7 +219,7 @@ app.get('/', function (req, res) {
     },
     {
         btnname: 'Tech Lead Manager',
-        img: "https://letsremotify.com/wp-content/uploads/2023/05/js.svg",
+        img: "/images/Tech-Lead-Manager-01.png",
         width:28,
        
     }

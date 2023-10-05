@@ -4,6 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+<<<<<<< HEAD
 @font-face {
     font-family: Helvetica Rounded;
     src: url(/public/fonts/Helvetica.ttf);
@@ -16,6 +17,11 @@
     src: url(/public/fonts/Gorditas.zip/Gorditas-Regular.ttf);
 
 }
+=======
+html * {
+    font-family: Nunito, serif;
+  }
+>>>>>>> c809c9dafeebc07998cc9f123460a045d8c31cfc
 :root{
     --Main--color: rgb(175, 32, 34);
     --text--18size:18px;
