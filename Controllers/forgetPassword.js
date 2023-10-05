@@ -61,7 +61,7 @@ router.patch('/resetPassword/:token', async (req, res) => {
     const loginToken = jwt.sign({ id: user._id }, process.env.JWT_SCERET_KEY, {
         expiresIn: "1200sec",
     });
-
+    
     res.cookie('token', loginToken, { httpOnly: true });
     const id = req.session.userId = user._id;
     console.log(id);
@@ -72,7 +72,4 @@ router.patch('/resetPassword/:token', async (req, res) => {
     })
 
 })
-
-
-
 module.exports = router
