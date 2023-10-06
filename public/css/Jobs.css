@@ -1,4 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
+
+
+@font-face {
+    font-family: Helvetica Rounded;
+    src: url(/public/fonts/Helvetica.ttf);
+    font-family: Helvetica;
+    src: url(Helvetica.ttf);
+    font-family: Gordita;
+    src: url(/public/fonts/Gorditas-Bold.ttf);
+
+    font-family: Gorditas;
+    src: url(/public/fonts/Gorditas.zip/Gorditas-Regular.ttf);
+
+}
 :root{
     --Main--color: rgb(175, 32, 34);
     --text--size:20px;
@@ -18,10 +38,275 @@
     --font--500:500;
     --h-font:48PX;
     --line--height:1.71rem;
+     /*  -----------------------     FONT-FAMILY     ---------------------------------- */
+     --Goditas--bold : Gorditas;
+     --Godita--bold : Gordita;
+     --Helvetica--Round:Helvetica Rounded;
+     --subbold--font: Helvetica;
 
 }
-#CCOLOR h4{
-    color: BLUE;
+body{
+    font-family:  Arial,Lucida, sans-serif;
+}
+h1{
+    font-family: 'Varela Round', sans-serif;
+    /* font-family:  var(--subbold--font); */
+}
+H3{
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+}
+
+.para, #para{
+    font-size: 16PX;
+    /* color: rgb(16, 238, 109); */
+}
+.small, #small{
+    font-size: 18px;
+    /* color: red; */
+}
+
+.xlarge{
+    font-size: 26PX;
+    /* color:rgb(24, 174, 243); */
+}
+
+.large{
+    font-size: 22PX;
+    /* color:rgb(28, 12, 248); */
+    /* font-weight: 500; */
+    letter-spacing: .3px;
+    font-family: Arial, sans-serif,Lucida, Helvetica Rounded;
+}
+
+h4{
+    font-weight: 600;
+    /* font-size: 24px; */
+    /* color: rgb(223, 29, 136); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    
+}
+.heading{
+    font-size: 42px;
+    /* color: purple; */
+    font-weight: 600;
+}
+.subhead, #subhead{
+    font-weight: 600;
+    font-size: 24px;
+    color: rgb(175, 32, 34);
+    /* color: rgb(8, 252, 118); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    
+}
+#NUMBER{
+    font-size: 36PX;
+}
+#NUMBER2{
+    font-size: 14PX;
+}
+
+
+
+/* --------------------------------       ---------------------------------------- */
+
+
+/* =================================  @Media Query      991     ========================================= */
+
+@media (max-width: 991px) {
+    /* Adjust for screens less than 992px (tablet screens) */
+    .slider-item {
+        flex: 0 0 calc(100% / 3); 
+    }
+    
+PT{
+    font-size: 16PX;
+    /* color: red; */
+}
+.small, #small{
+    font-size: 16px;
+    /* color: red; */
+}
+.xlarge{
+    font-size: 22PX;
+    /* color:rgb(24, 174, 243); */
+}
+
+#LARGE, HP{
+    font-size: 20PX;
+    /* color:rgb(28, 12, 248); */
+}
+
+h4{
+    font-weight: 600;
+    /* font-size: 24px; */
+    /* color: rgb(223, 29, 136); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    
+}
+.heading{
+    font-size: 40px;
+    /* color: purple; */
+}
+.subhead, #subhead{
+    font-weight: 600;
+    font-size: 20px;
+    /* color: rgb(8, 252, 118); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    
+}
+#NUMBER{
+    font-size: 36PX;
+}
+#NUMBER2{
+    font-size: 14PX;
+}
+
+
+  
+}
+/* =================================        786     ========================================= */
+@media (max-width: 786px) {
+
+    PT{
+        font-size: 15PX;
+        /* color: red; */
+    }
+    .small, #small{
+        font-size: 15px;
+        /* color: red; */
+    }
+    .xlarge{
+        font-size: 20PX;
+        /* color:rgb(24, 174, 243); */
+    }
+    
+    #LARGE, HP{
+        font-size: 18PX;
+        /* color:rgb(28, 12, 248); */
+    }
+    
+    h4{
+        font-weight: 600;
+        /* font-size: 24px; */
+        /* color: rgb(223, 29, 136); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    .heading{
+        font-size: 36px;
+        /* color: purple; */
+    }
+    .subhead, #subhead{
+        font-weight: 600;
+        font-size: 18px;
+        /* color: rgb(8, 252, 118); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    #NUMBER{
+        font-size: 33PX;
+    }
+    #NUMBER2{
+        font-size: 13PX;
+    }
+
+}
+
+
+/* =================================        700     ========================================= */
+@media (max-width: 700px) {
+    #HARIS {
+        background-image:none! important;
+    }
+   
+}
+
+
+/* =================================        575     ========================================= */
+
+@media (max-width: 575px) {
+    /* Adjust for screens less than 576px (phone screens) */
+    .slider-item {
+        flex: 0 0 100%; /* Display only 1 image at a time on phones */
+    }
+    #BUTTONSFLEX{
+        display: flex;
+        flex-direction: column;
+    }
+    PT{
+        font-size: 14PX;
+        /* color: red; */
+    }
+    .small, #small{
+        font-size: 14px;
+        /* color: red; */
+    }
+    .xlarge{
+        font-size: 18PX;
+        /* color:rgb(24, 174, 243); */
+    }
+    
+    #LARGE{
+        font-size: 16PX;
+        /* color:rgb(28, 12, 248); */
+    }
+    
+    h4{
+        font-weight: 600;
+        /* font-size: 24px; */
+        /* color: rgb(223, 29, 136); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    .heading{
+        font-size: 28px;
+        /* color: purple; */
+    }
+    .subhead, #subhead{
+        font-weight: 600;
+        font-size: 16px;
+        /* color: rgb(8, 252, 118); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    #NUMBER{
+        font-size: 30PX;
+    }
+    #NUMBER2{
+        font-size: 12PX;
+    }
+    #MAIN i{
+        font-size: 20px;
+    }
+    
+}
+/* ----------------------------------       350   --------------------------- */
+@media (max-width: 350px) {
+   
+    .heading{
+        font-size: 24px;
+    }
+    NUM1{
+        font-size: 19PX;
+    }
+    NUM2{
+        font-size: 12PX;
+    }
+    .input-container {
+    
+        width: 100%;
+        /* padding: 10px 15PX 10PX 10PX; */
+        padding: 0PX;
+    }
+    #INNER{
+        border: none;
+        /* outline: none; */
+        width: 80%;
+    
+    }
+
+    /* ----------------------       MEDIA ENDS HERE     ---------------------------------- */
+    
 }
 #NAV{
     color: blueviolet;
@@ -317,7 +602,7 @@
 }
 #TEXT{
     margin-top: 90px;
-    margin-left: 40px;
+    margin-left: 10px;
     width: 90%;
 }
 
@@ -489,14 +774,71 @@ input::placeholder{
      background:rgb(175, 32, 34);;
      color: white;
  }
- .NONE{
-    text-decoration: none;
-    color: gray;
- }
- .NONE:hover{
+
+ GG {
+      color: gray;
+    display:inline-block;
+     margin:0;
+     /* text-transform:uppercase;  */
+    }
+ GG:after {
     color: black;
     cursor: pointer;
-    border-bottom: 2px solid var(--Main--color);
-   
+   display:block;
+   content: '';
+   border-bottom: solid 3px  rgb(175, 32, 34)  ;
+   transform: scaleX(0);  
+   transition: transform 250ms ease-in-out;
  }
+ GG:hover:after { transform: scaleX(1); }
+ GG.fromRight:after{ transform-origin:100% 50%; }
+ GG.fromLeft:after{  transform-origin:  0% 50%; }
 
+/* ----------------------------------  CHAT------------------------ */
+.input-container {
+    
+    background-color: rgb(214, 34, 34);
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* height: 100px; */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-container i {
+    font-size: 24px;
+    /* margin-right: 10px; */
+    /* width: 80%; */
+    color: #333;
+}
+
+#MAIN lable{
+    color: black; 
+    font-weight: 600
+}
+#MAIN i{
+    color: black; 
+    font-weight: 600;
+    font-size: 30px;
+}
+#MAIN g{
+    color: red;
+}
+#MAIN div{
+    background-color: rgb(250, 250, 250);
+}
+#MAIN input{
+    background-color: rgb(250, 250, 250);
+}
+.LABLES div{
+    background-color: rgb(250, 250, 250);
+}
+#INNER{
+    border: none;
+    outline: none;
+
+}
