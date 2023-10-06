@@ -18,6 +18,9 @@ router.use(bodyParser.json())
 router.get('/', verifyToken ,async (req, res) => {
     res.render('create_profile.ejs')
 })
+router.get('/details' ,async (req, res) => {
+  res.render('details')
+})
 // const validatorProfile = [
 //     check('Designation ', 'Enter your Designation Please!'),
 //     check('firstName', 'Please Enter Your First Name!'),
@@ -61,7 +64,7 @@ router.post('/createProfile', upload.single('profileImage') ,async (req, res) =>
     } catch (error) {
         console.log(error);
     }
-    res.redirect('/hire_talents')
+    res.render('details')
 })
 // Handle profile upload
 
@@ -99,7 +102,6 @@ router.put('/update-talent-profile/:id', async (req, res) => {
 
 
 router.post('/reaytojoin', async(req, res)=>{
-   
     const userData = await user_profile_seller.findOne({}).populate('user').exec();
     // Check if userData exists and has a user field with an _id
     if (!userData || !userData.user || !userData.user._id) {
@@ -123,9 +125,10 @@ router.post('/reaytojoin', async(req, res)=>{
       SalaryExpetations,
 
     });
-    
+    console.log(userProfile);
     try {
       // Save the userProfile document to the database
+
       await userProfile.save();
       return res.status(200).json({ message: 'User profile skill added', userProfile });
     } catch (error) {
@@ -140,8 +143,7 @@ const id ="650edffca7270f00088d08cf"
         const userInfo= await user_model.findOne({_id: id})
      console.log(userInfo)
      return res.status(200).json(userInfo)
-    } catch (error) {
-      
+    } catch (error) {     
         return res.status(500).json({ message: 'Internal Server agi Error' });
     }
 })

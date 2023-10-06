@@ -10,12 +10,16 @@ const { check, body, validationResult } = require('express-validator');
 const user_model = require('../Models/user_model');
 const bodyParser = require('body-parser');
 const user_profile_seller = require('../Models/user_profile_seller_models')
-
+const verifyToken= require('../Controllers/middleware/auth')
 router.use(bodyParser.urlencoded({ extended: true }))
 
 router.get('/login', function (req, res) {
     res.render('login.ejs');
 });
+router.get('/createProfile', verifyToken
+    , function (req, res) {
+        res.render('create_profile');
+    });
 
 const validator = [
     body('email', 'Email is not valid')
@@ -64,10 +68,11 @@ router.post('/login', validator, async (req, res, next) => {
 
                 if (!userProfile) {
                     // Redirect the user to create a profile and pass user data
-                    res.render('create_profile',{existingUser:existingUser});
+                    res.render('create_profile', { existingUser: existingUser });
+
                 } else {
                     // Redirect the user to the hire_talents page
-                    res.redirect('/hire_talents');
+                    res.redirect('/details');
                 }
             }
         } catch (error) {
