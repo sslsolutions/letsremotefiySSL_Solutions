@@ -15,6 +15,10 @@ const userScheme = new Scheme({
         type: String,
         require: true
     },
+    roles: {
+        type: String,
+        enum: ['Seller', 'Buyer']
+    },
     token: {
         type: String
     },

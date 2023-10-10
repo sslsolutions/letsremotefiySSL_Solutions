@@ -10,23 +10,23 @@ const { check, body, validationResult } = require('express-validator');
 const user_model = require('../Models/user_model');
 const bodyParser = require('body-parser');
 const user_profile_seller = require('../Models/user_profile_seller_models')
-const verifyToken= require('../Controllers/middleware/auth')
+const { verifyToken, restricted } = require('../Controllers/middleware/auth')
 router.use(bodyParser.urlencoded({ extended: true }))
+const restrictedToSeller = restricted('Buyer');
 
-router.get('/login', function (req, res) {
-    res.render('login.ejs');
-});
-router.get('/createProfile', verifyToken
-    , function (req, res) {
-        res.render('create_profile');
-    });
+
+router.get('/login', async (req, res, next) => {
+    res.render('login.ejs')
+})
 
 const validator = [
     body('email', 'Email is not valid')
         .isEmail()
         .normalizeEmail(),
-    body('password', 'This password must be 6 characters long')
+    body('password', 'Password must be eight characters, at least one uppercase letter, one lowercase letter, one number and one special character')
         .exists()
+        .isLength({ min: 8 })
+        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)
         .custom(async (value, { req }) => {
             let existingUser;
             existingUser = await user_model.findOne({ email: req.body.email });
@@ -58,21 +58,29 @@ router.post('/login', validator, async (req, res, next) => {
                 const token = jwt.sign({ id: existingUser._id }, process.env.JWT_SCERET_KEY, {
                     expiresIn: "1200sec",
                 });
-
+                const userRoles = existingUser.roles; 
+                req.user = {
+                    id: existingUser._id,
+                    email: existingUser.email,
+                    roles: userRoles, // Assign user roles here
+                };
                 res.cookie('token', token, { httpOnly: true });
                 const id = req.session.userId = existingUser._id;
                 console.log(id);
 
                 // Attempt to find the user's profile
                 const userProfile = await user_profile_seller.findOne({ user: id }).populate('user').exec();
-
-                if (!userProfile) {
-                    // Redirect the user to create a profile and pass user data
-                    res.render('create_profile', { existingUser: existingUser });
-
-                } else {
+                if (!userProfile && existingUser.roles.includes('Seller')) {
+                    // Redirect to the seller page
+                    const hashedEmail = encodeURIComponent(existingUser.email);
+                    res.redirect(`/createProfile?email=${hashedEmail}`);
+                } else if (existingUser.roles.includes('Buyer')) {
+                    // Redirect to the buyer page
+                    res.redirect('/hire_talents');
+                }
+                else {
                     // Redirect the user to the hire_talents page
-                    res.redirect('/details');
+                    res.redirect('/seller/dashboard');
                 }
             }
         } catch (error) {
