@@ -41,6 +41,7 @@
                         </i></h4>
                     <h1>
                         <!-- rgb(175, 32, 34) -->
+<<<<<<< HEAD
 
 
 
@@ -53,6 +54,8 @@
 
 
 
+=======
+>>>>>>> 52eacf2c59e54d503b10fe8dd804ae76ec70a726
                         <!-- style="color:rgb(175, 32, 34);" -->
                         <!-- <span>SSL SOLUTION</span> is the Talent Outsource Specialist -->
                         <heading>Elevate Your Vision with Premier Tech Team Platform</heading>
@@ -75,7 +78,6 @@
                         <a href="#"
                             style="text-decoration: none; font-weight: 600; cursor: pointer; color: white;">Apply for
                             Jobs</a> Today!
-
                     </p>
                 </div>
             </div>
@@ -113,7 +115,6 @@
 
                         <div class="slider-item"><img src="/images/kudo.svg" alt="Image 5"></div>
                         <div class="slider-item"><img src="/images/showgizmo.svg" alt="Image 6"></div>
-
                     </div>
                 </div>
             </div>
@@ -700,19 +701,13 @@
                     <heading>Skills for Your Business!</heading>
                 </h1>
                 <div class=" lg-5 d-block">
-
-
                     <p id="XLARGE" class="text-white px-5">
-
-
                         Discover the elite remote professionals equipped with
                         top-notch skills tailored to meet your business requirements. Engage with renowned
                         experts
                         proficient in cutting-edge technologies and embark on a path to success with SSL
                         SOLUTIONS’s
                         talent pool.
-
-
                     </p>
                 </div>
             </div>
@@ -736,21 +731,22 @@
                 </div>
                 <div class="row  my-2 justify-content-center justify-content-start">
                     <% skills.forEach(function(skills) { %>
-                    <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
-                        <div class="row">
-                            <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
-                                <img decoding="async" loading="lazy" src=" <%= skills.img %>" class="mr-4 ml-1 " alt="">
-                                <%= skills.btnname %>
-                            </button>
+                        <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
+                            <div class="row">
+                                <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
+                                    <img decoding="async" loading="lazy" src=" <%= skills.img %>" class="mr-4 ml-1 "
+                                        alt="">
+                                    <%= skills.btnname %>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <% }); %>
-                    <div class="col-sm-10 my-3">
-                        <h5 class=" fw-semibold text-white fs-6 "><i class="fa fa-plus" aria-hidden="true"></i>
-                            See more
-                            Skills
-                        </h5>
-                    </div>
+                        <% }); %>
+                            <div class="col-sm-10 my-3">
+                                <h5 class=" fw-semibold text-white fs-6 "><i class="fa fa-plus" aria-hidden="true"></i>
+                                    See more
+                                    Skills
+                                </h5>
+                            </div>
                 </div>
 
             </div>
@@ -766,23 +762,24 @@
                 <div class="row  justify-content-center ">
 
                     <% technologies.forEach(function(technologies) { %>
-                    <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
-                        <div class="row">
-                            <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
-                                <img decoding="async" loading="lazy" width="<%=technologies.width%>"
-                                    src="<%= technologies.img%>" class="mr-4 ml-1 " alt="">
-                                <%= technologies.btnname %>
-                            </button>
+                        <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
+                            <div class="row">
+                                <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
+                                    <img decoding="async" loading="lazy" width="<%=technologies.width%>"
+                                        src="<%= technologies.img%>" class="mr-4 ml-1 " alt="">
+                                    <%= technologies.btnname %>
+                                </button>
+                            </div>
                         </div>
-                    </div>
 
-                    <% }); %>
-                    <div class="col-sm-10">
-                        <h5 class=" fw-semibold text-white fs-6 my-3"><i class="fa fa-plus" aria-hidden="true"></i> See
-                            more
-                            roles
-                        </h5>
-                    </div>
+                        <% }); %>
+                            <div class="col-sm-10">
+                                <h5 class=" fw-semibold text-white fs-6 my-3"><i class="fa fa-plus"
+                                        aria-hidden="true"></i> See
+                                    more
+                                    roles
+                                </h5>
+                            </div>
                 </div>
             </div>
         </div>
@@ -798,23 +795,24 @@
                 </div>
                 <div class="row  justify-content-center ">
                     <% trajectory.forEach(function(trajectory) { %>
-                    <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
-                        <div class="row">
-                            <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
-                                <img decoding="async" loading="lazy" width="<%=trajectory.width%>"
-                                    src=" <%= trajectory.img %>" class="mr-3 ml-1 " alt="">
-                                <%= trajectory.btnname %>
-                            </button>
-                        </div>
+                        <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
+                            <div class="row">
+                                <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
+                                    <img decoding="async" loading="lazy" width="<%=trajectory.width%>"
+                                        src=" <%= trajectory.img %>" class="mr-3 ml-1 " alt="">
+                                    <%= trajectory.btnname %>
+                                </button>
+                            </div>
 
-                    </div>
-                    <% }); %>
-                    <div class="col-sm-10">
-                        <h5 class=" fw-semibold text-white fs-6 my-3"><i class="fa fa-plus" aria-hidden="true"></i> See
-                            more
-                            positions
-                        </h5>
-                    </div>
+                        </div>
+                        <% }); %>
+                            <div class="col-sm-10">
+                                <h5 class=" fw-semibold text-white fs-6 my-3"><i class="fa fa-plus"
+                                        aria-hidden="true"></i> See
+                                    more
+                                    positions
+                                </h5>
+                            </div>
                 </div>
             </div>
         </div>
@@ -849,15 +847,15 @@
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                     <%- include('Components/modal'); %>
-                    <div class="row mt-4 ">
-                        <div class="d-flex  align-items-center ">
-                            <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                            <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                        <div class="row mt-4 ">
+                            <div class="d-flex  align-items-center ">
+                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
+                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                            </div>
+                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
+                                SOLUTIONS
+                            </h5>
                         </div>
-                        <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                            SOLUTIONS
-                        </h5>
-                    </div>
 
                 </div>
             </div>
@@ -865,15 +863,15 @@
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                     <%- include('Components/modal'); %>
-                    <div class="row mt-4 ">
-                        <div class="d-flex  align-items-center ">
-                            <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                            <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                        <div class="row mt-4 ">
+                            <div class="d-flex  align-items-center ">
+                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
+                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                            </div>
+                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
+                                SOLUTIONS
+                            </h5>
                         </div>
-                        <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                            SOLUTIONS
-                        </h5>
-                    </div>
 
                 </div>
             </div>
@@ -881,15 +879,15 @@
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                     <%- include('Components/modal'); %>
-                    <div class="row mt-4 ">
-                        <div class=" d-flex  align-items-center ">
-                            <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                            <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                        <div class="row mt-4 ">
+                            <div class=" d-flex  align-items-center ">
+                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
+                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                            </div>
+                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
+                                SOLUTIONS
+                            </h5>
                         </div>
-                        <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                            SOLUTIONS
-                        </h5>
-                    </div>
 
                 </div>
             </div>
@@ -897,15 +895,15 @@
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                     <%- include('Components/modal'); %>
-                    <div class="row mt-4 ">
-                        <div class="d-flex  align-items-center ">
-                            <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                            <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                        <div class="row mt-4 ">
+                            <div class="d-flex  align-items-center ">
+                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
+                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                            </div>
+                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
+                                SOLUTIONS
+                            </h5>
                         </div>
-                        <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                            SOLUTIONS
-                        </h5>
-                    </div>
 
                 </div>
             </div>
@@ -914,15 +912,15 @@
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                     <%- include('Components/modal'); %>
-                    <div class="row mt-4 ">
-                        <div class="d-flex  align-items-center ">
-                            <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                            <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                        <div class="row mt-4 ">
+                            <div class="d-flex  align-items-center ">
+                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
+                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                            </div>
+                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
+                                SOLUTIONS
+                            </h5>
                         </div>
-                        <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                            SOLUTIONS
-                        </h5>
-                    </div>
                 </div>
             </div>
         </div>

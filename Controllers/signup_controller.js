@@ -25,21 +25,21 @@ const validation = [
                 throw new Error('A user already exists with this e-mail address');
             }
         }),
-    check('password', 'This password must be 6 characters long')
+    check('password', 'Password must be eight characters, at least one uppercase letter, one lowercase letter, one number and one special character')
         .exists()
-        .isLength({ min: 6 }),
+        .isLength({ min: 8 })
+        .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/),
     check('confirmPassword').custom((value, { req }) => {
         if (value !== req.body.password) {
-            console.log('Passwords do not match');
             throw new Error('Passwords do not match');
         }
         return true;
     }),
 ]
 
-router.post('/signup',validation, async (req, res, next) => {
+router.post('/signup', validation, async (req, res, next) => {
     //destructing 
-    const { email, password } = req.body
+    const { email, password, roles } = req.body
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
         // return res.status(422).jsonp(errors.array())
@@ -65,7 +65,8 @@ router.post('/signup',validation, async (req, res, next) => {
         //  const comparepassword = bcrypt.compare(hashPassword, password)
         const user = new user_model({
             email,
-            password: hashPassword
+            password: hashPassword,
+            roles
 
         })
         try {

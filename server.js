@@ -38,12 +38,19 @@ app.use(function (req, res, next) {
 var router=require('./Controllers/contact_controller.js')
 const signup=require('./Controllers/signup_controller.js')
 const login=require('./Controllers/login_controller.js')
-const verifyToken = require('./Controllers/middleware/auth.js')
+const {verifyToken, restricted} = require('./Controllers/middleware/auth.js')
 const userProfileSeller=require('./Controllers/user_profile_seller.js')
 const logout=require('./Controllers/logout.js')
 const resetPassword=require('./Controllers/forgetPassword.js')
+<<<<<<< HEAD
 /////////roles///////////// 
  var skills = [
+=======
+
+/////////roles/////////////
+app.get('/', function (req, res) {
+    var skills = [
+>>>>>>> 52eacf2c59e54d503b10fe8dd804ae76ec70a726
         {
             btnname: 'ASP.NET',
             img: "https://letsremotify.com/wp-content/uploads/2023/05/net.svg",
@@ -224,9 +231,12 @@ const resetPassword=require('./Controllers/forgetPassword.js')
     }
 
   ]
+<<<<<<< HEAD
 
 app.get('/', function (req, res) {
   
+=======
+>>>>>>> 52eacf2c59e54d503b10fe8dd804ae76ec70a726
     res.render('index.ejs', {
         technologies: technologies,
         skills:skills,
@@ -239,8 +249,8 @@ app.use('/', router);
 app.use('/', signup)
 app.use('/', login)
 app.use('/', logout)
-app.use('/', userProfileSeller)
 app.use('/', resetPassword)
+app.use('/', userProfileSeller)
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
@@ -249,9 +259,7 @@ app.get('/blogs', (req, res)=>{
     res.render('blog.ejs')
 })
 
-app.get('/details', (req, res)=>{
-    res.render('details.ejs')
-})
+
 
 app.get('/pricing', (req, res)=>{
     res.render('pricing.ejs',{
@@ -271,8 +279,8 @@ app.get('/jobs',(req, res)=>{
     res.render('Jobs.ejs')
 })
 
-app.use('/createProfile' ,verifyToken ,(req, res)=>{
-    res.render('create_profile.ejs')
+app.get('/seller/dashboard',(req, res)=>{
+    res.render('userDashboard.ejs')
 })
 
 
