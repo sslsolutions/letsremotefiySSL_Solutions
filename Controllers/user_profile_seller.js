@@ -114,7 +114,6 @@ router.post('/readytojoin', async (req, res) => {
 
   // Get the user_profile_seller ID
   const user_profile_sellerId = userData._id;
-
   // Assuming you have the skills data in req.body.skills
   const { skills, language, Role, Experiences, Resume, SalaryExpetations } = req.body;
   console.log(SalaryExpetations, Experiences)
@@ -127,7 +126,6 @@ router.post('/readytojoin', async (req, res) => {
     Experiences,
     Resume,
     SalaryExpetations,
-
   });
 
   try {
