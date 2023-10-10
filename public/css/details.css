@@ -286,10 +286,11 @@ T{
 }
 
 /* Style the label for the input field */
-label {
-  font-size: 18px;
+#container label {
+  font-size: 38px;
   margin-left: 10px;
   cursor: pointer;
+  /* border: 50px solid black; */
 }
 /* ------------------------------------   PDF SELECT OPTION  ------------------------- */
  /* Style the full-screen container */
@@ -363,9 +364,68 @@ input[type="file"] {
   /* width: 80%; */
 }
 /* -----------------  PART 6 EXP  ---------------- */
-#EXP{
-  border: 1PX solid rgb(193, 193, 193) ;
+/* ----------------------   THREE OUT OF ONE BUTTON  ----------------------------- */
+/* 
+#radio-div {
   display: flex;
+}
+
+#radio-div label {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#radio-div label:hover {
+  background-color: #f0f0f0;
+} 
+input{
+  display: none;
+} */
+/* ------------=================================   ENDS OF DIVS =========================================-------------------- */
+/* .radio-container, .radio-container-2 {
+  display: flex;
+  margin-top: 20px;
+}
+
+.radio-container label, .radio-container-2 label {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.radio-container label:hover, .radio-container-2 label:hover {
+  background-color: #f0f0f0;
+} */
+
+/* --------------------------------================================   BOTH COMMON    ======----------------------------- */
+#radio-container, #radio-container-2 {
+  display: flex;
+  margin-top: 20px;
+}
+
+#radio-container label, #radio-container-2 label {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#radio-container label:hover, #radio-container-2 label:hover {
+  background-color: #f0f0f0;
+}
+#ICON-BOXES input, #EXP1 input{
+  display: none;
+}
+
+
+/* ======================================================================== */
+
+#EXP1{
+  border: 1PX solid rgb(193, 193, 193) ;
+  /* border: 2PX solid black; */
+  display: flex;
+  background-color: white;
+  color: BLACK;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -376,11 +436,12 @@ input[type="file"] {
 
  
 }
-#EXP:hover{
+#EXP1:hover, #EXP2:hover, #EXP3:hover{
   border: 1PX solid black;
   /* color: blue; */
   background-color: rgb(243, 246, 244);
 }
+
 
 button{
   padding: 12px 40px;
@@ -397,7 +458,7 @@ button{
   background: rgb(175, 32, 34);
 }
 #NEXT{
-  background-color: rgb(231, 27, 61);
+  background-color: rgb(175, 32, 34);
    border: 1px solid black;
     padding: 9px 28px;
      font-size: 20px;

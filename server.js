@@ -42,9 +42,8 @@ const verifyToken = require('./Controllers/middleware/auth.js')
 const userProfileSeller=require('./Controllers/user_profile_seller.js')
 const logout=require('./Controllers/logout.js')
 const resetPassword=require('./Controllers/forgetPassword.js')
-/////////roles/////////////
-app.get('/', function (req, res) {
-    var skills = [
+/////////roles///////////// 
+ var skills = [
         {
             btnname: 'ASP.NET',
             img: "https://letsremotify.com/wp-content/uploads/2023/05/net.svg",
@@ -226,6 +225,8 @@ app.get('/', function (req, res) {
 
   ]
 
+app.get('/', function (req, res) {
+  
     res.render('index.ejs', {
         technologies: technologies,
         skills:skills,
@@ -250,6 +251,14 @@ app.get('/blogs', (req, res)=>{
 
 app.get('/details', (req, res)=>{
     res.render('details.ejs')
+})
+
+app.get('/pricing', (req, res)=>{
+    res.render('pricing.ejs',{
+        technologies: technologies,
+        skills:skills,
+        trajectory:trajectory
+    })
 })
 
 app.get('/hire_talents' ,verifyToken ,(req, res) => {
