@@ -22,7 +22,7 @@ router.get('/createProfile', verifyToken, async (req, res, next) => {
   res.render('create_Profile.ejs', { userEmail: isEmailValid });
 })
 
-router.get('/details', verifyToken, async (req, res) => {
+router.get('/details', async (req, res) => {
   res.render('details')
 })
 // const validatorProfile = [

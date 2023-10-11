@@ -28,6 +28,7 @@
     background: rgb(175, 32, 34);
   
 }
+
 #GETNOW{
     margin-top: 15px;
     margin-bottom: 7px;
@@ -223,7 +224,7 @@ T{
 
 /* =============================================================== */
 #NEXT{
-    background-color: rgb(231, 27, 61);
+    background-color:   rgb(175, 32, 34);
      border: 1px solid black;
       padding: 9px 28px;
        font-size: 20px;
@@ -246,6 +247,7 @@ T{
   }
   #ICON-BOXES P{
     margin: 10px;
+    /* padding-bottom: ; */
   }
 
   #ICON-BOXES:hover{

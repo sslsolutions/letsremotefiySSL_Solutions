@@ -56,10 +56,17 @@
                         <a class="nav-link  text-light" href="#" id="GETNOWNAV">
                             <div class="col-12 text-center justify-content-center">Valued By:</div>
                             <div class="col-12  mt-2" id="IFLEXNAV">
-                                <div>
-                                    <img width="100px" height="72px" class="img-fluid" src="images/SSL Group logo3.png"
-                                        alt="">
-                                </div>
+                                <!-- <span>
+                          <img class="img-fluid" width="60px" height="60px" src="images/2.png" alt="" />
+                      </span>
+                      <span>
+                          <img src="images/4.png" width="60px" height="60px" alt="" />
+                      </span>
+                      <span>
+                          <img src="images/3.png" width="60px" height="60px" alt="" />
+                      </span> -->
+                                <div><img width="100px" height="72px" class="img-fluid" src="images/SSL Group logo3.png"
+                                        alt=""></div>
                                 <!-- <img width="200px" height="145px" class="img-fluid" src="images/SSL Group logo3.png" alt=""> -->
                             </div>
 
@@ -102,16 +109,22 @@
                     </div>
                 </div>
             </div>
+
             <!---------------------------- RIGHT  ONE  ----------------------  -->
             <div class="col-lg-8  col-sm-11">
-                <div class="row">
-                    <div class="col-lg-12 col-11" id="j">
-                        <!----------------------------  PART 2----------------------  -->
-                        <div class="row mt-5" id="PART1">
-                            <div class="col-lg-10">
-                                <h2 id="HEAD"><b>Complete Your Sign Up: Stand Out!</b></h2>
+                <form action="/reaytojoin" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-lg-12 col-11" id="j">
+                            <!----------------------------  PART 2----------------------  -->
+                            <div class="row mt-5" id="PART1">
+                                <div class="col-lg-10">
+                                    <h2 id="HEAD"><b>Complete Your Sign Up: Stand Out!</b></h2>
+                                </div>
+                                <div class="col-lg-12" id="PARA">
+                                    Craft your perfect profile with essential details, showcasing your expertise for the
+                                    best opportunities.
+                                </div>
                             </div>
-<<<<<<< HEAD
                             <!----------------------------  PART 3----------------------  -->
                             <div class="col-12 mt-5 justify-content-center" id="PART2">
                                 <div class="row justify-content-center">
@@ -126,38 +139,46 @@
 
 
                                     <div class="row justify-content-evenly" id="radio-container">
-                                        <div class="col-3 mb-4 text-center">
+                                        <div class="col-lg-3 col-md-5 mb-4 text-center">
 
-                                            <label  id="ICON-BOXES">
-                                            <input type="radio" name="color" value="SOFTWAREDEVELOPER">
-                                            <div><img class="img-fluid mb-2" src="images/soft.png" alt=""></div>
-                                            <div>&nbsp; <b>SOFTWARE DEVELOPER</b></div>
-                                        </label>
+                                            <label id="ICON-BOXES">
+                                                <input type="radio" name="color" value="SOFTWAREDEVELOPER">
+                                                <div><img class="img-fluid mb-2" src="images/soft.png" alt=""></div>
+                                                <div>&nbsp; <b>SOFTWARE DEVELOPER</b></div>
+                                            </label>
                                         </div>
-                                        
-                                        <div class="col-3 mb-4 text-center">
 
-                                            <label  id="ICON-BOXES">
-                                            <input type="radio" name="color" value="UI/UX DESIGNER">
-                                            <div><img class="img-fluid mb-2" src="images/uidesigner.png" alt=""></div>
-                                            <div>&nbsp; <b>UI/UX DESIGNER</b></div>
-                                        </label>
+                                        <div class="col-lg-3 col-md-5 mb-4 text-center">
+
+                                            <label id="ICON-BOXES">
+                                                <input type="radio" name="color" value="UI/UX DESIGNER">
+                                                <div><img class="img-fluid mb-2" src="images/uidesigner.png" alt="">
+                                                </div>
+                                                <div>&nbsp; <b>UI/UX DESIGNER</b></div>
+                                            </label>
                                         </div>
-                                        <div class="col-3 mb-4 text-center">
+                                        <div class="col-lg-3 col-md-5 mb-4 text-center">
 
-                                            <label  id="ICON-BOXES">
-                                            <input type="radio" name="color" value="MARKETING SPECIALIST">
-                                            <div><img class="img-fluid mb-2" src="images/marketing.png" alt=""></div>
-                                            <div>&nbsp; <b>MARKETING SPECIALIST</b></div>
-                                        </label>
+                                            <label id="ICON-BOXES">
+                                                <input type="radio" name="color" value="MARKETING SPECIALIST">
+                                                <div><img class="img-fluid mb-2" src="images/marketing.png" alt="">
+                                                </div>
+                                                <div>&nbsp; <b>MARKETING SPECIALIST</b></div>
+                                            </label>
                                         </div>
-                                        <div class="col-3 mb-4 text-center">
+                                        <div class="col-lg-3 col-md-5 mb-4 text-center">
 
-                                            <label  id="ICON-BOXES">
+                                            <div id="ICON-BOXES" type="button" class="btn " data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdrop">
+                                                <div><img class="img-fluid mb-2" src="images/other.png" alt=""></div>
+                                                <div>&nbsp; <b>Other</b></div>
+                                            </div>
+
+                                            <!-- <label  id="ICON-BOXES">
                                             <input type="radio" name="color" value="Other">
                                             <div><img class="img-fluid mb-2" src="images/other.png" alt=""></div>
                                             <div>&nbsp; <b>Other</b></div>
-                                        </label>
+                                            </label> -->
                                         </div>
 
 
@@ -166,126 +187,186 @@
                                             <div><img class="img-fluid mb-2" src="images/uidesigner.png" alt=""></div>
                                                 <div>&nbsp; <b>OTHER</b></div>
                                         </label> -->
+
+
+
+
+                                        <!--------==================== Modal ====================--------------->
+
+                                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="staticBackdropLabel">Select Your
+                                                            Desired Role</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container-fluid">
+                                                            <div class="row justify-content-evenly ">
+
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="SOFTWAREDEVELOPER">
+                                                                        <img class="img-fluid mb-2"
+                                                                            src="images/uidesigner.png" alt=""><BR>
+                                                                        <p><b>UI/UX DESIGNER</b></p>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="SOFTWAREDEVELOPER">
+                                                                        <div><img class="img-fluid mb-2"
+                                                                                src="images/soft.png" alt=""></div>
+                                                                        <b>SOFTWARE DEVELOPER</b>
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="MARKETING SPECIALIST">
+                                                                        <div><img class="img-fluid mb-2"
+                                                                                src="images/marketing.png" alt=""></div>
+                                                                        <div>&nbsp; <b>MARKETING SPECIALIST</b></div>
+                                                                    </label>
+                                                                </div>
+
+
+
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="SOFTWAREDEVELOPER">
+                                                                        <img class="img-fluid mb-2"
+                                                                            src="images/uidesigner.png" alt=""><BR>
+                                                                        <p><b>UI/UX DESIGNER</b></p>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="SOFTWAREDEVELOPER">
+                                                                        <div><img class="img-fluid mb-2"
+                                                                                src="images/soft.png" alt=""></div>
+                                                                        <b>SOFTWARE DEVELOPER</b>
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="MARKETING SPECIALIST">
+                                                                        <div><img class="img-fluid mb-2"
+                                                                                src="images/marketing.png" alt=""></div>
+                                                                        <div>&nbsp; <b>MARKETING SPECIALIST</b></div>
+                                                                    </label>
+                                                                </div>
+
+
+
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="SOFTWAREDEVELOPER">
+                                                                        <img class="img-fluid mb-2"
+                                                                            src="images/uidesigner.png" alt=""><BR>
+                                                                        <p><b>UI/UX DESIGNER</b></p>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="SOFTWAREDEVELOPER">
+                                                                        <div><img class="img-fluid mb-2"
+                                                                                src="images/soft.png" alt=""></div>
+                                                                        <b>SOFTWARE DEVELOPER</b>
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="MARKETING SPECIALIST">
+                                                                        <div><img class="img-fluid mb-2"
+                                                                                src="images/marketing.png" alt=""></div>
+                                                                        <div>&nbsp; <b>MARKETING SPECIALIST</b></div>
+                                                                    </label>
+                                                                </div>
+
+
+
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="SOFTWAREDEVELOPER">
+                                                                        <img class="img-fluid mb-2"
+                                                                            src="images/uidesigner.png" alt=""><BR>
+                                                                        <p><b>UI/UX DESIGNER</b></p>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="SOFTWAREDEVELOPER">
+                                                                        <div><img class="img-fluid mb-2"
+                                                                                src="images/soft.png" alt=""></div>
+                                                                        <b>SOFTWARE DEVELOPER</b>
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="col-lg-3 col-md-5 mb-4 text-center"
+                                                                    name="Role">
+                                                                    <label id="ICON-BOXES">
+                                                                        <input type="radio" name="color"
+                                                                            value="MARKETING SPECIALIST">
+                                                                        <div><img class="img-fluid mb-2"
+                                                                                src="images/marketing.png" alt=""></div>
+                                                                        <div>&nbsp; <b>MARKETING SPECIALIST</b></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                  
-
-
-                                    <!-- <label class="col-3 mb-4 text-center" id="ICON-BOXES">
-                                                <input type="radio" name="" >
-                                                <div><img class="img-fluid mb-2" src="images/uidesigner.png" alt=""></div>
-                                                <div>&nbsp; <b>SOFTWARE
-                                                    DEVELOPER</b></div>
-                                            </label>
-                                       
-                                        
-
-
-                                        </div> -->
-                                    <!-- <div class="col-sm-3 mb-4 text-center">
-                                            <div id="ICON-BOXES">
-                                                <img class="img-fluid mb-2" src="images/uidesigner.png" alt=""><BR>
-                                                <P><b>UI/UX DESIGNER</b></P>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 mb-4 text-center">
-                                            <div id="ICON-BOXES">
-                                                <img class="img-fluid mb-2" src="images/marketing.png" alt=""><BR>
-                                                <p id="Maketing" name="Role" aria-valuetext="Maketing Specialist" nam>
-                                                    <b>MARKETING
-                                                        SPECIALIST</b></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3 mb-3 text-center">
-                                            <div id="ICON-BOXES">
-                                                <img class="img-fluid mb-2" src="images/other.png" alt=""><BR>
-                                                <P><b>OTHER</b></P>
-                                            </div>
-                                        </div>  -->
+                                </div>
 
 
 
-=======
-                            <div class="col-lg-12" id="PARA">
-                                Craft your perfect profile with essential details, showcasing your expertise for the
-                                best opportunities.
+
                             </div>
-                        </div>
-                        <!----------------------------  PART 3----------------------  -->
 
-                        <div class="col-12 mt-5 justify-content-center" id="PART2">
-
-                            <div class="row justify-content-center">
-                                <div class="col-11 mt-3 mb-3 ml-2" id="PLZ">
-                                    <h6><i class="bi bi-bell-fill text-center"></i> Please note that the
-                                        selected
-                                        category cannot be changed after completing the sign-up process.</h6>
-                                </div>
-                                <div class="col-sm-11 my-2">
-                                    <h3 id="HEAD2">Choose Your Role:</h3>
-                                </div>
-                                <!-- -------------------------------    SECOND ROW     PART 4 ------------------------ -->
-                                <div class="row justify-content-evenly">
-
-                                    <div class="col-sm-3 mb-4 text-center">
-                                        <div id="ICON-BOXES">
-                                            <img class="img-fluid mb-2" src="images/soft.png" alt=""><BR>
-                                            <p id="Role" aria-valuetext="Software Developer">
-                                                <b>SOFTWARE
-                                                    DEVELOPER</b>
-                                            </P>
-                                        </div>
-                                    </div>
-
-
-                                    <div class="col-sm-3 mb-4 text-center">
-                                        <div id="ICON-BOXES">
-                                            <img class="img-fluid mb-2" src="images/uidesigner.png" alt=""><BR>
-                                            <option value="UI/UX DESIGNER" class=" text-decoration-none">UI/UX
-                                                DESIGNER</option>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 mb-4 text-center">
-                                        <div id="ICON-BOXES">
-                                            <img class="img-fluid mb-2" src="images/marketing.png" alt=""><BR>
-                                            <p id="Maketing" name="Role" aria-valuetext="Maketing Specialist" nam>
-                                                <b>MARKETING
-                                                    SPECIALIST</b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 mb-3 text-center">
-                                        <div id="ICON-BOXES">
-                                            <img class="img-fluid mb-2" src="images/other.png" alt=""><BR>
-                                            <P><b>OTHER</b></P>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-<<<<<<< HEAD
-                        </div>
-
-                        <div class="row mt-321`1    " id="PART1">
+                        </div> <!----------------------------  PART 5  FORM  ----------------------  -->
+                        
+                        <div class="row mt-5" id="PART1">
                             <div class="col-lg-10 col-11 mb-4">
                                 <h2 id="HEAD">Please Upload your Updated Resume</h2>
-=======
->>>>>>> 52eacf2c59e54d503b10fe8dd804ae76ec70a726
-                                </div>
-
-                            </div> <!----------------------------  PART 5  FORM  ----------------------  -->
-
-
-<<<<<<< HEAD
-
-                            <div class="row mt-5" id="PART1">
-                                <div class="col-lg-10 col-11 mb-4">
-                                    <h2 id="HEAD">Please Upload your Updated Resume</h2>
-=======
-                                <!----------------------------  PART 5  FORM  ----------------------  -->
-
->>>>>>> 4dee660ab318828df3e4b0eda17201b30995c935
->>>>>>> ad92b5a8b3f7d5def135fd49faee3d16f97f94b2
                             </div>
                             <div class="col-md-12 mb-2">
                                 <div class="fullscreen-container" id="container">
@@ -298,143 +379,57 @@
                                     <span>
                                         <p class="file-name"></p>
                                     </span>
->>>>>>> 52eacf2c59e54d503b10fe8dd804ae76ec70a726
                                 </div>
                             </div>
                             <div>Supports .pdf with max file size of 8mb</div>
                         </div>
                         <!----------------------------------------  PART 6  FORM  EXP ------------------------------------  -->
-                        <form action="/readytojoin" method="post">
-                            <div class="row mt-5" id="PART1">
-                                <div class="col-lg-10">
-                                    <h2 id="HEAD2">Mention your Fieldwork Experience?</h2>
-                                </div>
-                                <div class="col-sm-9 mt-5 mb-3">
-                                    <div id="MAIN-FIELD">
-                                        &nbsp;&nbsp;&nbsp;<i style="font-size: 25px;"
-                                            class="fas fa-wrench"></i>&nbsp;&nbsp;
-                                        <select name="Experiences" id="Experiences" required>
-                                            <option>Enter your Experience</option>
-                                            <option value=" Less than 1 year">Less than 1 year</option>
-                                            <option value="Between 1 and 2 years">Between 1 and 2 years</option>
-                                            <option value="Between 2 and 3 years">Between 2 and 3 years</option>
-                                            <option value="Between 3 and 4 years">Between 3 and 4 years</option>
-                                            <option value="Between 4 and 5 years">Between 4 and 5 years</option>
-                                            <option value="More than years">More than years</option>
-                                        </select>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 mt-5">
-                                    <h2 id="HEAD2">How Would You Rate Your English Communication Skills?</h2>
-                                </div>
-                                <div class="col-12 mt-3">
-
-
-
-                                    <div class="row justify-content-evenly" id="radio-container-2">
-                                        <label class="col-md-3" id="EXP1">
-                                            <input type="radio" name="shape" value="basic">
-                                            <div><img class="img-fluid" src="images/airplane.png" alt=""></div>
-                                            <div> &nbsp; Basis</div>
-                                        </label>
-                                        <label class="col-md-3" id="EXP1">
-                                            <input type="radio" name="shape" value="advanced"> 
-                                            <div><img class="img-fluid" src="images/plane.png" alt=""></div>
-                                            <div>&nbsp; Advanced</div>
-                                        </label>
-                                        <label class="col-md-3" id="EXP1">
-                                            <input type="radio" name="shape" value="native"> 
-                                            <div><img class="img-fluid" src="images/rocket.png" alt=""></div>
-                                            <div>&nbsp; Native</div>
-                                        </label>
-                                    </div>
-
-
-                                    <!-- <label class="col-md-3" id="EXP1">
-                                            <input type="radio" name="color" value="basic" required>
-                                            <div><img class="img-fluid" src="images/airplane.png" alt=""></div>
-                                            <div> &nbsp; Basis</div>
-                                        </label>
-
-                                        <label class="col-md-3" id="EXP1">
-                                            <input type="radio" name="color" value="advanced" required>
-                                            <div><img class="img-fluid" src="images/plane.png" alt=""></div>
-                                            <div>&nbsp; Advanced</div>
-                                        </label>
-
-                                        <label class="col-md-3" id="EXP1">
-                                            <input type="radio" name="color" value="native" required>
-                                            <div><img class="img-fluid" src="images/rocket.png" alt=""></div>
-                                            <div>&nbsp; Native</div>
-                                        </label> -->
-
-
-
-
-
-
-
-
-
-
-                                    <div class="col-lg-10 mt-5">
-                                        <h2 id="HEAD2">What led you to discover our platform?</h2>
-                                    </div>
-                                    <div class="col-sm-9 mt-5 mb-3">
-                                        <div id="MAIN-FIELD">
-                                            &nbsp;&nbsp;&nbsp;<i style="font-size: 25px;" class="fas fa-share-alt"></i>
-                                            &nbsp;&nbsp;
-                                            <select name="" id="SELECT" required>
-                                                <option selected="">Enter your Experience</option>
-                                                <option value="YouTube">YouTube</option>
-                                                <option value="Facebook">Facebook</option>
-                                                <option value="Twitter">Twitter</option>
-                                                <option value="">Instagram</option>
-                                                <option value="">Linkdin</option>
-                                                <option value="">Podcast</option>
-                                                <option value="">Tv</option>
-                                                <option value="">Newspaper Ads</option>
-                                                <option value="">Online Ads</option>
-                                                <option value="">3D Party Websites</option>
-                                                <option value="">Confrence</option>
-                                                <option value="">Others</option>
-                                            </select>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <!----------------------------  PART  ADDITION SKILLS AND BUTTON----------------------  -->
-                                <div class="row mt-5" id="PART1">
-                                    <div class="col-lg-10 mt-3 mb-4">
-                                        <h2 id="HEAD2">What are your salary expectations?</h2>
-                                    </div>
-                                    <div>Expected Salary per month (in USD)</div>
-                                    <div class="col-sm-10 mt-1 mb-3">
-                                        <div id="MAIN-FIELD">
-                                            &nbsp;&nbsp;&nbsp;<i style="font-size: 22px;"
-                                                class="fas fa-dollar-sign"></i>
-                                            &nbsp;&nbsp;
-                                            <input type="number" name="SalaryExpetations"
-                                                placeholder="Enter Expected Salary" required>
-                                        </div>
-                                    </div>
-                                </div>
-<<<<<<< HEAD
-
-                                <!-- <div class="col-3 my-3" >
-                                <button type="submit" class="btn btn-danger">Sign in</button>
-                            </div> -->
-                                <div class=" col-10" id="BOR">
-                                    <button id="NEXT" type="submit" value="submit" class="btn btn-primary mt-4 mb-5 "
-                                        style="background-color: rgb(231, 27, 61);">Submit</button>
-                                </div>
+                        <div class="row mt-5" id="PART1">
+                            <div class="col-lg-10">
+                                <h2 id="HEAD2">Mention your Fieldwork Experience?</h2>
                             </div>
-                        </div>
-                </form>
-=======
+                            <div class="col-sm-9 mt-5 mb-3">
+                                <div id="MAIN-FIELD">
+                                    &nbsp;&nbsp;&nbsp;<i style="font-size: 25px;" class="fas fa-wrench"></i>&nbsp;&nbsp;
+                                    <select name="Experiences" id="SELECT" required>
+                                        <option selected="">Enter your Experience</option>
+                                        <option value=" Less than 1 year">Less than 1 year</option>
+                                        <option value="Between 1 and 2 years">Between 1 and 2 years</option>
+                                        <option value="Between 2 and 3 years">Between 2 and 3 years</option>
+                                        <option value="Between 3 and 4 years">Between 3 and 4 years</option>
+                                        <option value="Between 4 and 5 years">Between 4 and 5 years</option>
+                                        <option value="More than years">More than years</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-12 mt-5">
+                                <h2 id="HEAD2">How Would You Rate Your English Communication Skills?</h2>
+                            </div>
+                            <div class="col-12 mt-3">
+
+
+
+                                <div class="row justify-content-evenly" id="radio-container-2">
+                                    <label class="col-md-3" id="EXP1">
+                                        <input type="radio" name="shape" value="basic">
+                                        <div><img class="img-fluid" src="images/airplane.png" alt=""></div>
+                                        <div> &nbsp; Basis</div>
+                                    </label>
+                                    <label class="col-md-3" id="EXP1">
+                                        <input type="radio" name="shape" value="advanced">
+                                        <div><img class="img-fluid" src="images/plane.png" alt=""></div>
+                                        <div>&nbsp; Advanced</div>
+                                    </label>
+                                    <label class="col-md-3" id="EXP1">
+                                        <input type="radio" name="shape" value="native">
+                                        <div><img class="img-fluid" src="images/rocket.png" alt=""></div>
+                                        <div>&nbsp; Native</div>
+                                    </label>
+                                </div>
+
+
+
                                 <div class="col-lg-10 mt-5">
                                     <h2 id="HEAD2">What led you to discover our platform?</h2>
                                 </div>
@@ -442,8 +437,7 @@
                                     <div id="MAIN-FIELD">
                                         &nbsp;&nbsp;&nbsp;<i style="font-size: 25px;" class="fas fa-share-alt"></i>
                                         &nbsp;&nbsp;
-
-                                        <select name="Role" id="Role">
+                                        <select name="" id="SELECT" required>
                                             <option selected="">Enter your Experience</option>
                                             <option value="YouTube">YouTube</option>
                                             <option value="Facebook">Facebook</option>
@@ -465,8 +459,6 @@
                             </div>
 
                             <!----------------------------  PART  ADDITION SKILLS AND BUTTON----------------------  -->
-
-
                             <div class="row mt-5" id="PART1">
                                 <div class="col-lg-10 mt-3 mb-4">
                                     <h2 id="HEAD2">What are your salary expectations?</h2>
@@ -481,14 +473,17 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- <div class="col-3 my-3" >
+                                <button type="submit" class="btn btn-danger">Sign in</button>
+                            </div> -->
                             <div class=" col-10" id="BOR">
-                                <button id="NEXT" type="submit" class="btn btn-primary mt-4 mb-5 "
+                                <button id="NEXT" type="submit" value="submit" class="btn btn-primary mt-4 mb-5 "
                                     style="background-color: rgb(231, 27, 61);">Submit</button>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
->>>>>>> 52eacf2c59e54d503b10fe8dd804ae76ec70a726
+                </form>
             </div>
         </div> <!-- this SECOND MAIN ROW -->
     </div>
@@ -524,33 +519,32 @@
 
         // ----------------------------  SELECT ONE FIELD OUT OF THREE  -----------------------------
         function handleRadioSelection(containerClass, resultClass) {
-    const container = document.querySelector('#' + containerClass);
-    const resultDiv = document.querySelector('#' + resultClass);
-    const radioInputs = container.querySelectorAll('input[type="radio"]');
+            const container = document.querySelector('#' + containerClass);
+            const resultDiv = document.querySelector('#' + resultClass);
+            const radioInputs = container.querySelectorAll('input[type="radio"]');
 
-    radioInputs.forEach(function (input) {
-        input.addEventListener('click', function () {
             radioInputs.forEach(function (input) {
-                input.parentNode.style.backgroundColor = '';
-                input.parentNode.style.border = '1px solid #ccc';
+                input.addEventListener('click', function () {
+                    radioInputs.forEach(function (input) {
+                        input.parentNode.style.backgroundColor = '';
+                        input.parentNode.style.border = '1px solid #ccc';
+                    });
+
+                    if (input.checked) {
+                        input.parentNode.style.backgroundColor = 'lightgray';
+                        input.parentNode.style.border = '1px solid black';
+                        resultDiv.textContent = 'Selected value: ' + input.value;
+                    } else {
+                        resultDiv.textContent = '';
+                    }
+                });
             });
+        }
 
-            if (input.checked) {
-                input.parentNode.style.backgroundColor = 'rgb(243, 246, 244)';
-                input.parentNode.style.border = '1px solid black';
-                resultDiv.textContent = 'Selected value: ' + input.value;
-            } else {
-                resultDiv.textContent = '';
-            }
-        });
-    });
-}
-
-// Call the function for each set of radio buttons
-handleRadioSelection('radio-container', 'result-container');
-handleRadioSelection('radio-container-2', 'result-container-2');
+        // Call the function for each set of radio buttons
+        handleRadioSelection('radio-container', 'result-container');
+        handleRadioSelection('radio-container-2', 'result-container-2');
         // ----------------------       PDF SELECT FILELD  ---------------------
-
         const container = document.getElementById('container');
         const fileInput = document.getElementById('file-upload');
         const checkmark = document.querySelector('.checkmark');
