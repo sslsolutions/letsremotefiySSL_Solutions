@@ -357,7 +357,7 @@ SUBHEAD{
     gap: 2.3rem;
     margin-top: 4.2rem;
     width: 90%;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 }
 
 #ICONG1, #ICONG2,#ICONG3,#ICONG4, #ICONG5,#ICONG6{
