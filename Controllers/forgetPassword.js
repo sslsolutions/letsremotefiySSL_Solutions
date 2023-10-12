@@ -7,6 +7,16 @@ const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
 dotenv.config();
 const crypto = require('crypto')
+
+
+router.get('/forgetPassword', async (req, res) => {
+    res.render('forgetpassword.ejs')
+})
+
+router.get('/resetpassword/:token', async (req, res) => {
+    res.render('resetPassword.ejs')
+})
+
 router.post('/forgetPassword', async (req, res, next) => {
     const user = await user_model.findOne({ email: req.body.email })
     if (!user) {
@@ -21,7 +31,7 @@ router.post('/forgetPassword', async (req, res, next) => {
 
     const resetUrl = `${req.protocol}://${req.get('host')}/resetPassword/${resetToken}`;
     console.log(resetUrl);
-    const message = `We have received a Password Reset request. Please use the below link to rest the password \n\n ${resetUrl}\n\n This reset Password link will be valid only for ten minutes`
+    const message = `We have received a Password Reset request. Please use the below link to rest the password \n\n ${resetUrl}\n This reset Password link will be valid only for ten minutes`
     try {
         await sendEmail({
             email: user.email,
@@ -30,7 +40,8 @@ router.post('/forgetPassword', async (req, res, next) => {
         })
         res.status(200).json({
             status: 'success',
-            message: "password reset link send to the user email"
+            message: "password reset link send to the user email",
+            redirect: "/login"
         })
     } catch (error) {
         user.passwordResetToken = undefined,
@@ -41,15 +52,16 @@ router.post('/forgetPassword', async (req, res, next) => {
 
 
 })
-router.patch('/resetPassword/:token', async (req, res) => {
+router.post('/resetPassword/:token', async (req, res) => {
 
-    const token = crypto.createHash('sha256').update(req.params.token).digest('hex')
+    const token = crypto.createHash('sha256').update(req.headers.token).digest('hex')
     const user = await user_model.findOne({ passwordResetToken: token, passwordResetTokenExpires: { $gt: Date.now() } })
 
     if (!user) {
         res.send({ message: 'user not found' }).status(400)
     }
     const password = req.body.password
+    console.log(password);
     const hashPassword = bcrypt.hashSync(password)
     user.password = hashPassword
     user.confirmPassword = req.body.confirmPassword
@@ -61,7 +73,7 @@ router.patch('/resetPassword/:token', async (req, res) => {
     const loginToken = jwt.sign({ id: user._id }, process.env.JWT_SCERET_KEY, {
         expiresIn: "1200sec",
     });
-    
+
     res.cookie('token', loginToken, { httpOnly: true });
     const id = req.session.userId = user._id;
     console.log(id);

@@ -15,6 +15,10 @@ const ReadytoJoin= new Schema({
         type:String,
         require:true
     },
+    platform:{
+        type:String,
+        require:true
+    },
     language:{
         type:String,
         require:true

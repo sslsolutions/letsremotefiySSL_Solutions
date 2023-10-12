@@ -41,7 +41,8 @@ const login=require('./Controllers/login_controller.js')
 const {verifyToken, restricted} = require('./Controllers/middleware/auth.js')
 const userProfileSeller=require('./Controllers/user_profile_seller.js')
 const logout=require('./Controllers/logout.js')
-const resetPassword=require('./Controllers/forgetPassword.js')
+const forgetPassword=require('./Controllers/forgetPassword.js')
+
 
 /////////roles///////////// 
  var skills = [
@@ -240,7 +241,7 @@ app.use('/', router);
 app.use('/', signup)
 app.use('/', login)
 app.use('/', logout)
-app.use('/', resetPassword)
+app.use('/', forgetPassword)
 app.use('/', userProfileSeller)
 
 app.get('/', (req, res) => {
@@ -270,7 +271,7 @@ app.get('/jobs',(req, res)=>{
     res.render('Jobs.ejs')
 })
 
-app.get('/seller/dashboard',(req, res)=>{
+app.get('/seller/dashboard', verifyToken,(req, res)=>{
     res.render('userDashboard.ejs')
 })
 

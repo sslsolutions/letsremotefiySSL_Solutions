@@ -22,7 +22,7 @@ router.get('/createProfile', verifyToken, async (req, res, next) => {
   res.render('create_Profile.ejs', { userEmail: isEmailValid });
 })
 
-router.get('/details', verifyToken, async (req, res) => {
+router.get('/details', async (req, res) => {
   res.render('details')
 })
 // const validatorProfile = [
@@ -105,7 +105,9 @@ router.put('/update-talent-profile/:id', async (req, res) => {
 });
 
 
-router.post('/readytojoin', async (req, res) => {
+router.post('/readytojoin', upload.single('Resume'), async (req, res) => {
+
+
   const userData = await user_profile_seller.findOne({}).populate('user').exec();
   // Check if userData exists and has a user field with an _id
   if (!userData || !userData.user || !userData.user._id) {
@@ -115,16 +117,19 @@ router.post('/readytojoin', async (req, res) => {
   // Get the user_profile_seller ID
   const user_profile_sellerId = userData._id;
   // Assuming you have the skills data in req.body.skills
-  const { skills, language, Role, Experiences, Resume, SalaryExpetations } = req.body;
-  console.log(SalaryExpetations, Experiences)
+  const { skills, language, Role, Experiences, platform, SalaryExpetations } = req.body;
+
+  const resume = req.file.buffer.toString('base64')
+
   // Create a new user_skill_model document and associate it with the user_profile_seller
   const userProfile = new user_skill_model({
     Profile: user_profile_sellerId, // Associate with the user_profile_seller
     skills,
     language,
     Role,
+    platform,
     Experiences,
-    Resume,
+    Resume:resume,
     SalaryExpetations,
   });
 
@@ -132,7 +137,10 @@ router.post('/readytojoin', async (req, res) => {
     // Save the userProfile document to the database
     await userProfile.save();
     if (userProfile) {
-      return  res.redirect('/hire_talents')
+      res.status(200).json(userProfile)
+    }
+    else{
+      return res.redirect('/seller/dashboard')
     }
   } catch (error) {
     console.error(error);
