@@ -169,6 +169,7 @@
   width: 300px;
   height: 300px;
   padding: 16PX 8PX 90PX 8PX ;
+  /* margin: 0px 10px; */
   /* margin-left: 45PX; */
   /* margin-right: 45PX; */
   background: white;
@@ -492,8 +493,11 @@
       color: white;
   }
   .service-content{
+    /* width: 95%; */
+    /* border: 2ps solid blue; */
       display: grid;
-      grid-template-columns: repeat(auto-fit,  minmax(300px, auto));
+      /* grid-template-columns: repeat(auto-fit,  minmax(300px, auto)); */
+      /* flex-wrap: wrap; */
       align-items: center;
       gap: 2.3rem;
       margin-top: 4.2rem;

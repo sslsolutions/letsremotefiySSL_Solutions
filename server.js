@@ -271,10 +271,14 @@ app.get('/jobs',(req, res)=>{
     res.render('Jobs.ejs')
 })
 
-app.get('/seller/dashboard', verifyToken,(req, res)=>{
-    res.render('userDashboard.ejs')
+app.get('/overview',(req, res)=>{
+    res.render('overview.ejs')
 })
 
+app.get('/seller/dashboard',(req, res)=>{
+    res.render('userDashboard.ejs')
+})
+ 
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     app.listen(process.env.PORT, (req, res) => {

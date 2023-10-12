@@ -186,6 +186,12 @@ T{
   border-radius: 12PX;
 
 }
+#PARTRED{
+  background: rgb(175, 32, 34);
+  padding: 22PX 10PX;
+  border-radius: 12PX;
+  color: white;
+}
 
 #PART2{
     background-color: white;
@@ -303,9 +309,8 @@ T{
   justify-content: center;
   height: 130px;
   width: 100%;
-  /* border: 2px dashed rgb(231, 27, 61); */
-  border: 2px dashed #3498db;
-   /* Dashed border to indicate drop area */
+  /* border: 2px dashed #3498db; */
+  border: 2px dashed rgb(175, 32, 34);
   cursor: pointer;
   position: relative; /* Add relative positioning */
   background-color: rgb(249, 249, 249);
@@ -314,7 +319,9 @@ T{
 /* Style the cloud icon */
 .cloud-icon {
   font-size: 48px;
-  color: #3498db; /* Blue color, you can change this */
+  /* color: #3498db;  */
+  /* Blue color, you can change this */
+  color: rgb(175, 32, 34);
 }
 
 /* Style the label for the input field */
@@ -359,6 +366,7 @@ input[type="file"] {
 #MAIN-FIELD select ,#MAIN-FIELD input{
   border: none;
   outline: none;
+  border-radius: 12PX;
   width: 90%;
   height: 40px;
   background-color: rgb(249, 249, 249);
