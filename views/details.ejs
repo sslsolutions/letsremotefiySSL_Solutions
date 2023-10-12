@@ -111,8 +111,9 @@
 
             <!---------------------------- RIGHT  ONE  ----------------------  -->
             <div class="col-lg-8  col-sm-11">
-                <form action="/reaytojoin" method="post" enctype="multipart/form-data">
-                    <div class="row">
+
+                <div class="row">
+                    <form action="/readytojoin" method="post" enctype="multipart/form-data">
                         <div class="col-lg-12 col-11" id="j">
                             <!----------------------------  PART 2----------------------  -->
                             <div class="row mt-5" id="PART1">
@@ -135,13 +136,10 @@
                                         <h3 id="HEAD2">Choose Your Role:</h3>
                                     </div>
                                     <!-- -------------------------------    SECOND ROW     PART 4 ------------------------ -->
-
-
                                     <div class="row justify-content-evenly" id="radio-container">
                                         <div class="col-lg-3 col-md-5 mb-4 text-center">
-
                                             <label id="ICON-BOXES">
-                                                <input type="radio" name="color" value="SOFTWAREDEVELOPER">
+                                                <input type="radio" name="Role" value="SOFTWAREDEVELOPER">
                                                 <div><img class="img-fluid mb-2" src="images/soft.png" alt=""></div>
                                                 <div>&nbsp; <b>SOFTWARE DEVELOPER</b></div>
                                             </label>
@@ -150,7 +148,7 @@
                                         <div class="col-lg-3 col-md-5 mb-4 text-center">
 
                                             <label id="ICON-BOXES">
-                                                <input type="radio" name="color" value="UI/UX DESIGNER">
+                                                <input type="radio" name="Role" value="UI/UX DESIGNER">
                                                 <div><img class="img-fluid mb-2" src="images/uidesigner.png" alt="">
                                                 </div>
                                                 <div>&nbsp; <b>UI/UX DESIGNER</b></div>
@@ -159,7 +157,7 @@
                                         <div class="col-lg-3 col-md-5 mb-4 text-center">
 
                                             <label id="ICON-BOXES">
-                                                <input type="radio" name="color" value="MARKETING SPECIALIST">
+                                                <input type="radio" name="Role" value="MARKETING SPECIALIST">
                                                 <div><img class="img-fluid mb-2" src="images/marketing.png" alt="">
                                                 </div>
                                                 <div>&nbsp; <b>MARKETING SPECIALIST</b></div>
@@ -200,7 +198,7 @@
                                                                 <div class="col-lg-3 col-md-5 mb-4 text-center"
                                                                     name="Role">
                                                                     <label id="ICON-BOXES">
-                                                                        <input type="radio" name="color"
+                                                                        <input type="radio" name="Role"
                                                                             value="SOFTWAREDEVELOPER">
                                                                         <img class="img-fluid mb-2"
                                                                             src="images/uidesigner.png" alt=""><BR>
@@ -210,7 +208,7 @@
                                                                 <div class="col-lg-3 col-md-5 mb-4 text-center"
                                                                     name="Role">
                                                                     <label id="ICON-BOXES">
-                                                                        <input type="radio" name="color"
+                                                                        <input type="radio" name="Role"
                                                                             value="SOFTWAREDEVELOPER">
                                                                         <div><img class="img-fluid mb-2"
                                                                                 src="images/soft.png" alt=""></div>
@@ -221,7 +219,7 @@
                                                                 <div class="col-lg-3 col-md-5 mb-4 text-center"
                                                                     name="Role">
                                                                     <label id="ICON-BOXES">
-                                                                        <input type="radio" name="color"
+                                                                        <input type="radio" name="Role"
                                                                             value="MARKETING SPECIALIST">
                                                                         <div><img class="img-fluid mb-2"
                                                                                 src="images/marketing.png" alt=""></div>
@@ -234,7 +232,7 @@
                                                                 <div class="col-lg-3 col-md-5 mb-4 text-center"
                                                                     name="Role">
                                                                     <label id="ICON-BOXES">
-                                                                        <input type="radio" name="color"
+                                                                        <input type="radio" name="Role"
                                                                             value="SOFTWAREDEVELOPER">
                                                                         <img class="img-fluid mb-2"
                                                                             src="images/uidesigner.png" alt=""><BR>
@@ -370,6 +368,7 @@
                         </div>
                         <!----------------------------------------  PART 6  FORM  EXP ------------------------------------  -->
                         <div class="row mt-5" id="PART1">
+
                             <div class="col-lg-10">
                                 <h2 id="HEAD2">Mention your Fieldwork Experience?</h2>
                             </div>
@@ -391,29 +390,27 @@
                             <div class="col-lg-12 mt-5">
                                 <h2 id="HEAD2">How Would You Rate Your English Communication Skills?</h2>
                             </div>
+
                             <div class="col-12 mt-3">
-
-
 
                                 <div class="row justify-content-evenly" id="radio-container-2">
                                     <label class="col-md-3" id="EXP1">
-                                        <input type="radio" name="shape" value="basic">
+                                        <input type="radio" name="language" value="basic">
                                         <div><img class="img-fluid" src="images/airplane.png" alt=""></div>
                                         <div> &nbsp; Basis</div>
                                     </label>
                                     <label class="col-md-3" id="EXP1">
-                                        <input type="radio" name="shape" value="advanced">
+                                        <input type="radio" name="language" value="advanced">
                                         <div><img class="img-fluid" src="images/plane.png" alt=""></div>
                                         <div>&nbsp; Advanced</div>
                                     </label>
                                     <label class="col-md-3" id="EXP1">
-                                        <input type="radio" name="shape" value="native">
+                                        <input type="radio" name="language" value="native">
                                         <div><img class="img-fluid" src="images/rocket.png" alt=""></div>
                                         <div>&nbsp; Native</div>
                                     </label>
+
                                 </div>
-
-
 
                                 <div class="col-lg-10 mt-5">
                                     <h2 id="HEAD2">What led you to discover our platform?</h2>
@@ -422,65 +419,25 @@
                                     <div id="MAIN-FIELD">
                                         &nbsp;&nbsp;&nbsp;<i style="font-size: 25px;" class="fas fa-share-alt"></i>
                                         &nbsp;&nbsp;
-                                        <select name="" id="SELECT" required>
-                                            <option selected="">Enter your Experience</option>
+                                        <select name="platform" id="SELECT" required>
                                             <option value="YouTube">YouTube</option>
                                             <option value="Facebook">Facebook</option>
                                             <option value="Twitter">Twitter</option>
-                                            <option value="">Instagram</option>
-                                            <option value="">Linkdin</option>
-                                            <option value="">Podcast</option>
-                                            <option value="">Tv</option>
-                                            <option value="">Newspaper Ads</option>
-                                            <option value="">Online Ads</option>
-                                            <option value="">3D Party Websites</option>
-                                            <option value="">Confrence</option>
-                                            <option value="">Others</option>
+                                            <option value="Instagram">Instagram</option>
+                                            <option value="LinkdIn">LinkdIn</option>
+                                            <option value="Podcast">Podcast</option>
+                                            <option value="Tv">Tv</option>
+                                            <option value="Newspaper Ads">Newspaper Ads</option>
+                                            <option value="Online Ads">Online Ads</option>
+                                            <option value="3D Party Websites">3D Party Websites</option>
+                                            <option value="Confrence">Confrence</option>
+                                            <option value="Others">Others</option>
                                         </select>
                                     </div>
 
                                 </div>
 
                             </div>
-                        </div>
-
-                        
-                        <!----------------------------  PART  SELECT / SEARCH AREA  -----------------  -->
-                        <div class="row mt-5" id="PARTRED">
-                            <div class="col-lg-7 mt-3 mb-4">
-                                <h2 id="HEAD2">Select your main area of expertise.</h2>
-                            </div>
-                            <div class="col-lg-6">Choose maximum of 6 skills that best represent your strengths and
-                                experience.
-                            </div>
-                            <div class="col-sm-6 mt-1 mb-3">
-                                <div id="MAIN-FIELD">
-                                    &nbsp;&nbsp;<i style="font-size: 22px; color: black;"
-                                        class="fas fa-search"></i>
-                                    &nbsp;&nbsp;&nbsp;
-                                    <input type="text" name="SalaryExpetations" placeholder="Search" required>
-                                </div>
-                            </div>
-                            <!-- <div class="col-lg-10" id="AGE">
-
-                                <p>/</p>
-                                <div style="background-color: black; margin-top: 5px;">
-                                    <input type="radio" id="child" name="age" value="child">
-                                    <label for="child">17 years or younger</label>
-                                </div>
-                                <div style="background-color: black; margin-top: 5px;">
-                                    <input type="radio" id="adult" name="age" value="adult">
-                                    <label for="adult">18 - 64 years</label>
-                                </div>
-                               <div style="background-color: black; margin-top: 5px;">
-                                <input type="radio" id="senior" name="age" value="senior">
-                                <label for="senior">65 years or older</label>
-                               </div>
-
-
-                            </div> -->
-                            
-                        </div>
                             <!----------------------------  PART  ADDITION SKILLS AND BUTTON----------------------  -->
                             <div class="row mt-5 mb-4" id="PART1">
                                 <div class="col-lg-10 mt-3 mb-4">
@@ -491,7 +448,7 @@
                                     <div id="MAIN-FIELD">
                                         &nbsp;&nbsp;&nbsp;<i style="font-size: 22px;" class="fas fa-dollar-sign"></i>
                                         &nbsp;&nbsp;
-                                        <input type="text" name="SalaryExpetations"
+                                        <input type="number" value="SalaryExpetations" name="SalaryExpetations"
                                             placeholder="Enter Expected Salary" required>
                                     </div>
                                 </div>
@@ -504,9 +461,11 @@
                                 <button id="NEXT" type="submit" value="submit" class="btn btn-primary mt-4 mb-5 "
                                     style=" background: rgb(175, 32, 34);">Submit</button>
                             </div>
+
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
+
             </div>
         </div> <!-- this SECOND MAIN ROW -->
     </div>
