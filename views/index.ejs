@@ -6,15 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>SSL Solutions</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" type="text/css" href="".css" /> -->
     <link href="css/haris.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="css/blog.css">
-    <!-- <link href="css/haris.css" rel="stylesheet" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="css/blog.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <!-- ----------------   CHATGPT     ----------- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- MUGHAIR LINKS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- swiper css  2sr SLIDER -->
+    <link rel="stylesheet" href="css/swiper-bundle22.min.css">
+    <!-- ENDS HERE -->
 
     <!------------------------------        GOOGLE FONT   ------------------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,8 +60,8 @@
                 </p>
                 <div class="row justify-content-center">
                     <div class="col-lg-6 col-md-8 col-sm-12 d-flex justify-content-around mt-2 mb-2 " id="BUTTONSFLEX">
-                        <div class="mb-3 mt-4" id="JOIN-COL"><a href=""><b>Hire Talent</b></a></div>
-                        <div class="mb-3 mt-4" id="JOIN-TRANS"><a href=""><b>Hire a Team</b></a></div>
+                        <div class="mb-3 mt-4" id="JOIN-COL"><a href="signup"><b>Hire Talent</b></a></div>
+                        <div class="mb-3 mt-4" id="JOIN-TRANS"><a href="signup"><b>Hire a Team</b></a></div>
                     </div>
                 </div>
                 <div class="mb-5">
@@ -74,44 +80,23 @@
     <!-- ------------------------------------------------------------------------------------------------ -->
 
     <!-- -------------------------  SLIDER  ----------------------------- -->
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-sm-11">
-                <div class="row justify-content-center mt-5">
-                    <div class="col-lg-2 col-md-2 mt-3">
-                        <div style="width: 100%; border: 1px solid #aeaeae;;"></div>
-                    </div>
-                    <div class="col-lg-7 col-md-9 text-center">
-                        <div id="LARGE">1000s of businesses from startups to global enterprises trust
-                            SSL</div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 mt-3">
-                        <div style="width: 100%; border: 1px solid #aeaeae;;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-11">
-                <div class="slider-container">
-                    <div class="slider">
-                        <div class="slider-item"><img src="/images/livewire.svg" alt="Image 1"></div>
-                        <div class="slider-item"><img src="/images/smarter-sorting.svg" alt="Image 2"></div>
-                        <div class="slider-item"><img src="/images/eduleaf-1.svg" alt="Image 3"></div>
-                        <div class="slider-item"><img src="/images/zooppa.svg" alt="Image 4"></div>
+   
 
-                        <div class="slider-item"><img src="/images/kudo.svg" alt="Image 5"></div>
-                        <div class="slider-item"><img src="/images/showgizmo.svg" alt="Image 6"></div>
-                    </div>
-                </div>
-            </div>
+            <!-- SLIDER OF MUGHAIR -->
+
+
+          
             <div class="col-sm-11 justify-content-center">
-                <div style="width: 100%; border: 1px solid #aeaeae;;"></div>
+                <div style="width: 100%; border: 1px solid BLUE;"></div>
 
             </div>
         </div>
 
     </div>
     </div>
-
+    <div class="slide-container-fluid swiper p-0">
+        <%- include('Components/profile-images'); %>
+    </div>
     <!-- ----------------------------A Fully Integrated Solution to------------------------------ -->
 
     <DIV id="HARIS">
@@ -146,13 +131,11 @@
 
         <!-- ------------------------------------WORK FROM HOME 2---------------------------- -->
         <section class="services mb-5">
-            <div class="center-text">
 
-            </div>
 
             <div class="service-content">
+
                 <div class="box1" id="H1">
-                    <!-- <i id="ICONG1" class="bi bi-lightbulb-fill"></i> -->
                     <div><img height="60px" width="60px" class="img-fluid" src="images/softwere engineers-01.png"
                             alt=""></div>
 
@@ -168,7 +151,6 @@
 
                 <div class="box1" id="H2">
 
-                    <!-- <i id="ICONG2" class="bi bi-globe-central-south-asia"></i> -->
                     <div>
                         <img height="60px" width="60px" class="img-fluid" src="images/project managers-01.png" alt="">
                     </div>
@@ -183,7 +165,6 @@
 
                 <div class="box1" id="H3">
 
-                    <!-- <i id="ICONG3" class="bi bi-lightbulb-fill"></i> -->
                     <div><img height="60px" width="60px" class="img-fluid" src="images/Digital Marketing-01.png" alt="">
                     </div>
                     <h5 id="W3"><B>Digital Markiting</B></h5>
@@ -197,7 +178,6 @@
                 </div>
 
                 <div class="box1" id="H4">
-                    <!-- <i id="ICONG4" class="bi bi-lightbulb-fill"></i> -->
                     <div><img height="60px" width="60px" class="img-fluid" src="images/Designers-01.png" alt="">
                     </div>
                     <h5 id="W4"><B>Designers</B></h5>
@@ -210,7 +190,6 @@
                 </div>
 
                 <div class="box1" id="H5">
-                    <!-- <i id="ICONG5" class="bi bi-lightbulb-fill"></i> -->
                     <div><img height="60px" width="60px" class="img-fluid" src="images/AI engineer-01.png" alt="">
                     </div>
                     <h5 id="W5"><B>AI Engineers</B></h4>
@@ -222,7 +201,6 @@
                         </p>
                 </div>
                 <div class="box1" id="H6">
-                    <!-- <i id="ICONG6" class="bi bi-lightbulb-fill"></i> -->
                     <div><img height="60px" width="60px" class="img-fluid" src="images/Business-01.png" alt="">
                     </div>
                     <h5 id="W6"><B>Business Consultants</B></h5>
@@ -259,7 +237,7 @@
                     hassle-free and secure, providing a win-win solution for both businesses and talented individuals in
                     the ever-evolving world of technology.
                 </p>
-                <div class="mb-3 mt-5" id="JOIN"><a href="">Book a Call</a></div>
+                <div class="mb-3 mt-5" id="JOIN"><a href="signup">Book a Call</a></div>
             </div>
             <div class="col-lg-5 col-md-6 mt-5">
                 <div id="PARENT"><img id="CHILD" class="img-fluid mb-5" src="images/hassle-hire-980x959-01.jpg" alt="">
@@ -431,7 +409,7 @@
 
                         </p>
                     </div>
-                    <div class="mb-2 mt-5" id="JOIN"><a href="">Hire a Team</a></div>
+                    <div class="mb-2 mt-5" id="JOIN"><a href="signup">Hire a Team</a></div>
                 </div>
             </div>
 
@@ -547,7 +525,7 @@
 
 
                 </p>
-                <div class="mb-3 mt-5 mb-5" id="JOIN"><a href="">Hire a Team</a></div>
+                <div class="mb-3 mt-5 mb-5" id="JOIN"><a href="signup">Hire a Team</a></div>
             </div>
 
             <div class="col-lg-5 container-fluid mt-5" style="background-image: url(/images/275-removebg-preview-1.png);
@@ -716,22 +694,21 @@
                 </div>
                 <div class="row  my-2 justify-content-center justify-content-start">
                     <% skills.forEach(function(skills) { %>
-                        <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
-                            <div class="row">
-                                <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
-                                    <img decoding="async" loading="lazy" src=" <%= skills.img %>" class="mr-4 ml-1 "
-                                        alt="">
-                                    <%= skills.btnname %>
-                                </button>
-                            </div>
+                    <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
+                        <div class="row">
+                            <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
+                                <img decoding="async" loading="lazy" src=" <%= skills.img %>" class="mr-4 ml-1 " alt="">
+                                <%= skills.btnname %>
+                            </button>
                         </div>
-                        <% }); %>
-                            <div class="col-sm-10 my-3">
-                                <h5 class=" fw-semibold text-white fs-6 "><i class="fa fa-plus" aria-hidden="true"></i>
-                                    See more
-                                    Skills
-                                </h5>
-                            </div>
+                    </div>
+                    <% }); %>
+                    <div class="col-sm-10 my-3">
+                        <h5 class=" fw-semibold text-white fs-6 "><i class="fa fa-plus" aria-hidden="true"></i>
+                            See more
+                            Skills
+                        </h5>
+                    </div>
                 </div>
 
             </div>
@@ -747,24 +724,23 @@
                 <div class="row  justify-content-center ">
 
                     <% technologies.forEach(function(technologies) { %>
-                        <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
-                            <div class="row">
-                                <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
-                                    <img decoding="async" loading="lazy" width="<%=technologies.width%>"
-                                        src="<%= technologies.img%>" class="mr-4 ml-1 " alt="">
-                                    <%= technologies.btnname %>
-                                </button>
-                            </div>
+                    <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
+                        <div class="row">
+                            <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
+                                <img decoding="async" loading="lazy" width="<%=technologies.width%>"
+                                    src="<%= technologies.img%>" class="mr-4 ml-1 " alt="">
+                                <%= technologies.btnname %>
+                            </button>
                         </div>
+                    </div>
 
-                        <% }); %>
-                            <div class="col-sm-10">
-                                <h5 class=" fw-semibold text-white fs-6 my-3"><i class="fa fa-plus"
-                                        aria-hidden="true"></i> See
-                                    more
-                                    roles
-                                </h5>
-                            </div>
+                    <% }); %>
+                    <div class="col-sm-10">
+                        <h5 class=" fw-semibold text-white fs-6 my-3"><i class="fa fa-plus" aria-hidden="true"></i> See
+                            more
+                            roles
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -780,24 +756,23 @@
                 </div>
                 <div class="row  justify-content-center ">
                     <% trajectory.forEach(function(trajectory) { %>
-                        <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
-                            <div class="row">
-                                <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
-                                    <img decoding="async" loading="lazy" width="<%=trajectory.width%>"
-                                        src=" <%= trajectory.img %>" class="mr-3 ml-1 " alt="">
-                                    <%= trajectory.btnname %>
-                                </button>
-                            </div>
-
+                    <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
+                        <div class="row">
+                            <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
+                                <img decoding="async" loading="lazy" width="<%=trajectory.width%>"
+                                    src=" <%= trajectory.img %>" class="mr-3 ml-1 " alt="">
+                                <%= trajectory.btnname %>
+                            </button>
                         </div>
-                        <% }); %>
-                            <div class="col-sm-10">
-                                <h5 class=" fw-semibold text-white fs-6 my-3"><i class="fa fa-plus"
-                                        aria-hidden="true"></i> See
-                                    more
-                                    positions
-                                </h5>
-                            </div>
+
+                    </div>
+                    <% }); %>
+                    <div class="col-sm-10">
+                        <h5 class=" fw-semibold text-white fs-6 my-3"><i class="fa fa-plus" aria-hidden="true"></i> See
+                            more
+                            positions
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -832,15 +807,15 @@
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                     <%- include('Components/modal'); %>
-                        <div class="row mt-4 ">
-                            <div class="d-flex  align-items-center ">
-                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
-                            </div>
-                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                                SOLUTIONS
-                            </h5>
+                    <div class="row mt-4 ">
+                        <div class="d-flex  align-items-center ">
+                            <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
+                            <h6 class="  fw-semibold fs-5">Talent Stories</h6>
                         </div>
+                        <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
+                            SOLUTIONS
+                        </h5>
+                    </div>
 
                 </div>
             </div>
@@ -848,15 +823,15 @@
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                     <%- include('Components/modal'); %>
-                        <div class="row mt-4 ">
-                            <div class="d-flex  align-items-center ">
-                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
-                            </div>
-                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                                SOLUTIONS
-                            </h5>
+                    <div class="row mt-4 ">
+                        <div class="d-flex  align-items-center ">
+                            <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
+                            <h6 class="  fw-semibold fs-5">Talent Stories</h6>
                         </div>
+                        <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
+                            SOLUTIONS
+                        </h5>
+                    </div>
 
                 </div>
             </div>
@@ -864,15 +839,15 @@
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                     <%- include('Components/modal'); %>
-                        <div class="row mt-4 ">
-                            <div class=" d-flex  align-items-center ">
-                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
-                            </div>
-                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                                SOLUTIONS
-                            </h5>
+                    <div class="row mt-4 ">
+                        <div class=" d-flex  align-items-center ">
+                            <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
+                            <h6 class="  fw-semibold fs-5">Talent Stories</h6>
                         </div>
+                        <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
+                            SOLUTIONS
+                        </h5>
+                    </div>
 
                 </div>
             </div>
@@ -880,15 +855,15 @@
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                     <%- include('Components/modal'); %>
-                        <div class="row mt-4 ">
-                            <div class="d-flex  align-items-center ">
-                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
-                            </div>
-                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                                SOLUTIONS
-                            </h5>
+                    <div class="row mt-4 ">
+                        <div class="d-flex  align-items-center ">
+                            <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
+                            <h6 class="  fw-semibold fs-5">Talent Stories</h6>
                         </div>
+                        <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
+                            SOLUTIONS
+                        </h5>
+                    </div>
 
                 </div>
             </div>
@@ -897,15 +872,15 @@
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                     <%- include('Components/modal'); %>
-                        <div class="row mt-4 ">
-                            <div class="d-flex  align-items-center ">
-                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
-                            </div>
-                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                                SOLUTIONS
-                            </h5>
+                    <div class="row mt-4 ">
+                        <div class="d-flex  align-items-center ">
+                            <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
+                            <h6 class="  fw-semibold fs-5">Talent Stories</h6>
                         </div>
+                        <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
+                            SOLUTIONS
+                        </h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1444,168 +1419,31 @@
     </footer>
 
 
-
-    <script>
-        // script.js
-        const slider = document.querySelector('.slider');
-        const images = [
-            '/images/livewire.svg',
-            '/images/smarter-sorting.svg',
-            '/images/eduleaf-1.svg',
-            '/images/zooppa.svg',
-            '/images/kudo.svg',
-            '/images/showgizmo.svg',
-
-        ];
-        const slideInterval = 1000;
-        let currentIndex = 0;
-
-        function slide() {
-
-            const currentItem = document.querySelector('.slider-item');
-            currentItem.remove();
-
-
-            const nextIndex = currentIndex % images.length;
-            const nextImage = document.createElement('div');
-            nextImage.className = 'slider-item';
-            nextImage.innerHTML = `<img src="${images[nextIndex]}" alt="Image ${nextIndex + 1}">`;
-            slider.appendChild(nextImage);
-
-            currentIndex++;
-
-            setTimeout(slide, slideInterval);
-        }
-
-        slide();
-
-        // ---------------------------------    BOXES   --------------------------------------------
-
-        const box1 = document.getElementById('H1');
-
-        // 👇️ Change text color on mouseover
-        box1.addEventListener('mouseover', function handleMouseOver() {
-            box1.style.color = 'red';
-            document.getElementById('W1').style.color = 'white';
-            document.getElementById('K1').style.color = 'white';
-            document.getElementById('ICONG1').style.color = 'white';
-        });
-
-        // 👇️ Change text color back on mouseout
-        box1.addEventListener('mouseout', function handleMouseOut() {
-            box1.style.color = 'black';
-            document.getElementById('W1').style.color = 'black'
-            document.getElementById('K1').style.color = 'BLACK';
-            document.getElementById('ICONG1').style.color = 'black';
-        });
-
-
-        // ---------------------------------------------------------------
-
-        const box2 = document.getElementById('H2');
-
-        // 👇️ Change text color on mouseover
-        box2.addEventListener('mouseover', function handleMouseOver() {
-            box2.style.color = 'red';
-            document.getElementById('W2').style.color = 'white';
-            document.getElementById('K2').style.color = 'white';
-            document.getElementById('ICONG2').style.color = 'white';
-        });
-
-        // 👇️ Change text color back on mouseout
-        box2.addEventListener('mouseout', function handleMouseOut() {
-            box2.style.color = 'black';
-            document.getElementById('W2').style.color = 'black'
-            document.getElementById('K2').style.color = 'BLACK';
-            document.getElementById('ICONG2').style.color = 'black';
-        });
-
-        // --------------------------------------------
-        const box3 = document.getElementById('H3');
-
-        // 👇️ Change text color on mouseover
-        box3.addEventListener('mouseover', function handleMouseOver() {
-            //   box3.style.border = '1px grey';
-            document.getElementById('W3').style.color = 'white';
-            document.getElementById('K3').style.color = 'white';
-            document.getElementById('ICONG3').style.color = 'white';
-
-
-
-        });
-
-        // 👇️ Change text color back on mouseout
-        box3.addEventListener('mouseout', function handleMouseOut() {
-            // box3.style.border = '1px solid black';
-            document.getElementById('W3').style.color = 'black'
-            document.getElementById('K3').style.color = 'BLACK';
-            document.getElementById('ICONG3').style.color = 'black';
-        });
-
-        // ---------------------------------    4------------------------------
-        const box4 = document.getElementById('H4');
-
-        // 👇️ Change text color on mouseover
-        box4.addEventListener('mouseover', function handleMouseOver() {
-            box4.style.color = 'red';
-            document.getElementById('W4').style.color = 'white';
-            document.getElementById('K4').style.color = 'white';
-            document.getElementById('ICONG4').style.color = 'white';
-        });
-
-        // 👇️ Change text color back on mouseout
-        box4.addEventListener('mouseout', function handleMouseOut() {
-            box4.style.color = 'black';
-            document.getElementById('W4').style.color = 'black'
-            document.getElementById('K4').style.color = 'BLACK';
-            document.getElementById('ICONG4').style.color = 'black';
-        });
-
-        //---------------------------------   5  ----------------
-        const box5 = document.getElementById('H5');
-
-        // 👇️ Change text color on mouseover
-        box5.addEventListener('mouseover', function handleMouseOver() {
-            box5.style.color = 'red';
-            document.getElementById('W5').style.color = 'white';
-            document.getElementById('K5').style.color = 'white';
-            document.getElementById('ICONG5').style.color = 'white';
-        });
-
-        // 👇️ Change text color back on mouseout
-        box5.addEventListener('mouseout', function handleMouseOut() {
-            box5.style.color = 'black';
-            document.getElementById('W5').style.color = 'black'
-            document.getElementById('K5').style.color = 'BLACK';
-            document.getElementById('ICONG5').style.color = 'black';
-        });
-
-        //--------------------------    6   --------------------
-        const box6 = document.getElementById('H6');
-
-        // 👇️ Change text color on mouseover
-        box6.addEventListener('mouseover', function handleMouseOver() {
-            box6.style.color = 'red';
-            document.getElementById('W6').style.color = 'white';
-            document.getElementById('K6').style.color = 'white';
-            document.getElementById('ICONG6').style.color = 'white';
-        });
-
-        // 👇️ Change text color back on mouseout
-        box6.addEventListener('mouseout', function handleMouseOut() {
-            box6.style.color = 'black';
-            document.getElementById('W6').style.color = 'black'
-            document.getElementById('K6').style.color = 'BLACK';
-            document.getElementById('ICONG6').style.color = 'black';
-        });
-
-    </script>
+    
+    <script src="js/swiper-bundle22.min.js"></script>
+     <script src="js/home.js"></script>
+   
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    <!-- End javascript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+    <!-- End Script  -->
 </body>
 
 </html>
