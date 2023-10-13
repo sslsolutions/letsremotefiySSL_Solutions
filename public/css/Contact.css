@@ -1,24 +1,4 @@
-:root {
-    --Main--color: rgb(175, 32, 34);
-    --text--size: 20px;
-    --text--size2: 18px;
-    --color: white;
-    --font-700: 700;
-    --font-family: Arial, Helvetica, sans-serif;
-    /* HZEjeHmj3WjmQKefFKpgLThgUXQcf2vrMbgrbwG9iCn1 */
-    font-family: 'Gordita Regular', Helvetica, Arial, Lucida, sans-serif;
-    /* --bg-color:#1b1f24; */
-    /* font-family: 'Gor'; */
-    /* --second-bg-color:#22282f; */
-    /* --main-color:#13bbff; */
-    /* --other-color:#c3cad5; */
 
-    /* --h1-font:4.5rem; */
-    --font--500: 500;
-    --h-font: 48PX;
-    --line--height: 1.71rem;
-
-}
 
 #WORK {
     display: flex;
@@ -53,16 +33,11 @@
 
 }
 
-#REMOTLY h1 {
-    font-size: var(--h-font);
-    /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
-}
+
 
 #REMOTLY p {
-    font-size: var(--text--size);
     margin-top: 25PX;
     margin-bottom: 90PX;
-    line-height: var(--line--height);
 
 }
 
@@ -70,7 +45,6 @@
     margin-top: 20px;
     text-decoration: none;
     color: var(--color);
-    font-size: var(--text--size);
     padding: 20px 25px;
     border-radius: 14px;
     background: rgb(175, 32, 34);
@@ -92,9 +66,9 @@
 
 /* --------------------------------------------   FORM   -------------------------------------- */
 .contant-form {
-    width: 350xp;
+    width: 100%;
     /* margin:10px 50px; */
-    margin: 50PX 50PX 25PX 50PX;
+    margin: 50PX 10PX 25PX 0PX;
     border-radius: 8px;
     padding: 20px;
     background: rgb(255, 255, 255);
@@ -186,7 +160,6 @@ input[type=submit]:hover {
 }
 
 #COM {
-    font-size: 20PX;
     font-size: 500;
     height: 50px;
     /* border: 2px solid red; */
@@ -215,7 +188,6 @@ input[type=submit]:hover {
 
 #EXPLORE2 a {
     color: black;
-    font-size: var(--text--size);
     text-align: center;
     padding: 5px 9px;
     border-radius: 50px;
@@ -240,4 +212,85 @@ input[type=submit]:hover {
     cursor: pointer;
     border-bottom: 2px solid var(--Main--color);
 
+}#JOIN-TRANS a {
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--color);
+    /* font-size: var(--text--18size); */
+    padding: 13px 55px;
+    border-radius: 14px;
+    border: 2PX solid white;
+    background: transparent;
+
+}
+
+#JOIN-TRANS a:hover {
+    background:rgb(175, 32, 34);
+}
+
+/* ----------------------------------  CHAT------------------------ */
+.input-container {
+    
+    background-color: rgb(214, 34, 34);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    /* border: 1px solid blue; */
+    width: 100%;
+    /* height: 100px; */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-container i {
+    font-size: 24px;
+    /* margin-right: 10px; */
+    /* width: 80%; */
+    color: #333;
+}
+
+#MAIN lable{
+    color: black; 
+    font-weight: 600
+}
+#MAIN i{
+    color: GREY; 
+    font-weight: 600;
+    font-size: 25px;
+}
+#MAIN g{
+    color: red;
+}
+#MAIN div{
+    background-color: rgb(250, 250, 250);
+}
+#MAIN input, #MAIN select{
+    background-color: rgb(250, 250, 250);
+    border: none;
+    outline: none;
+    /* border: 1px solid red; */
+    width: 90%;
+}
+.LABLES div{
+    background-color: rgb(250, 250, 250);
+}
+#INNER{
+    border: none;
+    outline: none;
+
+}
+#MAIN textarea{
+    border: 1px solid #ccc;
+    background-color: rgb(250, 250, 250);
+}
+
+/* -----    MEDIA QUERY OF TABLE  ------------- */
+@media screen and(max-width : 768px) {
+    #MAIN i{
+        font-size: 18px;
+    }
+   
 }

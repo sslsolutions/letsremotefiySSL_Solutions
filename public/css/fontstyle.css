@@ -1,4 +1,11 @@
 /* ----------------------       ANIMATION SECTION       --------------------------- */
+/* 
+INDEX
+ABOUT
+PRICING
+CONTACT-US
+*/
+
 *{
     padding: 0;
     margin: 0;
@@ -52,26 +59,25 @@
 H3{
     font-family: Arial, Helvetica, sans-serif,Lucida;
 }
-
-PT{
+.XSMALL, #XSMALL{
     font-size: 16PX;
     color: brown;
 }
-#SMALL, SP, .small{
+#SMALL, SP, .SMALL{
     font-size: 18px;
     color: red;
 }
-#XLARGE, .xlarge{
+#XLARGE, .XLARGE{
     font-size: 24PX;
     color:rgb(24, 174, 243);
 }
 
-#LARGE, HP, .large{
+#LARGE, HP, .LARGE{
     font-size: 22PX;
     color:rgb(28, 12, 248);
     /* font-weight: 500; */
-    letter-spacing: .3px;
-    font-family: Arial, sans-serif,Lucida, Helvetica Rounded;
+    /* letter-spacing: .3px; */
+    font-family: Arial, sans-serif,Lucida, Helvetica Rounded , var(--Godita--bold);
 }
 
 h4{
@@ -81,11 +87,11 @@ h4{
     font-family: Arial, Helvetica, sans-serif,Lucida;
     
 }
-heading, .heading, #heading{
+HEADING, .HEADING, #HEADING{
     font-size: 42px;
     color: purple;
 }
-SUBHEAD, #subhead, .subhead{
+SUBHEAD, #SUBHEAD, .SUBHEAD{
     font-weight: 600;
     font-size: 24px;
     /* color: rgb(175, 32, 34); */
@@ -113,6 +119,16 @@ h1{
     font-family: 'Varela Round', sans-serif;
     /* font-family:  var(--subbold--font); */
 }
+#NUMBER{
+    font-size: 36PX;
+    color: rgb(224, 148, 35) ;
+    
+}
+#NUMBER2{
+    font-size: 14PX;
+    color: rgb(224, 148, 35) ;
+    
+}
 
 /* --------------------------------SLIDER       ---------------------------------------- */
 
@@ -121,25 +137,22 @@ h1{
 /* =================================        991     ========================================= */
 
 @media (max-width: 991px) {
-    /* Adjust for screens less than 992px (tablet screens) */
-    .slider-item {
-        flex: 0 0 calc(100% / 3); 
-    }
     
-PT{
+    
+    .XSMALL, #XSMALL{
     font-size: 16PX;
     /* color: red; */
 }
-#SMALL, SP, .small{
+#SMALL, SP, .SMALL{
     font-size: 16px;
     /* color: red; */
 }
-#XLARGE, .xlarge{
+#XLARGE, .XLARGE{
     font-size: 22PX;
     /* color:rgb(24, 174, 243); */
 }
 
-#LARGE, HP{
+#LARGE, .LARGE, HP{
     font-size: 20PX;
     /* color:rgb(28, 12, 248); */
 }
@@ -151,37 +164,41 @@ h4{
     font-family: Arial, Helvetica, sans-serif,Lucida;
     
 }
-heading, .heading, #heading{
+HEADING, .HEADING, #HEADING{
     font-size: 40px;
     /* color: purple; */
 }
-SUBHEAD, #subhead, .subhead{
+SUBHEAD, #SUBHEAD, .SUBHEAD{
     font-weight: 600;
     font-size: 20px;
-    /* color: rgb(8, 252, 118); */
+    color: rgb(8, 252, 118);
     font-family: Arial, Helvetica, sans-serif,Lucida;
     
 }
 #NUMBER{
     font-size: 36PX;
+    /* color: rgb(224, 148, 35) ; */
+    
 }
 #NUMBER2{
     font-size: 14PX;
+    /* color: rgb(224, 148, 35) ; */
+    
 }
   
 }
 /* =================================        786     ========================================= */
 @media (max-width: 786px) {
 
-    PT{
+    .XSMALL, #XSMALL{
         font-size: 15PX;
         /* color: red; */
     }
-    #SMALL, SP, .small{
+    #SMALL, SP, .SMALL{
         font-size: 15px;
         /* color: red; */
     }
-    #XLARGE, .xlarge{
+    #XLARGE, .XLARGE{
         font-size: 20PX;
         /* color:rgb(24, 174, 243); */
     }
@@ -198,11 +215,11 @@ SUBHEAD, #subhead, .subhead{
         font-family: Arial, Helvetica, sans-serif,Lucida;
         
     }
-    heading, .heading, #heading{
+    HEADING, .HEADING, #HEADING{
         font-size: 36px;
         /* color: purple; */
     }
-    SUBHEAD, #subhead, .subhead{
+    SUBHEAD, #SUBHEAD, .SUBHEAD{
         font-weight: 600;
         font-size: 18px;
         /* color: rgb(8, 252, 118); */
@@ -219,35 +236,23 @@ SUBHEAD, #subhead, .subhead{
 }
 
 
-/* =================================        700     ========================================= */
-@media (max-width: 700px) {
-    #HARIS {
-        background-image:none! important;
-    }
-   
-}
+
 
 
 /* =================================        575     ========================================= */
 
 @media (max-width: 575px) {
-    /* Adjust for screens less than 576px (phone screens) */
-    .slider-item {
-        flex: 0 0 100%; /* Display only 1 image at a time on phones */
-    }
-    #BUTTONSFLEX{
-        display: flex;
-        flex-direction: column;
-    }
-    PT{
+   
+ 
+    .XSMALL, #XSMALL{
         font-size: 14PX;
         /* color: red; */
     }
-    #SMALL, SP, .small{
+    #SMALL, SP, .SMALL{
         font-size: 14px;
         /* color: red; */
     }
-    #XLARGE, .xlarge{
+    #XLARGE, .XLARGE{
         font-size: 18PX;
         /* color:rgb(24, 174, 243); */
     }
@@ -264,11 +269,11 @@ SUBHEAD, #subhead, .subhead{
         font-family: Arial, Helvetica, sans-serif,Lucida;
         
     }
-    heading, .heading, #heading{
+    HEADING, .HEADING, #HEADING{
         font-size: 28px;
         /* color: purple; */
     }
-    SUBHEAD, #subhead, .subhead{
+    SUBHEAD, #SUBHEAD, .SUBHEAD{
         font-weight: 600;
         font-size: 16px;
         /* color: rgb(8, 252, 118); */
@@ -281,15 +286,13 @@ SUBHEAD, #subhead, .subhead{
     #NUMBER2{
         font-size: 12PX;
     }
-    #MAIN i{
-        font-size: 20px;
-    }
+  
     
 }
 /* ----------------------------------       350   --------------------------- */
 @media (max-width: 350px) {
    
-    heading, .heading, #heading{
+    HEADING, .HEADING, #HEADING{
         font-size: 24px;
     }
     NUM1{
@@ -298,18 +301,7 @@ SUBHEAD, #subhead, .subhead{
     NUM2{
         font-size: 12PX;
     }
-    .input-container {
-    
-        width: 100%;
-        /* padding: 10px 15PX 10PX 10PX; */
-        padding: 0PX;
-    }
-    #INNER{
-        border: none;
-        /* outline: none; */
-        width: 80%;
-    
-    }
+ 
     
 }
 
