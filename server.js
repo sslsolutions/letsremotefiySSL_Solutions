@@ -272,8 +272,10 @@ app.get('/jobs',(req, res)=>{
 })
 
 app.get('/overview',(req, res)=>{
-    res.render('overview.ejs')
+    res.render('talent-overview.ejs')
 })
+
+
 
 app.get('/seller/dashboard',(req, res)=>{
     res.render('userDashboard.ejs')
