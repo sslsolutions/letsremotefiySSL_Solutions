@@ -25,14 +25,12 @@ router.post('/forgetPassword', async (req, res, next) => {
         console.log('User will not found');
     }
     const resetToken = user.createResetPasswordToken();
-
     //await user.save({ validateBeforeSave: false })
 
-   await user.createResetPasswordToken({ fields: ['passwordResetToken', 'passwordResetTokenExpires'] });
+    await user.save({ fields: ['passwordResetToken', 'passwordResetTokenExpires'] });
     ////send email to the user tto reset the link
 
     const resetUrl = `${req.protocol}://${req.get('host')}/resetPassword/${resetToken}`;
-    console.log(resetUrl);
     const message = `We have received a Password Reset request. Please use the below link to rest the password \n\n ${resetUrl}\n This reset Password link will be valid only for ten minutes`
     try {
         await sendEmail({
@@ -46,7 +44,7 @@ router.post('/forgetPassword', async (req, res, next) => {
             redirect: "/login"
         })
     } catch (error) {
-      
+
         return res.status(500).json({ message: 'Internal Server Error' });
     }
 
@@ -76,15 +74,14 @@ router.post('/resetPassword/:token', async (req, res) => {
         user.passwordResetTokenExpires = null; // Clear the token expiration
         user.passwordChangeAt = new Date();
 
-        await user.save();
+        await user.save({ validateBeforeSave: false });
 
-        const loginToken = jwt.sign({ id: user.id }, process.env.JWT_SECRET_KEY, {
+        const loginToken = jwt.sign({ id: user.id }, process.env.JWT_SCERET_KEY, {
             expiresIn: '1200s',
         });
 
         res.cookie('token', loginToken, { httpOnly: true });
         req.session.userId = user.id;
-
         return res.status(200).render('resetPassword.ejs', { token: token })
     } catch (error) {
         console.error(error);

@@ -281,21 +281,13 @@ app.get('/jobs', (req, res) => {
     res.render('Jobs.ejs')
 })
 
-<<<<<<< HEAD
-app.get('/overview', (req, res) => {
-    res.render('overview.ejs')
-})
-
-app.get('/seller/dashboard', verifyToken, (req, res) => {
-=======
 app.get('/overview',(req, res)=>{
     res.render('talent-overview.ejs')
 })
 
 
 
-app.get('/seller/dashboard',(req, res)=>{
->>>>>>> 66e2405a0d80d757d43d5e81e657b119944fc2f8
+app.get('/seller/dashboard', verifyToken, (req, res)=>{
     res.render('userDashboard.ejs')
 })
 

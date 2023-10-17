@@ -141,19 +141,24 @@ router.post('/readytojoin', upload.single('Resume'), async (req, res) => {
   }
   res.redirect('/seller/dashboard')
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///////get all user's form database//////////////////
 
 
-router.get('/url/api', async (req, res) => {
-  const id = "650edffca7270f00088d08cf"
-  try {
-    const userInfo = await user_model.findOne({ _id: id })
-    console.log(userInfo)
-    return res.status(200).json(userInfo)
-  } catch (error) {
-    return res.status(500).json({ message: 'Internal Server agi Error' });
-  }
-})
 
 
  router.get('/getuserinfo', async (req, res)=>{

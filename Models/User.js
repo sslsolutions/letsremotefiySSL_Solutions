@@ -2,18 +2,18 @@ const sequelize = require('./index');
 const { DataTypes, Model } = require('sequelize');
 const user_profile_seller = require('./user_profile_seller_models');
 const crypto = require('crypto');
-const user_skill_model = require('./user_skill_model');
+
 class User extends Model {
     static associations(model) {
-  
+
     }
     createResetPasswordToken() {
         const resetToken = crypto.randomBytes(32).toString('hex')
         this.passwordResetToken = crypto.createHash('sha256').update(resetToken).digest('hex')
-        this.passwordResetTokenExpires = Date.now() + 10 * 60 * 1000;
-        console.log(resetToken, this.passwordResetToken)
-        return resetToken
-    }
+        this.passwordResetTokenExpires = new Date(Date.now() + 10 * 60 * 1000);
+        console.log(resetToken, this.passwordResetToken);
+        return resetToken;
+    };
 }
 
 User.init({
@@ -29,6 +29,18 @@ User.init({
     roles: {
         type: DataTypes.STRING,
         ENUM: ['Seller', 'Buyer']
+    },
+    token: {
+        type: DataTypes.STRING,
+    },
+    passwordChangeAt: {
+        type: DataTypes.DATE
+    },
+    passwordResetToken: {
+        type: DataTypes.STRING
+    },
+    passwordResetTokenExpires: {
+        type: DataTypes.DATE
     }
 }, {
     // Other model options go here
