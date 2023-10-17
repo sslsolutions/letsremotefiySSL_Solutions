@@ -8,7 +8,7 @@ const dotenv = require('dotenv')
 const multer = require('multer')
 const path = require('path')
 const bcrypt = require('bcryptjs')
-const user_model = require("../Models/user_model")
+const user_model = require("../Models/User")
 const { verifyToken, restricted } = require("./middleware/auth")
 const user_skill_model = require("../Models/user_skill_model")
 dotenv.config();
@@ -22,7 +22,7 @@ router.get('/createProfile', verifyToken, async (req, res, next) => {
   res.render('create_Profile.ejs', { userEmail: isEmailValid });
 })
 
-router.get('/details', async (req, res) => {
+router.get('/details', verifyToken, async (req, res) => {
   res.render('details')
 })
 // const validatorProfile = [
@@ -43,28 +43,25 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
 router.post('/createProfile', upload.single('profileImage'), async (req, res) => {
-  const userId = req.session.userId
+  const userId = req.cookies.userId
   console.log(userId);
   const { Designation, country, firstName, lastName, phoneNumber, countryCode } = req.body;
   /////////user Profile Pics///////////
   const profileImage = req.file.buffer.toString('base64')
 
-  const userProfile = new user_profile_seller({
+  const userProfile = {
+    UserId: userId,
     Designation,
     country,
     firstName,
     lastName,
     phoneNumber,
     countryCode,
-    user: userId,
     avatar: profileImage
-  })
+  }
   try {
 
-    if (!userProfile) {
-      console.log('profile is not created');
-    }
-    await userProfile.save();
+    await user_profile_seller.create(userProfile);
   } catch (error) {
     console.log(error);
   }
@@ -107,57 +104,90 @@ router.put('/update-talent-profile/:id', async (req, res) => {
 
 router.post('/readytojoin', upload.single('Resume'), async (req, res) => {
 
-
-  const userData = await user_profile_seller.findOne({}).populate('user').exec();
+  const userId = req.cookies.userId
+  console.log(userId);
+  const userData = await user_profile_seller.findOne({ where: { UserId: userId } })
   // Check if userData exists and has a user field with an _id
-  if (!userData || !userData.user || !userData.user._id) {
+  console.log(userData);
+  if (!userData || !userData.UserId || !userData.id) {
     return res.status(404).json({ message: 'User profile not found' });
   }
 
   // Get the user_profile_seller ID
-  const user_profile_sellerId = userData._id;
+
   // Assuming you have the skills data in req.body.skills
   const { skills, language, Role, Experiences, platform, SalaryExpetations } = req.body;
 
   const resume = req.file.buffer.toString('base64')
 
   // Create a new user_skill_model document and associate it with the user_profile_seller
-  const userProfile = new user_skill_model({
-    Profile: user_profile_sellerId, // Associate with the user_profile_seller
+  const userProfile = {
+    userProfileSellerId: userData.id,
     skills,
     language,
     Role,
     platform,
     Experiences,
-    Resume:resume,
+    Resume: resume,
     SalaryExpetations,
-  });
+  };
 
   try {
     // Save the userProfile document to the database
-    await userProfile.save();
-    if (userProfile) {
-      res.status(200).json(userProfile)
-    }
-    else{
-      return res.redirect('/seller/dashboard')
-    }
+    await user_skill_model.create(userProfile)
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: 'Internal Server Error' });
   }
-  res.redirect('/dashboard')
+  res.redirect('/seller/dashboard')
 })
 
-router.get('/url/api', async (req, res) => {
-  const id = "650edffca7270f00088d08cf"
-  try {
-    const userInfo = await user_model.findOne({ _id: id })
-    console.log(userInfo)
-    return res.status(200).json(userInfo)
-  } catch (error) {
-    return res.status(500).json({ message: 'Internal Server agi Error' });
-  }
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////get all user's form database//////////////////
+
+
+
+
+ router.get('/getuserinfo', async (req, res)=>{
+
+  user_model.findOne({
+    where: { id: '1' },
+    include: [
+      {
+        model: user_profile_seller,
+        include: user_skill_model,
+      },
+    ],
+  })
+    .then((user) => {
+      if (user) {
+        // User found with the specified conditions
+       res.status(200).json(user)
+      } else {
+        // User not found
+        console.log('User not found.');
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+ })
+
 
 module.exports = router
+
+
+

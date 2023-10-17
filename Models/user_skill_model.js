@@ -1,40 +1,49 @@
-const mongoose=require('mongoose')
-const Schema =mongoose.Schema;
+const sequelize = require('./index');
+const { DataTypes, Model } = require('sequelize');
+const user_profile_seller = require('./user_profile_seller_models');
+const User = require('./User');
+class user_skill_model extends Model {
+    static associations(model) {
+  
+    }
+}
 
-const ReadytoJoin= new Schema({
+ user_skill_model.init({
     
     Role:{
-        type:String,
+        type: DataTypes.STRING,
         require: true
     },
     Resume:{
-        type:String,
+        type: DataTypes.STRING,
         require:true
     },
     Experiences:{
-        type:String,
+        type: DataTypes.STRING,
         require:true
     },
     platform:{
-        type:String,
+        type: DataTypes.STRING,
         require:true
     },
     language:{
-        type:String,
+        type: DataTypes.STRING,
         require:true
     },
     skills:{
-        type:[String],
-        require:true
+        type: DataTypes.JSON(DataTypes.ARRAY),
+        allowNull: false, 
+        defaultValue: []
     },
     SalaryExpetations:{
-        type:String,
+        type: DataTypes.STRING,
         require
     },
-    Profile: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user_profile_seller', // This creates a reference to the User model
-      },
+   
+}, {
+    // Other model options go here
+    sequelize, // We need to pass the connection instance
+    modelName: 'user_skill_model' // We need to choose the model name
 })
 
-module.exports= mongoose.model('skills_sections', ReadytoJoin)
+module.exports= user_skill_model

@@ -1,37 +1,47 @@
-const mongoose =require('mongoose')
-const Schema=mongoose.Schema;
+const User = require('./User');
+const sequelize = require('./index')
+const { DataTypes, Model } = require('sequelize');
+const user_skill_model = require('./user_skill_model');
 
-const user_profile_seller= new Schema({
-    Designation:{
-        type:String,
-        require:true
+class user_profile_seller extends Model {
+static associations(model){
+   // Specify the foreign key
+}
+}
+user_profile_seller.init({
+
+
+    Designation: {
+        type: DataTypes.STRING,
+        require: true
     },
-    firstName:{
-        type:String,
-        require:true
+    firstName: {
+        type: DataTypes.STRING,
+        require: true
     },
-    lastName:{
-        type:String,
-        require:true
+    lastName: {
+        type: DataTypes.STRING,
+        require: true
     },
     phoneNumber: {
-        type: String, // Change the data type to String
+        type: DataTypes.STRING, // Change the data type to String
         required: true,
     },
-    country:{
-        type:String,
-        require:true
+    country: {
+        type: DataTypes.STRING,
+        require: true
     },
-    countryCode:{
-        type:String,
-        require:true
+    countryCode: {
+        type: DataTypes.STRING,
+        require: true
     },
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'user', // This creates a reference to the User model
-      },
-    avatar:{
-        type:String
+    avatar: {
+        type: DataTypes.STRING,
     },
+}, {
+    sequelize, // We need to pass the connection instance
+    modelName: 'user_profile_seller'
 })
-module.exports= mongoose.model('user_profile_seller', user_profile_seller)
+
+user_profile_seller.hasOne(user_skill_model)
+module.exports = user_profile_seller

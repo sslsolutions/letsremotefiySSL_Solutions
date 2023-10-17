@@ -1,12 +1,13 @@
 
 const bcrypt = require('bcryptjs')
 //const jwt = require('jsonwebtoken');
-const user_model = require('../Models/user_model');
+const user_model = require('../Models/User');
 
 const express = require('express')
 const router = express.Router();
 const bodyParser = require('body-parser')
-const { check, validationResult, body } = require('express-validator')
+const { check, validationResult, body } = require('express-validator');
+const uuid = require('uuid');
 
 router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json());
@@ -19,7 +20,7 @@ const validation = [
     body('email', 'Email is not valid')
         .isEmail()
         .normalizeEmail().custom(async value => {
-            const existingUser = await user_model.findOne({ email: value });
+            const existingUser = await user_model.findOne({where:{ email: value }});
             if (existingUser) {
                 // Will use the below as the error message
                 throw new Error('A user already exists with this e-mail address');
@@ -51,9 +52,14 @@ router.post('/signup', validation, async (req, res, next) => {
 
     else {
         //validation for exiting user  
-        let exitingUser;
+        let existingUser;
+        console.log(existingUser);
         try {
-            exitingUser = await user_model.findOne({ email: email })
+            existingUser = await user_model.findOne({
+                where: {
+                    email: email
+                }
+            });
         } catch (error) {
             console.log(error);
         }
@@ -63,14 +69,14 @@ router.post('/signup', validation, async (req, res, next) => {
         // }
         const hashPassword = bcrypt.hashSync(password)
         //  const comparepassword = bcrypt.compare(hashPassword, password)
-        const user = new user_model({
+        const user ={
             email,
             password: hashPassword,
             roles
 
-        })
+        }
         try {
-            await user.save();
+            await user_model.create(user);
             console.log(user);
         }
         catch (err) {
