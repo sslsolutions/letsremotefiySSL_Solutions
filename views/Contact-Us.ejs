@@ -2,19 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>contact Us</title>
+  <title>contact Us</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link href="css/Contact.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!--  LINKS OF FONT FAMILY  -->
+  <link rel="stylesheet" href="css/fontstyle.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/navbar.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="css/Contact.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   <link rel="stylesheet" href="css/blog.css">
+
+     <!-- ----------------   CHATGPT     ----------- -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
 
 
@@ -22,266 +32,336 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary">
-      <%- include('Components/navbar'); %>
-    </nav>
-    <!-- ---------------------------------------------       FORM        ------------------------------------->
-    <div class="container-fluid">
-        <div class="row" id="WORKH">
-            <div class="col-lg-6 mt-5 text-center justify-content-center " id="REMOTLY">
-                <!-- <div id="WORK1"> <h1>LOGIN</h1> </div> -->
-            </div>
-            <div class="col-lg-5 mt-5" id="IMG1">
-                <div class="contant-form">
-                    <form action="/auth" method="post">
-                        <!--  return validate means it take the T/F value of function then give to action it gives F value & action didnt respond -->
-                        <div>
-                            <lable style="color: black; font-weight: 600;">Your Name</lable>
-                            <input type="text" class="HH" id="NAME" name="name" placeholder="Your Name">
-                            <span id="NAMEERROR" style="color: red;"></span>
-                        </div>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary">
+    <%- include('Components/navbar'); %>
+  </nav>
+  <!-- ---------------------------------------------       FORM        ------------------------------------->
+  <div class="container-fluid">
+    <div class="row" id="WORKH">
+      <div class="col-lg-5 mt-5 text-center justify-content-center " id="REMOTLY">
+        
+      </div>
+      <div class="col-lg-6 mt-5" id="IMG1" >
+        <div class="contant-form" >
+          <form action="/auth" method="post">
+            <!--  return validate means it take the T/F value of function then give to action it gives F value & action didnt respond -->
+<!-- 
+            <div>
+              <lable style="color: black; font-weight: 600;">Your Name</lable>
+              <input type="text" class="HH" id="NAME" name="name" placeholder="Your Name">
+            </div> -->
 
-                        <div>
-                            <lable style="color: black; font-weight: 600;">Your Email</lable>
-                            <!-- <input type="" class="HH" name="" placeholder="&#xF32C;   Your Email"> -->
-                            <input type="" class="HH"  name="email" placeholder="&#xF32C;   Your Email">
-                            <span id="EMAILERROR"  style="color: red;"></span>
-                        </div>
+            <!-- NEW FORM -->
+            <div class="col-12 mt-4 mb-3" id="MAIN">
+              <lable>Your Name<g>*</g>
+              </lable>
+              <div class="input-container">
+                  <i class="fas fa-user"></i> &nbsp; &nbsp;
+                  <input type="text" placeholder="Enter Your Name" name="lastName"
+                      id="lastName" required>
+              </div>
+          </div>
 
-                        <div style="margin-bottom: 20px;">
-                            <lable style="color: black; font-weight: 600;">Inquiry</lable>
-                            <select class="form-select" name="Inquiry" class="HH" id="SELECT"  aria-label="Default select example">
-                                <option id="class" selected>Select</option>
-                                <option value="Hre Developer" >Hre Developer</option>
-                                <option value="Apply for Jobs">Apply for Jobs</option>
-                                <option value="General Question">General Question</option>
-                                <option value="Invester">Invester</option>
-                                <option value="Media & Jobs">Media & Jobs</option>
-                            </select>
-                            <span id="SELECTERROR" style="color: red;"></span>
-                        </div>
-
-                        <div>
-                            <lable style="color: black; font-weight: 600;">How can I help you?</lable>
-                            <textarea name="message" class="HH" id="TEXTAREA" cols="50" rows="3" placeholder="Write your query..."
-                                required></textarea>
-                            <span id="TEXTAREAERROR" style="color: red;"></span>
-                        </div>
-                        <input type="submit" value="Submit" onclick="click()" >
-                        <script>
-                          function click(){
-                            swal ("You are logged in");
-                          }
-                        </script>
-                    </form>
-                </div>
-            </div>
-        </div>
- </div>
-
-        <!-- ---------------------------------------------------    Effortlessly  ----------------------------------- -->
-
-        <div class="container-fluid" style="background-color: rgb(248, 249, 254)">
-            <div class="row justify-content-around">
-                <div class="col-lg-5" id="REMOTLY">
-                    <div id="WORK1">
-                      <h3 style="color: rgb(175, 32, 34)">How Can We Help?</h3>
-                      <h1>
-                        Effortlessly hire and be hired with SSL SOLUTIONS
-                      </h1>
-                    </div>
-                    <p style="color: #555659 !important">
-                        We make remote tech hiring and tech support services simpler, providing a seamless experience for businesses and talent. Whether you’re a business owner, startup, or enterprise, you can discover highly skilled global remote tech talent in just 24 hours. We are based in Middletown, Delaware. We are a fully remote company with 1300+ employees from various parts of the world. Not only does our platform offer a wide range of features, but it also boasts a secure and reliable payment system to ensure peace of mind for companies and talent.
-                    </p>
-                  </div>
-                <div  class="col-lg-6 mt-5">
-                    <div><img class="img-fluid" src="images/hassle-hire-980x959-01.jpg" alt=""></div>
-                </div>
+          <div class="col-12 mt-4 mb-3" id="MAIN">
+            <lable>Your Email<g>*</g>
+            </lable>
+            <div class="input-container">
+              <i class="fas fa-envelope"></i> &nbsp; &nbsp;
+                <input type="text" placeholder="Enter Your Email" name="lastName"
+                    id="lastName" required>
             </div>
         </div>
 
-        <!-- -------------------------------------------------------------UNLOCK DOOR-------------------------- -->
-<div class="container-fluid">
+        <div class="col-12 mt-4 mb-3" id="MAIN">
+          <lable>Inquiry<g>*</g>
+          </lable>
+          <div class="input-container">
+          <i class="fas fa-laptop-code"></i>&nbsp; &nbsp;
+          <select class="form-select" name="Inquiry" class="HH" id="SELECT" aria-label="Default select example">
+            <option id="class" selected>Select</option>
+            <option value="Hre Developer">Hre Developer</option>
+            <option value="Apply for Jobs">Apply for Jobs</option>
+            <option value="General Question">General Question</option>
+            <option value="Invester">Invester</option>
+            <option value="Media & Jobs">Media & Jobs</option>
+          </select>
+          </div>
+      </div>
+       
+            <!--  -->
+
+            <!-- <div>
+              <lable style="color: black; font-weight: 600;">Your Email</lable>
+              <input type="" class="HH" name="email" placeholder="&#xF32C;   Your Email">
+            </div> -->
+
+            <!-- <div style="margin-bottom: 20px;">
+              <lable style="color: black; font-weight: 600;">Inquiry</lable>
+              <select class="form-select" name="Inquiry" class="HH" id="SELECT" aria-label="Default select example">
+                <option id="class" selected>Select</option>
+                <option value="Hre Developer">Hre Developer</option>
+                <option value="Apply for Jobs">Apply for Jobs</option>
+                <option value="General Question">General Question</option>
+                <option value="Invester">Invester</option>
+                <option value="Media & Jobs">Media & Jobs</option>
+              </select>
+            </div> -->
+
+            <div id="MAIN">
+              <lable >How can I help you? <g>*</g></lable>
+              <textarea name="message" class="HH" id="TEXTAREA" cols="50" rows="3" placeholder="Write your query..."
+                required></textarea>
+            </div>
+            <input type="submit" value="Submit" onclick="click()">
+            <script>
+              function click() {
+                swal("You are logged in");
+              }
+            </script>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------------------------------------------------    Effortlessly  ----------------------------------- -->
+
+  <div class="container-fluid" style="background-color: rgb(248, 249, 254)">
+    <div class="row justify-content-around">
+      <div class="col-lg-5" id="REMOTLY">
+        <div id="WORK1">
+          <h3 class="SUBHEAD">How Can We Help?</h3>
+          <h1 class="HEADING">
+            Effortlessly hire and be hired with SSL SOLUTIONS
+          </h1>
+        </div>
+        <p class="LARGE">
+          We make remote tech hiring and tech support services simpler, providing a seamless experience for businesses
+          and talent. Whether you’re a business owner, startup, or enterprise, you can discover highly skilled global
+          remote tech talent in just 24 hours. We are based in Middletown, Delaware. We are a fully remote company with
+          1300+ employees from various parts of the world. Not only does our platform offer a wide range of features,
+          but it also boasts a secure and reliable payment system to ensure peace of mind for companies and talent.
+        </p>
+      </div>
+      <div class="col-lg-6 mt-5">
+        <div><img class="img-fluid" src="images/hassle-hire-980x959-01.jpg" alt=""></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- -------------------------------------------------------------UNLOCK DOOR-------------------------- -->
+  <div class="container-fluid">
 
     <div class="d-flex justify-content-center">
       <div class="row" id="UNLOCK">
-        <div class="col-12 mt-3"><h4>Need help? We're here, 24/7</h4></div>
-       <div class="col-12"><h1>Global Reach, Local Expertise</h1></div>
-       <div class="col-11 mt-2 mb-5" style="font-size: 18px;">
-      
-        At SSL SOLUTIONS, we’ve built a global community that stretches across continents, bringing you access to a diverse pool of talent and expertise. Need software developers in India? How about tapping into the innovative minds of Silicon Valley software engineers, Software Developer California, and Software Developer Los Angeles? Or perhaps you’re interested in the burgeoning tech talent in Eastern Europe?
-        <br>
-        Look no further, we’ve got you covered!
-        
-       </div>
+        <div class="col-12 mt-3">
+          <h4 class="SUBHEAD">Need help? We're here, 24/7</h4>
+        </div>
+        <div class="col-12">
+          <h1 class="HEADING">Global Reach, Local Expertise</h1>
+        </div>
+        <div class="col-11 mt-2 mb-5" id="SMALL">
+
+          At SSL SOLUTIONS, we’ve built a global community that stretches across continents, bringing you access to a
+          diverse pool of talent and expertise. Need software developers in India? How about tapping into the innovative
+          minds of Silicon Valley software engineers, Software Developer California, and Software Developer Los Angeles?
+          Or perhaps you’re interested in the burgeoning tech talent in Eastern Europe?
+          <br>
+          Look no further, we’ve got you covered!
+
+        </div>
       </div>
     </div>
 
-    
+
 
   </DIV>
   <!-- -----------------------------background-color: rgb(248, 249, 254)---------- BLOG --------------------------------- -->
 
   <DIV class="container-fluid" style="background-color: rgb(248, 249, 254)">
     <div class="container-fluid" style="margin-top: 45px; ">
-        <div style="font-size: 24px; font-weight: 500; margin-left: 6%; color: rgb(175, 32, 34);" class=" ml-5"><H1 style="padding-top: 70px;">Get in Touch</H1></div>
-      </div> 
-      <div class="container-fluid" style="margin-top: 15px; margin-bottom: 45px;">
-        <div class="row justify-content-between" style="margin-left: 5%;">
-          <div class="col-lg-7 col-md-11 col-sm-12 mt-3 mb-3" id="Ex"><h4>For inquiries, reach out to us at the following emails:</h4></div>
-          <div class="col-lg-3 col-md-4 col-sm-8  mt-3 mb-3" id="EXPLORE"><a href=""></a></div>
-        </div>
+      <div style="  color: rgb(175, 32, 34);" class=" ml-5">
+        <H1 style="padding-top: 70px;" class="HEADING">Get in Touch</H1>
       </div>
-      <div class="container-fluid">
-        <div class="row justify-content-evenly">
-            <div class="card mb-5" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Have general questions?</h5>
-                  <p class="card-text" style="color: rgb(175, 32, 34) ;">Review our FAQs.</p>
-                  <a href="#" id="II">Learn more  <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
+    </div>
+    <div class="container-fluid" style="margin-top: 15px; margin-bottom: 45px;">
+      <div class="row justify-content-center" >
+        <div style="border: 2PX SOLID BLACK;" class="col-lg-11 col-md-11 col-sm-12 mt-3 mb-3" id="Ex">
+          <h4 class="SUBHEAD">For inquiries, reach out to us at the following emails:</h4>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-8  mt-3 mb-3" id="EXPLORE"><a href=""></a></div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-evenly">
+        
+        <div class="card mb-5" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Have general questions?</h5>
+            <p class="card-text" style="color: rgb(175, 32, 34) ;">Review our FAQs.</p>
+            <a href="#" id="II">Learn more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
 
-              <div class="card mb-5" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Developer Support</h5>
-                  <p class="card-text" style="color: rgb(175, 32, 34) ;">developers@SSL SOLUTIONS.com</p>
-                  <a href="#" id="II">Learn more  <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
-              
-              <div class="card mb-5" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Customer Support</h5>
-                  <p class="card-text" style="color: rgb(175, 32, 34) ;">support@SSL SOLUTIONS.com</p>
-                  <a href="#" id="II">Learn more  <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
-              
-              <div class="card mb-5" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Press</h5>
-                  <p class="card-text" style="color: rgb(175, 32, 34) ;">support@SSL SOLUTIONS.com</p>
-                  <a href="#" id="II">Learn more  <i class="bi bi-arrow-right"></i></a>
-                </div>
-              </div>
+        <div class="card mb-5" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Developer Support</h5>
+            <p class="card-text" style="color: rgb(175, 32, 34) ;">@SSL SOLUTIONS.net</p>
+            <a href="#" id="II">Learn more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="card mb-5" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Customer Support</h5>
+            <p class="card-text" style="color: rgb(175, 32, 34) ;">support@SSL SOLUTIONS.net</p>
+            <a href="#" id="II">Learn more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="card mb-5" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Press</h5>
+            <p class="card-text" style="color: rgb(175, 32, 34) ;">support@SSL SOLUTIONS.net</p>
+            <a href="#" id="II">Learn more <i class="bi bi-arrow-right"></i></a>
+          </div>
         </div>
       </div>
-<!-- -------------------------------------------    is the best place       ------------------------------- -->
-  
-<div class="container-fluid justify-content-center" style="display: flex; justify-content: center;">
-  <div class="row justify-content-center mt-5 mb-5" id="BEST">
-      <div class="col-lg-7 col-md-7 col-sm-10 text-center" >
+    </div>
+    <!-- -------------------------------------------    is the best place       ------------------------------- -->
+
+    <div class="container-fluid justify-content-center" style="display: flex; justify-content: center;">
+      <div class="row justify-content-center mt-5 mb-5" id="BEST">
+        <div class="col-lg-7 col-md-7 col-sm-10 text-center">
           <!-- <img class="img-fluid" src="images/Newsletter_img.png" alt=""> -->
-          <H2 style="margin-top:18% ; color: white;">SSL SOLUTIONS is the best place
-              to build your tech team.</H2>
-                <!-- ---------------------input field------------------------- -->
-              <!--  -->
+          <H2 style="margin-top:18% ; color: white;" class="HEADING">SSL SOLUTIONS is the best place
+            to build your tech team.</H2>
+          <!-- ---------------------input field------------------------- -->
+          <!--  -->
+        </div>
+
+        <!-- <div class="row justify-content-center">
+          <div class="col-lg-5 col-sm-8"> <input type="" class="HH" id="EMAOIL" name=""
+              placeholder=" &#xF7B3;   Your Email"></div>
+          <div id="COM" class="col-lg-2 col-md-5 col-sm-5 mt-2">Send</div>
+        </div> -->
+        <div class="row justify-content-center">
+
+          <div class="col-lg-5 col-sm-11" id="MAIN">
+              <div class="input-container">
+                  <i class="fas fa-envelope">&nbsp;&nbsp;&nbsp;&nbsp; </i> <input id="INNER" type="text"
+                      placeholder="Enter your Email" name="email">
+              </div>
+          </div>
+
+
+          <!-- <div class="col-lg-5 col-sm-8"> <input type="" class="HH" name=""
+                  placeholder="&#xF32C;   Your Email"></div> -->
+
+          <div id="COM" class="col-lg-2 col-md-3 col-sm-5 ">Send</div>
       </div>
-      <div class="row justify-content-center">
-             <div class="col-lg-5 col-sm-8"> <input type="" class="HH" id="EMAOIL" name="" placeholder=" &#xF7B3;   Your Email"></div>
-            <div id="COM" class="col-lg-2 col-md-5 col-sm-5 mt-2">Send</div>
+
+
       </div>
-  </div>
-</div>
+    </div>
 
 
-<div style="height: 100px;"></div>
-<!-- <div style="height: 100px;"></div> -->
-</DIV>
-
-
+    <div style="height: 100px;"></div>
+    <!-- <div style="height: 100px;"></div> -->
+  </DIV>
 
 
 
-<!-- ------------------------------FINAL------------------- -->
 
-  
+
+  <!-- ------------------------------FINAL------------------- -->
+
+
 
   <footer class="bg-dark text-center p-2">
     <%- include('Components/footor'); %>
-</footer>
-        <script>
-          console.log('its working');
+  </footer>
+  <script>
+    console.log('its working');
 
-// document.getElementById("JOIN").onmouseover(function() {
-//     alert("test");
-//     console.log('HELLO');
-// })
+    // document.getElementById("JOIN").onmouseover(function() {
+    //     alert("test");
+    //     console.log('HELLO');
+    // })
 
-// var boundary = document.getElementById('H');
-// var mouseOverFunction = function () {
-//     // this.style.color = 'black'; // your colour change
-//     console.log('HELLO')
-//     // alert("hello")
-//     document.getElementById('W').style.color='white'
-//     document.getElementById('K').style.color='white'
+    // var boundary = document.getElementById('H');
+    // var mouseOverFunction = function () {
+    //     // this.style.color = 'black'; // your colour change
+    //     console.log('HELLO')
+    //     // alert("hello")
+    //     document.getElementById('W').style.color='white'
+    //     document.getElementById('K').style.color='white'
 
-// };
-// boundary.onmouseover = mouseOverFunction;
+    // };
+    // boundary.onmouseover = mouseOverFunction;
 
-const box1 = document.getElementById('H1');
+    const box1 = document.getElementById('H1');
 
-// 👇️ Change text color on mouseover
-box1.addEventListener('mouseover', function handleMouseOver() {
-  box1.style.color = 'red';
-  document.getElementById('W1').style.color='white';
-document.getElementById('K1').style.color='white';
- document.getElementById('ICONG1').style.color='white';
-});
+    // 👇️ Change text color on mouseover
+    box1.addEventListener('mouseover', function handleMouseOver() {
+      box1.style.color = 'red';
+      document.getElementById('W1').style.color = 'white';
+      document.getElementById('K1').style.color = 'white';
+      document.getElementById('ICONG1').style.color = 'white';
+    });
 
-// 👇️ Change text color back on mouseout
-box1.addEventListener('mouseout', function handleMouseOut() {
-  box1.style.color = 'black';
-  document.getElementById('W1').style.color='black'
-    document.getElementById('K1').style.color='BLACK';
-    document.getElementById('ICONG1').style.color='black';
-});
+    // 👇️ Change text color back on mouseout
+    box1.addEventListener('mouseout', function handleMouseOut() {
+      box1.style.color = 'black';
+      document.getElementById('W1').style.color = 'black'
+      document.getElementById('K1').style.color = 'BLACK';
+      document.getElementById('ICONG1').style.color = 'black';
+    });
 
 
-// ---------------------------------------------------------------
+    // ---------------------------------------------------------------
 
-const box2 = document.getElementById('H2');
+    const box2 = document.getElementById('H2');
 
-// 👇️ Change text color on mouseover
-box2.addEventListener('mouseover', function handleMouseOver() {
-  box2.style.color = 'red';
-  document.getElementById('W2').style.color='white';
-document.getElementById('K2').style.color='white';
- document.getElementById('ICONG2').style.color='white';
-});
+    // 👇️ Change text color on mouseover
+    box2.addEventListener('mouseover', function handleMouseOver() {
+      box2.style.color = 'red';
+      document.getElementById('W2').style.color = 'white';
+      document.getElementById('K2').style.color = 'white';
+      document.getElementById('ICONG2').style.color = 'white';
+    });
 
-// 👇️ Change text color back on mouseout
-box2.addEventListener('mouseout', function handleMouseOut() {
-  box2.style.color = 'black';
-  document.getElementById('W2').style.color='black'
-    document.getElementById('K2').style.color='BLACK';
-    document.getElementById('ICONG2').style.color='black';
-});
+    // 👇️ Change text color back on mouseout
+    box2.addEventListener('mouseout', function handleMouseOut() {
+      box2.style.color = 'black';
+      document.getElementById('W2').style.color = 'black'
+      document.getElementById('K2').style.color = 'BLACK';
+      document.getElementById('ICONG2').style.color = 'black';
+    });
 
-// --------------------------------------------
-const box3 = document.getElementById('H3');
+    // --------------------------------------------
+    const box3 = document.getElementById('H3');
 
-// 👇️ Change text color on mouseover
-box3.addEventListener('mouseover', function handleMouseOver() {
-//   box3.style.border = '1px grey';
-  document.getElementById('W3').style.color='white';
-document.getElementById('K3').style.color='white';
- document.getElementById('ICONG3').style.color='white';
-});
+    // 👇️ Change text color on mouseover
+    box3.addEventListener('mouseover', function handleMouseOver() {
+      //   box3.style.border = '1px grey';
+      document.getElementById('W3').style.color = 'white';
+      document.getElementById('K3').style.color = 'white';
+      document.getElementById('ICONG3').style.color = 'white';
+    });
 
-// 👇️ Change text color back on mouseout
-box3.addEventListener('mouseout', function handleMouseOut() {
-    // box3.style.border = '1px solid black';
-  document.getElementById('W3').style.color='black'
-    document.getElementById('K3').style.color='BLACK';
-    document.getElementById('ICONG3').style.color='black';
-});
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-            crossorigin="anonymous"></script>
+    // 👇️ Change text color back on mouseout
+    box3.addEventListener('mouseout', function handleMouseOut() {
+      // box3.style.border = '1px solid black';
+      document.getElementById('W3').style.color = 'black'
+      document.getElementById('K3').style.color = 'BLACK';
+      document.getElementById('ICONG3').style.color = 'black';
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

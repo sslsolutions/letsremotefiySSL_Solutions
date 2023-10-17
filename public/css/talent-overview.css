@@ -1,0 +1,206 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+   
+}
+
+@media (max-width:1200px) {
+  #h{
+    margin-top: 25px;
+    border-radius: 12px;
+    /* border: 2px solid black; */
+    height: 600px;
+    position: fixed;
+    background: rgb(175, 32, 34);
+  
+}
+
+#GETNOW{
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: 28PX;
+    font-weight: 500;
+    color: white;
+    /* font-family: sans-serif */
+
+}
+#MAR{
+    margin-top: 50PX;
+}
+   
+   
+  }
+@media (max-width:992px) {
+  
+}
+@media (max-width:786px) {
+  
+
+}
+@media (max-width:575px) {
+  
+  
+}
+@media (max-width:440px) {
+  
+}
+/* -----------------  NAVBAR----------------------- */
+
+#IFLEXNAV{
+    display: flex;
+    justify-content: space-evenly;
+}
+#GETNOWNAV{
+    margin-top: 15px;
+    margin-bottom: px;
+    font-size: 18PX;
+    font-weight: 500;
+    color: white;
+    /* font-family: sans-serif */
+
+}
+#NAV{
+  display: none;
+}
+
+
+
+@media (max-width:992px) {
+    #NAV{
+      display: block;
+    }
+      #HIDDEN{
+          display: none;
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------- */
+#HAR{
+    background-color: rgb(244, 248, 255);
+}
+
+
+
+#j{
+    /* border: 3px solid red; */
+    /* border-radius: 120px; */
+    /* height: 1250px; */
+    width: 100%;
+    margin-bottom: 50px;
+  
+}
+
+#h{
+    margin-top: 25px;
+    border-radius: 12px;
+    /* border: 2px solid black; */
+    height: 600px;
+    /* width: 100%; */
+    position: fixed;
+    background: rgb(175, 32, 34);
+  
+}
+#GETNOW{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 25PX;
+    /* font-weight: 500; */
+    color: white;
+    /* font-family: sans-serif */
+
+}
+#GETNOW span{
+    /* margin-top: 10px; */
+    /* margin-bottom: 5px; */
+    /* font-size: 25PX; */
+    /* font-weight: 500; */
+    color: white;
+    /* font-family: sans-serif */
+
+}
+#GETNOW i{
+    margin-right: 18px;
+}
+#MAR{
+    margin-top: 30PX;
+}
+#IFLEX{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* --------------------------------------------------------------       RIGHT  SIDE     -------------------------------------------- */
+#PART1{
+  padding: 22PX 10PX;
+  background-color: WHITE;
+  border-radius: 12PX;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+#PART2{
+    background-color: white;
+    border-radius: 12px;
+}
+/* ----------------------  UPDATIONS  ------------------------------ */
+#USER{
+    height: 80PX ;
+    width: 250PX;
+    border: 1PX solid grey;
+    border-radius: 25PX;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(241, 246, 252);
+}
+#USER-IMG{
+        border: 2PX solid  white;
+        height: 70PX;
+        width: 70PX;
+        border-radius: 50%;
+        background-image: url(images/Section_04-01-01.png);
+    background-size: 100% 100%;
+}
+#PROFILE{
+    /* height: 100PX ; */
+    /* width: 200PX; */
+    border: 1PX solid gray;
+    /* background-color: aliceblue; */
+    border-radius: 8px;
+}
+#PROFILE a{
+    text-decoration: none;
+    color: black;
+}
+#GOTO{
+    padding: 1PX 14PX;
+    margin: 2PX 5PX;
+    border-radius: 8PX;
+}
+#GOTO:hover{
+    background-color: rgb(244, 248, 255);
+}
+#LOGOUT{
+    padding: 1PX 14PX;
+    margin: 2PX 5PX;
+    border-radius: 8PX;
+}
+#LOGOUT:hover{
+    background-color: rgb(244, 248, 255);
+}
+
+
+
+
+

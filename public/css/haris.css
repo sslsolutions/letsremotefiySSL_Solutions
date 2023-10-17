@@ -1,117 +1,4 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-@font-face {
-    font-family: Helvetica Rounded;
-    src: url(/public/fonts/Helvetica.ttf);
-    font-family: Helvetica;
-    src: url(Helvetica.ttf);
-    font-family: Gordita;
-    src: url(/public/fonts/Gorditas-Bold.ttf);
 
-    font-family: Gorditas;
-    src: url(/public/fonts/Gorditas.zip/Gorditas-Regular.ttf);
-
-}
-
-/* html * {
-     font-family: Nunito, serif; 
-  } */
-:root{
-    --Main--color: rgb(175, 32, 34);
-    --text--18size:18px;
-    --text--22size:22px;
-    /* --paragraph--size:30px; */
-    --color:white;
-    --font-700:700;
-    /* --font-family:Arial, Helvetica, sans-serif ; */
-    /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
-    /* --bg-color:#1b1f24; */
-    /* font-family: 'Gor'; */
-    /* --second-bg-color:#22282f; */
-    /* --main-color:#13bbff; */
-    /* --other-color:#c3cad5; */
-/*  -----------------------     FONT-FAMILY     ---------------------------------- */
---Goditas--bold : Gorditas;
---Godita--bold : Gordita;
---Helvetica--Round:Helvetica Rounded;
---subbold--font: Helvetica;
-
-
-
-    /* ----------------------------     FONT-ENDS       --------------------------------------- */
-    --font--500:500;
-    --h-font:48PX;
-    --line--height:1.71rem;
-
-}
-H3{
-    font-family: Arial, Helvetica, sans-serif,Lucida;
-}
-
-PT{
-    font-size: 16PX;
-    /* color: red; */
-}
-#SMALL, SP{
-    font-size: 18px;
-    /* color: red; */
-}
-#XLARGE{
-    font-size: 24PX;
-    /* color:rgb(24, 174, 243); */
-}
-
-#LARGE, HP{
-    font-size: 22PX;
-    /* color:rgb(28, 12, 248); */
-    /* font-weight: 500; */
-    letter-spacing: .3px;
-    font-family: Arial, sans-serif,Lucida, Helvetica Rounded;
-}
-
-h4{
-    font-weight: 600;
-    /* font-size: 24px; */
-    /* color: rgb(223, 29, 136); */
-    font-family: Arial, Helvetica, sans-serif,Lucida;
-    
-}
-heading{
-    font-size: 42px;
-    /* color: purple; */
-}
-SUBHEAD{
-    font-weight: 600;
-    font-size: 24px;
-    color: rgb(175, 32, 34);
-    /* color: rgb(8, 252, 118); */
-    font-family: Arial, Helvetica, sans-serif,Lucida;
-    
-}
-
-@font-face {
-    font-family: Helvetica Rounded;
-    src: url(/public/fonts/Helvetica.ttf);
-    font-family: Helvetica;
-    src: url(Helvetica.ttf);
-    font-family: Gordita;
-    src: url(/public/fonts/Gorditas-Bold.ttf);
-
-    font-family: Gorditas;
-    src: url(/public/fonts/Gorditas.zip/Gorditas-Regular.ttf);
-
-}
-body{
-    font-family:  Arial,Lucida, sans-serif;
-}
-h1{
-    font-family: 'Varela Round', sans-serif;
-    /* font-family:  var(--subbold--font); */
-}
 
 /* --------------------------------SLIDER       ---------------------------------------- */
 
@@ -141,98 +28,11 @@ h1{
     .slider-item {
         flex: 0 0 calc(100% / 3); 
     }
-    
-PT{
-    font-size: 16PX;
-    /* color: red; */
-}
-#SMALL, SP{
-    font-size: 16px;
-    /* color: red; */
-}
-#XLARGE{
-    font-size: 22PX;
-    /* color:rgb(24, 174, 243); */
+     
 }
 
-#LARGE, HP{
-    font-size: 20PX;
-    /* color:rgb(28, 12, 248); */
-}
-
-h4{
-    font-weight: 600;
-    /* font-size: 24px; */
-    /* color: rgb(223, 29, 136); */
-    font-family: Arial, Helvetica, sans-serif,Lucida;
     
-}
-heading{
-    font-size: 40px;
-    /* color: purple; */
-}
-SUBHEAD{
-    font-weight: 600;
-    font-size: 20px;
-    /* color: rgb(8, 252, 118); */
-    font-family: Arial, Helvetica, sans-serif,Lucida;
-    
-}
-#NUMBER{
-    font-size: 36PX;
-}
-#NUMBER2{
-    font-size: 14PX;
-}
-  
-}
-/* =================================        786     ========================================= */
-@media (max-width: 786px) {
-
-    PT{
-        font-size: 15PX;
-        /* color: red; */
-    }
-    #SMALL, SP{
-        font-size: 15px;
-        /* color: red; */
-    }
-    #XLARGE{
-        font-size: 20PX;
-        /* color:rgb(24, 174, 243); */
-    }
-    
-    #LARGE, HP{
-        font-size: 18PX;
-        /* color:rgb(28, 12, 248); */
-    }
-    
-    h4{
-        font-weight: 600;
-        /* font-size: 24px; */
-        /* color: rgb(223, 29, 136); */
-        font-family: Arial, Helvetica, sans-serif,Lucida;
-        
-    }
-    heading{
-        font-size: 36px;
-        /* color: purple; */
-    }
-    SUBHEAD{
-        font-weight: 600;
-        font-size: 18px;
-        /* color: rgb(8, 252, 118); */
-        font-family: Arial, Helvetica, sans-serif,Lucida;
-        
-    }
-    #NUMBER{
-        font-size: 33PX;
-    }
-    #NUMBER2{
-        font-size: 13PX;
-    }
-
-}
+   
 
 
 /* =================================        700     ========================================= */
@@ -255,48 +55,7 @@ SUBHEAD{
         display: flex;
         flex-direction: column;
     }
-    PT{
-        font-size: 14PX;
-        /* color: red; */
-    }
-    #SMALL, SP{
-        font-size: 14px;
-        /* color: red; */
-    }
-    #XLARGE{
-        font-size: 18PX;
-        /* color:rgb(24, 174, 243); */
-    }
-    
-    #LARGE, HP{
-        font-size: 16PX;
-        /* color:rgb(28, 12, 248); */
-    }
-    
-    h4{
-        font-weight: 600;
-        /* font-size: 24px; */
-        /* color: rgb(223, 29, 136); */
-        font-family: Arial, Helvetica, sans-serif,Lucida;
-        
-    }
-    heading{
-        font-size: 28px;
-        /* color: purple; */
-    }
-    SUBHEAD{
-        font-weight: 600;
-        font-size: 16px;
-        /* color: rgb(8, 252, 118); */
-        font-family: Arial, Helvetica, sans-serif,Lucida;
-        
-    }
-    #NUMBER{
-        font-size: 30PX;
-    }
-    #NUMBER2{
-        font-size: 12PX;
-    }
+   
     #MAIN i{
         font-size: 20px;
     }
@@ -310,15 +69,7 @@ SUBHEAD{
 /* ----------------------------------       350   --------------------------- */
 @media (max-width: 350px) {
    
-    heading{
-        font-size: 24px;
-    }
-    NUM1{
-        font-size: 19PX;
-    }
-    NUM2{
-        font-size: 12PX;
-    }
+  
     .input-container {
     
         width: 100%;
@@ -768,15 +519,7 @@ SUBHEAD{
     /* font-size: var(--text--18size); */
     /* font-family:var(--font-family) ; */
 }
-#NUMBER{
-    font-size: 40PX;
-    font-weight: 600;
-}
-#NUMBER2{
-    font-size: 16PX;
-    font-weight: 500;
-    margin-bottom: 10PX;
-}
+
 /* <!-- ============================================Seamless Talent Solutions===================================================== --> */
 
 #CCOLOR p{
@@ -1020,7 +763,39 @@ SUBHEAD{
 
 /*   MUGHAIR SLIDER 1st of 6 BUSINESSES LOGO */
 
+/* start slider section  */
 
+
+.slider-content11 {
+    margin: 0 70px;
+    overflow: hidden;
+}
+.slider-content11 {
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.swiper-slide11 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .swiper-slide11 {
+        display: block;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider-content11 {
+        margin: 0 30px;
+        overflow-x: hidden;
+    }
+}
+
+/* End Slider Section  */
 
 /* -------------------- MUGHAIR 2ND CONTAINER  --------------------- */
 
