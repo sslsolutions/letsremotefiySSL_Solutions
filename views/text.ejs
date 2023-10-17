@@ -37,5 +37,16 @@
     <helaine style="font-family: var(--subbold--font);">this is random text </helaine><br>
   
 </H1>
+<img id="image" src="" alt="Image" />
+    
+<script>
+    // Replace this with the Base64 data you retrieve from your database
+    const base64ImageData = "/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAA";
+
+    // Set the Base64 data as the image source
+    const imageElement = document.getElementById("image");
+    imageElement.src = `data:image/jpeg;base64,${base64ImageData}`;
+</script>
 </body>
+
 </html>
