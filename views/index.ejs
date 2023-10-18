@@ -81,14 +81,6 @@
     <!-- ------------------------------------------------------------------------------------------------ -->
 
  
-
-
-          
-            
-        </div>
-
-    </div>
-    </div>
     <div class="slide-container-fluid swiper p-0 my-5">
         <%- include('Components/profile-images'); %>
     </div>
@@ -701,8 +693,8 @@
                     <% skills.forEach(function(skills) { %>
                         <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
                             <div class="row">
-                                <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
-                                    <img decoding="async" loading="lazy" src=" <%= skills.img %>" class="mr-4 ml-1 "
+                                <button class=" rounded-4  bg-white fw-semibold d-flex border-0  align-items-center">
+                                    <img decoding="async" loading="lazy" src=" <%= skills.img %>" class="mr-4 p-1 "
                                         alt="">
                                     <%= skills.btnname %>
                                 </button>
@@ -732,9 +724,9 @@
                     <% technologies.forEach(function(technologies) { %>
                         <div class="col-lg-2 col-sm-3 col-md-3 m-2 ">
                             <div class="row">
-                                <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
+                                <button class=" rounded-4 bg-white fw-semibold d-flex border-0  align-items-center">
                                     <img decoding="async" loading="lazy" width="<%=technologies.width%>"
-                                        src="<%= technologies.img%>" class="mr-4 ml-1 " alt="">
+                                        src="<%= technologies.img%>" class="mr-4 img-fluid " alt="">
                                     <%= technologies.btnname %>
                                 </button>
                             </div>
@@ -767,7 +759,7 @@
                             <div class="row">
                                 <button class=" rounded-4 p-1 bg-white fw-semibold d-flex border-0  align-items-center">
                                     <img decoding="async" loading="lazy" width="<%=trajectory.width%>"
-                                        src=" <%= trajectory.img %>" class="mr-3 ml-1 " alt="">
+                                        src=" <%= trajectory.img %>" class="p-1  " alt="">
                                     <%= trajectory.btnname %>
                                 </button>
                             </div>

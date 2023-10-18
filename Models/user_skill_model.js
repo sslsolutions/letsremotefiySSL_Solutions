@@ -1,7 +1,6 @@
 const sequelize = require('./index');
 const { DataTypes, Model } = require('sequelize');
 const user_profile_seller = require('./user_profile_seller_models');
-const User = require('./User');
 class user_skill_model extends Model {
     static associations(model) {
   

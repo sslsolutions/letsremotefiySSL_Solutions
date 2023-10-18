@@ -1,8 +1,10 @@
 /////////updating user Profile in profile page/////////
- const express=require("express")
- const router=express.Router();
+const express = require("express")
+const router = express.Router();
 
 const user_skill_model = require('../Models/user_skill_model'); // Import your Sequelize model
+const User = require("../Models/User");
+const user_profile_seller = require("../Models/user_profile_seller_models");
 
 
 router.put('/update-talent-profile/', async (req, res) => {
@@ -28,3 +30,42 @@ router.put('/update-talent-profile/', async (req, res) => {
     return res.status(500).json({ message: 'Internal server error' });
   }
 });
+
+router.post('/update/info', async (req, res) => {
+
+  try {
+    const userId = req.cookies.userId
+    console.log(userId);
+  const { descriptions, country, firstName, lastName } = req.body;
+console.log(descriptions, country, firstName);
+    User.findByPk(userId, {
+      include: [
+        {
+          model: user_profile_seller,
+          include: user_skill_model,
+        },
+      ],
+    })
+      .then((user) => {
+        if (!user) {
+        // User found with the specified conditions
+        return res.status(404).json({ message: 'User not found' });
+      }
+          user.user_profile_seller.firstName = firstName
+          user.user_profile_seller.lastName = lastName
+          user.user_profile_seller.country = country
+          user.user_profile_seller.descriptions = descriptions
+  
+           user.user_profile_seller.save();
+          return res.redirect('/talent/profile-view')
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: 'Internal server error' });
+  }
+})
+
+module.exports = router

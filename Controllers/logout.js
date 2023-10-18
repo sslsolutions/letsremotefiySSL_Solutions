@@ -10,6 +10,7 @@ router.get('/logout',async (req, res)=>{
         // If the user is loggedin
         res.clearCookie('token')
         res.redirect('/login')
+        res.end()
 })
 
 

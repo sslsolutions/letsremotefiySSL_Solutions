@@ -5,7 +5,7 @@ const crypto = require('crypto');
 
 class User extends Model {
     static associations(model) {
-
+      
     }
     createResetPasswordToken() {
         const resetToken = crypto.randomBytes(32).toString('hex')
@@ -47,8 +47,8 @@ User.init({
     sequelize, // We need to pass the connection instance
     modelName: 'Users' // We need to choose the model name
 });
-User.hasOne(user_profile_seller)
 
+User.hasOne(user_profile_seller);
 // the defined model is the class itself
 
 module.exports = User
