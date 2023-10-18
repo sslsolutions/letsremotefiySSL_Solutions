@@ -147,46 +147,6 @@ router.post('/readytojoin', upload.single('Resume'), async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-///////get all user's form database//////////////////
-
-
-
-
- router.get('/getuserinfo', async (req, res)=>{
-
-  user_model.findOne({
-    where: { id: '1' },
-    include: [
-      {
-        model: user_profile_seller,
-        include: user_skill_model,
-      },
-    ],
-  })
-    .then((user) => {
-      if (user) {
-        // User found with the specified conditions
-       res.status(200).json(user)
-      } else {
-        // User not found
-        console.log('User not found.');
-      }
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
- })
-
-
 module.exports = router
 
 

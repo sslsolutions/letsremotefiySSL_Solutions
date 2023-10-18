@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const mongoose = require('mongoose')
 const passport = require('passport')
 const dotenv = require('dotenv')
 dotenv.config();
@@ -9,6 +8,10 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const flash = require('connect-flash')
 const cookieParser = require('cookie-parser')
+const user_profile_seller = require('./Models/user_profile_seller_models.js')
+
+
+
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + '/public'));
 app.set('views', path.join(__dirname, 'views'));
@@ -40,7 +43,7 @@ const { verifyToken, restricted } = require('./Controllers/middleware/auth.js')
 const userProfileSeller = require('./Controllers/user_profile_seller.js')
 const logout = require('./Controllers/logout.js')
 const forgetPassword = require('./Controllers/forgetPassword.js')
-const user_profile_seller = require('./Models/user_profile_seller_models.js')
+const profileView=require('./Controllers/profileView.js')
 
 /////////roles///////////// 
 var skills = [
@@ -166,8 +169,8 @@ var technologies = [
     },
     {
         btnname: 'Business Analyst',
-        img: "https://letsremotify.com/wp-content/uploads/2023/05/js.svg",
-        width: 28,
+        img: "images/business-analysis-01.png",
+        width: 34,
 
 
     },
@@ -182,44 +185,44 @@ var technologies = [
 var trajectory = [
     {
         btnname: 'Software Engineer',
-        img: "https://letsremotify.com/wp-content/uploads/2023/05/js.svg",
-        width: 28,
+        img: "images/Senior Engineer.png",
+        width: 38,
     },
     {
         btnname: 'Senior Architect',
-        img: "https://letsremotify.com/wp-content/uploads/2023/05/js.svg",
-        width: 28,
+        img: "images/Software Architect-01.png",
+        width: 38,
     },
     {
         btnname: 'Senior Engineer',
-        img: "https://letsremotify.com/wp-content/uploads/2023/05/js.svg",
-        width: 28
+        img: "images/Senior Engineer.png",
+        width: 38,
     },
     {
         btnname: 'Marketer',
-        img: "https://letsremotify.com/wp-content/uploads/2023/05/js.svg",
-        width: 28
+        img: "images/Marketer-01.png",
+        width: 38,
     },
     {
         btnname: 'Software Developer',
         img: "/images/Software Developer.png",
-        width: 28
+        width: 38,
     },
     {
         btnname: 'Project Manager ',
-        img: "https://letsremotify.com/wp-content/uploads/2023/05/js.svg",
-        width: 28
+        img: "/images/Project Manager-01.png",
+        width: 38,
     },
     {
         btnname: 'Software Architect',
-        img: "https://letsremotify.com/wp-content/uploads/2023/05/js.svg",
-        width: 28,
+        img: "/images/Software Architect-01.png",
+        width: 38,
 
     },
     {
         btnname: 'Tech Lead Manager',
         img: "/images/Tech-Lead-Manager-01.png",
-        width: 28,
+        width: 38,
 
     }
 
@@ -253,6 +256,7 @@ app.use('/', login)
 app.use('/', logout)
 app.use('/', forgetPassword)
 app.use('/', userProfileSeller)
+app.use('/talent/profile', profileView)
 
 app.get('/', (req, res) => {
     res.render('index.ejs')
@@ -261,6 +265,14 @@ app.get('/blogs', (req, res) => {
     res.render('blog.ejs')
 })
 
+
+app.get('*', function(req, res, next){
+	if(req.cookies['token'] == null){
+		res.redirect('/login');
+	}else{
+		next();
+	}
+});
 
 
 app.get('/pricing', (req, res) => {
@@ -286,11 +298,12 @@ app.get('/overview',(req, res)=>{
 })
 
 
-
 app.get('/seller/dashboard', verifyToken, (req, res)=>{
     res.render('userDashboard.ejs')
 })
-
+app.get('/talent/profile-view',verifyToken, (req, res)=>{
+    res.render('profile-page.ejs')
+})
 app.listen(process.env.PORT, (req, res) => {
     console.log(`Listening to localhost ${process.env.PORT}`);
 })

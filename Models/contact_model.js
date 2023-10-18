@@ -1,25 +1,31 @@
-const mongoose = require('mongoose')
-const Scheme = mongoose.Schema;
-const contactScheme = new Scheme({
+const sequelize=require('./index')
+const { DataTypes, Model } = require('sequelize');
+
+ class ContactScheme extends Model{
+
+}
+
+ContactScheme.init({
     name: {
-        type: String,
+        type:DataTypes.STRING,
         require: true
     },
     email: {
-        type: String,
+        type:DataTypes.STRING,
         require: true
     },
-    inquiry: {
-        type: String,
-        require: true
-    },
+   
     message: {
-        type: String,
+        type:DataTypes.STRING,
         require: true
     },
     Inquiry: {
-        type: String,
+        type:DataTypes.STRING,
         require: true
     }
+},{
+    sequelize, // We need to pass the connection instance
+    modelName: 'ContactSchema' 
 })
-module.exports = mongoose.model('contact_us', contactScheme)
+
+module.exports=ContactScheme

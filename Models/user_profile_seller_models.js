@@ -1,16 +1,12 @@
-const User = require('./User');
-const sequelize = require('./index')
 const { DataTypes, Model } = require('sequelize');
+const sequelize = require('./index');
 const user_skill_model = require('./user_skill_model');
 
 class user_profile_seller extends Model {
-static associations(model){
-   // Specify the foreign key
+    // Define your user_profile_seller model here
 }
-}
+
 user_profile_seller.init({
-
-
     Designation: {
         type: DataTypes.STRING,
         require: true
@@ -24,7 +20,7 @@ user_profile_seller.init({
         require: true
     },
     phoneNumber: {
-        type: DataTypes.STRING, // Change the data type to String
+        type: DataTypes.STRING,
         required: true,
     },
     country: {
@@ -35,13 +31,19 @@ user_profile_seller.init({
         type: DataTypes.STRING,
         require: true
     },
+    descriptions: {
+        type: DataTypes.STRING,
+        require: true
+    },
     avatar: {
         type: DataTypes.STRING,
     },
 }, {
-    sequelize, // We need to pass the connection instance
-    modelName: 'user_profile_seller'
-})
+    sequelize,
+    modelName: 'user_profile_sellers'
+});
 
+// Create the association with user_skill_model
 user_profile_seller.hasOne(user_skill_model)
+
 module.exports = user_profile_seller

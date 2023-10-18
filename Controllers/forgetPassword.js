@@ -73,7 +73,6 @@ router.post('/resetPassword/:token', async (req, res) => {
         user.passwordResetToken = null; // Clear the password reset token
         user.passwordResetTokenExpires = null; // Clear the token expiration
         user.passwordChangeAt = new Date();
-
         await user.save({ validateBeforeSave: false });
 
         const loginToken = jwt.sign({ id: user.id }, process.env.JWT_SCERET_KEY, {

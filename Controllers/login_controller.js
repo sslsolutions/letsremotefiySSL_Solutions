@@ -75,7 +75,7 @@ router.post('/login', validator, async (req, res, next) => {
                 // const userProfile = await user_profile_seller.findOne({where:{ user: id }});
                 const userProfile = await user_profile_seller.findOne({ where: { UserId: existingUser.id } });
                 if (userProfile ) {
-                    redirectPath='/seller/dashboard'
+                    redirectPath='/talent/profile-view'
                 }
                 else if (existingUser.roles.includes('Seller')) {
                     // Redirect to the seller page
