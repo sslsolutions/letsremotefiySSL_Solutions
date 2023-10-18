@@ -65,13 +65,12 @@ H3, h4, h5{
     /* color: blue; */
 }
 
-/* scnsdjcndjkcnwdkjcnjncjkwcwjknkcjwjcn
-
-
-dcndjcwdcxnwjcwjc
-jwncjwcj*/
 .XSMALL, #XSMALL{
     font-size: 16PX;
+    /* color: brown; */
+}
+.XXSMALL, #XXSMALL{
+    font-size: 14PX;
     /* color: brown; */
 }
 #SMALL, SP, .SMALL{
@@ -82,6 +81,7 @@ jwncjwcj*/
     font-size: 24PX;
     /* color:rgb(24, 174, 243); */
 }
+
 
 #LARGE, HP, .LARGE{
     font-size: 22PX;
