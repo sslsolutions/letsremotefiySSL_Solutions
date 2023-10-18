@@ -16,6 +16,7 @@ dotenv.config();
 router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json())
 
+<<<<<<< Updated upstream
 router.get('/createProfile', verifyToken, async (req, res, next) => {
   const encodedEmail = req.query.email;
   const isEmailValid = decodeURIComponent(encodedEmail)
@@ -24,6 +25,10 @@ router.get('/createProfile', verifyToken, async (req, res, next) => {
 
 router.get('/details', verifyToken, async (req, res) => {
   res.render('details')
+=======
+router.get('/', verifyToken ,async (req, res) => {
+    res.render('create_profile.ejs')
+>>>>>>> Stashed changes
 })
 // const validatorProfile = [
 //     check('Designation ', 'Enter your Designation Please!'),
@@ -39,8 +44,13 @@ router.get('/details', verifyToken, async (req, res) => {
 //       cb(null, Date.now() + '-' + file.originalname); // Rename the file with a unique name
 //     },
 //   });
+<<<<<<< Updated upstream
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
+=======
+const storage = multer.memoryStorage(); 
+  const upload = multer({storage});
+>>>>>>> Stashed changes
 
 router.post('/createProfile', upload.single('profileImage'), async (req, res) => {
   const userId = req.cookies.userId

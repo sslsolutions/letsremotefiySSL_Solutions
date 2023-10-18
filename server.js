@@ -264,7 +264,11 @@ app.get('/', (req, res) => {
 app.get('/blogs', (req, res) => {
     res.render('blog.ejs')
 })
+app.get('/blogs', (req, res)=>{
+    res.render('blog.ejs')
+})
 
+<<<<<<< Updated upstream
 
 app.get('*', function(req, res, next){
 	if(req.cookies['token'] == null){
@@ -284,6 +288,9 @@ app.get('/pricing', (req, res) => {
 })
 
 app.get('/hire_talents', verifyToken, (req, res) => {
+=======
+app.get('/hire_talents' ,verifyToken ,(req, res) => {
+>>>>>>> Stashed changes
     res.render('hire_talents.ejs')
 })
 app.get('/about', (req, res) => {
@@ -293,10 +300,13 @@ app.get('/jobs', (req, res) => {
     res.render('Jobs.ejs')
 })
 
+<<<<<<< Updated upstream
 app.get('/overview',(req, res)=>{
     res.render('talent-overview.ejs')
 })
 
+=======
+>>>>>>> Stashed changes
 
 app.get('/seller/dashboard', verifyToken, (req, res)=>{
     res.render('userDashboard.ejs')
