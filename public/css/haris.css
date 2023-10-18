@@ -99,11 +99,12 @@
     display: flex;
     justify-content: center;
 }
-.service-content{
+.service-content11{
+    /* border: 2px solid red; */
     display: grid;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* grid-template-columns: repeat(auto-fit,  minmax(300px, auto)); */
+    grid-template-columns: repeat(auto-fit,  minmax(300px, auto));
     align-items: center;
     gap: 2.3rem;
     margin-top: 4.2rem;
@@ -546,7 +547,8 @@
     /* background-image: url('/images/design.png'); */
     background-size: 100% 100%;
 }
-.service-content{
+.service-content22{
+    /* border: 2px solid blue; */
     display: grid;
     grid-template-columns: repeat(auto-fit,  minmax(300px, auto));
     align-items: center;
