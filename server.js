@@ -258,24 +258,14 @@ app.use('/', forgetPassword)
 app.use('/', userProfileSeller)
 app.use('/talent/profile', profileView)
 
-app.get('/', (req, res) => {
-    res.render('index.ejs')
-})
-app.get('/blogs', (req, res) => {
-    res.render('blog.ejs')
-})
-app.get('/blogs', (req, res)=>{
-    res.render('blog.ejs')
-})
 
-
-app.get('*', function(req, res, next){
-	if(req.cookies['token'] == null){
-		res.redirect('/login');
-	}else{
-		next();
-	}
-});
+// app.get('*', function(req, res, next){
+// 	if(req.cookies['token'] == null){
+// 		res.redirect('/');
+// 	}else{
+// 		next();
+// 	}
+// });
 
 
 app.get('/pricing', (req, res) => {
@@ -296,6 +286,10 @@ app.get('/jobs', (req, res) => {
     res.render('Jobs.ejs')
 })
 
+app.get('/blogs', (req, res)=>{
+    res.render('blog.ejs')
+})
+
 app.get('/overview',(req, res)=>{
     res.render('talent-overview.ejs')
 })
@@ -310,7 +304,7 @@ app.get('/nprofile',(req, res)=>{
 app.get('/seller/dashboard', verifyToken, (req, res)=>{
     res.render('userDashboard.ejs')
 })
-app.get('/talent/profile-view',verifyToken, (req, res)=>{
+app.get('/talent/profile-view', (req, res)=>{
     res.render('profile-page.ejs')
 })
 app.listen(process.env.PORT, (req, res) => {
