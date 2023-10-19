@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/network-profile.css" type="text/css" >
+    <link rel="stylesheet" href="/css/networkprofile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Talent Profile</title>
+    <title>letsremodify</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                     <div class="collapse navbar-collapse" id="menu-navbar">
                         <div class="left-side">
                             <div class="container">
-                                <h5 class="pt-3 pb-5"><span><img class="left-logo" src="logo.png" alt=""></span>
+                                <h5 class="pt-3 pb-5"><span><img class="left-logo" src="/images/logo.png" alt=""></span>
                                 </h5>
                                 <div class="overview">
                                     <i class="fa fa-th-large Overview-font" aria-hidden="true"></i>
@@ -54,7 +54,7 @@
                                 </div>
                                 <div class="value mt-5">
                                     <h3 class="text-center mt-5">Valued By:</h3>
-                                    <img src="images/value.png" alt="">
+                                    <img src="value.png" alt="">
                                     <!-- <img src="https://letsremotify.com/static/deer-logo-1298a2bef4ccfa11ce6da521286b65db50df5d0273ad1cbaf6fa92f7ac45ec9b.png"
                                             alt="">
                                         <img src="https://letsremotify.com/static/clip-logo-24f05d7b3cf319e10c6e0036e4e681ee8e09cdf06c105b2c7cb6c6d3bc3d501d.png"
@@ -68,7 +68,7 @@
 
                 <div class="left-side mt-2 d-none d-md-block">
                     <div class="container">
-                        <h5 class="pt-3 pb-5"><span><img class="left-logo" src="logo.png" alt=""></span></h5>
+                        <h5 class="pt-3 pb-5"><span><img class="left-logo" src="/images/logo.png" alt=""></span></h5>
                         <div class="overview">
                             <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Overview</span>
                         </div>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="value">
                             <h3 class="text-center">Valued By:</h3>
-                            <img src="images/value.png" alt="">
+                            <img src="/images/value.png" alt="">
                             <!-- <img src="https://letsremotify.com/static/deer-logo-1298a2bef4ccfa11ce6da521286b65db50df5d0273ad1cbaf6fa92f7ac45ec9b.png" -->
                             <!-- alt=""> -->
                             <!-- <img src="https://letsremotify.com/static/clip-logo-24f05d7b3cf319e10c6e0036e4e681ee8e09cdf06c105b2c7cb6c6d3bc3d501d.png" -->
@@ -99,8 +99,6 @@
                         </div>
 
                     </div>
-
-                </div>
 
                 </div>
 
@@ -114,7 +112,7 @@
                     <div class="dropdown">
                         <i class="fa fa-bell" aria-hidden="true"></i>
                         <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                            <img class="profile" src="<%= image.dataUri %>">
+                            <img class="profile" src="https://i.stack.imgur.com/KKhkr.png?s=128&g=1">
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
@@ -129,7 +127,7 @@
                 </nav>
                 <div class="bg">
                     <div class="profile-detail">
-                        <img src="images/banner.jpg" alt="">
+                        <img src="/images/banner.jpg" alt="">
                     </div>
                     <div class="row">
                         <div class="col-md-4 mt-3 col-sm-6">
@@ -158,21 +156,21 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="/talent/profile/update/info" method="post">
+                                                <form>
                                                     <div class="form-group">
                                                         <label for="formGroupExampleInput">First Name</label>
                                                         <input type="text" class="form-control rounded-2 py-2"
-                                                            id="formGroupExampleInput" placeholder="First name" name="firstName">
+                                                            id="formGroupExampleInput" placeholder="First name">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="formGroupExampleInput2">Last Name</label>
                                                         <input type="text" class="form-control rounded py-2"
-                                                            id="formGroupExampleInput2" placeholder="Last name" name="lastName">
+                                                            id="formGroupExampleInput2" placeholder="Last name">
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="formGroupExampleInput2">Country</label>
-                                                        <select class="country py-2 rounded-2" name="country">
+                                                        <select class="country py-2 rounded-2">
                                                             <option value="Afghanistan">Afghanistan</option>
                                                             <option value="Albania">Albania</option>
                                                             <option value="Algeria">Algeria</option>
@@ -455,25 +453,24 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="formGroupExampleInput2">Description</label>
-                                                        <textarea name="descriptions" id="descriptions" cols="60" rows="5"></textarea>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                        <textarea name="" id="" cols="60" rows="5"></textarea>
                                                     </div>
                                                 </form>
                                             </div>
-                                            
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Update</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <p class="ms-2">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <span id="clock">
+                                    <span>
                                         PK - 10:44 AM local time
                                     </span>
                                 </p>
                                 <p class="container">
-                                    <a class="add-des" href=""><%= userDetails.user_profile_seller.descriptions %></a>
+                                    <a class="add-des" href="">Add description</a>
                                 </p>
 
                                 <!-- Modal -->
@@ -572,7 +569,7 @@
                         </div>
                         <div class="col-md-2 col-sm-6 mt-3 py-4 experience-media">
                             <p class="mt-5"><strong>Experience</strong></p>
-                            <p class="non-active">Less than 1 year</p>
+                            <p class="non-active"><%= userDetails.user_profile_seller.user_skill_model.Experiences %></p>
                         </div>
                     </div>
 
@@ -912,20 +909,8 @@
             </div>
         </div>
     </div>
-    <script>
-            function updateLiveTime() {
-            const now = new Date();
-            const hours = now.getHours();
-            const minutes = now.getMinutes();
-            const ampm = hours >= 12 ? 'PM' : 'AM';
-            const formattedTime = `${hours % 12 || 12}:${String(minutes).padStart(2, '0')} ${ampm}`;
-            
-            // Update the content of the 'live-time' div
-            const liveTime = document.getElementById('clock');
-            liveTime.textContent = `PK - ${formattedTime}`;
-        }
 
-  
+    <script>
         // Get all the elements with the "seeking-hover" class
         const seekingBoxes = document.querySelectorAll('.seeking-hover');
 

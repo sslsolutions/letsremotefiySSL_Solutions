@@ -30,7 +30,7 @@ router.get('/', verifyToken, (req, res) => {
         const dataUri = `data:image/png;base64,${binaryImageData}`;
         fs.writeFileSync('avatar.jpge', dataUri)
         console.log(binaryImageData);
-        return res.render('network-profile.ejs', { userDetails: user, image: dataUri })
+        return res.render('networkprofile.ejs', { userDetails: user, image: dataUri })
       }
     }).catch((error) => {
       console.error('Error:', error);
