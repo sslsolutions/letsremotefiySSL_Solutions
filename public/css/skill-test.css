@@ -1,0 +1,82 @@
+#technical{
+    background-color: white;
+    border-radius: 12px;
+    /* border: 2px solid blue; */
+    flex-wrap: wrap;
+}
+
+#SKILL-BOXES{
+    border: 1PX solid grey;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: yellow; */
+}
+
+.XSMALL{
+    color: rgb(175, 32, 34);
+}
+
+.IMG-TEXT{
+    display: flex;
+}
+#X-ICON{
+    /* align-items: end; */
+    align-self: flex-end;
+}
+.ARROW{
+    
+    font-size: 24px;
+    color: rgb(175, 32, 34);
+}
+
+/* ------------------       CHAT        ------------------------ */
+.input-container {
+    
+    background-color: rgb(214, 34, 34);
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    /* width: 300px; */
+    /* height: 100px; */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-container i {
+    font-size: 20px;
+    margin-right: 10px;
+    color: #333;
+}
+
+input[type="text"] {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+}
+.form-select{
+   background-color: rgb(250, 250, 250);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 90%;
+    color:  rgb(124, 113, 107);
+    /* height: 100%; */
+    /* height: 30pxs; */
+
+}
+#MAIN div{
+    background-color: rgb(250, 250, 250);
+}
+#MAIN input{
+    background-color: rgb(250, 250, 250);
+}
+.LABLES div{
+    background-color: rgb(250, 250, 250);
+}
+
