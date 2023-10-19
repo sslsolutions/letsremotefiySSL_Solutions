@@ -264,6 +264,9 @@ app.get('/', (req, res) => {
 app.get('/blogs', (req, res) => {
     res.render('blog.ejs')
 })
+app.get('/blogs', (req, res)=>{
+    res.render('blog.ejs')
+})
 
 
 app.get('*', function(req, res, next){
