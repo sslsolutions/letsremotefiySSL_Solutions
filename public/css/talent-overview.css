@@ -169,7 +169,7 @@
 #USER{
     height: 80PX ;
     width: 250PX;
-    border: 1PX solid grey;
+    /* border: 1PX solid grey; */
     border-radius: 25PX;
     display: flex;
     justify-content: space-evenly;

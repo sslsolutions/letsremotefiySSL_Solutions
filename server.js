@@ -296,7 +296,13 @@ app.get('/jobs', (req, res) => {
 app.get('/overview',(req, res)=>{
     res.render('talent-overview.ejs')
 })
+app.get('/skill',(req, res)=>{
+    res.render('skill-test.ejs')
+})
 
+app.get('/nprofile',(req, res)=>{
+    res.render('network-profile')
+})
 
 app.get('/seller/dashboard', verifyToken, (req, res)=>{
     res.render('userDashboard.ejs')

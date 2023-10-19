@@ -1,3 +1,6 @@
+
+
+
 const sequelize = require('./index');
 const { DataTypes, Model } = require('sequelize');
 const user_profile_seller = require('./user_profile_seller_models');
