@@ -276,7 +276,7 @@ app.get('/pricing', (req, res) => {
     })
 })
 
-app.get('/hire_talents', verifyToken, (req, res) => {
+app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
 })
 app.get('/about', (req, res) => {
@@ -297,16 +297,12 @@ app.get('/skill',(req, res)=>{
     res.render('skill-test.ejs')
 })
 
-app.get('/nprofile',(req, res)=>{
-    res.render('network-profile')
-})
+
 
 app.get('/seller/dashboard', verifyToken, (req, res)=>{
     res.render('userDashboard.ejs')
 })
-app.get('/talent/profile-view', (req, res)=>{
-    res.render('profile-page.ejs')
-})
+
 app.listen(process.env.PORT, (req, res) => {
     console.log(`Listening to localhost ${process.env.PORT}`);
 })
