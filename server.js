@@ -298,7 +298,15 @@ app.get('/skill',(req, res)=>{
 })
 
 app.get('/nprofile',(req, res)=>{
-    res.render('network-profile')
+    res.render('network-profile.ejs')
+})
+
+app.get('/404',(req, res)=>{
+    res.render('404pg.ejs')
+})
+
+app.get('/505',(req, res)=>{
+    res.render('505pg.ejs')
 })
 
 app.get('/seller/dashboard', verifyToken, (req, res)=>{
