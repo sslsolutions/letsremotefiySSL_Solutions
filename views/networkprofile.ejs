@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/profileview.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/networkprofile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>letsremodify</title>
@@ -17,12 +17,58 @@
 
 <body>
 
-    <div class="container-fluid main py-3">
+    <div class="main-header container-fluid main py-3">
         <div class="row">
-            <div class="col-md-2">
-                <div class="left-side">
+            <!-- <div class="position-absolutes"> -->
+            <div class="col-md-3">
+                <nav class="container-fluid navbar py-3 d-md-none navbar-expand-lg navbar-light navbar-color">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <i data-target="#menu-navbar" class="fa-solid fa-bars toggle-icon text-light"
+                        data-toggle="collapse"></i>
+                    <div class="collapse navbar-collapse" id="menu-navbar">
+                        <div class="left-side">
+                            <div class="container">
+                                <h5 class="pt-3 pb-5"><span><img class="left-logo" src="images/logo.png" alt=""></span>
+                                </h5>
+                                <div class="overview">
+                                    <i class="fa fa-th-large Overview-font" aria-hidden="true"></i>
+                                    <span>Overview</span>
+                                </div>
+                                <div class="overview">
+                                    <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Skill
+                                        Test</span>
+                                </div>
+                                <div class="overview-disabeld">
+                                    <i class="fa fa-desktop" aria-hidden="true"></i> <span> Video
+                                        Screening</span>
+                                </div>
+                                <div class="overview-disabeld">
+                                    <i class="fa fa-archive" aria-hidden="true"></i> <span>
+                                        Final Interview
+                                    </span>
+                                </div>
+                                <div class="overview-disabeld">
+                                    <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>
+                                        Network
+                                    </span>
+                                </div>
+                                <div class="value mt-5">
+                                    <h3 class="text-center mt-5">Valued By:</h3>
+                                    <img src="value.png" alt="">
+                                    <!-- <img src="https://letsremotify.com/static/deer-logo-1298a2bef4ccfa11ce6da521286b65db50df5d0273ad1cbaf6fa92f7ac45ec9b.png"
+                                            alt="">
+                                        <img src="https://letsremotify.com/static/clip-logo-24f05d7b3cf319e10c6e0036e4e681ee8e09cdf06c105b2c7cb6c6d3bc3d501d.png"
+                                            alt=""> -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </nav>
+
+                <div class="left-side mt-2 d-none d-md-block">
                     <div class="container">
-                        <h5 class="pt-3 pb-5"><span><img class="left-logo" src="logo.png" alt=""></span></h5>
+                        <h5 class="pt-3 pb-5"><span><img class="left-logo" src="/images/logo.png" alt=""></span></h5>
                         <div class="overview">
                             <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Overview</span>
                         </div>
@@ -43,20 +89,25 @@
                                 Network
                             </span>
                         </div>
-                        <div class="value pt-5">
-                            <h3 class="text-center mt-5">Valued By:</h3>
-                            <img src="https://letsremotify.com/static/google-icon-03aa8f40316d5a64176db8ced862cf9795302e5b9c4342678f44c8795a1b174b.png"
-                                alt="">
-                            <img src="https://letsremotify.com/static/deer-logo-1298a2bef4ccfa11ce6da521286b65db50df5d0273ad1cbaf6fa92f7ac45ec9b.png"
-                                alt="">
-                            <img src="https://letsremotify.com/static/clip-logo-24f05d7b3cf319e10c6e0036e4e681ee8e09cdf06c105b2c7cb6c6d3bc3d501d.png"
-                                alt="">
+                        <div class="value">
+                            <h3 class="text-center">Valued By:</h3>
+                            <img src="/images/value.png" alt="">
+                            <!-- <img src="https://letsremotify.com/static/deer-logo-1298a2bef4ccfa11ce6da521286b65db50df5d0273ad1cbaf6fa92f7ac45ec9b.png" -->
+                            <!-- alt=""> -->
+                            <!-- <img src="https://letsremotify.com/static/clip-logo-24f05d7b3cf319e10c6e0036e4e681ee8e09cdf06c105b2c7cb6c6d3bc3d501d.png" -->
+                            <!-- alt=""> -->
                         </div>
+
                     </div>
 
                 </div>
+
+                <!-- </div> -->
+
             </div>
-            <div class="col-md-10 right-section">
+
+
+            <div class="col-md-9 right-section">
                 <nav class="container bg-light py-2" role="navigation">
                     <div class="dropdown">
                         <i class="fa fa-bell" aria-hidden="true"></i>
@@ -65,31 +116,33 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation">
+                            <li role="presentation text-center">
                                 <a role="menuitem" tabindex="-1" href="#">Go to profile</a>
                             </li>
-                            <li role="presentation">
+                            <li role="presentation text-center">
                                 <a role="menuitem" tabindex="-1" href="#">Logout</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
                 <div class="bg">
-                    <div class="profile-detail mt-5">
-                        <img src="profile-2.png" alt="">
+                    <div class="profile-detail">
+                        <img src="/images/banner.jpg" alt="">
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 mt-3 col-sm-6">
                             <div class="container add-profile">
                                 <img class="rounded-circle"
                                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkTQ8DFOgujidIRil33r2QnSZ2Y_ZHahrUlw&usqp=CAU"
                                     alt="">
                             </div>
                             <div class="container add-name">
-                                <h3 class="container">ALi Hussnain <span>
+                                <h3><%= userDetails.user_profile_seller.firstName %>
+                                    <span>
                                         <img type="button" data-toggle="modal" data-target="#exampleModal"
                                             src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                            alt=""></span>
+                                            alt="">
+                                    </span>
                                 </h3>
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -103,23 +156,21 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="/talent/profile/update/info" method="post">
+                                                <form>
                                                     <div class="form-group">
                                                         <label for="formGroupExampleInput">First Name</label>
                                                         <input type="text" class="form-control rounded-2 py-2"
-                                                            id="formGroupExampleInput" placeholder="First name"
-                                                            name="firstName">
+                                                            id="formGroupExampleInput" placeholder="First name">
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="formGroupExampleInput2">Last Name</label>
                                                         <input type="text" class="form-control rounded py-2"
-                                                            id="formGroupExampleInput2" placeholder="Last name"
-                                                            name="lastName">
+                                                            id="formGroupExampleInput2" placeholder="Last name">
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="formGroupExampleInput2">Country</label>
-                                                        <select class="country py-2 rounded-2" name="country">
+                                                        <select class="country py-2 rounded-2">
                                                             <option value="Afghanistan">Afghanistan</option>
                                                             <option value="Albania">Albania</option>
                                                             <option value="Algeria">Algeria</option>
@@ -402,19 +453,17 @@
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="formGroupExampleInput2">Description</label>
-                                                        <textarea name="descriptions" id="descriptions" cols="60"
-                                                            rows="5"></textarea>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="submit" class=" btn-primary">Update</button>
+                                                        <textarea name="" id="" cols="60" rows="5"></textarea>
                                                     </div>
                                                 </form>
                                             </div>
-
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Update</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <p class="container ms-2">
+                                <p class="ms-2">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                     <span>
                                         PK - 10:44 AM local time
@@ -423,19 +472,6 @@
                                 <p class="container">
                                     <a class="add-des" href="">Add description</a>
                                 </p>
-
-                                <div class="container mt-5 tech-stack">
-                                    <div class="d-flex">
-
-                                        <h2>Tech Stack</h2>
-                                        <span data-toggle="modal" data-target="#myModal">
-                                            <img class="ms-3 mt-2"
-                                                src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                                alt="Edit Icon">
-                                        </span>
-                                    </div>
-                                    <p class="get-skill rounded-3">React.js</p>
-                                </div>
 
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
@@ -461,26 +497,20 @@
                         </div>
 
                         <!-- model end -->
-
-                        <div class="col-md-2">
-
-                        </div>
-                        <div class="col-md-2 mt-5">
-                            <h4 class="experties mt-5">
+                        <div class="col-md-3 col-sm-6 mt-5">
+                            <h4 class="container experties mt-5">
+                                Profile Detail
                                 <span>
                                     <img type="button" data-toggle="modal" data-target=".bd-example-modal-xl"
                                         src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
                                         alt="">
                                 </span>
-                                Profile Detail
                             </h4>
-                            <span class="container ms-3 mt-2 profile-experties">Expertise </span><br>
-                            <span class="container ms-2">Software Developer</span>
-                            <div class="web-dev rounded-3 m-auto ms-4">
-                                <p class="text-center mt-1">
-                                    Web Development
-                                </p>
+                            <div class="container">
+                                <span class="mt-2 profile-experties m-auto">Expertise </span><br>
+                                <span>Software Developer</span> <br>
                             </div>
+
                             <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog"
                                 aria-labelledby="myHugeModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-xl">
@@ -522,21 +552,67 @@
                                         <div class="select-work mt-3">
                                             <h2>What kind of Work are you interested in?</h2>
                                         </div>
+                                        <button type="button" class="w-50 btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2 mt-5">
-                            <div class="py-4 ms-5">
-                                <p class="mt-5"><strong>English Level</strong></p>
-                                <p class="non-active">Native</p>
+                        <div class="col-md-3 col-sm-6 mt-4">
+                            <div class="py-4 ">
+                                <div class="container english-media">
+                                    <p class="mt-5"><strong>English Level</strong></p>
+                                    <p class="non-active"><%= userDetails.user_profile_seller.user_skill_model.language %></p>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="col-md-2 mt-5 py-4">
+                        <div class="col-md-2 col-sm-6 mt-3 py-4 experience-media">
                             <p class="mt-5"><strong>Experience</strong></p>
-                            <p class="non-active">Less than 1 year</p>
+                            <p class="non-active"><%= userDetails.user_profile_seller.user_skill_model.Experiences %></p>
                         </div>
                     </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="container mt-5 tech-stack">
+                                    <div class="d-flex">
+                                        <h2>Tech Stack</h2>
+                                        <span data-toggle="modal" data-target="#myModal">
+                                            <img class="ms-3 mt-2"
+                                                src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                                alt="Edit Icon">
+                                        </span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <button class="get-skill rounded-3">React.js</button>
+                                        <button class="get-skill rounded-3 ms-2">php</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-8 set-skill d-flex">
+                                <div class="web-dev">
+                                    <button class="rounded-3 text-center mt-1">
+                                        Custom Style
+                                    </button>
+                                    <button class="rounded-3 text-center mt-1">
+                                        Style Sheet
+                                    </button>
+                                    <button class="rounded-3 text-center mt-1">
+                                        Web Development
+                                    </button>
+                                    <button class="rounded-3 text-center mt-1">
+                                        JavaScript
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
                 <div class="work-update">
@@ -544,25 +620,51 @@
                         <h3>Work Availability Update</h3>
                         <div class="containers mt-3">
                             <div class="row seeking">
-                                <div class="col-md-4 seeking-first border py-4 rounded-2 seeking-hover active">
-                                    <h3 class="text-center"><i class="fa fa-briefcase seeking-icon"
-                                            aria-hidden="true"></i> Seeking Jobs </h3>
+                                <div class="col-md-4 seeking-first border py-4 rounded-2 seeking-hover">
+                                    <h3 class="text-center">
+                                        <i class="fa fa-briefcase seeking-icon" aria-hidden="true"></i>
+                                        Seeking Jobs
+                                    </h3>
                                 </div>
-                                <!-- <div class="col-md-0"></div> -->
                                 <div class="col-md-4 seeking-center border py-4 rounded-2 seeking-hover">
-                                    <h3 class="text-center"><i class="fa fa-briefcase seeking-icon"
-                                            aria-hidden="true"></i>Seeking Jobs </h3>
+                                    <h3 class="text-center">
+                                        <i class="fa fa-briefcase seeking-icon" aria-hidden="true"></i>
+                                        Seeking Jobs
+                                    </h3>
                                 </div>
-                                <!-- <div class="col-md-0"></div> -->
                                 <div class="col-md-4 seeking-last border py-4 rounded-2 seeking-hover">
-                                    <h3 class="text-center"><i class="fa fa-briefcase seeking-icon"
-                                            aria-hidden="true"></i> Seeking Jobs</h3>
-
+                                    <h3 class="text-center">
+                                        <i class="fa fa-briefcase seeking-icon" aria-hidden="true"></i>
+                                        Seeking Jobs
+                                    </h3>
                                 </div>
                             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         </div>
                     </div>
                 </div>
+
                 <div class="work-update">
                     <div class="work-bg">
                         <div class="row">
@@ -571,9 +673,80 @@
                                 <h6 class="mt-5">No employment details added</h6>
                             </div>
                             <div class="col-md-1 add-detail">
-                                <img src="https://letsremotify.com/static/add_icon-cca05673df8bbb51833a3f4e63d6e305f8c20560572f240ad90686413cdfb953.png"
+                                <img type="button" data-toggle="modal" data-target="#exampleModal_3"
+                                    src="https://letsremotify.com/static/add_icon-cca05673df8bbb51833a3f4e63d6e305f8c20560572f240ad90686413cdfb953.png"
                                     alt="">
-                                <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
+                                <!--model Start  -->
+                                <div class="modal fade" id="exampleModal_3" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Add Work History</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword"
+                                                            class="col-sm-2 col-form-label">Position</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Position">
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword"
+                                                            class="col-sm-2 col-form-label">Company</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Company name">
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword"
+                                                            class="col-sm-2 col-form-label">Location</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Location">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex date mt-3">
+                                                        <label for="">Start Date</label>
+                                                        <input type="date" class="form-control">
+                                                        <label for="end-date" id="label_end" class="ms-5">End Date</label>
+                                                        <input type="date" class="form-control" id="end-date">
+                                                        <!-- <label for="end-date" class="ms-5">End Date</label>
+                                                        <input type="date" class="form-control" id="end-date"> -->
+                                                    </div>
+                                                    <!-- <input class="mt-3" type="checkbox" id="currently-working">
+                                                    <span>Currently working here</span> -->
+                                                    <input class="mt-3" type="checkbox" id="currently-working">
+                                                    <span>Currently working here</span>
+                                                    <br>
+                                                    <br>
+                                                    <label for=""><strong>Description</strong></label>
+                                                    <textarea class="mt-3" name="" id="" cols="60" rows="6"></textarea>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save</button>
+                                                    </div>
+
+                                                </form>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- modal end -->
                             </div>
                         </div>
                     </div>
@@ -586,9 +759,69 @@
                                 <h6 class="mt-5">No qualifications added</h6>
                             </div>
                             <div class="col-md-1 add-detail">
-                                <img src="https://letsremotify.com/static/add_icon-cca05673df8bbb51833a3f4e63d6e305f8c20560572f240ad90686413cdfb953.png"
+                                <img type="button" data-toggle="modal" data-target="#exampleModal_2"
+                                    src="https://letsremotify.com/static/add_icon-cca05673df8bbb51833a3f4e63d6e305f8c20560572f240ad90686413cdfb953.png"
                                     alt="">
-                                <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
+                                <!--model Start  -->
+                                <div class="modal fade" id="exampleModal_2" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Add Qualification</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <form action="">
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword"
+                                                            class="col-sm-2 col-form-label">Degree</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Degree">
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword"
+                                                            class="col-sm-2 col-form-label">Field</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Field of study">
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group row">
+                                                        <label for="inputPassword"
+                                                            class="col-sm-2 col-form-label">Institute</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Institute">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex date mt-3">
+                                                        <label for="">Starting year</label>
+                                                        <input type="month" class="form-control">
+                                                        <label for="" class="ms-5">Ending year</label>
+                                                        <input type="month" class="form-control">
+                                                    </div>
+                                                    <br>
+                                                    <br>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- modal end -->
                             </div>
                         </div>
                     </div>
@@ -601,35 +834,114 @@
                                 <h6 class="mt-5">No certificates added</h6>
                             </div>
                             <div class="col-md-1 add-detail">
-                                <img src="https://letsremotify.com/static/add_icon-cca05673df8bbb51833a3f4e63d6e305f8c20560572f240ad90686413cdfb953.png"
+                                <img type="button" data-toggle="modal" data-target="#exampleModal_1"
+                                    src="https://letsremotify.com/static/add_icon-cca05673df8bbb51833a3f4e63d6e305f8c20560572f240ad90686413cdfb953.png"
                                     alt="">
-                                <!-- <i class="fa fa-plus" aria-hidden="true"></i> -->
+                                <!--model Start  -->
+                                <div class="modal fade" id="exampleModal_1" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Add Certificate</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <div class="form-group row">
+                                                        <h6 for="inputPassword" class="col-sm-2 col-form-label">
+                                                            Certificate</h6>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Certificate name">
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group row">
+                                                        <h6 for="inputPassword" class="col-sm-2 col-form-label">
+                                                            Organization</h6>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Organization name">
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group row">
+                                                        <h6 for="inputPassword" class="col-sm-2 col-form-label">
+                                                            Institute</h6>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Description">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex date mt-3">
+                                                        <h6 for="">Starting year</h6>
+                                                        <input type="month" class="form-control">
+                                                        <h6 for="" class="ms-5">Ending year</h6>
+                                                        <input type="month" class="form-control">
+                                                    </div>
+                                                    <br>
+                                                    <br>
+                                                    <h5 for=""><strong>Description</strong></h5>
+                                                    <textarea class="mt-3" name="" id="" cols="60" rows="6"></textarea>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- modal end -->
                             </div>
                         </div>
                     </div>
                 </div>
 
 
-
-
-
-
-
-
-
-
-
             </div>
         </div>
     </div>
 
+    <script>
+        // Get all the elements with the "seeking-hover" class
+        const seekingBoxes = document.querySelectorAll('.seeking-hover');
 
+        // Add a click event listener to each box
+        seekingBoxes.forEach(box => {
+            box.addEventListener('click', () => {
+                // Remove the "active" class from all boxes
+                seekingBoxes.forEach(box => {
+                    box.classList.remove('active');
+                });
 
+                // Add the "active" class to the clicked box
+                box.classList.add('active');
+            });
+        });
 
+        const endDateInput = document.getElementById('end-date');
+        const currentlyWorkingCheckbox = document.getElementById('currently-working');
+        const  label_date = document.getElementById('label_end');
+        
+        currentlyWorkingCheckbox.addEventListener('change', function () {
+            if (currentlyWorkingCheckbox.checked) {
+                endDateInput.style.display = 'none';
+                label_date.style.display = 'none'
+            } else {
+                endDateInput.style.display = 'block';
+                label_date.style.display = 'block';
+            }
+        });
 
-
-
-
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
