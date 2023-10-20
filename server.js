@@ -296,8 +296,6 @@ app.get('/overview',(req, res)=>{
 app.get('/skill',(req, res)=>{
     res.render('skill-test.ejs')
 })
-
-<<<<<<< HEAD
 app.get('/nprofile',(req, res)=>{
     res.render('network-profile.ejs')
 })
@@ -309,9 +307,7 @@ app.get('/404',(req, res)=>{
 app.get('/505',(req, res)=>{
     res.render('505pg.ejs')
 })
-=======
 
->>>>>>> f8edddd3b7a0dff2d892ede24e779bc29ffd86c0
 
 app.get('/seller/dashboard', verifyToken, (req, res)=>{
     res.render('userDashboard.ejs')
