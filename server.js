@@ -10,7 +10,7 @@ const flash = require('connect-flash')
 const cookieParser = require('cookie-parser')
 const user_profile_seller = require('./Models/user_profile_seller_models.js')
 
-
+const cors=require('cors')
 
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + '/public'));
@@ -27,14 +27,10 @@ app.use(session({
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(flash());
-app.use(function (req, res, next) {
-    res.locals.success = req.flash('success');
-    res.locals.info = req.flash('info');
-    res.locals.error = req.flash('error');
-    res.locals.user = req.user || null;
-    next();
-});
+app.use(cors({
+    origin: 'http://localhost:8080',
+    credentials: true
+}))
 
 var router = require('./Controllers/contact_controller.js')
 const signup = require('./Controllers/signup_controller.js')
@@ -44,7 +40,7 @@ const userProfileSeller = require('./Controllers/user_profile_seller.js')
 const logout = require('./Controllers/logout.js')
 const forgetPassword = require('./Controllers/forgetPassword.js')
 const profileView=require('./Controllers/profileView.js')
-
+const empHistory=require('./Controllers/employmentHistory.js')
 /////////roles///////////// 
 var skills = [
     {
@@ -257,6 +253,7 @@ app.use('/', logout)
 app.use('/', forgetPassword)
 app.use('/', userProfileSeller)
 app.use('/talent/profile', profileView)
+app.use('/talent/profile', empHistory)
 
 
 // app.get('*', function(req, res, next){

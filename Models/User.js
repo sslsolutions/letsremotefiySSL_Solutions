@@ -2,6 +2,8 @@ const sequelize = require('./index');
 const { DataTypes, Model } = require('sequelize');
 const user_profile_seller = require('./user_profile_seller_models');
 const crypto = require('crypto');
+const EmploymentHistory = require('./employmentHistory');
+const UserEducationHistory = require('./userEducationHistory');
 
 class User extends Model {
     static associations(model) {
@@ -49,6 +51,8 @@ User.init({
 });
 
 User.hasOne(user_profile_seller);
+User.hasOne(EmploymentHistory)
+User.hasOne(UserEducationHistory)
 // the defined model is the class itself
 
 module.exports = User
