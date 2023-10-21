@@ -293,7 +293,17 @@ app.get('/overview',(req, res)=>{
 app.get('/skill',(req, res)=>{
     res.render('skill-test.ejs')
 })
+app.get('/nprofile',(req, res)=>{
+    res.render('network-profile.ejs')
+})
 
+app.get('/404',(req, res)=>{
+    res.render('404pg.ejs')
+})
+
+app.get('/505',(req, res)=>{
+    res.render('505pg.ejs')
+})
 
 
 app.get('/seller/dashboard', verifyToken, (req, res)=>{
