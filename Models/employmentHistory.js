@@ -24,7 +24,11 @@ EmploymentHistory.init({
     },
     EndDate:{
         type:DataTypes.DATEONLY,
-        allowNull:false
+        allowNull:true
+    },
+    CurrentlyWorking:{
+        type:DataTypes.BOOLEAN,
+        defaultValue: false
     },
     Description:{
         type:DataTypes.STRING,

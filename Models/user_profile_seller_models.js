@@ -33,7 +33,8 @@ user_profile_seller.init({
     },
     descriptions: {
         type: DataTypes.STRING,
-        require: true
+        require: true,
+        defaultValue:"Add Descriptions"
     },
     avatar: {
         type: DataTypes.STRING,

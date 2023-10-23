@@ -1,20 +1,74 @@
 /////////updating user Profile in profile page/////////
 const express = require("express")
 const router = express.Router();
-const fs=require('fs')
+const fs = require('fs')
 const user_skill_model = require('../Models/user_skill_model'); // Import your Sequelize model
 const User = require("../Models/User");
 const user_profile_seller = require("../Models/user_profile_seller_models");
 const { verifyToken } = require("./middleware/auth");
-const { encodeBase64 } = require("bcryptjs");
+const EmploymentHistory = require("../Models/employmentHistory");
+const moment = require('moment');
+const UserEducationHistory = require("../Models/userEducationHistory");
+const Certification = require("../Models/Certification");
 
 
-
-
-
-
-router.get('/', verifyToken, (req, res) => {
+router.get('/', verifyToken, async (req, res) => {
   const userId = req.cookies.userId
+
+  /////////////getting the useremloyement history ////////////
+  const userEmplyHistory = await EmploymentHistory.findAll({
+    where: {
+      UserId: userId,
+    },
+    order: [['createdAt', 'DESC'], ['updatedAt', 'DESC']],
+  })// Format the dates in each employment history record
+  const formattedEmploymentHistory = userEmplyHistory.map((employment) => {
+    const startdate = new Date(employment.StartDate);
+    const endDate = new Date(employment.EndDate)
+    const options = { year: 'numeric', month: 'long' };
+    employment.formattedStartDate = startdate.toLocaleDateString(undefined, options);
+    employment.formattedEndDate = endDate.toLocaleDateString(undefined, options);
+    return employment
+  });
+  /////////////////////end///////////////////////
+////////////////////getCertificatin//////////////
+try {
+  const { Certificate, Organization ,Institute, StartYear, EndYear ,Description}=req.body
+
+  const addCertification={
+      UserId:userId,
+      Certificate,
+      Organization,
+      Institute,
+      StartYear,
+      EndYear,
+      Description
+  }
+
+await Certification.create(addCertification)
+  res.status(200).redirect('/talent/profile')
+
+} catch (error) {
+  throw error
+}
+
+  ///////get user education history//////////////
+  const userEducationHistory = await UserEducationHistory.findAll({
+    where: {
+      userId: userId,
+    },
+    order: [['createdAt', 'DESC'], ['updatedAt', 'DESC']],
+  })
+  const getUserEducationHistroy=userEducationHistory.map((education)=>{
+    const startYear = new Date(education.StartYear);
+    const endYear = new Date(education.EndYear)
+    const options = { year: 'numeric', month: 'long' };
+    education.formattedStartYear = startYear.toLocaleDateString(undefined, options);
+    education.formattedEndYear = endYear.toLocaleDateString(undefined, options);
+    return education
+  })
+
+  /////////////getting the complete user info//////////////////////
   User.findByPk(userId, {
     include: [
       {
@@ -26,18 +80,23 @@ router.get('/', verifyToken, (req, res) => {
     .then((user) => {
       if (user) {
         const user_image = user.user_profile_seller.avatar;
-        const binaryImageData =Buffer.from(user_image).toString('base64');
+        const binaryImageData = Buffer.from(user_image).toString('base64');
         const dataUri = `data:image/png;base64,${binaryImageData}`;
         fs.writeFileSync('avatar.jpge', dataUri)
         console.log(binaryImageData);
-        return res.render('networkprofile.ejs', { userDetails: user, image: dataUri })
+        return res.render('networkprofile.ejs', { 
+          userDetails: user,
+           image: dataUri,
+            employmentHistory: formattedEmploymentHistory,
+            userEducationHistory:getUserEducationHistroy
+          })
       }
     }).catch((error) => {
       console.error('Error:', error);
     });
 
 })
-
+//////////////////////////end//////////////////////
 router.post('/update/info', async (req, res) => {
   try {
     const userId = req.cookies.userId

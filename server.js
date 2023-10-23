@@ -41,6 +41,8 @@ const logout = require('./Controllers/logout.js')
 const forgetPassword = require('./Controllers/forgetPassword.js')
 const profileView=require('./Controllers/profileView.js')
 const empHistory=require('./Controllers/employmentHistory.js')
+const empEducationHistory=require('./Controllers/userEducationHistory.js')
+const CertificateHistory=require("./Controllers/Certification.js")
 /////////roles///////////// 
 var skills = [
     {
@@ -240,7 +242,7 @@ app.get('/', async (req, res) =>{
         });
     } catch (error) {
         console.error(error);
-        res.status(500).json({ message: 'Internal Server Error' });
+        res.status(500).render('505pg.ejs')
     }
   
 });
@@ -254,8 +256,8 @@ app.use('/', forgetPassword)
 app.use('/', userProfileSeller)
 app.use('/talent/profile', profileView)
 app.use('/talent/profile', empHistory)
-
-
+app.use('/talent/profile', empEducationHistory)
+app.use('/talent/profile', CertificateHistory)
 // app.get('*', function(req, res, next){
 // 	if(req.cookies['token'] == null){
 // 		res.redirect('/');

@@ -4,6 +4,7 @@ const user_profile_seller = require('./user_profile_seller_models');
 const crypto = require('crypto');
 const EmploymentHistory = require('./employmentHistory');
 const UserEducationHistory = require('./userEducationHistory');
+const Certification = require('./Certification');
 
 class User extends Model {
     static associations(model) {
@@ -53,6 +54,7 @@ User.init({
 User.hasOne(user_profile_seller);
 User.hasOne(EmploymentHistory)
 User.hasOne(UserEducationHistory)
+User.hasOne(Certification)
 // the defined model is the class itself
 
 module.exports = User

@@ -17,19 +17,20 @@
 
 <body>
 
-    <div class="main-header container-fluid main py-3">
-        <div class="row">
-            <!-- <div class="position-absolutes"> -->
-            <div class="col-md-3">
-                <nav class="container-fluid navbar py-3 d-md-none navbar-expand-lg navbar-light navbar-color">
-                    <!-- <span class="navbar-toggler-icon"></span> -->
-                    <i data-target="#menu-navbar" class="fa-solid fa-bars toggle-icon text-light"
-                        data-toggle="collapse"></i>
-                    <div class="collapse navbar-collapse" id="menu-navbar">
-                        <div class="left-side">
-                            <div class="container">
-                                <h5 class="pt-3 pb-5"><span><img class="left-logo" src="/images/logo.png" alt=""></span>
-                                </h5>
+    <header class="d-lg-none d-block">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="mobile-logo" src="/images/Logo updeted.png"></a>
+                <button class="text-light navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="mobile-side mt-4">
+                            <div class="container mt-3">
+                                <!-- <h5 class="pt-3 pb-5"><span><img class="left-logo" src="logo.png" alt=""></span></h5> -->
                                 <div class="overview">
                                     <i class="fa fa-th-large Overview-font" aria-hidden="true"></i>
                                     <span>Overview</span>
@@ -52,21 +53,28 @@
                                         Network
                                     </span>
                                 </div>
-                                <div class="value mt-5">
-                                    <h3 class="text-center mt-5">Valued By:</h3>
-                                    <img src="value.png" alt="">
-                                    <!-- <img src="https://letsremotify.com/static/deer-logo-1298a2bef4ccfa11ce6da521286b65db50df5d0273ad1cbaf6fa92f7ac45ec9b.png"
-                                            alt="">
-                                        <img src="https://letsremotify.com/static/clip-logo-24f05d7b3cf319e10c6e0036e4e681ee8e09cdf06c105b2c7cb6c6d3bc3d501d.png"
-                                            alt=""> -->
+                                <div class="value">
+                                    <h3 class="text-center">Valued By:</h3>
+                                    <img src="/images/value.png" alt="">
+
                                 </div>
+
                             </div>
+
                         </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-                    </div>
-                </nav>
+    <div class="main-header container-fluid main py-3">
 
-                <div class="left-side mt-2 d-none d-md-block">
+        <div class="row">
+
+            <div class="col-lg-3 d-lg-block d-md-block  col-md-3">
+
+                <div class="left-side mt-2 d-none d-md-none d-lg-block">
                     <div class="container">
                         <h5 class="pt-3 pb-5"><span><img class="left-logo" src="/images/logo.png" alt=""></span></h5>
                         <div class="overview">
@@ -92,22 +100,15 @@
                         <div class="value">
                             <h3 class="text-center">Valued By:</h3>
                             <img src="/images/value.png" alt="">
-                            <!-- <img src="https://letsremotify.com/static/deer-logo-1298a2bef4ccfa11ce6da521286b65db50df5d0273ad1cbaf6fa92f7ac45ec9b.png" -->
-                            <!-- alt=""> -->
-                            <!-- <img src="https://letsremotify.com/static/clip-logo-24f05d7b3cf319e10c6e0036e4e681ee8e09cdf06c105b2c7cb6c6d3bc3d501d.png" -->
-                            <!-- alt=""> -->
+
                         </div>
 
                     </div>
 
                 </div>
 
-                <!-- </div> -->
-
             </div>
-
-
-            <div class="col-md-9 right-section">
+            <div class="col-lg-9  col-md-12 right-section">
                 <nav class="container bg-light py-2" role="navigation">
                     <div class="dropdown">
                         <i class="fa fa-bell" aria-hidden="true"></i>
@@ -127,50 +128,56 @@
                 </nav>
                 <div class="bg">
                     <div class="profile-detail">
-                        <img src="/images/banner.jpg" alt="">
+                        <img src="/images/Banner.jpg" alt="">
                     </div>
-                    <div class="row">
-                        <div class="col-md-4 mt-3 col-sm-6">
-                            <div class="container add-profile">
-                                <img class="rounded-circle"
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkTQ8DFOgujidIRil33r2QnSZ2Y_ZHahrUlw&usqp=CAU"
+                    <div class="container mt-5">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img class="rounded-5 profile-image"
+                                    src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
                                     alt="">
-                            </div>
-                            <div class="container add-name">
-                                <h3><%= userDetails.user_profile_seller.firstName %>
-                                    <span>
-                                        <img type="button" data-toggle="modal" data-target="#exampleModal"
-                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                            alt="">
-                                    </span>
-                                </h3>
-                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <form>
-                                                    <div class="form-group">
-                                                        <label for="formGroupExampleInput">First Name</label>
-                                                        <input type="text" class="form-control rounded-2 py-2"
-                                                            id="formGroupExampleInput" placeholder="First name">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="formGroupExampleInput2">Last Name</label>
-                                                        <input type="text" class="form-control rounded py-2"
-                                                            id="formGroupExampleInput2" placeholder="Last name">
-                                                    </div>
-
-                                                    <div class="form-group">
-                                                        <label for="formGroupExampleInput2">Country</label>
-                                                        <select class="country py-2 rounded-2">
+                                <div class="d-flex">
+                                    <h4><b>
+                                            <%= userDetails.user_profile_seller.firstName %>
+                                                <%= userDetails.user_profile_seller.lastName %>
+                                        </b></h4>
+                                    <img type="button" data-toggle="modal" data-target="#exampleModalCenter"
+                                        class="model-image" src="/images/edit_icon.png" alt="">
+                                    <!-- Button trigger modal -->
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Update Name</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form action="/talent/profile/update/info" method="post">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">First name</label>
+                                                            <input type="text" class="form-control"
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                placeholder="First name" name="firstName">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputPassword1">Last name</label>
+                                                            <input type="text" class="form-control"
+                                                                id="exampleInputPassword1" placeholder="Last name"
+                                                                name="lastName">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputPassword1">Email</label>
+                                                            <input type="Email" class="form-control"
+                                                                id="exampleInputPassword1" placeholder="Email"
+                                                                name="email">
+                                                        </div>
+                                                        <label for="">Country</label>
+                                                        <select name="Country">
                                                             <option value="Afghanistan">Afghanistan</option>
                                                             <option value="Albania">Albania</option>
                                                             <option value="Algeria">Algeria</option>
@@ -199,14 +206,12 @@
                                                             <option value="Bhutan">Bhutan</option>
                                                             <option value="Bolivia">Bolivia</option>
                                                             <option value="Bosnia and Herzegowina">Bosnia and
-                                                                Herzegowina
-                                                            </option>
+                                                                Herzegowina</option>
                                                             <option value="Botswana">Botswana</option>
                                                             <option value="Bouvet Island">Bouvet Island</option>
                                                             <option value="Brazil">Brazil</option>
                                                             <option value="British Indian Ocean Territory">British
-                                                                Indian
-                                                                Ocean Territory</option>
+                                                                Indian Ocean Territory</option>
                                                             <option value="Brunei Darussalam">Brunei Darussalam</option>
                                                             <option value="Bulgaria">Bulgaria</option>
                                                             <option value="Burkina Faso">Burkina Faso</option>
@@ -278,8 +283,7 @@
                                                             <option value="Guyana">Guyana</option>
                                                             <option value="Haiti">Haiti</option>
                                                             <option value="Heard and McDonald Islands">Heard and Mc
-                                                                Donald
-                                                                Islands</option>
+                                                                Donald Islands</option>
                                                             <option value="Holy See">Holy See (Vatican City State)
                                                             </option>
                                                             <option value="Honduras">Honduras</option>
@@ -311,8 +315,7 @@
                                                             <option value="Lesotho">Lesotho</option>
                                                             <option value="Liberia">Liberia</option>
                                                             <option value="Libyan Arab Jamahiriya">Libyan Arab
-                                                                Jamahiriya
-                                                            </option>
+                                                                Jamahiriya</option>
                                                             <option value="Liechtenstein">Liechtenstein</option>
                                                             <option value="Lithuania">Lithuania</option>
                                                             <option value="Luxembourg">Luxembourg</option>
@@ -377,8 +380,7 @@
                                                             </option>
                                                             <option value="Saint LUCIA">Saint LUCIA</option>
                                                             <option value="Saint Vincent">Saint Vincent and the
-                                                                Grenadines
-                                                            </option>
+                                                                Grenadines</option>
                                                             <option value="Samoa">Samoa</option>
                                                             <option value="San Marino">San Marino</option>
                                                             <option value="Sao Tome and Principe">Sao Tome and Principe
@@ -399,8 +401,7 @@
                                                             <option value="SriLanka">Sri Lanka</option>
                                                             <option value="St. Helena">St. Helena</option>
                                                             <option value="St. Pierre and Miguelon">St. Pierre and
-                                                                Miquelon
-                                                            </option>
+                                                                Miquelon</option>
                                                             <option value="Sudan">Sudan</option>
                                                             <option value="Suriname">Suriname</option>
                                                             <option value="Svalbard">Svalbard and Jan Mayen Islands
@@ -450,175 +451,164 @@
                                                             <option value="Zambia">Zambia</option>
                                                             <option value="Zimbabwe">Zimbabwe</option>
                                                         </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="formGroupExampleInput2">Description</label>
-                                                        <textarea name="" id="" cols="60" rows="5"></textarea>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-primary">Update</button>
+                                                        <label for="">Description</label>
+                                                        <textarea name="descriptions" id="" cols="60"
+                                                            rows="10"></textarea>
+                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <p class="ms-2">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <p class="taxt-dark">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>PK - 02:52 PM local time</span> <br>
+                                    <i class="fa-solid fa-briefcase"></i>
                                     <span>
-                                        PK - 10:44 AM local time
-                                    </span>
+                                        <%= userDetails.email %>
+                                    </span> <br>
+                                <p>
+                                    <%= userDetails.user_profile_seller.descriptions %>
                                 </p>
-                                <p class="container">
-                                    <a class="add-des" href="">Add description</a>
                                 </p>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="d-flex">
+                                    <h4>Profile Detail</h4>
+                                    <img class="model-image" type="button" data-toggle="modal"
+                                        data-target=".bd-example-modal-lg" src="/images/edit_icon.png" alt="">
+                                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+                                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <h1>Mention your Fieldwork Experience?</h1>
+                                                <select name="" id="">
+                                                    <option value="">Less then 1 year</option>
+                                                    <option value="">Between 1 and 2 Year</option>
+                                                    <option value="">Between 2 and 3 Year</option>
+                                                    <option value="">Between 3 and 4 Year</option>
+                                                    <option value="">Between 4 and 5 Year</option>
+                                                    <option value="">More then 5 Year</option>
 
-                                <!-- Modal -->
-                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
-                                                <button type="button" class="close" data-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h3>Manage Tech Stacks</h3>
-                                                <hr>
+                                                </select>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <div class="border">
+                                                            <h3>Basic</h3>
+                                                            <p>I can communicate over emails and slack. Verbal
+                                                                communication would be slow and impractical with the US
+                                                                manager.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Close</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p>
+                                            <b>Expertise</b>
+                                            <br>
+                                            <span>
+                                                <%= userDetails.user_profile_seller.Designation %>
+                                            </span>
+                                        </p>
 
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <p>
+                                            <b>
+                                                English Level
+                                            </b>
+                                            <br>
+                                            <%= userDetails.user_profile_seller.user_skill_model.language %>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p>
+                                            <b>
+                                                Experience
+                                            </b>
+                                            <br>
+                                            <%= userDetails.user_profile_seller.user_skill_model.Experiences %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="container tech">
+                                <div class="d-flex">
+                                    <h4><b>Tech stack</b></h4>
+                                    <img type="button" data-toggle="modal" data-target="#exampleModal"
+                                        class="model-image" src="/images/edit_icon.png" alt="">
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" FF
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    ...
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="border rounded py-1">React.js</button>
+                                <button class="border rounded py-1">View.js</button>
+                                <button class="border rounded py-1 mt-1">Node.js</button>
+                                <button class="border rounded py-1">React.js</button>
+                                <button class="border rounded py-1">View.js</button>
+                                <button class="border rounded py-1 mt-1">Node.js</button>
+                                <button class="border rounded py-1 mt-1">Node.js</button>
                             </div>
                         </div>
-
-                        <!-- model end -->
-                        <div class="col-md-3 col-sm-6 mt-5">
-                            <h4 class="container experties mt-5">
-                                Profile Detail
-                                <span>
-                                    <img type="button" data-toggle="modal" data-target=".bd-example-modal-xl"
-                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                        alt="">
-                                </span>
-                            </h4>
+                        <div class="col-md-7 select-wrapper mt-3">
                             <div class="container">
-                                <span class="mt-2 profile-experties m-auto">Expertise </span><br>
-                                <span>Software Developer</span> <br>
+                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
+                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
+                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
+                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
+                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
+                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
+                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
+                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
                             </div>
 
-                            <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog"
-                                aria-labelledby="myHugeModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-xl">
-                                    <div class="modal-content container">
-                                        <h2 class="mt-3">Mention your Fieldwork Experience?</h2>
-                                        <select class="mt-3 select-experience rounded" name="" id="">
-                                            <option value="">Less then 1 year </option>
-                                            <option value="">Between 1 and 2 years </option>
-                                            <option value="">Between 2 and 3 years </option>
-                                            <option value="">Between 3 and 4 years </option>
-                                            <option value="">Between 4 and 5 years </option>
-                                            <option value="">More than 5 years </option>
-                                        </select>
-                                        <h2 class="mt-5">How’s your English Communication?</h2>
-                                        <div class="conatiner profile-box">
-                                            <div class="row">
-                                                <div class="col-md-3 basic-card rounded-2">
-                                                    <h3>Basic</h3>
-                                                    <p>I can communicate over emails and slack. Verbal communication
-                                                        would be slow and impractical with the US manager.</p>
-                                                </div>
-                                                <div class="col-md-1"></div>
-                                                <div class="col-md-3 basic-card rounded-2">
-                                                    <h3>Conversational</h3>
-                                                    <p>I can communicate with the US manager if it goes slowly and might
-                                                        repeat sentences if the other person doesn’t understand.
-                                                    </p>
-                                                </div>
-                                                <div class="col-md-1"></div>
-
-                                                <div class="col-md-3 basic-card rounded-2">
-                                                    <h3>Conversational</h3>
-                                                    <p>I can communicate with the US manager if it goes slowly and might
-                                                        repeat sentences if the other person doesn’t understand.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="select-work mt-3">
-                                            <h2>What kind of Work are you interested in?</h2>
-                                        </div>
-                                        <button type="button" class="w-50 btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 mt-4">
-                            <div class="py-4 ">
-                                <div class="container english-media">
-                                    <p class="mt-5"><strong>English Level</strong></p>
-                                    <p class="non-active"><%= userDetails.user_profile_seller.user_skill_model.language %></p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-6 mt-3 py-4 experience-media">
-                            <p class="mt-5"><strong>Experience</strong></p>
-                            <p class="non-active"><%= userDetails.user_profile_seller.user_skill_model.Experiences %></p>
                         </div>
                     </div>
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="container mt-5 tech-stack">
-                                    <div class="d-flex">
-                                        <h2>Tech Stack</h2>
-                                        <span data-toggle="modal" data-target="#myModal">
-                                            <img class="ms-3 mt-2"
-                                                src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                                alt="Edit Icon">
-                                        </span>
-                                    </div>
-                                    <div class="d-flex">
-                                        <button class="get-skill rounded-3">React.js</button>
-                                        <button class="get-skill rounded-3 ms-2">php</button>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-md-8 set-skill d-flex">
-                                <div class="web-dev">
-                                    <button class="rounded-3 text-center mt-1">
-                                        Custom Style
-                                    </button>
-                                    <button class="rounded-3 text-center mt-1">
-                                        Style Sheet
-                                    </button>
-                                    <button class="rounded-3 text-center mt-1">
-                                        Web Development
-                                    </button>
-                                    <button class="rounded-3 text-center mt-1">
-                                        JavaScript
-                                    </button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
 
                 </div>
+
 
                 <div class="work-update">
                     <div class="work-bg">
                         <h3>Work Availability Update</h3>
-                        <div class="containers mt-3">
+                        <div class="container mt-3">
                             <div class="row seeking">
                                 <div class="col-md-4 seeking-first border py-4 rounded-2 seeking-hover">
                                     <h3 class="text-center">
@@ -640,27 +630,6 @@
                                 </div>
                             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         </div>
                     </div>
                 </div>
@@ -670,7 +639,39 @@
                         <div class="row">
                             <div class="col-md-11">
                                 <h3 class="text-dark">Employment History</h3>
-                                <h6 class="mt-5">No employment details added</h6>
+                                <!-- <h6 class="mt-5">No employment details added</h6> -->
+                               
+                                <% if (!employmentHistory || employmentHistory.length === 0) { %>
+                                    <p>no employment history added</p>
+                                  <% } else { %>
+                                    <% employmentHistory.forEach(function(history) { %>
+                                        <div class="history-wrapper">
+                                            <div class="history d-flex">
+                                                <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i>
+                                                        <%= history.Position %>
+                                                    </b></p>
+                                                <img class="ms-2 histroy-img" 
+                                                id="exampleModalLabel"
+                                                    src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                                    alt="Edit Icon">
+                                            </div>
+                                            <p>
+                                                <%= history.formattedStartDate %> , <% if (history.CurrentlyWorking === true) { %>
+                                                   Present
+                                                  <% } else { %>
+                                                    <%= history.formattedEndDate %>
+                                                  <% } %>
+                                            </p>
+                                            <p class="location">
+                                                <%= history.Location%>
+                                            </p>
+                                            <p>
+                                                <%= history.Description %>
+                                            </p>
+                                        </div>
+                                        <% }); %>
+                                  <% } %>
+                               
                             </div>
                             <div class="col-md-1 add-detail">
                                 <img type="button" data-toggle="modal" data-target="#exampleModal_3"
@@ -694,8 +695,8 @@
                                                         <label for="inputPassword"
                                                             class="col-sm-2 col-form-label">Position</label>
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" name="Position" id="inputPassword"
-                                                                placeholder="Position">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Position" name="Position">
                                                         </div>
                                                     </div>
                                                     <br>
@@ -703,8 +704,8 @@
                                                         <label for="inputPassword"
                                                             class="col-sm-2 col-form-label">Company</label>
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" name="Company" id="inputPassword"
-                                                                placeholder="Company name">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Company name" name="Company">
                                                         </div>
                                                     </div>
                                                     <br>
@@ -712,26 +713,29 @@
                                                         <label for="inputPassword"
                                                             class="col-sm-2 col-form-label">Location</label>
                                                         <div class="col-sm-10">
-                                                            <input type="text" class="form-control" name="Location" id="inputPassword"
-                                                                placeholder="Location">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Location" name="Location">
                                                         </div>
                                                     </div>
                                                     <div class="d-flex date mt-3">
                                                         <label for="">Start Date</label>
                                                         <input type="date" class="form-control" name="StartDate">
-                                                        <label for="end-date" id="label_end" class="ms-5">End Date</label>
-                                                        <input type="date" class="form-control" id="end-date" name="EndDate">
+                                                        <label for="end-date" id="label_end" class="ms-5">End
+                                                            Date</label>
+                                                        <input type="date" class="form-control" id="end-date"
+                                                            name="EndDate">
                                                         <!-- <label for="end-date" class="ms-5">End Date</label>
                                                         <input type="date" class="form-control" id="end-date"> -->
                                                     </div>
                                                     <!-- <input class="mt-3" type="checkbox" id="currently-working">
                                                     <span>Currently working here</span> -->
-                                                    <input class="mt-3" type="checkbox" id="currently-working">
+                                                    <input class="mt-3" type="checkbox" id="currently-working" value="true" name="CurrentlyWorking">
                                                     <span>Currently working here</span>
                                                     <br>
                                                     <br>
                                                     <label for=""><strong>Description</strong></label>
-                                                    <textarea class="mt-3" name="Description" id="Description" cols="60" rows="6"></textarea>
+                                                    <textarea class="mt-3" name="Description" id="" cols="60"
+                                                        rows="6"></textarea>
 
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
@@ -756,7 +760,27 @@
                         <div class="row">
                             <div class="col-md-11">
                                 <h3 class="text-dark">Education</h3>
-                                <h6 class="mt-5">No qualifications added</h6>
+                                <!-- <h6 class="mt-5">No qualifications added</h6> -->
+                                <% if (!userEducationHistory ||userEducationHistory.length===0) { %>
+                                   <p> no education is add</p>
+                                  <% } else { %>
+                                <% userEducationHistory.forEach(function (education) { %>
+                                     <div class="history-wrapper">
+                                    <div class="history d-flex">
+                                        <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i></b>
+                                      <%= education.Degree %> </p>
+                                        <img class="ms-2 histroy-img"
+                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                            alt="Edit Icon">
+                                    </div>
+                                    <p><%=education.formattedStartYear %> - <%=education.formattedEndYear %></p>
+                                    <span class="location"><%= education.Field %></span>
+                                    <span><strong><%= education.Institute %></strong></span>
+                                </div>  
+                            <%   }); %>
+                                    <% } %>
+                            
+                               
                             </div>
                             <div class="col-md-1 add-detail">
                                 <img type="button" data-toggle="modal" data-target="#exampleModal_2"
@@ -776,13 +800,13 @@
                                             </div>
                                             <div class="modal-body">
 
-                                                <form action="">
+                                                <form action="/talent/profile/addEducation" method="post">
                                                     <div class="form-group row">
                                                         <label for="inputPassword"
                                                             class="col-sm-2 col-form-label">Degree</label>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Degree">
+                                                                placeholder="Degree" name="Degree" required>
                                                         </div>
                                                     </div>
                                                     <br>
@@ -791,7 +815,7 @@
                                                             class="col-sm-2 col-form-label">Field</label>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Field of study">
+                                                                placeholder="Field of study"  name="Field" required>
                                                         </div>
                                                     </div>
                                                     <br>
@@ -800,21 +824,21 @@
                                                             class="col-sm-2 col-form-label">Institute</label>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Institute">
+                                                                placeholder="Institute" name="Institute", required>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex date mt-3">
                                                         <label for="">Starting year</label>
-                                                        <input type="month" class="form-control">
+                                                        <input type="month" class="form-control" name="StartYear" required>
                                                         <label for="" class="ms-5">Ending year</label>
-                                                        <input type="month" class="form-control">
+                                                        <input type="month" class="form-control" name="EndYear" required>
                                                     </div>
                                                     <br>
                                                     <br>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save</button>
+                                                        <button type="submit" class="btn btn-primary">Save</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -832,6 +856,29 @@
                             <div class="col-md-11">
                                 <h3 class="text-dark">Certification</h3>
                                 <h6 class="mt-5">No certificates added</h6>
+                                <div class="history-wrapper">
+                                    <div class="history d-flex">
+                                        <p class="mt-5"><b><i
+                                                    class="fa-solid fa-briefcase histroy-bag mx-2"></i>Certification</b>
+                                        </p>
+                                        <img class="ms-2 histroy-img"
+                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                            alt="Edit Icon">
+                                    </div>
+                                    <p>October 2023 - present - less than 1 month</p>
+                                    <p class="location">Certification</p>
+                                </div>
+                                <div class="history-wrapper">
+                                    <div class="history d-flex">
+                                        <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i>Ali
+                                                Hussnain</b></p>
+                                        <img class="ms-2 histroy-img"
+                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                            alt="Edit Icon">
+                                    </div>
+                                    <p>October 2023 - present - less than 1 month</p>
+                                    <p class="location">location</p>
+                                </div>
                             </div>
                             <div class="col-md-1 add-detail">
                                 <img type="button" data-toggle="modal" data-target="#exampleModal_1"
@@ -850,13 +897,13 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="">
+                                                <form action="/talent/profile/addCertification" method="post">
                                                     <div class="form-group row">
                                                         <h6 for="inputPassword" class="col-sm-2 col-form-label">
                                                             Certificate</h6>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Certificate name">
+                                                                placeholder="Certificate name" name="Certificate">
                                                         </div>
                                                     </div>
                                                     <br>
@@ -865,7 +912,7 @@
                                                             Organization</h6>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Organization name">
+                                                                placeholder="Organization name" name="Organization">
                                                         </div>
                                                     </div>
                                                     <br>
@@ -874,24 +921,24 @@
                                                             Institute</h6>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Description">
+                                                                placeholder="Description" name="Institute">
                                                         </div>
                                                     </div>
                                                     <div class="d-flex date mt-3">
                                                         <h6 for="">Starting year</h6>
-                                                        <input type="month" class="form-control">
+                                                        <input type="date" class="form-control" name="StartYear">
                                                         <h6 for="" class="ms-5">Ending year</h6>
-                                                        <input type="month" class="form-control">
+                                                        <input type="date" class="form-control" name="EndYear">
                                                     </div>
                                                     <br>
                                                     <br>
                                                     <h5 for=""><strong>Description</strong></h5>
-                                                    <textarea class="mt-3" name="" id="" cols="60" rows="6"></textarea>
+                                                    <textarea class="mt-3" name="Description" id="" cols="60" rows="6"></textarea>
 
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"
                                                             data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save</button>
+                                                        <button type="submit" class="btn btn-primary">Save</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -910,7 +957,9 @@
         </div>
     </div>
 
+
     <script>
+
         // Get all the elements with the "seeking-hover" class
         const seekingBoxes = document.querySelectorAll('.seeking-hover');
 
@@ -927,10 +976,11 @@
             });
         });
 
+
         const endDateInput = document.getElementById('end-date');
         const currentlyWorkingCheckbox = document.getElementById('currently-working');
-        const  label_date = document.getElementById('label_end');
-        
+        const label_date = document.getElementById('label_end');
+
         currentlyWorkingCheckbox.addEventListener('change', function () {
             if (currentlyWorkingCheckbox.checked) {
                 endDateInput.style.display = 'none';
