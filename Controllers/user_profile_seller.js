@@ -48,7 +48,7 @@ router.post('/createProfile', upload.single('profileImage'), async (req, res) =>
   const { Designation, country, firstName, lastName, phoneNumber, countryCode } = req.body;
   /////////user Profile Pics///////////
   const profileImage = req.file.buffer.toString('base64')
-
+console.log(profileImage);
   const userProfile = {
     UserId: userId,
     Designation,
@@ -139,7 +139,7 @@ router.post('/readytojoin', upload.single('Resume'), async (req, res) => {
     console.error(error);
     return res.status(500).json({ message: 'Internal Server Error' });
   }
-  res.redirect('/seller/dashboard')
+  res.redirect('/talent/profile')
 })
 
 

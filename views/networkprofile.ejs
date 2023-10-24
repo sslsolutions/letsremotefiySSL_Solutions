@@ -56,7 +56,6 @@
                                 <div class="value">
                                     <h3 class="text-center">Valued By:</h3>
                                     <img src="/images/value.png" alt="">
-
                                 </div>
 
                             </div>
@@ -69,11 +68,8 @@
     </header>
 
     <div class="main-header container-fluid main py-3">
-
         <div class="row">
-
             <div class="col-lg-3 d-lg-block d-md-block  col-md-3">
-
                 <div class="left-side mt-2 d-none d-md-none d-lg-block">
                     <div class="container">
                         <h5 class="pt-3 pb-5"><span><img class="left-logo" src="/images/logo.png" alt=""></span></h5>
@@ -102,7 +98,6 @@
                             <img src="/images/value.png" alt="">
 
                         </div>
-
                     </div>
 
                 </div>
@@ -113,7 +108,7 @@
                     <div class="dropdown">
                         <i class="fa fa-bell" aria-hidden="true"></i>
                         <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                            <img class="profile" src="https://i.stack.imgur.com/KKhkr.png?s=128&g=1">
+                            <img class="profile" src="data:image/jpeg;base64," alt="Profile images">
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
@@ -476,40 +471,177 @@
                             <div class="col-md-7">
                                 <div class="d-flex">
                                     <h4>Profile Detail</h4>
-                                    <img class="model-image" type="button" data-toggle="modal"
-                                        data-target=".bd-example-modal-lg" src="/images/edit_icon.png" alt="">
-                                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-                                        aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg">
+                                    <img class="model-image" 
+                                    type="button" class="model-image" data-toggle="modal"
+                                        data-target=".bd-example-modal-xl"
+                                     src="/images/edit_icon.png" alt="">
+                                    <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog"
+                                        aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-xl">
                                             <div class="modal-content">
-                                                <h1>Mention your Fieldwork Experience?</h1>
-                                                <select name="" id="">
-                                                    <option value="">Less then 1 year</option>
-                                                    <option value="">Between 1 and 2 Year</option>
-                                                    <option value="">Between 2 and 3 Year</option>
-                                                    <option value="">Between 3 and 4 Year</option>
-                                                    <option value="">Between 4 and 5 Year</option>
-                                                    <option value="">More then 5 Year</option>
-
-                                                </select>
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="border">
-                                                            <h3>Basic</h3>
-                                                            <p>I can communicate over emails and slack. Verbal
-                                                                communication would be slow and impractical with the US
-                                                                manager.
-                                                            </p>
+                                                <div class="detail-design container">
+                                                    <form id="wrap-detail">
+                                                        <div class="container">
+                                                            <h4 class="mt-5 container">Mention your Fieldwork
+                                                                Experience?</h4>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
+                                                        <div class="exp container">
+                                                            <div class="out-select container">
+                                                                <select name="Enter your Experience" id="">
+                                                                    <option value="">Enter your Experience</option>
+                                                                    <option value="">Less then 1 year</option>
+                                                                    <option value="">Between 1 and 2 years</option>
+                                                                    <option value="">Between 2 and 3 years</option>
+                                                                    <option value="">Between 3 and 4 years</option>
+                                                                    <option value="">Between 4 and 5 years</option>
+                                                                    <option value="">More then 5 years</option>
+                                                                </select>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="container">
+                                                            <h4 class="container">How’s your English Communication?</h4>
+                                                        </div>
+                                                        <div class="radio-tile-group">
+
+                                                            <div class="input-container">
+                                                                <input id="walk" type="radio" name="radio">
+                                                                <div class="radio-tile">
+                                                                    <h3>Basic</h3>
+                                                                    <p>
+                                                                        I can communicate over emails and slack.
+                                                                        Verbal communication would be slow and
+                                                                        impractical with the US manager.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="input-container">
+                                                                <input id="bike" type="radio" name="radio">
+                                                                <div class="radio-tile">
+                                                                    <h3> Conversational </h3>
+
+                                                                    <p>
+                                                                        I can communicate with the US manager if
+                                                                        it
+                                                                        goes slowly and might repeat sentences
+                                                                        if
+                                                                        the other person doesn’t understand.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="input-container">
+                                                                <input id="car" type="radio" name="radio">
+                                                                <div class="radio-tile">
+                                                                    <h3>Native</h3>
+                                                                    <p>
+                                                                        I am a native English speaker, fluent in
+                                                                        speaking, writing and communicating
+                                                                        effectively. I can understand all the
+                                                                        details delivered by the US manager.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="container">
+                                                                <h4 class="mt-3">What kind of Work are you interested
+                                                                    in?</h4>
+
+                                                            </div>
+                                                            <div class="kind-work">
+
+                                                                <div class="container">
+                                                                    <ul class="ks-cboxtags">
+                                                                        <li><input name="Web Development"
+                                                                                type="checkbox" id="checkboxOne"
+                                                                                value="Web Development"><label
+                                                                                for="checkboxOne">Web
+                                                                                Development</label>
+                                                                        </li>
+                                                                        <li><input type="checkbox" id="checkboxTwo"
+                                                                                name="Mobile Development"
+                                                                                value="Mobile Development"><label
+                                                                                for="checkboxTwo">Mobile
+                                                                                Development</label>
+                                                                        </li>
+                                                                        <li><input name="Cloud Computing"
+                                                                                type="checkbox" id="checkboxThree"
+                                                                                value="Cloud Computing"><label
+                                                                                for="checkboxThree">Cloud
+                                                                                Computing</label></li>
+                                                                        <li><input type="checkbox" name="Blockchain"
+                                                                                id="checkboxFour"
+                                                                                value="Blockchain"><label
+                                                                                for="checkboxFour">Blockchain</label>
+                                                                        </li>
+                                                                        <li><input name="Cyber Security" type="checkbox"
+                                                                                id="checkboxFive"
+                                                                                value="Cyber Security"><label
+                                                                                for="checkboxFive">Cyber
+                                                                                Security</label></li>
+                                                                        <li><input name="Ai And Ml" type="checkbox"
+                                                                                id="checkboxSix"
+                                                                                value="Ai And Ml"><label
+                                                                                for="checkboxSix">Ai And Ml</label></li>
+                                                                        <li><input name="Dev Ops" type="checkbox"
+                                                                                id="checkboxSeven"
+                                                                                value="Dev Ops"><label
+                                                                                for="checkboxSeven">Dev Ops</label>
+                                                                        </li>
+                                                                        <li><input type="checkbox"
+                                                                                name="Salesforce Consulting"
+                                                                                id="checkboxEight"
+                                                                                value="Salesforce Consulting"><label
+                                                                                for="checkboxEight">Salesforce
+                                                                                Consulting</label>
+                                                                        </li>
+                                                                        <li><input name="Software Integration"
+                                                                                type="checkbox" id="checkboxNine"
+                                                                                value="Software Integration"><label
+                                                                                for="checkboxNine">Software
+                                                                                Integration</label></li>
+                                                                        <li><input name="Qa And Testing" type="checkbox"
+                                                                                id="checkboxTen" value="Gusty"><label
+                                                                                for="checkboxTen">Qa And Testing</label>
+                                                                        </li>
+                                                                        <li class="ks-selected"><input
+                                                                                name="Api Development" type="checkbox"
+                                                                                id="checkboxEleven"
+                                                                                value="Api Development"><label
+                                                                                for="checkboxEleven">Api
+                                                                                Development</label>
+                                                                        </li>
+                                                                        <li><input name="Application Development"
+                                                                                type="checkbox" id="checkboxTwelve"
+                                                                                value="Application Development"><label
+                                                                                for="checkboxTwelve">Application
+                                                                                Development</label></li>
+                                                                        <li><input name="Data Science" type="checkbox"
+                                                                                id="checkboxThirteen"
+                                                                                value="Data Sciencer"><label
+                                                                                for="checkboxThirteen">Data
+                                                                                Science</label></li>
+
+                                                                    </ul>
+
+                                                                    <div class="update-btn">
+                                                                        <button>Update</button>
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+
+
+                                    <!-------------------------------------------------------------Model start-------------------------------------------------------------->
+                                    <!-- end -->
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4">
@@ -578,25 +710,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="border rounded py-1">React.js</button>
-                                <button class="border rounded py-1">View.js</button>
-                                <button class="border rounded py-1 mt-1">Node.js</button>
-                                <button class="border rounded py-1">React.js</button>
-                                <button class="border rounded py-1">View.js</button>
-                                <button class="border rounded py-1 mt-1">Node.js</button>
-                                <button class="border rounded py-1 mt-1">Node.js</button>
+                                <button class="tech-btn"><img src="images/react.png" class="mx-1"
+                                    alt="">React.js</button>
+                            <button class="tech-btn"><img src="images/python.png" alt=""> Python</button>
+                            <button class="tech-btn mt-1"><img src="images/node.js.png" class="mx-1"
+                                    alt="">Node.js</button>
                             </div>
                         </div>
                         <div class="col-md-7 select-wrapper mt-3">
                             <div class="container">
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
+                                <button class="btn-color mt-1 py-1">React.js</button>
+                                <button class="btn-color mt-1 py-1">Vue.js</button>
+                                <button class="btn-color mt-1 py-1">Node.js</button>
                             </div>
 
                         </div>
@@ -640,38 +765,39 @@
                             <div class="col-md-11">
                                 <h3 class="text-dark">Employment History</h3>
                                 <!-- <h6 class="mt-5">No employment details added</h6> -->
-                               
-                                <% if (!employmentHistory || employmentHistory.length === 0) { %>
+
+                                <% if (!employmentHistory || employmentHistory.length===0) { %>
                                     <p>no employment history added</p>
-                                  <% } else { %>
-                                    <% employmentHistory.forEach(function(history) { %>
-                                        <div class="history-wrapper">
-                                            <div class="history d-flex">
-                                                <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i>
-                                                        <%= history.Position %>
-                                                    </b></p>
-                                                <img class="ms-2 histroy-img" 
-                                                id="exampleModalLabel"
-                                                    src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                                    alt="Edit Icon">
+                                    <% } else { %>
+                                        <% employmentHistory.forEach(function(history) { %>
+                                            <div class="history-wrapper">
+                                                <div class="history d-flex">
+                                                    <p class="mt-5"><b><i
+                                                                class="fa-solid fa-briefcase histroy-bag mx-2"></i>
+                                                            <%= history.Position %>
+                                                        </b></p>
+                                                    <img class="ms-2 histroy-img" id="exampleModalLabel"
+                                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                                        alt="Edit Icon">
+                                                </div>
+                                                <p>
+                                                    <%= history.formattedStartDate %> , <% if
+                                                            (history.CurrentlyWorking===true) { %>
+                                                            Present
+                                                            <% } else { %>
+                                                                <%= history.formattedEndDate %>
+                                                                    <% } %>
+                                                </p>
+                                                <p class="location">
+                                                    <%= history.Location%>
+                                                </p>
+                                                <p>
+                                                    <%= history.Description %>
+                                                </p>
                                             </div>
-                                            <p>
-                                                <%= history.formattedStartDate %> , <% if (history.CurrentlyWorking === true) { %>
-                                                   Present
-                                                  <% } else { %>
-                                                    <%= history.formattedEndDate %>
-                                                  <% } %>
-                                            </p>
-                                            <p class="location">
-                                                <%= history.Location%>
-                                            </p>
-                                            <p>
-                                                <%= history.Description %>
-                                            </p>
-                                        </div>
-                                        <% }); %>
-                                  <% } %>
-                               
+                                            <% }); %>
+                                                <% } %>
+
                             </div>
                             <div class="col-md-1 add-detail">
                                 <img type="button" data-toggle="modal" data-target="#exampleModal_3"
@@ -729,7 +855,8 @@
                                                     </div>
                                                     <!-- <input class="mt-3" type="checkbox" id="currently-working">
                                                     <span>Currently working here</span> -->
-                                                    <input class="mt-3" type="checkbox" id="currently-working" value="true" name="CurrentlyWorking">
+                                                    <input class="mt-3" type="checkbox" id="currently-working"
+                                                        value="true" name="CurrentlyWorking">
                                                     <span>Currently working here</span>
                                                     <br>
                                                     <br>
@@ -760,27 +887,36 @@
                         <div class="row">
                             <div class="col-md-11">
                                 <h3 class="text-dark">Education</h3>
-                                <!-- <h6 class="mt-5">No qualifications added</h6> -->
+
                                 <% if (!userEducationHistory ||userEducationHistory.length===0) { %>
-                                   <p> no education is add</p>
-                                  <% } else { %>
-                                <% userEducationHistory.forEach(function (education) { %>
-                                     <div class="history-wrapper">
-                                    <div class="history d-flex">
-                                        <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i></b>
-                                      <%= education.Degree %> </p>
-                                        <img class="ms-2 histroy-img"
-                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                            alt="Edit Icon">
-                                    </div>
-                                    <p><%=education.formattedStartYear %> - <%=education.formattedEndYear %></p>
-                                    <span class="location"><%= education.Field %></span>
-                                    <span><strong><%= education.Institute %></strong></span>
-                                </div>  
-                            <%   }); %>
-                                    <% } %>
-                            
-                               
+                                    <h6 class="mt-5">No qualifications added</h6>
+                                    <% } else { %>
+                                        <% userEducationHistory.forEach(function (education) { %>
+                                            <div class="history-wrapper">
+                                                <div class="history d-flex">
+                                                    <p class="mt-5"><b><i
+                                                                class="fa-solid fa-briefcase histroy-bag mx-2"></i></b>
+                                                        <%= education.Degree %>
+                                                    </p>
+                                                    <img class="ms-2 histroy-img"
+                                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                                        alt="Edit Icon">
+                                                </div>
+                                                <p>
+                                                    <%=education.formattedStartYear %> - <%=education.formattedEndYear
+                                                            %>
+                                                </p>
+                                                <span class="location">
+                                                    <%= education.Field %>
+                                                </span>
+                                                <span><strong>
+                                                        <%= education.Institute %>
+                                                    </strong></span>
+                                            </div>
+                                            <% }); %>
+                                                <% } %>
+
+
                             </div>
                             <div class="col-md-1 add-detail">
                                 <img type="button" data-toggle="modal" data-target="#exampleModal_2"
@@ -815,7 +951,7 @@
                                                             class="col-sm-2 col-form-label">Field</label>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Field of study"  name="Field" required>
+                                                                placeholder="Field of study" name="Field" required>
                                                         </div>
                                                     </div>
                                                     <br>
@@ -824,14 +960,16 @@
                                                             class="col-sm-2 col-form-label">Institute</label>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Institute" name="Institute", required>
+                                                                placeholder="Institute" name="Institute" required>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex date mt-3">
                                                         <label for="">Starting year</label>
-                                                        <input type="month" class="form-control" name="StartYear" required>
+                                                        <input type="month" class="form-control" name="StartYear"
+                                                            required>
                                                         <label for="" class="ms-5">Ending year</label>
-                                                        <input type="month" class="form-control" name="EndYear" required>
+                                                        <input type="month" class="form-control" name="EndYear"
+                                                            required>
                                                     </div>
                                                     <br>
                                                     <br>
@@ -855,30 +993,36 @@
                         <div class="row">
                             <div class="col-md-11">
                                 <h3 class="text-dark">Certification</h3>
-                                <h6 class="mt-5">No certificates added</h6>
-                                <div class="history-wrapper">
-                                    <div class="history d-flex">
-                                        <p class="mt-5"><b><i
-                                                    class="fa-solid fa-briefcase histroy-bag mx-2"></i>Certification</b>
-                                        </p>
-                                        <img class="ms-2 histroy-img"
-                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                            alt="Edit Icon">
-                                    </div>
-                                    <p>October 2023 - present - less than 1 month</p>
-                                    <p class="location">Certification</p>
-                                </div>
-                                <div class="history-wrapper">
-                                    <div class="history d-flex">
-                                        <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i>Ali
-                                                Hussnain</b></p>
-                                        <img class="ms-2 histroy-img"
-                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                            alt="Edit Icon">
-                                    </div>
-                                    <p>October 2023 - present - less than 1 month</p>
-                                    <p class="location">location</p>
-                                </div>
+
+                                <% if (!getuserCertification ||getuserCertification.length===0) { %>
+                                    <h6 class="mt-5">No certificates added</h6>
+                                    <% } else { %>
+                                        <% getuserCertification.forEach(function (Certificate) { %>
+                                            <div class="history-wrapper">
+                                                <div class="history d-flex">
+                                                    <p class="mt-5"><b><i
+                                                                class="fa-solid fa-briefcase histroy-bag mx-2"></i>
+                                                            <%= Certificate.Certificate%>
+                                                        </b>
+                                                    </p>
+                                                    <img class="ms-2 histroy-img"
+                                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                                        alt="Edit Icon">
+                                                </div>
+                                                <h5>
+                                                    <%= Certificate.Institute %>
+                                                </h5>
+                                                <p>
+                                                    <%= Certificate.formattedStartYear %> , <%=
+                                                            Certificate.formattedEndYear %>
+                                                </p>
+                                                <p class="location">
+                                                    <%=Certificate.Description %>
+                                                </p>
+                                            </div>
+
+                                            <% }); %>
+                                                <% } %>
                             </div>
                             <div class="col-md-1 add-detail">
                                 <img type="button" data-toggle="modal" data-target="#exampleModal_1"
@@ -903,7 +1047,8 @@
                                                             Certificate</h6>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Certificate name" name="Certificate">
+                                                                placeholder="Certificate name" name="Certificate"
+                                                                required>
                                                         </div>
                                                     </div>
                                                     <br>
@@ -912,7 +1057,8 @@
                                                             Organization</h6>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Organization name" name="Organization">
+                                                                placeholder="Organization name" name="Organization"
+                                                                required>
                                                         </div>
                                                     </div>
                                                     <br>
@@ -921,19 +1067,21 @@
                                                             Institute</h6>
                                                         <div class="col-sm-10">
                                                             <input type="text" class="form-control" id="inputPassword"
-                                                                placeholder="Description" name="Institute">
+                                                                required placeholder="Description" name="Institute">
                                                         </div>
                                                     </div>
                                                     <div class="d-flex date mt-3">
                                                         <h6 for="">Starting year</h6>
-                                                        <input type="date" class="form-control" name="StartYear">
+                                                        <input type="date" class="form-control" name="StartYear"
+                                                            required>
                                                         <h6 for="" class="ms-5">Ending year</h6>
-                                                        <input type="date" class="form-control" name="EndYear">
+                                                        <input type="date" class="form-control" name="EndYear" required>
                                                     </div>
                                                     <br>
                                                     <br>
                                                     <h5 for=""><strong>Description</strong></h5>
-                                                    <textarea class="mt-3" name="Description" id="" cols="60" rows="6"></textarea>
+                                                    <textarea class="mt-3" name="Description" id="" cols="60" rows="6"
+                                                        required></textarea>
 
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-secondary"

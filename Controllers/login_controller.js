@@ -91,7 +91,7 @@ router.post('/login', validator, async (req, res, next) => {
             }
         } catch (error) {
             console.error('Error:', error);
-            res.status(500).json({ message: 'Internal server error' });
+            res.render('505pg.ejs')
         }
     }
 
