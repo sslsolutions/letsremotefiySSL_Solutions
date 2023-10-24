@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+    font-family: Gorditas;
+    src: url(/public/fonts/Gorditas.zip/Gorditas-Regular.ttf);
+    font-family: Gordita;
+    src: url(/public/fonts/Gorditas.zip/Gorditas-Bold.ttf);
+
+    src: url(/public/fonts/Helvetica.ttf);
+    font-family: Helvetica Rounded;
+    src: url(/public/fonts/Helvetica.ttf);
+
+    font-family: Helvetica;
+    src: url(Helvetica.ttf);
+
+}
+        :root{
+            --Goditas--bold : Gorditas;
+            --Godita--bold : Gordita;
+            --Helvetica--Round:Helvetica Rounded;
+            --subbold--font: Helvetica;
+            
+    
+        }
+    </style>
+</head>
+<body>
+<H1>
+    <gordita style="font-family: var(--Goditas--bold);">this is go gordita </gordita><br>
+    <gordita style="font-family: var(--Godita--bold);">this is go gordita </gordita><br>
+    <helaine style="font-family: var(--Helvetica--Round);">this is --round--hel text </helaine><br>
+    <helaine style="font-family: var(--subbold--font);">this is random text </helaine><br>
+  
+</H1>
+<img id="image" src="" alt="Image" />
+    
+<script>
+    // Replace this with the Base64 data you retrieve from your database
+    const base64ImageData = "/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAA";
+
+    // Set the Base64 data as the image source
+    const imageElement = document.getElementById("image");
+    imageElement.src = `data:image/jpeg;base64,${base64ImageData}`;
+</script>
+</body>
+
+</html>

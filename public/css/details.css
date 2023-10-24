@@ -1,0 +1,478 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+   
+}
+#HEAD{
+  font-size: 26px;
+  /* font-weight: 600; */
+
+}
+#HEAD2{
+  font-size: 30px;
+  /* font-weight: 600; */
+
+}
+
+#PARA{
+  font-size: 22PX;
+}
+@media (max-width:1200px) {
+  #h{
+    margin-top: 25px;
+    border-radius: 12px;
+    /* border: 2px solid black; */
+    height: 600px;
+    position: fixed;
+    background: rgb(175, 32, 34);
+  
+}
+
+#GETNOW{
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: 28PX;
+    font-weight: 500;
+    color: white;
+    /* font-family: sans-serif */
+
+}
+#MAR{
+    margin-top: 50PX;
+}
+   
+   
+  }
+@media (max-width:992px) {
+  #HEAD{
+    font-size: 24px;
+  
+  }
+  #HEAD2{
+    font-size: 28px;
+  
+  }
+  #PARA{
+    font-size: 20PX;
+  }
+}
+@media (max-width:786px) {
+  #HEAD{
+    font-size: 22px;
+  
+  }
+  #HEAD2{
+    font-size: 26px;
+  
+  }
+  #PARA{
+    font-size: 18PX;
+  }
+
+}
+@media (max-width:575px) {
+  #HEAD{
+    font-size: 20px;
+  
+  }
+  #HEAD2{
+    font-size: 24px;
+  
+  }
+}
+@media (max-width:440px) {
+  #HEAD{
+    font-size: 20px;
+  
+  }
+  #HEAD2{
+    font-size: 22px;
+  
+  }
+  #PARA{
+    font-size: 16PX;
+  }
+}
+/* -----------------  NAVBAR----------------------- */
+
+#IFLEXNAV{
+    display: flex;
+    justify-content: space-evenly;
+}
+#GETNOWNAV{
+    margin-top: 15px;
+    margin-bottom: px;
+    font-size: 18PX;
+    font-weight: 500;
+    color: white;
+    /* font-family: sans-serif */
+
+}
+#NAV{
+  display: none;
+}
+
+
+
+@media (max-width:992px) {
+    #NAV{
+      display: block;
+    }
+      #HIDDEN{
+          display: none;
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------- */
+#HAR{
+    background-color: rgb(244, 248, 255);
+}
+T{
+    color: green;
+    font-size: 20PX;
+}
+
+
+#j{
+    /* border: 3px solid red; */
+    /* border-radius: 120px; */
+    /* height: 1250px; */
+    width: 100%;
+    margin-bottom: 50px;
+  
+}
+
+#h{
+    margin-top: 25px;
+    border-radius: 12px;
+    /* border: 2px solid black; */
+    height: 600px;
+    /* width: 100%; */
+    position: fixed;
+    background: rgb(175, 32, 34);
+  
+}
+#GETNOW{
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-size: 28PX;
+    font-weight: 500;
+    color: white;
+    /* font-family: sans-serif */
+
+}
+#MAR{
+    margin-top: 50PX;
+}
+#IFLEX{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* --------------------------------------------------------------       RIGHT  SIDE     -------------------------------------------- */
+#PART1{
+  padding: 22PX 10PX;
+  background-color: WHITE;
+  border-radius: 12PX;
+
+}
+#PARTRED{
+  background: rgb(175, 32, 34);
+  padding: 22PX 10PX;
+  border-radius: 12PX;
+  color: white;
+}
+
+#PART2{
+    background-color: white;
+    border-radius: 12px;
+}
+#PART2 h6{
+    font-weight: 600;
+}
+#SOFT{
+    
+    background-color: rgb(128, 121, 119);
+    border: 5px solid rgb(2, 2, 2);
+    /* padding: 30PX 35PX 30PX 35PX; */
+    border-radius: 12px;
+}
+
+#SOFT :hover{
+    background-color: rgb(17, 0, 255);
+    border: 4PX SOLID white;
+}
+#PLZ{
+    background-color: rgb(255, 220, 224);
+    color: rgb(219, 13, 15);
+    border-radius: 12PX;
+    padding: 20PX 4PX 12PX 16PX;
+}
+
+#RTEXT{
+    padding: 7PX 4PX;
+    background-color: rgb(250, 250, 250);
+    font-size: 16PX;
+
+}
+
+
+
+/* =============================================================== */
+#NEXT{
+    background-color:   rgb(175, 32, 34);
+     border: 1px solid black;
+      padding: 9px 28px;
+       font-size: 20px;
+       /* margin: 3PX; */
+       /* position: fixed; */
+
+}
+#ICON-BOXES{
+    height: 160PX;
+    width: 100%;
+    border: 1PX solid rgb(193, 193, 193) ;
+    color:  rgb(74, 91, 101);
+    /* background-color: red; */
+    border-radius: 12px;
+    align-items: center;
+    text-align: center;
+  }
+  #ICON-BOXES img{
+    margin: 18px 0px 8px 0px;
+  }
+  #ICON-BOXES P{
+    margin: 10px;
+    /* padding-bottom: ; */
+  }
+
+  #ICON-BOXES:hover{
+    border: 1PX solid black;
+    /* color: blue; */
+    background-color: rgb(243, 246, 244);
+  }
+/* =====================----------------        PART 5 PDF UPLOAD  -------------------================== */
+#UPLOAD-INPUT{
+    width: 700PX ;
+    height: 30PX;
+    border: 2PX SO blue;
+}
+
+
+/* Style the full-screen container */
+.fullscreen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 2px solid black;
+}
+
+/* Style the input field */
+.file-input {
+  /* display: none; */
+  height: 100px;
+  width: 200px;
+  border: 2px sol red;
+}
+
+/* Style the cloud icon */
+.cloud-icon {
+  font-size: 48px;
+  color: #3498db; /* Blue color, you can change this */
+  cursor: pointer;
+}
+
+/* Style the label for the input field */
+#container label {
+  font-size: 38px;
+  margin-left: 10px;
+  cursor: pointer;
+  /* border: 50px solid black; */
+}
+/* ------------------------------------   PDF SELECT OPTION  ------------------------- */
+ /* Style the full-screen container */
+ .fullscreen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  width: 100%;
+  /* border: 2px dashed #3498db; */
+  border: 2px dashed rgb(175, 32, 34);
+  cursor: pointer;
+  position: relative; /* Add relative positioning */
+  background-color: rgb(249, 249, 249);
+}
+
+/* Style the cloud icon */
+.cloud-icon {
+  font-size: 48px;
+  /* color: #3498db;  */
+  /* Blue color, you can change this */
+  color: rgb(175, 32, 34);
+}
+
+/* Style the label for the input field */
+label {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+/* Hide the input field */
+input[type="file"] {
+  display: none;
+}
+
+/* Style the checkmark icon */
+.checkmark {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: green; /* Green color for the checkmark */
+  font-size: 24px;
+  display: none; /* Initially hidden */
+}
+
+/* Style the file name display */
+.file-name {
+  margin-top: 1px;
+  font-size: 16px;
+  display: none; /* Initially hidden */
+}
+
+/* ======================  Experience  field============================ */
+#MAIN-FIELD{
+  display: flex;
+  border: 1PX solid rgb(193, 193, 193) ;
+  /* color:   rgb(74, 91, 101); */
+  align-items: center;
+  border-radius: 12px;
+  background-color: rgb(249, 249, 249);
+}
+
+
+#MAIN-FIELD select ,#MAIN-FIELD input{
+  border: none;
+  outline: none;
+  border-radius: 12PX;
+  width: 90%;
+  height: 40px;
+  background-color: rgb(249, 249, 249);
+
+  /* width: 80%; */
+}
+/* -----------------  PART 6 EXP  ---------------- */
+/* ----------------------   THREE OUT OF ONE BUTTON  ----------------------------- */
+/* 
+#radio-div {
+  display: flex;
+}
+
+#radio-div label {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#radio-div label:hover {
+  background-color: #f0f0f0;
+} 
+input{
+  display: none;
+} */
+/* ------------=================================   ENDS OF DIVS =========================================-------------------- */
+/* .radio-container, .radio-container-2 {
+  display: flex;
+  margin-top: 20px;
+}
+
+.radio-container label, .radio-container-2 label {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.radio-container label:hover, .radio-container-2 label:hover {
+  background-color: #f0f0f0;
+} */
+
+/* --------------------------------================================   BOTH COMMON    ======----------------------------- */
+#radio-container, #radio-container-2 {
+  display: flex;
+  margin-top: 20px;
+}
+
+#radio-container label, #radio-container-2 label {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+#radio-container label:hover, #radio-container-2 label:hover {
+  background-color: #f0f0f0;
+}
+#ICON-BOXES input, #EXP1 input{
+  display: none;
+}
+
+
+/* ======================================================================== */
+
+#EXP1{
+  border: 1PX solid rgb(193, 193, 193) ;
+  /* border: 2PX solid black; */
+  display: flex;
+  background-color: white;
+  color: BLACK;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 120PX;
+  font-size: 30PX;
+  /* font-weight: 600; */
+  /* font: sem; */
+
+ 
+}
+#EXP1:hover, #EXP2:hover, #EXP3:hover{
+  border: 1PX solid black;
+  /* color: blue; */
+  background-color: rgb(243, 246, 244);
+}
+
+
+button{
+  padding: 12px 40px;
+  /* border-radius: 48px; */
+  font-size: 22px;
+  /* background: rgb(175, 32, 34); */
+  background-color: none;
+  border: none;
+  outline: none;
+  color: white;
+}
+#SUBMIT{
+  border: 2PX SOLID BLUE;
+  background: rgb(175, 32, 34);
+}
+#NEXT{
+  background-color: rgb(175, 32, 34);
+   border: 1px solid black;
+    padding: 9px 28px;
+     font-size: 20px;
+     /* margin: 3PX; */
+     /* position: fixed; */
+
+}
