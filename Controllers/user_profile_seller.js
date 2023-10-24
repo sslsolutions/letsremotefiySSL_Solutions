@@ -19,7 +19,7 @@ router.use(bodyParser.json())
 router.get('/createProfile', verifyToken, async (req, res, next) => {
   const encodedEmail = req.query.email;
   const isEmailValid = decodeURIComponent(encodedEmail)
-  res.render('create_Profile.ejs', { userEmail: isEmailValid });
+  res.render('create_profile.ejs', { userEmail: isEmailValid });
 })
 
 router.get('/details', async (req, res) => {

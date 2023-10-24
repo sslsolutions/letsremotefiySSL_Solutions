@@ -1,6 +1,6 @@
 
 const Sequelize=require('sequelize')
-const sequelize = new Sequelize('ssl_solutions', 'root', '', {
+const sequelize = new Sequelize('shoamzwk_ssl_solutions', 'shoamzwk_ssl_group', 'qazxsw@!#', {
     host: 'localhost',
     dialect: 'mysql'
   });
@@ -12,5 +12,5 @@ try {
     console.error('Unable to connect to the database:', error);
   }
 
-  // sequelize.sync({ alter: true });
+ sequelize.sync({ alter: true });
 module.exports= sequelize
