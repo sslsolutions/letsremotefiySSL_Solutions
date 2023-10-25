@@ -256,12 +256,7 @@ nav {
     margin: 40px;
 }
 
-.web-dev {
-    /* height: 35px;
-    border: 1px solid rgb(175, 32, 34);
-    width: 15%;
-    float: left; */
-}
+
 
 .web-dev button {
     color: rgb(175, 32, 34);
@@ -312,7 +307,7 @@ nav {
     margin-right: -10px;
 }
 
-.seeking-center {}
+
 
 .seeking-first {
     margin-left: -10px;
@@ -409,9 +404,8 @@ nav {
         width: 90px;
     }
 
-    .overview,
-    .overview-disabeld {
-    }
+   
+
 
     .detail-design h4 {
         font-size: 13px;

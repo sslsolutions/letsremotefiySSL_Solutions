@@ -290,7 +290,7 @@ app.get('/blogs', (req, res)=>{
     res.render('blog.ejs')
 })
 
-app.get('/overview',(req, res)=>{
+app.get('/talent/overview',(req, res)=>{
     res.render('talent-overview.ejs')
 })
 app.get('/skill',(req, res)=>{
