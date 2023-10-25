@@ -79,7 +79,6 @@ router.get('/', verifyToken, async (req, res) => {
         const user_image = user.user_profile_seller.avatar;
         const binaryImageData = Buffer.from(user_image).toString('base64');
         const dataUri = "data:image/jpeg;base64," + user.user_profile_seller.avatar;
-        fs.writeFileSync('avatar.jpge', dataUri)
         console.log(binaryImageData);
         return res.render('networkprofile.ejs', {
           userDetails: user,
