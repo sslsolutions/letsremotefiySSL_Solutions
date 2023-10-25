@@ -227,6 +227,7 @@ var trajectory = [
 ]
 
 
+
 app.get('/', async (req, res) =>{
     try {
         const allUserProfiles = await user_profile_seller.findAll({ where:{id:1},
