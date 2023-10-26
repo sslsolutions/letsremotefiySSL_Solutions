@@ -1073,3 +1073,42 @@
 }
 
 /* End Slider section */
+
+
+/* <!-- ------------------------     YOUTUBE VIDEOS      ------------------------------- --> */
+
+#BG-IMAGE1{
+    background-image: url('https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-c1c3f8a/letsremotify.com/wp-content/uploads/2023/09/web1.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+    /* height: 250px ; */
+    /* width: 100px; */
+    border-radius: 12px;
+    border: 2px solid blue;
+    margin: 5px 3px;
+    /* transition: background-size 0.9s ease; */
+}
+
+#BG-IMAGE1:hover{
+    background-size: 103% 105%;
+    /* transform: 0.2s ease; */
+    /* Adjust the scale factor for the desired zoom level */
+    /* transition: background-size 0.9s ease; */
+    /* transition: all 2s; */
+  }
+
+  .image-container {
+    width: 300px; /* Adjust to your desired width */
+    height: 200px; /* Adjust to your desired height */
+    background-image: url('https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-c1c3f8a/letsremotify.com/wp-content/uploads/2023/09/web1.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s; /* Smooth transition for the zoom effect */
+  }
+  
+  .image-container:hover {
+    transform: scale(1.2); /* Adjust the scale factor for the desired zoom level */
+  }
+  
+

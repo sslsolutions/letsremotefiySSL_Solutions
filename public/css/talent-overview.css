@@ -167,8 +167,8 @@
      /* border: 2px solid green; */
 }
 #USER{
-    height: 80PX ;
-    width: 250PX;
+    /* height: 80PX ; */
+    width: 220PX;
     /* border: 1PX solid grey; */
     border-radius: 25PX;
     display: flex;
@@ -179,8 +179,8 @@
 }
 #USER-IMG{
         border: 3PX solid  white;
-        height: 70PX;
-        width: 70PX;
+        /* height: 70PX; */
+        /* width: 70PX; */
         border-radius: 50%;
         background-image: url(images/Section_04-01-01.png);
     background-size: 100% 100%;
