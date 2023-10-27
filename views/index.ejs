@@ -40,9 +40,12 @@
 
     <!-- -----------------------WORK REMOTLY--------------------->
 
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <!-- <nav class="navbar navbar-expand-lg bg-dark">
         <%- include('Components/navbar'); %>
-    </nav>
+    </nav> -->
+    <header class="header">
+        <%- include('Components/navbar'); %>
+    </header>
 
     <div class="container-fluid bg-dark">
         <div class="row justify-content-center " id="WORKH">
@@ -793,6 +796,39 @@
     <!---------------youtbe------------->
     <div class="container-fluid mt-5">
         <div class="row py-2 px-4">
+            
+            <!-- Modal -->  <!-- POP UPS -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POP ENDs -->
+
+            
+            
+            <!-- this secton displat specifiv vide -->
+    <div class="col-10" id="popup">
+        <div class="popup-content">
+            <span class="close-icon" onclick="closePopup()">&times;</span>
+            <iframe id="video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
             <div class="col-lg-4 my-2 ">
                 <div class="p-5 boder-0">
                     <h4 class="text-color-custom" id="SUBHEAD">
@@ -805,28 +841,33 @@
             </div>
 
             <div class="col-lg-4 my-2 ">
-                <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
-                    style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
-                    <%- include('Components/modal'); %>
-                        <div class="row mt-4 ">
-                            <div class="d-flex  align-items-center ">
-                                <li class=" mr-2 fa fa-play-circle " aria-hidden="true"></li>
-                                <h6 class="  fw-semibold fs-5">Talent Stories</h6>
+                <div class="card p-5 rounded-3" style="border: 2px solid red;" data-toggle="modal" data-target="#exampleModalCenter" id="BG-IMAGE1">
+                        
+                           <div style="display: flex; align-items: center;" class="div-to-click" data-video-id="VIDEO_ID_1" onclick="openPopup(this)">
+                            <div style="font-size: 30px; margin-right: 8PX;">
+                                <i class="bi bi-play-circle-fill"></i>
                             </div>
-                            <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
-                                SOLUTIONS
-                            </h5>
-                        </div>
+                            <div>
+                                <div class="SMALL"><b>Talent Stories</b></div>
+                                <div class="XSMALL">A day in the life of a Remote Data Analyst | SSL SOLUTIONS</div>
+                            </div>
+                           </div>
+                      
 
                 </div>
             </div>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+              </button>
+
             <div class="col-lg-4 my-2 ">
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
                                             
                            
                                 <li class=" mr-2 fa fa-play-circle"></li>
-                                <span>Talent Stories</span>
+                                <span>SECTION # 3</span>
                           
                             <h5 class="text-white fw-bold">A day in the life of a Remote Data Analyst | SSL
                                 SOLUTIONS
@@ -835,6 +876,7 @@
 
                 </div>
             </div>
+            
             <div class="col-lg-4 my-2 ">
                 <div class="card p-5 rounded-3" data-toggle="modal" data-target="#exampleModalCenter"
                     style="background-color: #16031f; background-image: url(images/OIP.jpeg); background-position: 100% 100%; ">
@@ -1202,7 +1244,7 @@
     </div>
     <!-- ============================================================================== -->
     <!-- <DIV class="container-fluid " style="background-color: rgb(248, 249, 254);"> -->
-        <DIV class="container-fluid " >
+        
         <!-- ---------------------------------------------------Testimonialss--------------------------- -->
         <!-- <div class="container-fluid mt-5" style="display: flex; justify-content: center;">
             <div class="row text-center mt-5" id="CCOLOR" style="width: 80%;">
@@ -1229,8 +1271,8 @@
         <div class="container-fluid" style="margin-top: 15px;">
             <div class="row justify-content-between" style="margin-left: 5%;">
                 <div class="col-lg-7 col-md-10 col-sm-12 mt-3 mb-3" id="Ex">
-                    <h1>
-                        <heading>SSL SOLUTIONS</heading>
+                    <h1 class="HEADING">
+                        SSL SOLUTIONS
                     </h1>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-8  mt-3 mb-3" id="EXPLORE"><a href="">Explore more</a>
@@ -1310,7 +1352,6 @@
 
 
 
-    </DIV>
 
 
     <!-- ---------------------------------------------------------- Curious?-------------------- -->
@@ -1471,6 +1512,27 @@
                     },
                 },
             });
+
+            // VIDEO PLAY SECTION
+            function openPopup(div) {
+    var popup = document.querySelector('#popup');
+    var video = document.getElementById('video');
+    var videoID = div.getAttribute('data-video-id');
+
+    var videoURL = 'https://www.youtube.com/embed/' + videoID + '?autoplay=1';
+    
+    video.src = videoURL;
+    popup.style.display = 'block';
+}
+
+function closePopup() {
+    var popup = document.querySelector('#popup');
+    var video = document.getElementById('video');
+    
+    video.src = '';
+    popup.style.display = 'none';
+    // --------------
+}
 
     </script>
     <!-- End javascript -->

@@ -1082,20 +1082,20 @@
     background-size: cover;
     background-position: center;
     transition: transform 0.3s;
-    /* height: 250px ; */
-    /* width: 100px; */
     border-radius: 12px;
     border: 2px solid blue;
     margin: 5px 3px;
-    /* transition: background-size 0.9s ease; */
+    display: flex;
+    color: white;
+    /* justify-content: start; */
 }
 
 #BG-IMAGE1:hover{
-    background-size: 103% 105%;
-    /* transform: 0.2s ease; */
-    /* Adjust the scale factor for the desired zoom level */
-    /* transition: background-size 0.9s ease; */
-    /* transition: all 2s; */
+    background-size: 103% 120%;
+  }
+  #BG-IMAGE1 i{
+    /* font: 400px; */
+    color: white;
   }
 
   .image-container {
@@ -1110,5 +1110,8 @@
   .image-container:hover {
     transform: scale(1.2); /* Adjust the scale factor for the desired zoom level */
   }
+
+  /* -------------------  RANDOM POPUPS   --------------------- */
+  
   
 
