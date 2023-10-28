@@ -138,9 +138,7 @@
 }
 
 .box1 p{
-    /* font-size: var(--p-font); */
-    font-weight: 400;
-    color: black;
+    /* color: black; */
     line-height: 30px;
     margin-bottom: 20px;
 }
@@ -354,11 +352,7 @@
     /* line-height: normal; */
 
 }
-#REMOTLY h1{
-    /* font-weight: 700;   */
-    /* font-size: var(--h-font);   */
-    /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
-}
+
 #REMOTLY p{
     margin-top: 10PX; 
     margin-bottom: 20PX;  

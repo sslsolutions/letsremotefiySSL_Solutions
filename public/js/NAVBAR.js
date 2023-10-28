@@ -12,4 +12,4 @@ const showMenu = (toggleId, navId) =>{
     })
  }
  
- showMenu('nav-toggle','nav-menu')
+ showMenu('nav-togglemine','nav-menu')
