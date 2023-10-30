@@ -16,7 +16,10 @@ router.get('/signup', function (req, res) {
     res.render('signup.ejs')
 
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 const validation = [
     body('email', 'Email is not valid')
         .isEmail()

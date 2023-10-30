@@ -42,4 +42,21 @@
 .link-light:hover .animation-line {
     width: 100%;
     background-color: rgb(175, 32, 34);
+<<<<<<< HEAD
+=======
+}
+
+
+/* ---------------FOOTER SECTION -------------- */
+#SOCIAL-ICONS a{
+    font-size: 18PX;
+    color: blue;
+    padding: 8px 10px;
+    border-radius: 50%;
+}
+
+#SOCIAL-ICONS a:hover{
+    color: RED;
+    background-color:grey
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 }

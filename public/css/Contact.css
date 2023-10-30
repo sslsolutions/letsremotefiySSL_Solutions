@@ -72,6 +72,11 @@
     border-radius: 8px;
     padding: 20px;
     background: rgb(255, 255, 255);
+<<<<<<< HEAD
+=======
+
+    align-items: center;
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 }
 
 #class {

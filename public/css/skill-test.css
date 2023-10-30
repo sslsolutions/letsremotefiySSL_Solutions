@@ -31,6 +31,102 @@
     font-size: 24px;
     color: rgb(175, 32, 34);
 }
+<<<<<<< HEAD
+=======
+#BUTTON{
+    width: 220PX;
+    display: flex;
+    /* border: 2PX solid BLUE; */
+}
+
+@media (max-width: 1024px) {
+    .IMG-TEXT{
+        flex-direction: column;
+    }
+    #BUTTON{
+        width: 155px;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+@media (max-width: 992px) {
+    .IMG-TEXT{
+        flex-direction: row;
+    }
+    #BUTTON{
+        width: 220px;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+/* -------------------      toolips     --------------------------- */
+/* Tooltip container */
+#tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip text (hidden by default) */
+#tooltip #tooltiptext {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color:  rgb(175, 32, 34);
+    text-align: center;
+    border-radius: 8px;
+    padding: 3px;
+    z-index: 1;
+    width: 180px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    border: 1px solid rgb(175, 32, 34);
+}
+
+/* Show the tooltip text when hovering over the tooltip container */
+#tooltip:hover #tooltiptext {
+    display: block;
+    top: -45px;
+    opacity: 1;
+        
+}
+
+                    /* ---------------    LAGUAGE HOVER EFFECT  ------------------ */
+                    #tooltip2 {
+                        position: relative;
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+                    
+                    /* Tooltip text (hidden by default) */
+                    #tooltip2 #tooltiptext2 {
+                        display: none;
+                        position: absolute;
+                        background-color: white;
+                        color:  rgb(175, 32, 34);
+                        text-align: center;
+                        border-radius: 8px;
+                        padding: 3px;
+                        z-index: 1;
+                        width: 150px;
+                        top: -40px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        opacity: 0;
+                        border: 1px solid rgb(175, 32, 34);
+                    }
+                    
+                    /* Show the tooltip text when hovering over the tooltip container */
+                    #tooltip2:hover #tooltiptext2 {
+                        display: block;
+                        top: -45px;
+                        opacity: 1;
+                    }
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 
 /* ------------------       CHAT        ------------------------ */
 .input-container {

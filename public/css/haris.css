@@ -298,6 +298,10 @@
 
 #JOIN-COL a:hover {
     background: black;
+<<<<<<< HEAD
+=======
+    color: white;
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     border:2PX solid white;
 }
 #JOIN-TRANS a {
@@ -710,7 +714,11 @@
   }
   #GET:hover{
     background-color: BLACK;
+<<<<<<< HEAD
     color: RED;
+=======
+    color: white;
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
   }
 
 
@@ -1072,4 +1080,50 @@
     }
 }
 
+<<<<<<< HEAD
 /* End Slider section */
+=======
+/* End Slider section */
+
+
+/* <!-- ------------------------     YOUTUBE VIDEOS      ------------------------------- --> */
+
+#BG-IMAGE1{
+    background-image: url('https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-c1c3f8a/letsremotify.com/wp-content/uploads/2023/09/web1.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+    border-radius: 12px;
+    border: 2px solid blue;
+    margin: 5px 3px;
+    display: flex;
+    color: white;
+    /* justify-content: start; */
+}
+
+#BG-IMAGE1:hover{
+    background-size: 103% 120%;
+  }
+  #BG-IMAGE1 i{
+    /* font: 400px; */
+    color: white;
+  }
+
+  .image-container {
+    width: 300px; /* Adjust to your desired width */
+    height: 200px; /* Adjust to your desired height */
+    background-image: url('https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-c1c3f8a/letsremotify.com/wp-content/uploads/2023/09/web1.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s; /* Smooth transition for the zoom effect */
+  }
+  
+  .image-container:hover {
+    transform: scale(1.2); /* Adjust the scale factor for the desired zoom level */
+  }
+
+  /* -------------------  RANDOM POPUPS   --------------------- */
+  
+  
+
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15

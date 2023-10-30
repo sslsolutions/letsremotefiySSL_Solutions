@@ -31,6 +31,7 @@ router.get('/', verifyToken, async (req, res) => {
     return employment
   });
   /////////////////////end///////////////////////
+<<<<<<< HEAD
   ////////////////////getCertificatin/////////////
 
   const getuserCertification = await Certification.findAll({
@@ -49,6 +50,29 @@ router.get('/', verifyToken, async (req, res) => {
     certifications.formattedEndYear = endYear.toLocaleDateString(undefined, options);
     return certifications
   });
+=======
+////////////////////getCertificatin//////////////
+try {
+  const { Certificate, Organization ,Institute, StartYear, EndYear ,Description}=req.body
+
+  const addCertification={
+      UserId:userId,
+      Certificate,
+      Organization,
+      Institute,
+      StartYear,
+      EndYear,
+      Description
+  }
+
+await Certification.create(addCertification)
+  res.status(200).redirect('/talent/profile')
+
+} catch (error) {
+  throw error
+}
+
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
   ///////get user education history//////////////
   const userEducationHistory = await UserEducationHistory.findAll({
     where: {
@@ -56,7 +80,11 @@ router.get('/', verifyToken, async (req, res) => {
     },
     order: [['createdAt', 'DESC'], ['updatedAt', 'DESC']],
   })
+<<<<<<< HEAD
   const getUserEducationHistroy = userEducationHistory.map((education) => {
+=======
+  const getUserEducationHistroy=userEducationHistory.map((education)=>{
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     const startYear = new Date(education.StartYear);
     const endYear = new Date(education.EndYear)
     const options = { year: 'numeric', month: 'long' };
@@ -77,6 +105,7 @@ router.get('/', verifyToken, async (req, res) => {
     .then((user) => {
       if (user) {
         const user_image = user.user_profile_seller.avatar;
+<<<<<<< HEAD
         
         console.log(user_image);
         return res.render('networkprofile.ejs', {
@@ -86,10 +115,26 @@ router.get('/', verifyToken, async (req, res) => {
           userEducationHistory: getUserEducationHistroy,
           getuserCertification:userCertificationData
         })
+=======
+        const binaryImageData = Buffer.from(user_image).toString('base64');
+        const dataUri = `data:image/png;base64,${binaryImageData}`;
+        fs.writeFileSync('avatar.jpge', dataUri)
+        console.log(binaryImageData);
+        return res.render('networkprofile.ejs', { 
+          userDetails: user,
+           image: dataUri,
+            employmentHistory: formattedEmploymentHistory,
+            userEducationHistory:getUserEducationHistroy
+          })
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
       }
     }).catch((error) => {
       console.error('Error:', error);
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 })
 //////////////////////////end//////////////////////
 router.post('/update/info', async (req, res) => {

@@ -167,8 +167,13 @@
      /* border: 2px solid green; */
 }
 #USER{
+<<<<<<< HEAD
     height: 80PX ;
     width: 250PX;
+=======
+    /* height: 80PX ; */
+    width: 220PX;
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     /* border: 1PX solid grey; */
     border-radius: 25PX;
     display: flex;
@@ -179,8 +184,13 @@
 }
 #USER-IMG{
         border: 3PX solid  white;
+<<<<<<< HEAD
         height: 70PX;
         width: 70PX;
+=======
+        /* height: 70PX; */
+        /* width: 70PX; */
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
         border-radius: 50%;
         background-image: url(images/Section_04-01-01.png);
     background-size: 100% 100%;
@@ -251,6 +261,10 @@
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
     margin: 15px 8px;
+<<<<<<< HEAD
+=======
+    border: 1px solid white;
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 }
 #FIELDS:hover{
     border: 1px solid black;
