@@ -8,11 +8,6 @@ const Certification = require('./Certification');
 
 class User extends Model {
     static associations(model) {
-<<<<<<< HEAD
-
-=======
-      
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     }
     createResetPasswordToken() {
         const resetToken = crypto.randomBytes(32).toString('hex')
@@ -55,7 +50,6 @@ User.init({
     modelName: 'Users' // We need to choose the model name
 });
 
-<<<<<<< HEAD
 User.hasOne(user_profile_seller, {
     onDelete: 'RESTRICT',
     onUpdate: 'RESTRICT'
@@ -72,12 +66,6 @@ User.hasOne(Certification, {
     onDelete: 'RESTRICT',
     onUpdate: 'RESTRICT'
 })
-=======
-User.hasOne(user_profile_seller);
-User.hasOne(EmploymentHistory)
-User.hasOne(UserEducationHistory)
-User.hasOne(Certification)
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 // the defined model is the class itself
 
 module.exports = User

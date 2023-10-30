@@ -31,8 +31,6 @@
     font-size: 24px;
     color: rgb(175, 32, 34);
 }
-<<<<<<< HEAD
-=======
 #BUTTON{
     width: 220PX;
     display: flex;
@@ -126,7 +124,6 @@
                         top: -45px;
                         opacity: 1;
                     }
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 
 /* ------------------       CHAT        ------------------------ */
 .input-container {

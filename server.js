@@ -227,12 +227,8 @@ var trajectory = [
 ]
 
 
-<<<<<<< HEAD
 app.get('/', async  (req, res) =>{
 
-=======
-app.get('/', async (req, res) =>{
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     try {
         const allUserProfiles = await user_profile_seller.findAll({ where:{id:1},
             attributes: ['Designation', 'firstName', 'lastName', 'avatar']
@@ -245,16 +241,10 @@ app.get('/', async (req, res) =>{
             trajectory: trajectory,
             profiles: allUserProfiles
         });
-<<<<<<< HEAD
         
     } catch (error) {
         console.error(error);
         res.render('505pg.ejs')
-=======
-    } catch (error) {
-        console.error(error);
-        res.status(500).render('505pg.ejs')
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     }
   
 });
@@ -266,11 +256,7 @@ app.use('/', login)
 app.use('/', logout)
 app.use('/', forgetPassword)
 app.use('/', userProfileSeller)
-<<<<<<< HEAD
 app.use('/talent/profile', verifyToken, profileView)
-=======
-app.use('/talent/profile', profileView)
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 app.use('/talent/profile', empHistory)
 app.use('/talent/profile', empEducationHistory)
 app.use('/talent/profile', CertificateHistory)
@@ -283,20 +269,13 @@ app.use('/talent/profile', CertificateHistory)
 // });
 
 
-<<<<<<< HEAD
-app.get('/pricing', async (req, res) => {
-   await res.render('pricing.ejs', {
-=======
 app.get('/pricing', (req, res) => {
     res.render('pricing.ejs', {
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
         technologies: technologies,
         skills: skills,
         trajectory: trajectory
     })
 })
-<<<<<<< HEAD
-=======
 // ========
 
 app.get('/sign', (req, res) => {
@@ -313,7 +292,6 @@ app.get('/nav',(req, res)=>{
 })
 
 // =============
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 
 app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
@@ -329,11 +307,7 @@ app.get('/blogs', (req, res)=>{
     res.render('blog.ejs')
 })
 
-<<<<<<< HEAD
 app.get('/talent/overview',(req, res)=>{
-=======
-app.get('/overview',(req, res)=>{
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     res.render('talent-overview.ejs')
 })
 app.get('/skill',(req, res)=>{
@@ -351,14 +325,8 @@ app.get('/505',(req, res)=>{
     res.render('505pg.ejs')
 })
 
-<<<<<<< HEAD
-
-app.get('/seller/dashboard', (req, res)=>{
-    res.render('preloader.ejs')
-=======
 app.get('/seller/dashboard', verifyToken, (req, res)=>{
     res.render('userDashboard.ejs')
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 })
 
 app.listen(process.env.PORT, (req, res) => {

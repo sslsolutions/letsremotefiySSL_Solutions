@@ -298,10 +298,7 @@
 
 #JOIN-COL a:hover {
     background: black;
-<<<<<<< HEAD
-=======
     color: white;
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     border:2PX solid white;
 }
 #JOIN-TRANS a {
@@ -714,11 +711,7 @@
   }
   #GET:hover{
     background-color: BLACK;
-<<<<<<< HEAD
-    color: RED;
-=======
     color: white;
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
   }
 
 
@@ -1080,9 +1073,6 @@
     }
 }
 
-<<<<<<< HEAD
-/* End Slider section */
-=======
 /* End Slider section */
 
 
@@ -1126,4 +1116,3 @@
   
   
 
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15

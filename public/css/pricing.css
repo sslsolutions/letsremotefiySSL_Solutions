@@ -1,65 +1,10 @@
-<<<<<<< HEAD
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-
-PT{
-    font-size: 16PX;
-    color: brown;
-}
-=======
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 
 
 
 
 
-<<<<<<< HEAD
-/* =================================        991     ========================================= */
-
-@media (max-width: 991px) {
-    /* Adjust for screens less than 992px (tablet screens) */
-    .slider-item {
-        flex: 0 0 calc(100% / 3); 
-    }
-    
-PT{
-    font-size: 16PX;
-    /* color: red; */
-}
-
-#NUMBER{
-    font-size: 36PX;
-}
-#NUMBER2{
-    font-size: 14PX;
-}
-  
-}
-/* =================================        786     ========================================= */
-@media (max-width: 786px) {
-
-    PT{
-        font-size: 15PX;
-        /* color: red; */
-    }
-  
-    #NUMBER{
-        font-size: 33PX;
-    }
-    #NUMBER2{
-        font-size: 13PX;
-    }
-
-}
-=======
   
 
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 
 
 /* =================================        700     ========================================= */
@@ -82,27 +27,6 @@ PT{
         display: flex;
         flex-direction: column;
     }
-<<<<<<< HEAD
-    PT{
-        font-size: 14PX;
-        /* color: red; */
-    }
-   
-  
-    
- 
-    #NUMBER{
-        font-size: 30PX;
-    }
-    #NUMBER2{
-        font-size: 12PX;
-    }
-    #MAIN i{
-        font-size: 20px;
-    }
-=======
-
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     
 }
 /* ----------------------------------       350   --------------------------- */
@@ -213,13 +137,7 @@ PT{
 }
 
 .box1 p{
-<<<<<<< HEAD
-    /* font-size: var(--p-font); */
-    font-weight: 400;
-    color: black;
-=======
     /* color: black; */
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     line-height: 30px;
     margin-bottom: 20px;
 }
@@ -242,11 +160,7 @@ PT{
 .box1 i{
     margin-top: -20PX;
     vertical-align: middle;
-<<<<<<< HEAD
-    font-size: 30px;
-=======
     /* font-size: 30px; */
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     color: white;
     margin-left: 5px;
 }
@@ -293,35 +207,16 @@ PT{
     }
   }  */
   
-<<<<<<< HEAD
-#REMOTLY h1 {
-    /* font-size: var(--h-font); */
-    /* font-family: var(--subheading--font); */
-    /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
-}
-
-#REMOTLY p {
-    /* font-size: var(--text--18size); */
-    margin-top: 25PX;
-    margin-bottom: 90PX;
-    /* line-height: var(--line--height); */
-=======
 
 #REMOTLY p {
     margin-top: 25PX;
     margin-bottom: 90PX;
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 
 }
 
 #JOIN a {
     /* margin-top: 20px; */
     text-decoration: none;
-<<<<<<< HEAD
-    color: var(--color);
-    /* font-size: var(--text--18size); */
-=======
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     padding: 13px 55px;
     border-radius: 14px;
     color: white;
@@ -376,16 +271,7 @@ PT{
 
 
   #WORK1 {
-<<<<<<< HEAD
-    font-weight: 900;
-    /* display: flex; */
     margin-top: 60PX;
-    /* font-size: var(--paragraph--size); */
-    /* justify-content: center; */
-    /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
-=======
-    margin-top: 60PX;
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     line-height: normal;
 
 }
@@ -465,24 +351,10 @@ PT{
     /* line-height: normal; */
 
 }
-<<<<<<< HEAD
-#REMOTLY h1{
-    /* font-weight: 700;   */
-    /* font-size: var(--h-font);   */
-    /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
-}
-#REMOTLY p{
-    /* font-size: var(--text--18size); */
-    margin-top: 10PX; 
-    margin-bottom: 20PX;  
-    line-height: var(--line--height); 
-    font-family: var(--subheading--font);
-=======
 
 #REMOTLY p{
     margin-top: 10PX; 
     margin-bottom: 20PX;  
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
     
 }
 

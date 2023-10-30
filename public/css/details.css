@@ -14,13 +14,9 @@
   /* font-weight: 600; */
 
 }
-<<<<<<< HEAD
-
-=======
 #PARA34{
   font-size: 16px;
 }
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 #PARA{
   font-size: 22PX;
 }
@@ -190,10 +186,7 @@ T{
   padding: 22PX 10PX;
   background-color: WHITE;
   border-radius: 12PX;
-<<<<<<< HEAD
-=======
   margin-top: 600px;
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 
 }
 #PARTRED{
@@ -433,11 +426,7 @@ input{
 #radio-container label:hover, #radio-container-2 label:hover {
   background-color: #f0f0f0;
 }
-<<<<<<< HEAD
-#ICON-BOXES input, #EXP1 input{
-=======
 #ICON-BOXES input, #EXP1 input, #WORK-DIV input{
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
   display: none;
 }
 
@@ -460,18 +449,12 @@ input{
 
  
 }
-<<<<<<< HEAD
-#EXP1:hover, #EXP2:hover, #EXP3:hover{
-=======
 #EXP1:hover, #EXP2:hover, #EXP3:hover, #WORK-DIV:hover{
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
   border: 1PX solid black;
   /* color: blue; */
   background-color: rgb(243, 246, 244);
 }
 
-<<<<<<< HEAD
-=======
 #WORK-DIV{
   border: 1PX solid rgb(193, 193, 193) ;
   /* border: 2PX solid black; */
@@ -489,7 +472,6 @@ input{
 
 }
 
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 
 button{
   padding: 12px 40px;
@@ -513,9 +495,6 @@ button{
      /* margin: 3PX; */
      /* position: fixed; */
 
-<<<<<<< HEAD
-}
-=======
 }
 
 
@@ -569,4 +548,3 @@ input[type="text"] {
   background-color: rgb(250, 250, 250);
 }
 
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15

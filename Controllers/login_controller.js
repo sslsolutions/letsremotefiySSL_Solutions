@@ -57,11 +57,7 @@ router.post('/login', validator, async (req, res, next) => {
                 res.status(404).json({ message: 'User not found' });
             } else {
                 const token = jwt.sign({ id: existingUser.id }, process.env.JWT_SCERET_KEY, {
-<<<<<<< HEAD
                     expiresIn: "12000sec",
-=======
-                    expiresIn: "120000sec",
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
                 });
                 const userRoles = existingUser.roles;
                 req.user = {
@@ -95,11 +91,7 @@ router.post('/login', validator, async (req, res, next) => {
             }
         } catch (error) {
             console.error('Error:', error);
-<<<<<<< HEAD
             res.render('505pg.ejs')
-=======
-            res.status(500).json({ message: 'Internal server error' });
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
         }
     }
 
