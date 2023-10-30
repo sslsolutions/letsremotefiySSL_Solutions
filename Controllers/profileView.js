@@ -77,12 +77,11 @@ router.get('/', verifyToken, async (req, res) => {
     .then((user) => {
       if (user) {
         const user_image = user.user_profile_seller.avatar;
-        const binaryImageData = Buffer.from(user_image).toString('base64');
-        const dataUri = "data:image/jpeg;base64," + user.user_profile_seller.avatar;
-        console.log(binaryImageData);
+        
+        console.log(user_image);
         return res.render('networkprofile.ejs', {
           userDetails: user,
-          image: dataUri,
+          user_image,
           employmentHistory: formattedEmploymentHistory,
           userEducationHistory: getUserEducationHistroy,
           getuserCertification:userCertificationData

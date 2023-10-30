@@ -57,7 +57,7 @@ router.post('/login', validator, async (req, res, next) => {
                 res.status(404).json({ message: 'User not found' });
             } else {
                 const token = jwt.sign({ id: existingUser.id }, process.env.JWT_SCERET_KEY, {
-                    expiresIn: "120000sec",
+                    expiresIn: "12000sec",
                 });
                 const userRoles = existingUser.roles;
                 req.user = {

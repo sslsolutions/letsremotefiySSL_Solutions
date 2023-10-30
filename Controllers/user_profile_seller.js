@@ -39,8 +39,10 @@ router.get('/details', async (req, res) => {
 //       cb(null, Date.now() + '-' + file.originalname); // Rename the file with a unique name
 //     },
 //   });
-const storage = multer.memoryStorage();
-const upload = multer({ storage });
+const upload = multer({
+  storage: multer.memoryStorage(), // You can choose storage options based on your requirements.
+  limits: { fileSize: 3 * 1024 * 1024 }, // Set the file size limit in bytes (1MB in this example).
+});
 
 router.post('/createProfile', upload.single('profileImage'), async (req, res) => {
   const userId = req.cookies.userId
@@ -48,7 +50,10 @@ router.post('/createProfile', upload.single('profileImage'), async (req, res) =>
   const { Designation, country, firstName, lastName, phoneNumber, countryCode } = req.body;
   /////////user Profile Pics///////////
   const profileImage = req.file.buffer.toString('base64')
-console.log(profileImage);
+  if (req.file.size > 3 * 1024 * 1024) {
+    return res.status(400).send('File size exceeds the limit.');
+  }
+
   const userProfile = {
     UserId: userId,
     Designation,

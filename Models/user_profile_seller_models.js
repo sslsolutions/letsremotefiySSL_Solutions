@@ -37,7 +37,7 @@ user_profile_seller.init({
         defaultValue:"Add Descriptions"
     },
     avatar: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT('long'),
     },
 }, {
     sequelize,

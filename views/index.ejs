@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>SSL Solutions</title>
-    
-    <link href="/css/fontstyle.css" rel="stylesheet" >
-    <link href="css/haris.css" rel="stylesheet" >
-    <link  href="css/navbar.css" rel="stylesheet">
-    <link  href="/css/blog.css" rel="stylesheet">
+
+    <link href="/css/fontstyle.css" rel="stylesheet">
+    <link href="css/haris.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="/css/blog.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/blog.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <!-- ----------------   CHATGPT     ----------- -->
@@ -22,8 +22,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
-     <!-- swiper css  1st SLIDER -->
-     <link rel="stylesheet" href="/public/css/swiper-bundle11.min.css">
+    <!-- swiper css  1st SLIDER -->
+    <link rel="stylesheet" href="/public/css/swiper-bundle11.min.css">
     <!-- swiper css  2sr SLIDER -->
     <link rel="stylesheet" href="css/swiper-bundle22.min.css">
     <!-- ENDS HERE -->
@@ -39,7 +39,10 @@
 <body>
 
     <!-- -----------------------WORK REMOTLY--------------------->
-
+  
+    <div class="pl">
+        <%- include('Components/preloader.ejs'); %>  
+    </div>
     <nav class="navbar navbar-expand-lg bg-dark">
         <%- include('Components/navbar'); %>
     </nav>
@@ -68,8 +71,7 @@
                 </div>
                 <div class="mb-5">
                     <p class="SMALL">Searching for employment opportunities?
-                        <a class="SMALL" href="#"
-                            style=" font-weight: 600; cursor: pointer; color: white;">Apply for
+                        <a class="SMALL" href="#" style=" font-weight: 600; cursor: pointer; color: white;">Apply for
                             Jobs</a> Today!
                     </p>
                 </div>
@@ -81,7 +83,7 @@
     </div>
     <!-- ------------------------------------------------------------------------------------------------ -->
 
- 
+
     <div class="slide-container-fluid swiper p-0 my-5">
         <%- include('Components/profile-images'); %>
     </div>
@@ -124,8 +126,8 @@
                     <h5 id="W1"><B>Software Engineers</B></h4>
                         <p id="K1" class="XSMALL">
                             Principal Engineers guide, mentor, ensure code quality. Architect designs system.
-                                Developers
-                                build web and mobile apps. QA tests. ML & DevOps experts.
+                            Developers
+                            build web and mobile apps. QA tests. ML & DevOps experts.
                         </p>
                 </div>
 
@@ -138,10 +140,10 @@
                     </div>
                     <h5 id="W2"><B>Project Managers</B></h5>
                     <p id="K2" class="XSMALL">
-                      
-                            Build your dream team: Virtual Assistants, eCommerce Managers, Project Managers,
-                            Supply Chain, CRM & ERP Experts, Business & Data Analysts, AI Consultants.
-                        
+
+                        Build your dream team: Virtual Assistants, eCommerce Managers, Project Managers,
+                        Supply Chain, CRM & ERP Experts, Business & Data Analysts, AI Consultants.
+
                     </p>
                 </div>
 
@@ -150,11 +152,11 @@
                     <div><img height="60px" width="60px" class="img-fluid" src="images/Digital Marketing-01.png" alt="">
                     </div>
                     <h5 id="W3"><B>Digital Markiting</B></h5>
-                    <p id="K3"  class="XSMALL">
-                       
-                            Expand your team: Digital Marketers, Brand & Product Managers, Social Media &
-                            Content Marketing, SEO, Email Marketing Specialists, and more.
-                       
+                    <p id="K3" class="XSMALL">
+
+                        Expand your team: Digital Marketers, Brand & Product Managers, Social Media &
+                        Content Marketing, SEO, Email Marketing Specialists, and more.
+
                     </p>
 
                 </div>
@@ -164,10 +166,10 @@
                     </div>
                     <h5 id="W4"><B>Designers</B></h5>
                     <p id="K4" class="XSMALL">
-                        
-                            Unleash Creativity: Graphic, UI/UX, Web, Product, Visual, and Interaction Designers,
-                            Strategists, Brand Experts, and More - Ready to Transform Your Vision in Just 24 Hours.
-                     
+
+                        Unleash Creativity: Graphic, UI/UX, Web, Product, Visual, and Interaction Designers,
+                        Strategists, Brand Experts, and More - Ready to Transform Your Vision in Just 24 Hours.
+
                     </p>
                 </div>
 
@@ -175,22 +177,22 @@
                     <div><img height="60px" width="60px" class="img-fluid" src="images/AI engineer-01.png" alt="">
                     </div>
                     <h5 id="W5"><B>AI Engineers</B></h4>
-                        <p id="K5"  class="XSMALL">
-                          
-                                Unlock Possibilities: Craft AI Apps, Websites, Chatbots, and Enhance Data Science with
-                                Model Training, Labeling, Annotation, and Advanced Analytics
-                           
+                        <p id="K5" class="XSMALL">
+
+                            Unlock Possibilities: Craft AI Apps, Websites, Chatbots, and Enhance Data Science with
+                            Model Training, Labeling, Annotation, and Advanced Analytics
+
                         </p>
                 </div>
                 <div class="box1" id="H6">
                     <div><img height="60px" width="60px" class="img-fluid" src="images/Business-01.png" alt="">
                     </div>
                     <h5 id="W6"><B>Business Consultants</B></h5>
-                    <p id="K6"  class="XSMALL">
-                       
-                            Diversify your recruitment: VA, eCommerce, Project, Supply Chain, Market Research, AI
-                            Consulting experts for business success through their diverse domains.
-                        
+                    <p id="K6" class="XSMALL">
+
+                        Diversify your recruitment: VA, eCommerce, Project, Supply Chain, Market Research, AI
+                        Consulting experts for business success through their diverse domains.
+
                 </div>
             </div>
         </section>
@@ -203,7 +205,7 @@
             <div class="col-lg-5 COL-md-8 col-sm-11" id="REMOTLY">
                 <div id="WORK1">
                     <h4 class="SUBHEAD">
-                       Seamless Remote IT Staffing
+                        Seamless Remote IT Staffing
                     </h4>
                     <h1>
                         <heading>Empower Your Hiring</heading>
@@ -235,7 +237,7 @@
             <div class="col-12 justify-content-center mb-5">
                 <div class="row justify-content-center">
                     <div class="col-11">
-                        <h4  class="SUBHEAD">
+                        <h4 class="SUBHEAD">
                             Elevate Your Business
                         </h4>
                     </div>
@@ -326,7 +328,7 @@
                     <div class="col-lg-6" id="REMOTLY">
                         <div id="WORK1">
                             <h4 class="SUBHEAD">
-                             Your Talent Sourcing Partner: SSL Solutions
+                                Your Talent Sourcing Partner: SSL Solutions
                             </h4>
                             <h1>
                                 <heading>How SSL Solutions Operates<span style="color: rgb(175, 32, 34)">?</span>
@@ -366,7 +368,7 @@
             <div class="col-sm-12 col-lg-6  ">
                 <div class=" my-5" id="REMOTLY">
                     <h4 class="SUBHEAD">
-                         Serving a Broad Spectrum of Industries and Clients
+                        Serving a Broad Spectrum of Industries and Clients
                     </h4>
                     <h1 class="HEADING">
                         Your Versatile Partner
@@ -656,7 +658,7 @@
         <div class=" text-center row ">
             <div class="col-12">
                 <h4 class=" fs-4 fw-semibold mt-5 pb-1 text-white" id="SUBHEAD">
-                   Uncover Essential
+                    Uncover Essential
                 </h4>
                 <h1 class="text-white" id="HEADING">
                     Skills for Your Business!
@@ -796,7 +798,7 @@
             <div class="col-lg-4 my-2 ">
                 <div class="p-5 boder-0">
                     <h4 class="text-color-custom" id="SUBHEAD">
-                        Discover SSL Soluation 
+                        Discover SSL Soluation
                     </h4>
                     <h2 class="XLARGE">
                         Why Global Employers Trust Us
@@ -1036,13 +1038,13 @@
                                 </div>
                                 <div style="color: #555659 !important">
                                     <p class="SMALL">
-                                        
-                                            SSL Solutions talent unlock opportunities with leading global firms,
-                                            securing
-                                            competitive market salaries on a worldwide scale. Your path to
-                                            success
-                                            awaits.
-                                        
+
+                                        SSL Solutions talent unlock opportunities with leading global firms,
+                                        securing
+                                        competitive market salaries on a worldwide scale. Your path to
+                                        success
+                                        awaits.
+
                                     </p>
                                 </div>
                             </div>
@@ -1053,9 +1055,9 @@
                                 <div id="SMALL" style="color: #555659 !important">
                                     <p>
                                         Experience rapid growth as you tackle intricate technical and business
-                                            challenges
-                                            utilizing our cutting-edge tech stack. Your journey to unprecedented
-                                            professional development starts here.
+                                        challenges
+                                        utilizing our cutting-edge tech stack. Your journey to unprecedented
+                                        professional development starts here.
                                     </p>
                                 </div>
                             </div>
@@ -1103,7 +1105,7 @@
         <div class="row" style="color: white;">
             <div id="TEXTH">
                 <h4 class="text-white" id="SUBHEAD">
-            Spotlight
+                    Spotlight
                 </h4>
                 <h1 id="HEADING">
                     Delving Deeper into Our Global Presence
@@ -1338,7 +1340,7 @@
 
         <div class="container-fluid mb-5">
             <div class="row justify-content-center">
-                
+
                 <div class="col-md-8 ">
                     <div class="accordion accordion-flush" id="accordionFlushExample">
                         <div class="accordion-item" style="border: 1px solid black; margin-top:10px; width: 100%;">
@@ -1476,7 +1478,33 @@
     <!-- End javascript -->
 
 
-    
+    <script>
+        // Function to show the loading screen
+        function showLoadingScreen() {
+            document.getElementById('loading-screen').style.display = 'block';
+        }
+
+        // Function to hide the loading screen
+        function hideLoadingScreen() {
+            document.getElementById('loading-screen').style.display = 'none';
+        }
+
+        // Simulate an API request or data loading
+        function loadData() {
+            // Show the loading screen while data is being fetched
+            showLoadingScreen();
+
+            // Simulate a 3-second data loading
+            setTimeout(() => {
+                // Hide the loading screen when data is loaded
+                hideLoadingScreen();
+                // Add your code to mount the content on the DOM here
+            }, 3000);
+        }
+
+        // Call the loadData function when the page is ready
+        window.onload = loadData;
+    </script>
     <script src="/public/js/swiper-bundle11.min.js"></script>
     <script src="js/swiper-bundle22.min.js"></script>
     <script src="js/home.js"></script>
@@ -1497,6 +1525,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
+<script>
+    //after window is loaded completely 
+    window.onload = function () {
+        //hide the preloader
+        document.querySelector(".pl").style.display = "none";
+    }
+</script>
     <!-- End Script  -->
 </body>
 

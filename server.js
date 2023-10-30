@@ -227,8 +227,8 @@ var trajectory = [
 ]
 
 
+app.get('/', async  (req, res) =>{
 
-app.get('/', async (req, res) =>{
     try {
         const allUserProfiles = await user_profile_seller.findAll({ where:{id:1},
             attributes: ['Designation', 'firstName', 'lastName', 'avatar']
@@ -241,6 +241,7 @@ app.get('/', async (req, res) =>{
             trajectory: trajectory,
             profiles: allUserProfiles
         });
+        
     } catch (error) {
         console.error(error);
         res.render('505pg.ejs')
@@ -255,7 +256,7 @@ app.use('/', login)
 app.use('/', logout)
 app.use('/', forgetPassword)
 app.use('/', userProfileSeller)
-app.use('/talent/profile', profileView)
+app.use('/talent/profile', verifyToken, profileView)
 app.use('/talent/profile', empHistory)
 app.use('/talent/profile', empEducationHistory)
 app.use('/talent/profile', CertificateHistory)
@@ -268,8 +269,8 @@ app.use('/talent/profile', CertificateHistory)
 // });
 
 
-app.get('/pricing', (req, res) => {
-    res.render('pricing.ejs', {
+app.get('/pricing', async (req, res) => {
+   await res.render('pricing.ejs', {
         technologies: technologies,
         skills: skills,
         trajectory: trajectory
@@ -309,8 +310,8 @@ app.get('/505',(req, res)=>{
 })
 
 
-app.get('/seller/dashboard', verifyToken, (req, res)=>{
-    res.render('userDashboard.ejs')
+app.get('/seller/dashboard', (req, res)=>{
+    res.render('preloader.ejs')
 })
 
 app.listen(process.env.PORT, (req, res) => {
