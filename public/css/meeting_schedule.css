@@ -1,0 +1,84 @@
+.bg {
+    background-color: white;
+    height: 650px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+
+.cookie{
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(175, 32, 34);
+}
+
+.cookie:hover{
+    color: rgb(175, 32, 34);
+    text-decoration: underline;
+}
+
+.logo img {
+    width: 250px;
+}
+
+.about-image img {
+    width: 100%;
+}
+
+.box{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    height: 500px;
+}
+
+.in-content h4 i{
+    position: relative;
+    bottom: 3px;
+    right: 8px;
+}
+
+.inner ,h4, p{
+    margin-left: 30px;
+    color: gray;
+}
+
+.inner h4{
+    margin-top: 20px;
+
+}
+
+.invite-btn{
+    border: 1px solid rgb(175, 32, 34);
+    padding: 6px;
+    width: 150px;
+    border-radius: 50px;
+    outline: none;
+    color: rgb(175, 32, 34);
+    background-color: white;
+    margin: auto;
+    display: block;
+}
+
+.true{
+    background-color: rgb(175, 32, 34);
+    padding: 8px;
+    font-size: 0.6rem;
+    border-radius: 50px;
+    color: white;
+}
+
+.inner{
+    border: 1px solid var(--color-grey-3,#CCCCCC);
+    border-radius: 5px;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .about-image img {
+        width: 370px;
+    }
+
+}
+
+    

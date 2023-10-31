@@ -283,6 +283,15 @@ app.get('/hire_talents', (req, res) => {
 app.get('/step_one', (req, res) => {
     res.render('step_one.ejs')
 })
+app.get('/step_two', (req, res) => {
+    res.render('step_two.ejs')
+})
+app.get('/step_two-p2', (req, res) => {
+    res.render('step_two_part2.ejs')
+})
+app.get('/meeting', (req, res) => {
+    res.render('meeting_schedule.ejs')
+})
 app.get('/about', (req, res) => {
     res.render('About.ejs')
 })
