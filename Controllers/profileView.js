@@ -77,8 +77,6 @@ router.get('/', verifyToken, async (req, res) => {
     .then((user) => {
       if (user) {
         const user_image = user.user_profile_seller.avatar;
-        
-        console.log(user_image);
         return res.render('networkprofile.ejs', {
           userDetails: user,
           user_image,
