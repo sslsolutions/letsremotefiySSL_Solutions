@@ -294,6 +294,9 @@ app.get('/nav',(req, res)=>{
 app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
 })
+app.get('/step_one', (req, res) => {
+    res.render('step_one.ejs')
+})
 app.get('/about', (req, res) => {
     res.render('About.ejs')
 })
