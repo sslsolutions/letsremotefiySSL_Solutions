@@ -22,17 +22,8 @@ label{
     width: 100%;
 }
 
-.about-text p {
-    font-weight: 600;
-}
 
-.about-text h1 {
-    font-weight: 700;
-}
 
-/* .checks {
-    gap: 90px;
-} */
 
 .bg {
     background-color: white;
