@@ -20,7 +20,19 @@ router.get('/resetpassword/:token', async (req, res) => {
     res.render('changepasswor.ejs', { token })
 })
 
+const validationforgetPassword=[
+    body('email', 'Email is not valid')
+        .isEmail()
+        .normalizeEmail().custom(async value => {
+            const existingUser = await User.findOne({where:{ email: value }});
+            if (!existingUser) {
+                // Will use the below as the error message
+                throw new Error(`A user didn't have account with this email or check your e-mail address`);
+            }
+        }),
+]
 const validation = [
+    
     check('password', 'Password must be eight characters, at least one uppercase letter, one lowercase letter, one number and one special character')
         .exists()
         .isLength({ min: 8 })
@@ -32,31 +44,42 @@ const validation = [
         return true;
     }),
 ]
-router.post('/forgetPassword', async (req, res, next) => {
-    const user = await User.findOne({ where: { email: req.body.email } })
-    if (!user) {
-        console.log('User will not found');
-    }
-    const resetToken = user.createResetPasswordToken();
-    //await user.save({ validateBeforeSave: false })
-
-    await user.save({ fields: ['passwordResetToken', 'passwordResetTokenExpires'] });
-    ////send email to the user tto reset the link
-
-    const resetUrl = `${req.protocol}://${req.get('host')}/resetPassword/${resetToken}`;
-    const message = `We have received a Password Reset request. Please use the below link to rest the password \n\n ${resetUrl} This reset Password link will be valid only for ten minutes`
-    try {
-        await sendEmail({
-            email: user.email,
-            subject: "Password Change request received ",
-            message: message
+router.post('/forgetPassword', validationforgetPassword, async (req, res, next) => {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) {
+        // return res.status(422).jsonp(errors.array())
+        const alert = errors.array()
+        res.render('forgetpassword.ejs', {
+            alert,
         })
-        res.status(200).redirect('/login')
-    } catch (error) {
-
-        return res.status(500).json({ message: 'Internal Server Error' });
     }
-
+    else{
+        const user = await User.findOne({ where: { email: req.body.email } })
+        if (!user) {
+            console.log('User will not found');
+        }
+        const resetToken = user.createResetPasswordToken();
+        //await user.save({ validateBeforeSave: false })
+    
+        await user.save({ fields: ['passwordResetToken', 'passwordResetTokenExpires'] });
+        ////send email to the user tto reset the link
+    
+        const resetUrl = `${req.protocol}://${req.get('host')}/resetPassword/${resetToken}`;
+        const message = `We have received a Password Reset request. Please use the below link to rest the password \n\n ${resetUrl} This reset Password link will be valid only for ten minutes`
+        try {
+            await sendEmail({
+                email: user.email,
+                subject: "Password Change request received ",
+                message: message
+            })
+            res.status(200).redirect('/login')
+        } catch (error) {
+    
+            return res.status(500).json({ message: 'Internal Server Error' });
+        }
+    
+    }
+   
 
 })
 router.post('/resetpassword/:token', validation, async (req, res) => {
