@@ -15,12 +15,13 @@ router.get('/forgetPassword', async (req, res) => {
 })
 
 router.get('/resetpassword/:token', async (req, res) => {
-    res.render('resetPassword.ejs')
+    const token=req.params.token
+    console.log(token);
+    res.render('changepasswor.ejs', {token})
 })
 
 router.post('/forgetPassword', async (req, res, next) => {
     const user = await User.findOne({ where: { email: req.body.email } })
-    console.log(user);
     if (!user) {
         console.log('User will not found');
     }
@@ -31,18 +32,14 @@ router.post('/forgetPassword', async (req, res, next) => {
     ////send email to the user tto reset the link
 
     const resetUrl = `${req.protocol}://${req.get('host')}/resetPassword/${resetToken}`;
-    const message = `We have received a Password Reset request. Please use the below link to rest the password \n\n ${resetUrl}\n This reset Password link will be valid only for ten minutes`
+    const message = `We have received a Password Reset request. Please use the below link to rest the password \n\n ${resetUrl} This reset Password link will be valid only for ten minutes`
     try {
         await sendEmail({
             email: user.email,
             subject: "Password Change request received ",
             message: message
         })
-        res.status(200).json({
-            status: 'success',
-            message: "password reset link send to the user email",
-            redirect: "/login"
-        })
+        res.status(200).redirect('/login')
     } catch (error) {
 
         return res.status(500).json({ message: 'Internal Server Error' });
@@ -50,7 +47,7 @@ router.post('/forgetPassword', async (req, res, next) => {
 
 
 })
-router.post('/resetPassword/:token', async (req, res) => {
+router.post('/resetpassword/:token', async (req, res) => {
 
     const token = crypto.createHash('sha256').update(req.params.token).digest('hex')
 
@@ -67,6 +64,7 @@ router.post('/resetPassword/:token', async (req, res) => {
         }
 
         const newPassword = req.body.password;
+        console.log(newPassword);
         const hashedPassword = bcrypt.hashSync(newPassword, 12);
 
         user.password = hashedPassword;
@@ -81,7 +79,7 @@ router.post('/resetPassword/:token', async (req, res) => {
 
         res.cookie('token', loginToken, { httpOnly: true });
         req.session.userId = user.id;
-        return res.status(200).render('resetPassword.ejs', { token: token })
+        return res.status(200).redirect('/login')
     } catch (error) {
         console.error(error);
         return res.status(500).json({ message: 'Internal Server Error' });

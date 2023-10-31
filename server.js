@@ -276,22 +276,6 @@ app.get('/pricing', (req, res) => {
         trajectory: trajectory
     })
 })
-// ========
-
-app.get('/sign', (req, res) => {
-    res.render('signup.ejs')
-})
-app.get('/change', (req, res) => {
-    res.render('changepasswor.ejs')
-})
-app.get('/forget', (req, res) => {
-    res.render('forgetpassword.ejs')
-})
-app.get('/nav',(req, res)=>{
-    res.render('Navbar.ejs')
-})
-
-// =============
 
 app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
