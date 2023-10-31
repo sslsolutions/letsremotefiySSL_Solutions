@@ -111,7 +111,8 @@
                     <div class="dropdown">
                         <i class="fa fa-bell" aria-hidden="true"></i>
                         <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                            <img class="profile" src="data:image/jpeg;base64,<%= user_image %>" alt="Profile images">
+                            <img id="displayImage" class="img-fluid profile rounded-circle"
+                                            style="width: 44px; height: 44px;" src="data:image/jpeg;base64,<%= user_image %>">
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
@@ -131,9 +132,9 @@
                     <div class="container mt-5">
                         <div class="row">
                             <div class="col-md-5">
-                                <img class="profile-image img-fluid "
-                                  src="data:image/jpeg;base64,<%= user_image %>"
-                                    alt="">
+                                <img  class="img-fluid profile-image rounded-circle"
+                                            style="width: 120px; height: 120px;" src="data:image/jpeg;base64,<%= user_image %>">
+        
                                 <div class="d-flex">
                                     <h4><b>
                                             <%= userDetails.user_profile_seller.firstName %>
