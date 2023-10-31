@@ -310,7 +310,7 @@ app.get('/skill',(req, res)=>{
     res.render('skill-test.ejs')
 })
 app.get('/nprofile',(req, res)=>{
-    res.render('network-profile.ejs')
+    res.render('networkprofile.ejs')
 })
 
 app.get('/404',(req, res)=>{

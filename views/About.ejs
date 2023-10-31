@@ -5,13 +5,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About</title>
-  <!--  LINKS OF FILES -->
+    <!-- REMIX-ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- NAVBAR LINK -->
+    <link rel="stylesheet" href="/css/NAVBAR.css">
+  <!-- FONT STYLE -->
   <link rel="stylesheet" href="css/fontstyle.css">
+  <!-- STYLE -->
   <link href="css/about.css" rel="stylesheet" type="text/css">
   <!-- FOOTER -->
   <link href="css/blog.css" rel="stylesheet" type="text/css">
-  <!-- NAVBAR STYLE -->
-  <link rel="stylesheet" href="/css/navbar.css">
     <!--  LINKS OF FONT FAMILY  -->
     <link rel="stylesheet" href="css/fontstyle.css">
   <!--  -->
@@ -36,9 +39,10 @@
 
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary">
-    <%- include('Components/navbar'); %>
-  </nav>
+    <header class="header">
+      <%- include('Components/NAVBAR'); %>
+    </header><br><hr>
+
   <!-- -----------------------WORK REMOTLY------------------- -->
 
   <div class="container-fluid">
@@ -784,7 +788,8 @@
 
 
 
-
+   <!-- NAVBAR JS -->
+    <script src="js/NAVBAR.js"></script>
 
 
 

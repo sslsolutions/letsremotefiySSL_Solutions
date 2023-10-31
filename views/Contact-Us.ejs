@@ -22,8 +22,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- FOOTER -->
   <link href="css/blog.css" rel="stylesheet" type="text/css">
-  <!-- NAVBAR STYLE -->
-  <link rel="stylesheet" href="/css/navbar.css">
+    <!-- REMIX-ICONS -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- NAVBAR LINK -->
+    <link rel="stylesheet" href="/css/NAVBAR.css">
+
 
      <!-- ----------------   CHATGPT     ----------- -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -35,9 +38,9 @@
 
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bg-dark bg-body-tertiary">
-    <%- include('Components/navbar'); %>
-  </nav>
+  <header class="header">
+    <%- include('Components/NAVBAR'); %>
+</header><br><hr>
   <!-- ---------------------------------------------       FORM        ------------------------------------->
   <div class="container-fluid">
     <div class="row" id="WORKH">
@@ -266,6 +269,9 @@
   <footer class="bg-dark text-center p-2">
     <%- include('Components/footor'); %>
   </footer>
+
+     <!-- NAVBAR JS -->
+     <script src="js/NAVBAR.js"></script>
   <script>
     console.log('its working');
 
