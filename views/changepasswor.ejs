@@ -31,6 +31,13 @@
                             Please Enter Valid email we will sharing the new password with you.
                         </p>
                     </div>
+                    <% if(typeof alert != 'undefined') { %>
+                        <% alert.forEach(function(error) { %>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <%= error.msg %>
+                              </div>
+                        <% }) %>
+                    <% } %>
                     <form action="/resetpassword/<%= token %>" method="post">
                         <div class="row justify-content-center mt-4">
                           <div class="col-12 mt-4 mb-3" id="MAIN">
@@ -52,8 +59,6 @@
                                 </div>
                             </div>
                           </div>
-            
-            
             
                           <div class="col-8 mt-3">
                             <input class="mt-1" type="submit" value="Submit" data-toggle="modal" data-target="#exampleModal">
@@ -104,7 +109,7 @@
             e.preventDefault();
         });
 
-        // ----------------
+        
         const togglePass = document.querySelector("#togglePass");
         const pass = document.querySelector("#pass");
 
