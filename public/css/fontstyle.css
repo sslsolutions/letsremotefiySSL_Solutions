@@ -1,0 +1,321 @@
+/* ----------------------       ANIMATION SECTION       --------------------------- */
+/* 
+INDEX/HOME
+ABOUT
+PRICING
+CONTACT-US
+JOBS
+hire_talent
+
+*/
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: Helvetica Rounded;
+    src: url(/public/fonts/Helvetica.ttf);
+    font-family: Helvetica;
+    src: url(Helvetica.ttf);
+    font-family: Gordita;
+    src: url(/public/fonts/Gorditas-Bold.ttf);
+
+    font-family: Gorditas;
+    src: url(/public/fonts/Gorditas.zip/Gorditas-Regular.ttf);
+
+}
+
+/* html * {
+     font-family: Nunito, serif; 
+  } */
+:root{
+    --Main--color: rgb(175, 32, 34);
+    --text--18size:18px;
+    --text--22size:22px;
+    /* --paragraph--size:30px; */
+    --color:white;
+    --font-700:700;
+    /* --font-family:Arial, Helvetica, sans-serif ; */
+    /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
+    /* --bg-color:#1b1f24; */
+    /* font-family: 'Gor'; */
+    /* --second-bg-color:#22282f; */
+    /* --main-color:#13bbff; */
+    /* --other-color:#c3cad5; */
+/*  -----------------------     FONT-FAMILY     ---------------------------------- */
+--Goditas--bold : Gorditas;
+--Godita--bold : Gordita;
+--Helvetica--Round:Helvetica Rounded;
+--subbold--font: Helvetica;
+
+
+
+    /* ----------------------------     FONT-ENDS       --------------------------------------- */
+    --font--500:500;
+    --h-font:48PX;
+    --line--height:1.71rem;
+
+}
+H3, h4, h5,h1{
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    /* color: blue; */
+}
+
+.XSMALL, #XSMALL{
+    font-size: 16PX;
+    /* color: brown; */
+}
+.XXSMALL, #XXSMALL{
+    font-size: 14PX;
+    /* color: brown; */
+}
+#SMALL, SP, .SMALL{
+    font-size: 18px;
+    /* color: red; */
+}
+#XLARGE, .XLARGE{
+    font-size: 24PX;
+    /* color:rgb(24, 174, 243); */
+}
+
+
+#LARGE, HP, .LARGE{
+    font-size: 22PX;
+    /* color:rgb(28, 12, 248); */
+    /* font-weight: 500; */
+    /* letter-spacing: .3px; */
+    font-family: Arial, sans-serif,Lucida, Helvetica Rounded , var(--Godita--bold);
+}
+
+h4{
+    font-weight: 600;
+    /* font-size: 24px; */
+    /* color: rgb(223, 29, 136); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    
+}
+HEADING, .HEADING, #HEADING{
+    font-size: 42px;
+    /* color: purple; */
+}
+SUBHEAD, #SUBHEAD, .SUBHEAD{
+    font-weight: 600;
+    font-size: 24px;
+    color: rgb(175, 32, 34);
+    /* color: rgb(8, 252, 118); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    
+}
+
+@font-face {
+    font-family: Helvetica Rounded;
+    src: url(/public/fonts/Helvetica.ttf);
+    font-family: Helvetica;
+    src: url(Helvetica.ttf);
+    font-family: Gordita;
+    src: url(/public/fonts/Gorditas-Bold.ttf);
+
+    font-family: Gorditas;
+    src: url(/public/fonts/Gorditas.zip/Gorditas-Regular.ttf);
+
+}
+body{
+    font-family:  Arial,Lucida, sans-serif;
+}
+h1{
+    font-family: 'Varela Round', sans-serif;
+    /* font-family:  var(--subbold--font); */
+}
+#NUMBER{
+    font-size: 36PX;
+    /* color: rgb(224, 148, 35) ; */
+    
+}
+#NUMBER2{
+    font-size: 14PX;
+    /* color: rgb(224, 148, 35) ; */
+    
+}
+
+/* --------------------------------SLIDER       ---------------------------------------- */
+
+
+
+/* =================================        991     ========================================= */
+
+@media (max-width: 991px) {
+    
+    
+    .XSMALL, #XSMALL{
+    font-size: 16PX;
+    /* color: red; */
+}
+#SMALL, SP, .SMALL{
+    font-size: 16px;
+    /* color: red; */
+}
+#XLARGE, .XLARGE{
+    font-size: 22PX;
+    /* color:rgb(24, 174, 243); */
+}
+
+#LARGE, .LARGE, HP{
+    font-size: 20PX;
+    /* color:rgb(28, 12, 248); */
+}
+
+h4{
+    font-weight: 600;
+    /* font-size: 24px; */
+    /* color: rgb(223, 29, 136); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    
+}
+HEADING, .HEADING, #HEADING{
+    font-size: 40px;
+    /* color: purple; */
+}
+SUBHEAD, #SUBHEAD, .SUBHEAD{
+    font-weight: 600;
+    font-size: 20px;
+    /* color: rgb(8, 252, 118); */
+    font-family: Arial, Helvetica, sans-serif,Lucida;
+    
+}
+#NUMBER{
+    font-size: 36PX;
+    /* color: rgb(224, 148, 35) ; */
+    
+}
+#NUMBER2{
+    font-size: 14PX;
+    /* color: rgb(224, 148, 35) ; */
+    
+}
+  
+}
+/* =================================        786     ========================================= */
+@media (max-width: 786px) {
+
+    .XSMALL, #XSMALL{
+        font-size: 15PX;
+        /* color: red; */
+    }
+    #SMALL, SP, .SMALL{
+        font-size: 15px;
+        /* color: red; */
+    }
+    #XLARGE, .XLARGE{
+        font-size: 20PX;
+        /* color:rgb(24, 174, 243); */
+    }
+    
+    #LARGE, HP{
+        font-size: 18PX;
+        /* color:rgb(28, 12, 248); */
+    }
+    
+    h4{
+        font-weight: 600;
+        /* font-size: 24px; */
+        /* color: rgb(223, 29, 136); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    HEADING, .HEADING, #HEADING{
+        font-size: 36px;
+        /* color: purple; */
+    }
+    SUBHEAD, #SUBHEAD, .SUBHEAD{
+        font-weight: 600;
+        font-size: 18px;
+        /* color: rgb(8, 252, 118); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    #NUMBER{
+        font-size: 33PX;
+    }
+    #NUMBER2{
+        font-size: 13PX;
+    }
+
+}
+
+
+
+
+
+/* =================================        575     ========================================= */
+
+@media (max-width: 575px) {
+   
+ 
+    .XSMALL, #XSMALL{
+        font-size: 14PX;
+        /* color: red; */
+    }
+    #SMALL, SP, .SMALL{
+        font-size: 14px;
+        /* color: red; */
+    }
+    #XLARGE, .XLARGE{
+        font-size: 18PX;
+        /* color:rgb(24, 174, 243); */
+    }
+    
+    #LARGE, HP{
+        font-size: 16PX;
+        /* color:rgb(28, 12, 248); */
+    }
+    
+    h4{
+        font-weight: 600;
+        /* font-size: 24px; */
+        /* color: rgb(223, 29, 136); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    HEADING, .HEADING, #HEADING{
+        font-size: 28px;
+        /* color: purple; */
+    }
+    SUBHEAD, #SUBHEAD, .SUBHEAD{
+        font-weight: 600;
+        font-size: 16px;
+        /* color: rgb(8, 252, 118); */
+        font-family: Arial, Helvetica, sans-serif,Lucida;
+        
+    }
+    #NUMBER{
+        font-size: 30PX;
+    }
+    #NUMBER2{
+        font-size: 12PX;
+    }
+  
+    
+}
+/* ----------------------------------       350   --------------------------- */
+@media (max-width: 350px) {
+   
+    HEADING, .HEADING, #HEADING{
+        font-size: 24px;
+    }
+    NUM1{
+        font-size: 19PX;
+    }
+    NUM2{
+        font-size: 12PX;
+    }
+ 
+    
+}
+
+
+/* --------------------===============     Photo animation   =================-------------- */

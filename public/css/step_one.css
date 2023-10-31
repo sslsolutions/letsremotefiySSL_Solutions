@@ -1,0 +1,89 @@
+/* body {
+    background-image: url('design-01.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.logo h5{
+    font-weight: 600;
+}
+
+label{
+    color: #607d8b;
+    /* font-size: 1rem; */
+    font-weight: 600;
+}
+
+.logo img {
+    width: 250px;
+}
+
+.about-image img {
+    width: 100%;
+}
+
+.about-text p {
+    font-weight: 600;
+}
+
+.about-text h1 {
+    font-weight: 700;
+}
+
+/* .checks {
+    gap: 90px;
+} */
+
+.bg {
+    background-color: white;
+    height: 650px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+
+
+input[type='radio'] {
+    margin-right: 8px;
+}
+
+::placeholder {
+    padding-left: 2px
+}
+
+.set-icon {
+    position: relative;
+    bottom: 34px;
+    left: 15px;
+    color: #bfc0bd;
+}
+
+.text-area{
+    padding-left: 40px;
+    height: 47px;
+    border: 1px solid gray  ;
+    /* outline: ; */
+    outline: none;
+    background-color: #f5f6e9;
+}
+
+.text-area:hover
+{
+    border: 2px solid rgb(175, 32, 34);
+}
+
+.continue-btn{
+    padding: 9px;
+    border: none;
+    background: rgb(175, 32, 34);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .about-image img {
+        width: 370px;
+    }
+
+}
