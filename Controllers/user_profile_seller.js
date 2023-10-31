@@ -19,7 +19,7 @@ router.use(bodyParser.json())
 router.get('/createProfile', verifyToken, async (req, res, next) => {
   const encodedEmail = req.query.email;
   const isEmailValid = decodeURIComponent(encodedEmail)
-  res.render('create_Profile.ejs', { userEmail: isEmailValid });
+  res.render('create_profile.ejs', { userEmail: isEmailValid });
 })
 
 router.get('/details', async (req, res) => {
@@ -39,8 +39,10 @@ router.get('/details', async (req, res) => {
 //       cb(null, Date.now() + '-' + file.originalname); // Rename the file with a unique name
 //     },
 //   });
-const storage = multer.memoryStorage();
-const upload = multer({ storage });
+const upload = multer({
+  storage: multer.memoryStorage(), // You can choose storage options based on your requirements.
+  limits: { fileSize: 3 * 1024 * 1024 }, // Set the file size limit in bytes (1MB in this example).
+});
 
 router.post('/createProfile', upload.single('profileImage'), async (req, res) => {
   const userId = req.cookies.userId
@@ -48,6 +50,9 @@ router.post('/createProfile', upload.single('profileImage'), async (req, res) =>
   const { Designation, country, firstName, lastName, phoneNumber, countryCode } = req.body;
   /////////user Profile Pics///////////
   const profileImage = req.file.buffer.toString('base64')
+  if (req.file.size > 3 * 1024 * 1024) {
+    return res.status(400).send('File size exceeds the limit.');
+  }
 
   const userProfile = {
     UserId: userId,
@@ -139,7 +144,7 @@ router.post('/readytojoin', upload.single('Resume'), async (req, res) => {
     console.error(error);
     return res.status(500).json({ message: 'Internal Server Error' });
   }
-  res.redirect('/seller/dashboard')
+  res.redirect('/talent/profile')
 })
 
 

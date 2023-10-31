@@ -227,7 +227,8 @@ var trajectory = [
 ]
 
 
-app.get('/', async (req, res) =>{
+app.get('/', async  (req, res) =>{
+
     try {
         const allUserProfiles = await user_profile_seller.findAll({ where:{id:1},
             attributes: ['Designation', 'firstName', 'lastName', 'avatar']
@@ -240,9 +241,10 @@ app.get('/', async (req, res) =>{
             trajectory: trajectory,
             profiles: allUserProfiles
         });
+        
     } catch (error) {
         console.error(error);
-        res.status(500).render('505pg.ejs')
+        res.render('505pg.ejs')
     }
   
 });
@@ -254,7 +256,7 @@ app.use('/', login)
 app.use('/', logout)
 app.use('/', forgetPassword)
 app.use('/', userProfileSeller)
-app.use('/talent/profile', profileView)
+app.use('/talent/profile', verifyToken, profileView)
 app.use('/talent/profile', empHistory)
 app.use('/talent/profile', empEducationHistory)
 app.use('/talent/profile', CertificateHistory)
@@ -274,22 +276,6 @@ app.get('/pricing', (req, res) => {
         trajectory: trajectory
     })
 })
-// ========
-
-app.get('/sign', (req, res) => {
-    res.render('signup.ejs')
-})
-app.get('/change', (req, res) => {
-    res.render('changepasswor.ejs')
-})
-app.get('/forget', (req, res) => {
-    res.render('forgetpassword.ejs')
-})
-app.get('/nav',(req, res)=>{
-    res.render('Navbar.ejs')
-})
-
-// =============
 
 app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
@@ -308,7 +294,7 @@ app.get('/blogs', (req, res)=>{
     res.render('blog.ejs')
 })
 
-app.get('/overview',(req, res)=>{
+app.get('/talent/overview',(req, res)=>{
     res.render('talent-overview.ejs')
 })
 app.get('/skill',(req, res)=>{

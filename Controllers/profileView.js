@@ -31,27 +31,24 @@ router.get('/', verifyToken, async (req, res) => {
     return employment
   });
   /////////////////////end///////////////////////
-////////////////////getCertificatin//////////////
-try {
-  const { Certificate, Organization ,Institute, StartYear, EndYear ,Description}=req.body
+  ////////////////////getCertificatin/////////////
 
-  const addCertification={
-      UserId:userId,
-      Certificate,
-      Organization,
-      Institute,
-      StartYear,
-      EndYear,
-      Description
-  }
+  const getuserCertification = await Certification.findAll({
+    where: {
+      UserId: userId
+    }
+    , order: [['createdAt', 'DESC'], ['updatedAt', 'DESC']]
 
-await Certification.create(addCertification)
-  res.status(200).redirect('/talent/profile')
+  })
 
-} catch (error) {
-  throw error
-}
-
+  const userCertificationData= getuserCertification.map((certifications) => {
+    const startYear = new Date(certifications.StartYear);
+    const endYear = new Date(certifications.EndYear)
+    const options = { year: 'numeric', month: 'long' };
+    certifications.formattedStartYear = startYear.toLocaleDateString(undefined, options);
+    certifications.formattedEndYear = endYear.toLocaleDateString(undefined, options);
+    return certifications
+  });
   ///////get user education history//////////////
   const userEducationHistory = await UserEducationHistory.findAll({
     where: {
@@ -59,7 +56,7 @@ await Certification.create(addCertification)
     },
     order: [['createdAt', 'DESC'], ['updatedAt', 'DESC']],
   })
-  const getUserEducationHistroy=userEducationHistory.map((education)=>{
+  const getUserEducationHistroy = userEducationHistory.map((education) => {
     const startYear = new Date(education.StartYear);
     const endYear = new Date(education.EndYear)
     const options = { year: 'numeric', month: 'long' };
@@ -80,21 +77,19 @@ await Certification.create(addCertification)
     .then((user) => {
       if (user) {
         const user_image = user.user_profile_seller.avatar;
-        const binaryImageData = Buffer.from(user_image).toString('base64');
-        const dataUri = `data:image/png;base64,${binaryImageData}`;
-        fs.writeFileSync('avatar.jpge', dataUri)
-        console.log(binaryImageData);
-        return res.render('networkprofile.ejs', { 
+        
+        console.log(user_image);
+        return res.render('networkprofile.ejs', {
           userDetails: user,
-           image: dataUri,
-            employmentHistory: formattedEmploymentHistory,
-            userEducationHistory:getUserEducationHistroy
-          })
+          user_image,
+          employmentHistory: formattedEmploymentHistory,
+          userEducationHistory: getUserEducationHistroy,
+          getuserCertification:userCertificationData
+        })
       }
     }).catch((error) => {
       console.error('Error:', error);
     });
-
 })
 //////////////////////////end//////////////////////
 router.post('/update/info', async (req, res) => {

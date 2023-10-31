@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const userEducation = require('../Models/userEducationHistory')
 
-router.post('/', async (req, res) => {
+router.post('/addEducation', async (req, res) => {
     const userId = req.cookies.userId
     try {
         const { Degree, Field, Institute, StartYear, EndYear } = req.body

@@ -3,13 +3,20 @@
 # dependencies
 /node_modules
 /.pnp
+<<<<<<< HEAD
+=======
 /letsremotefiySSL_Solutions.rar
 
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 .pnp.js
 .env
 # testing
 /coverage
 /SSL Solutions.rar
+<<<<<<< HEAD
+# production
+/build
+=======
 <<<<<<< HEAD
 /letsremotefiySSL_Solutions.rar
 
@@ -18,6 +25,7 @@
 # production
 /build
 /letsremotefiySSL_Solutions.rar
+>>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 
 # misc
 .DS_Store
