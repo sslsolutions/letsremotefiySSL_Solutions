@@ -80,7 +80,7 @@ a {
 .nav__logo, 
 .nav__burger, 
 .nav__close {
-  color: var(--white-color);
+  color: black;
 }
 
 .nav__data-mine {
