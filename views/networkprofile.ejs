@@ -5,6 +5,12 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- STYLE  -->
+    <link rel="stylesheet" href="/css/hire_talents.css">
+    <!-- FONT style -->
+    <link href="/css/fontstyle.css" rel="stylesheet">
+    <!-- DETAILS STYLE -->
+    <link href="/css/details.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -12,7 +18,7 @@
     <link rel="stylesheet" href="/css/networkprofile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>letsremodify</title>
+    <title>network-profile</title>
 </head>
 
 <body>
@@ -112,7 +118,7 @@
                         <i class="fa fa-bell" aria-hidden="true"></i>
                         <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
                             <img id="displayImage" class="img-fluid profile rounded-circle"
-                                            style="width: 44px; height: 44px;" src="data:image/jpeg;base64,<%= user_image %>">
+                                style="width: 44px; height: 44px;" src="data:image/jpeg;base64,<%= user_image %>">
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
@@ -132,13 +138,13 @@
                     <div class="container mt-5">
                         <div class="row">
                             <div class="col-md-5">
-                                <img  class="img-fluid profile-image rounded-circle"
-                                            style="width: 120px; height: 120px;" src="data:image/jpeg;base64,<%= user_image %>">
-        
+                                <img class="img-fluid profile-image rounded-circle" style="width: 120px; height: 120px;"
+                                    src="data:image/jpeg;base64,<%= user_image %>">
+
                                 <div class="d-flex">
                                     <h4><b>
                                             <%= userDetails.user_profile_seller.firstName %>
-                                                <%= userDetails.user_profile_seller.lastName %>
+                                            <%= userDetails.user_profile_seller.lastName %>
                                         </b></h4>
                                     <img type="button" data-toggle="modal" data-target="#exampleModalCenter"
                                         class="model-image" src="/images/edit_icon.png" alt="">
@@ -474,38 +480,95 @@
                             </div>
                             <div class="col-md-7">
                                 <div class="d-flex">
-                                    <h4>Profile Detail</h4>
+                                    <h4 class="SUBHEAD">Profile Detail</h4>
+
+
                                     <img class="model-image" type="button" data-toggle="modal"
                                         data-target=".bd-example-modal-lg" src="/images/edit_icon.png" alt="">
                                     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
                                         aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
-                                                <h1>Mention your Fieldwork Experience?</h1>
-                                                <select name="" id="">
-                                                    <option value="">Less then 1 year</option>
-                                                    <option value="">Between 1 and 2 Year</option>
-                                                    <option value="">Between 2 and 3 Year</option>
-                                                    <option value="">Between 3 and 4 Year</option>
-                                                    <option value="">Between 4 and 5 Year</option>
-                                                    <option value="">More then 5 Year</option>
 
-                                                </select>
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="border">
-                                                            <h3>Basic</h3>
-                                                            <p>I can communicate over emails and slack. Verbal
-                                                                communication would be slow and impractical with the US
-                                                                manager.
-                                                            </p>
+
+
+                                                <div class="container-fluid">
+                                                    <form action="">
+                                                        
+
+                                                        <!-- ENGLISH -->
+
+                                                        <div class="row justify-content-evenly " id="radio-container-2">
+                                                            <div class="col-lg-12 my-2">
+                                                                <h4 class="LARGE">How Would You Rate Your English
+                                                                    Communication Skills?</h4>
+                                                            </div>
+                                                            <label class="col-md-3" id="EXP1">
+                                                                <input type="radio" name="shape" value="basic">
+                                                                <div><img class="img-fluid" src="/images/airplane.png"
+                                                                        alt=""></div>
+                                                                <div> &nbsp; Basis</div>
+                                                            </label>
+                                                            <label class="col-md-3" id="EXP1">
+                                                                <input type="radio" name="shape" value="advanced">
+                                                                <div><img class="img-fluid" src="/images/plane.png"
+                                                                        alt="">
+                                                                </div>
+                                                                <div>&nbsp; Advanced</div>
+                                                            </label>
+                                                            <label class="col-md-3" id="EXP1">
+                                                                <input type="radio" name="shape" value="native">
+                                                                <div><img class="img-fluid" src="/images/rocket.png"
+                                                                        alt="">
+                                                                </div>
+                                                                <div>&nbsp; Native</div>
+                                                            </label>
+
                                                         </div>
-                                                    </div>
+                                                        <!-- SELECT EXP VALUE -->
+                                                        <div class="row justify-content-evenly">
+                                                            <div class="col-lg-12 my-2">
+                                                                <h4 id="LARGE">Mention your Fieldwork Experience?</h4>
+                                                            </div>
+                                                            <div class="col-sm-9 my-2">
+                                                                <div id="MAIN-FIELD">
+                                                                    &nbsp;&nbsp;&nbsp;<i style="font-size: 25px;"
+                                                                        class="fas fa-wrench"></i>&nbsp;&nbsp;
+                                                                    <select name="Experiences" id="SELECT" required>
+                                                                        <option selected="">Enter your Experience
+                                                                        </option>
+                                                                        <option value=" Less than 1 year">Less than 1
+                                                                            year
+                                                                        </option>
+                                                                        <option value="Between 1 and 2 years">Between 1
+                                                                            and
+                                                                            2 years</option>
+                                                                        <option value="Between 2 and 3 years">Between 2
+                                                                            and
+                                                                            3 years</option>
+                                                                        <option value="Between 3 and 4 years">Between 3
+                                                                            and
+                                                                            4 years</option>
+                                                                        <option value="Between 4 and 5 years">Between 4
+                                                                            and
+                                                                            5 years</option>
+                                                                        <option value="More than years">More than years
+                                                                        </option>
+                                                                    </select>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer my-1">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary">Save
+                                                                changes</button>
+                                                        </div>
+                                                    </form>
+
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
@@ -513,7 +576,7 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <p>
-                                            <b>Expertise</b>
+                                            <b>Role</b>
                                             <br>
                                             <span>
                                                 <%= userDetails.user_profile_seller.Designation %>
@@ -547,58 +610,97 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-10" style="border: 2px solid black;">
                             <div class="container tech">
-                                <div class="d-flex">
-                                    <h4><b>Tech stack</b></h4>
+                                <div class="my-3">                                    <div class="d-flex">
+                                        <h4><b>Tech stack</b></h4>
                                     <img type="button" data-toggle="modal" data-target="#exampleModal"
                                         class="model-image" src="/images/edit_icon.png" alt="">
+                                    </div>
+                                        <div class="d-flex mt-4">
+                                            <label style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a
+                                                href=""><img src="/images/node.js.png" alt=""> Node
+                                                .js</a></span></label>
+                                    <div style="margin:  12px 5px;"><span id="DOMAINS-BTN"><a
+                                                href=""><img src="/images/node.js.png" alt="">
+                                                React.js</a></span></div>
+                                    <div style="margin:  12px 5px;"><span id="DOMAINS-BTN"><a
+                                                href=""><img src="/images/node.js.png" alt=""> React
+                                                navive</a></span></div>
+                                        </div>
+
                                     <!-- Modal -->
                                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel">Tech stack</h5>
                                                     <button type="button" class="close" data-dismiss="modal" FF
                                                         aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
+                                                
                                                 <div class="modal-body">
-                                                    ...
+                                                    <div class="col-sm-12 d-flex flex-wrap">
+                                                        <div style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt=""> Node
+                                                                    .js</a></span></div>
+                                                        <div style="margin:  12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt="">
+                                                                    React.js</a></span></div>
+                                                        <div style="margin:  12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt=""> React
+                                                                    navive</a></span></div>
+                                                        <div style="margin:  12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt="">
+                                                                    Python </a></span></div>
+                                                        <div style="margin:  12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt="">
+                                                                    Angular </a></span></div>
+                                                        <div style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt="">
+                                                                    JavaScript </a></span></div>
+                                                        <div style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt="">
+                                                                    TypScript</a></span></div>
+                                                        <div style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt="">
+                                                                    Laravel</a></span></div>
+                                                        <div style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt="">
+                                                                    PostgreSQL</a></span></div>
+                                                        <div style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt="">
+                                                                    Java</a></span></div>
+                                                        <div style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt="">
+                                                                    AWS</a></span></div>
+                                                        <div style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt=""> Java
+                                                                    Android</a></span></div>
+                                                        <div style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a
+                                                                    href=""><img src="/images/node.js.png" alt=""> Ruby
+                                                                    on Rails</a></span></div>
+                                                        <!-- <div><span id="DOMAINS-BTN"><a href=""><img src="images/node.js.png" alt=""> Node .js</a></span></div> -->
+
+                                                    </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
                                                         data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                    <button type="submit" class="btn btn-primary">Save changes</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <button class="border rounded py-1">React.js</button>
-                                <button class="border rounded py-1">View.js</button>
-                                <button class="border rounded py-1 mt-1">Node.js</button>
-                                <button class="border rounded py-1">React.js</button>
-                                <button class="border rounded py-1">View.js</button>
-                                <button class="border rounded py-1 mt-1">Node.js</button>
-                                <button class="border rounded py-1 mt-1">Node.js</button>
-                            </div>
-                        </div>
-                        <div class="col-md-7 select-wrapper mt-3">
-                            <div class="container">
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                                <button class="btn btn-outline-danger mt-1 py-2">React.js</button>
-                            </div>
 
+
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
@@ -641,36 +743,35 @@
                                 <!-- <h6 class="mt-5">No employment details added</h6> -->
 
                                 <% if (!employmentHistory || employmentHistory.length===0) { %>
-                                    <p>no employment history added</p>
-                                    <% } else { %>
-                                        <% employmentHistory.forEach(function(history) { %>
-                                            <div class="history-wrapper">
-                                                <div class="history d-flex">
-                                                    <p class="mt-5"><b><i
-                                                                class="fa-solid fa-briefcase histroy-bag mx-2"></i>
-                                                            <%= history.Position %>
-                                                        </b></p>
-                                                    <img class="ms-2 histroy-img" id="exampleModalLabel"
-                                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                                        alt="Edit Icon">
-                                                </div>
-                                                <p>
-                                                    <%= history.formattedStartDate %> , <% if
+                                <p>no employment history added</p>
+                                <% } else { %>
+                                <% employmentHistory.forEach(function(history) { %>
+                                <div class="history-wrapper">
+                                    <div class="history d-flex">
+                                        <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i>
+                                                <%= history.Position %>
+                                            </b></p>
+                                        <img class="ms-2 histroy-img" id="exampleModalLabel"
+                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                            alt="Edit Icon">
+                                    </div>
+                                    <p>
+                                        <%= history.formattedStartDate %> , <% if
                                                             (history.CurrentlyWorking===true) { %>
-                                                            Present
-                                                            <% } else { %>
-                                                                <%= history.formattedEndDate %>
-                                                                    <% } %>
-                                                </p>
-                                                <p class="location">
-                                                    <%= history.Location%>
-                                                </p>
-                                                <p>
-                                                    <%= history.Description %>
-                                                </p>
-                                            </div>
-                                            <% }); %>
-                                                <% } %>
+                                        Present
+                                        <% } else { %>
+                                        <%= history.formattedEndDate %>
+                                        <% } %>
+                                    </p>
+                                    <p class="location">
+                                        <%= history.Location%>
+                                    </p>
+                                    <p>
+                                        <%= history.Description %>
+                                    </p>
+                                </div>
+                                <% }); %>
+                                <% } %>
 
                             </div>
                             <div class="col-md-1 add-detail">
@@ -763,32 +864,31 @@
                                 <h3 class="text-dark">Education</h3>
 
                                 <% if (!userEducationHistory ||userEducationHistory.length===0) { %>
-                                    <h6 class="mt-5">No qualifications added</h6>
-                                    <% } else { %>
-                                        <% userEducationHistory.forEach(function (education) { %>
-                                            <div class="history-wrapper">
-                                                <div class="history d-flex">
-                                                    <p class="mt-5"><b><i
-                                                                class="fa-solid fa-briefcase histroy-bag mx-2"></i></b>
-                                                        <%= education.Degree %>
-                                                    </p>
-                                                    <img class="ms-2 histroy-img"
-                                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                                        alt="Edit Icon">
-                                                </div>
-                                                <p>
-                                                    <%=education.formattedStartYear %> - <%=education.formattedEndYear
+                                <h6 class="mt-5">No qualifications added</h6>
+                                <% } else { %>
+                                <% userEducationHistory.forEach(function (education) { %>
+                                <div class="history-wrapper">
+                                    <div class="history d-flex">
+                                        <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i></b>
+                                            <%= education.Degree %>
+                                        </p>
+                                        <img class="ms-2 histroy-img"
+                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                            alt="Edit Icon">
+                                    </div>
+                                    <p>
+                                        <%=education.formattedStartYear %> - <%=education.formattedEndYear
                                                             %>
-                                                </p>
-                                                <span class="location">
-                                                    <%= education.Field %>
-                                                </span>
-                                                <span><strong>
-                                                        <%= education.Institute %>
-                                                    </strong></span>
-                                            </div>
-                                            <% }); %>
-                                                <% } %>
+                                    </p>
+                                    <span class="location">
+                                        <%= education.Field %>
+                                    </span>
+                                    <span><strong>
+                                            <%= education.Institute %>
+                                        </strong></span>
+                                </div>
+                                <% }); %>
+                                <% } %>
 
 
                             </div>
@@ -869,34 +969,33 @@
                                 <h3 class="text-dark">Certification</h3>
 
                                 <% if (!getuserCertification ||getuserCertification.length===0) { %>
-                                    <h6 class="mt-5">No certificates added</h6>
-                                    <% } else { %>
-                                        <% getuserCertification.forEach(function (Certificate) { %>
-                                            <div class="history-wrapper">
-                                                <div class="history d-flex">
-                                                    <p class="mt-5"><b><i
-                                                                class="fa-solid fa-briefcase histroy-bag mx-2"></i>
-                                                            <%= Certificate.Certificate%>
-                                                        </b>
-                                                    </p>
-                                                    <img class="ms-2 histroy-img"
-                                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                                        alt="Edit Icon">
-                                                </div>
-                                                <h5>
-                                                    <%= Certificate.Institute %>
-                                                </h5>
-                                                <p>
-                                                    <%= Certificate.formattedStartYear %> , <%=
+                                <h6 class="mt-5">No certificates added</h6>
+                                <% } else { %>
+                                <% getuserCertification.forEach(function (Certificate) { %>
+                                <div class="history-wrapper">
+                                    <div class="history d-flex">
+                                        <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i>
+                                                <%= Certificate.Certificate%>
+                                            </b>
+                                        </p>
+                                        <img class="ms-2 histroy-img"
+                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                            alt="Edit Icon">
+                                    </div>
+                                    <h5>
+                                        <%= Certificate.Institute %>
+                                    </h5>
+                                    <p>
+                                        <%= Certificate.formattedStartYear %> , <%=
                                                             Certificate.formattedEndYear %>
-                                                </p>
-                                                <p class="location">
-                                                    <%=Certificate.Description %>
-                                                </p>
-                                            </div>
+                                    </p>
+                                    <p class="location">
+                                        <%=Certificate.Description %>
+                                    </p>
+                                </div>
 
-                                            <% }); %>
-                                                <% } %>
+                                <% }); %>
+                                <% } %>
                             </div>
                             <div class="col-md-1 add-detail">
                                 <img type="button" data-toggle="modal" data-target="#exampleModal_1"
@@ -981,6 +1080,26 @@
 
 
     <script>
+
+
+        // ----------------------------  SELECT ONE FIELD OUT OF THREE  -----------------------------
+        const boxes=document.querySelectorAll('#EXP1');
+
+        boxes.forEach(box=>{
+            box.addEventListener('click', ()=>{
+             boxes.forEach(allBoxes=>{
+                allBoxes.classList.remove('active');
+                allBoxes.style.border='1px solid lightgray';
+                allBoxes.style.backgroundColor='white'
+             });
+             box.classList.add('active');
+             box.style.border='1px solid black'
+             box.style.backgroundColor='lightgray'
+            })
+        })
+ 
+
+          
 
         // Get all the elements with the "seeking-hover" class
         const seekingBoxes = document.querySelectorAll('.seeking-hover');
