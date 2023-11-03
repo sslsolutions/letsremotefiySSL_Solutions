@@ -12,7 +12,7 @@ const UserEducationHistory = require("../Models/userEducationHistory");
 const Certification = require("../Models/Certification");
 
 
-router.get('/', verifyToken, async (req, res) => {
+router.get('/talent/profile', verifyToken, async (req, res) => {
   const userId = req.cookies.userId
 
   /////////////getting the useremloyement history ////////////
@@ -113,7 +113,6 @@ router.post('/update/info', async (req, res) => {
         user.user_profile_seller.lastName = lastName
         user.user_profile_seller.country = country
         user.user_profile_seller.descriptions = descriptions
-
         user.user_profile_seller.save();
         return res.redirect('/talent/profile')
       })
@@ -125,5 +124,29 @@ router.post('/update/info', async (req, res) => {
     return res.status(500).json({ message: 'Internal server error' });
   }
 })
+
+router.post('/talent/3350', async (req, res) => {
+  const workingStatus = req.body.method;
+  const userId = req.cookies.userId;
+
+  try {
+    // Find the user by their ID
+    const user = await User.findByPk(userId);
+
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    // Update the user's working status
+    user.workingStatus = workingStatus;
+
+    // Save the changes to the database
+    await user.save();
+
+    return res.status(200).redirect('/talent/profile');
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: 'Internal Server Error' });
+  }
+});
 
 module.exports = router

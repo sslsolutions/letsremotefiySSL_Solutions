@@ -233,13 +233,14 @@ app.get('/', async  (req, res) =>{
         const allUserProfiles = await user_profile_seller.findAll({ where:{id:1},
             attributes: ['Designation', 'firstName', 'lastName', 'avatar']
         });
-
+      
         // Render your EJS template and pass the 'profiles' data
         res.render('index.ejs', {
             technologies: technologies,
             skills: skills,
             trajectory: trajectory,
-            profiles: allUserProfiles
+            profiles: allUserProfiles,
+       
         });
         
     } catch (error) {
@@ -256,7 +257,7 @@ app.use('/', login)
 app.use('/', logout)
 app.use('/', forgetPassword)
 app.use('/', userProfileSeller)
-app.use('/talent/profile', verifyToken, profileView)
+app.use('/', verifyToken, profileView)
 app.use('/talent/profile', empHistory)
 app.use('/talent/profile', empEducationHistory)
 app.use('/talent/profile', CertificateHistory)

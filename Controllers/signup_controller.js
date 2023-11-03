@@ -41,6 +41,7 @@ const validation = [
 router.post('/signup', validation, async (req, res, next) => {
     //destructing 
     const { email, password, roles } = req.body
+    console.log(roles);
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
         // return res.status(422).jsonp(errors.array())
@@ -73,7 +74,6 @@ router.post('/signup', validation, async (req, res, next) => {
             email,
             password: hashPassword,
             roles
-
         }
         try {
             await user_model.create(user);

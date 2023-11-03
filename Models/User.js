@@ -32,6 +32,10 @@ User.init({
         type: DataTypes.STRING,
         ENUM: ['Seller', 'Buyer']
     },
+    workingStatus:{
+        type:DataTypes.BOOLEAN,
+        default:false
+    },
     token: {
         type: DataTypes.STRING,
     },
