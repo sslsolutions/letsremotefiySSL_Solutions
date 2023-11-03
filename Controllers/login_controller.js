@@ -74,7 +74,8 @@ router.post('/login', validator, async (req, res, next) => {
                 // Attempt to find the user's profile
                 // const userProfile = await user_profile_seller.findOne({where:{ user: id }});
                 const userProfile = await user_profile_seller.findOne({ where: { UserId: existingUser.id } });
-                if (userProfile ) {
+             
+                if (userProfile && existingUser.roles.includes('Seller')) {
                     redirectPath='/talent/profile'
                 }
                 else if (existingUser.roles.includes('Seller')) {

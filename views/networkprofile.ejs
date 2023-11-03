@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/networkprofile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>letsremodify</title>
+    <title>Network Profile</title>
 </head>
 
 <body>
@@ -31,10 +31,12 @@
                         <div class="mobile-side mt-4">
                             <div class="container mt-3">
                                 <!-- <h5 class="pt-3 pb-5"><span><img class="left-logo" src="logo.png" alt=""></span></h5> -->
+                                <a href="/talent/overview" class=" style-none ">
                                 <div class="overview">
                                     <i class="fa fa-th-large Overview-font" aria-hidden="true"></i>
                                     <span>Overview</span>
                                 </div>
+                                </a>
                                 <div class="overview">
                                     <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Skill
                                         Test</span>
@@ -112,7 +114,7 @@
                         <i class="fa fa-bell" aria-hidden="true"></i>
                         <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
                             <img id="displayImage" class="img-fluid profile rounded-circle"
-                                            style="width: 44px; height: 44px;" src="data:image/jpeg;base64,<%= user_image %>">
+                                style="width: 44px; height: 44px;" src="data:image/jpeg;base64,<%= user_image %>">
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
@@ -132,9 +134,9 @@
                     <div class="container mt-5">
                         <div class="row">
                             <div class="col-md-5">
-                                <img  class="img-fluid profile-image rounded-circle"
-                                            style="width: 120px; height: 120px;" src="data:image/jpeg;base64,<%= user_image %>">
-        
+                                <img class="img-fluid profile-image rounded-circle" style="width: 120px; height: 120px;"
+                                    src="data:image/jpeg;base64,<%= user_image %>">
+
                                 <div class="d-flex">
                                     <h4><b>
                                             <%= userDetails.user_profile_seller.firstName %>
@@ -160,23 +162,24 @@
                                                         <div class="form-group">
                                                             <label for="exampleInputEmail1">First name</label>
                                                             <input type="text" class="form-control"
-                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                id="exampleInputEmail1" value=" <%= userDetails.user_profile_seller.firstName %>" aria-describedby="emailHelp"
                                                                 placeholder="First name" name="firstName">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleInputPassword1">Last name</label>
                                                             <input type="text" class="form-control"
-                                                                id="exampleInputPassword1" placeholder="Last name"
+                                                                id="exampleInputPassword1" value=" <%= userDetails.user_profile_seller.lastName %>" placeholder="Last name"
                                                                 name="lastName">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleInputPassword1">Email</label>
                                                             <input type="Email" class="form-control"
                                                                 id="exampleInputPassword1" placeholder="Email"
-                                                                name="email">
+                                                                name="email" disabled  value="  <%= userDetails.email %>">
                                                         </div>
                                                         <label for="">Country</label>
-                                                        <select name="Country">
+                                                        <select name="Country" >
+                                                            <option selected value=" <%= userDetails.user_profile_seller.firstName%>" ></option>
                                                             <option value="Afghanistan">Afghanistan</option>
                                                             <option value="Albania">Albania</option>
                                                             <option value="Algeria">Algeria</option>
@@ -310,7 +313,7 @@
                                                             <option value="Lao">Lao People's Democratic Republic
                                                             </option>
                                                             <option value="Latvia">Latvia</option>
-                                                            <option value="Lebanon" selected>Lebanon</option>
+                                                            <option value="Lebanon">Lebanon</option>
                                                             <option value="Lesotho">Lesotho</option>
                                                             <option value="Liberia">Liberia</option>
                                                             <option value="Libyan Arab Jamahiriya">Libyan Arab
@@ -612,7 +615,7 @@
                                 <div class="col-md-4 seeking-first border py-4 rounded-2 seeking-hover">
                                     <h3 class="text-center">
                                         <i class="fa fa-briefcase seeking-icon" aria-hidden="true"></i>
-                                        Seeking Jobs
+                                        Open to work
                                     </h3>
                                 </div>
                                 <div class="col-md-4 seeking-center border py-4 rounded-2 seeking-hover">
