@@ -38,10 +38,10 @@
                             <div class="container mt-3">
                                 <!-- <h5 class="pt-3 pb-5"><span><img class="left-logo" src="logo.png" alt=""></span></h5> -->
                                 <a href="/talent/overview" class=" style-none ">
-                                <div class="overview">
-                                    <i class="fa fa-th-large Overview-font" aria-hidden="true"></i>
-                                    <span>Overview</span>
-                                </div>
+                                    <div class="overview">
+                                        <i class="fa fa-th-large Overview-font" aria-hidden="true"></i>
+                                        <span>Overview</span>
+                                    </div>
                                 </a>
                                 <div class="overview">
                                     <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Skill
@@ -125,7 +125,7 @@
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
                             <li role="presentation text-center">
-                                <a role="menuitem" tabindex="-1" href="#">Go to profile</a>
+                                <a role="menuitem" tabindex="-1" href="/talent/profile">Go to profile</a>
                             </li>
                             <li role="presentation text-center">
                                 <a role="menuitem" tabindex="-1" href="/logout">Logout</a>
@@ -146,7 +146,7 @@
                                 <div class="d-flex">
                                     <h4><b>
                                             <%= userDetails.user_profile_seller.firstName %>
-                                            <%= userDetails.user_profile_seller.lastName %>
+                                                <%= userDetails.user_profile_seller.lastName %>
                                         </b></h4>
                                     <img type="button" data-toggle="modal" data-target="#exampleModalCenter"
                                         class="model-image" src="/images/edit_icon.png" alt="">
@@ -168,24 +168,30 @@
                                                         <div class="form-group">
                                                             <label for="exampleInputEmail1">First name</label>
                                                             <input type="text" class="form-control"
-                                                                id="exampleInputEmail1" value=" <%= userDetails.user_profile_seller.firstName %>" aria-describedby="emailHelp"
-                                                                placeholder="First name" name="firstName">
+                                                                id="exampleInputEmail1"
+                                                                value=" <%= userDetails.user_profile_seller.firstName %>"
+                                                                aria-describedby="emailHelp" placeholder="First name"
+                                                                name="firstName">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleInputPassword1">Last name</label>
                                                             <input type="text" class="form-control"
-                                                                id="exampleInputPassword1" value=" <%= userDetails.user_profile_seller.lastName %>" placeholder="Last name"
-                                                                name="lastName">
+                                                                id="exampleInputPassword1"
+                                                                value=" <%= userDetails.user_profile_seller.lastName %>"
+                                                                placeholder="Last name" name="lastName">
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="exampleInputPassword1">Email</label>
                                                             <input type="Email" class="form-control"
                                                                 id="exampleInputPassword1" placeholder="Email"
-                                                                name="email" disabled  value="  <%= userDetails.email %>">
+                                                                name="email" disabled
+                                                                value="  <%= userDetails.email %>">
                                                         </div>
                                                         <label for="">Country</label>
-                                                        <select name="Country" >
-                                                            <option selected value=" <%= userDetails.user_profile_seller.firstName%>" ></option>
+                                                        <select name="Country">
+                                                            <option selected
+                                                                value=" <%= userDetails.user_profile_seller.firstName%>">
+                                                            </option>
                                                             <option value="Afghanistan">Afghanistan</option>
                                                             <option value="Albania">Albania</option>
                                                             <option value="Algeria">Algeria</option>
@@ -496,9 +502,7 @@
 
 
                                                 <div class="container-fluid">
-                                                    <form action="">
-                                                        
-
+                                                    <form action="/update/info/seller" method="post">
                                                         <!-- ENGLISH -->
 
                                                         <div class="row justify-content-evenly " id="radio-container-2">
@@ -507,20 +511,20 @@
                                                                     Communication Skills?</h4>
                                                             </div>
                                                             <label class="col-md-3" id="EXP1">
-                                                                <input type="radio" name="shape" value="basic">
+                                                                <input type="radio" name="language" value="basic">
                                                                 <div><img class="img-fluid" src="/images/airplane.png"
                                                                         alt=""></div>
                                                                 <div> &nbsp; Basis</div>
                                                             </label>
                                                             <label class="col-md-3" id="EXP1">
-                                                                <input type="radio" name="shape" value="advanced">
+                                                                <input type="radio" name="language" value="advanced">
                                                                 <div><img class="img-fluid" src="/images/plane.png"
                                                                         alt="">
                                                                 </div>
                                                                 <div>&nbsp; Advanced</div>
                                                             </label>
                                                             <label class="col-md-3" id="EXP1">
-                                                                <input type="radio" name="shape" value="native">
+                                                                <input type="radio" name="language" value="native">
                                                                 <div><img class="img-fluid" src="/images/rocket.png"
                                                                         alt="">
                                                                 </div>
@@ -569,7 +573,6 @@
                                                                 changes</button>
                                                         </div>
                                                     </form>
-
                                                 </div>
 
                                             </div>
@@ -617,8 +620,19 @@
                             <div class="container-fluid tech">                                 
                                        <div class="col-12 d-flex">
                                         <h4><b>Tech stack</b></h4>
-                                    <img type="button" data-toggle="modal" data-target="#exampleModal"
-                                        class="model-image" src="/images/edit_icon.png" alt="">
+                                        <img type="button" data-toggle="modal" data-target="#exampleModal"
+                                            class="model-image" src="/images/edit_icon.png" alt="">
+                                    </div>
+                                    <div class="d-flex mt-4">
+                                        <label style="margin: 12px 5px;"><span id="DOMAINS-BTN"><a href=""><img
+                                                        src="/images/node.js.png" alt=""> Node
+                                                    .js</a></span></label>
+                                        <div style="margin:  12px 5px;"><span id="DOMAINS-BTN"><a href=""><img
+                                                        src="/images/node.js.png" alt="">
+                                                    React.js</a></span></div>
+                                        <div style="margin:  12px 5px;"><span id="DOMAINS-BTN"><a href=""><img
+                                                        src="/images/node.js.png" alt=""> React
+                                                    navive</a></span></div>
                                     </div>
 
 
@@ -666,7 +680,7 @@
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                
+
                                                 <div class="modal-body">
                                                     <div class="col-sm-12 d-flex flex-wrap">
                                                       
@@ -750,35 +764,36 @@
                                 <!-- <h6 class="mt-5">No employment details added</h6> -->
 
                                 <% if (!employmentHistory || employmentHistory.length===0) { %>
-                                <p>no employment history added</p>
-                                <% } else { %>
-                                <% employmentHistory.forEach(function(history) { %>
-                                <div class="history-wrapper">
-                                    <div class="history d-flex">
-                                        <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i>
-                                                <%= history.Position %>
-                                            </b></p>
-                                        <img class="ms-2 histroy-img" id="exampleModalLabel"
-                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                            alt="Edit Icon">
-                                    </div>
-                                    <p>
-                                        <%= history.formattedStartDate %> , <% if
+                                    <p>no employment history added</p>
+                                    <% } else { %>
+                                        <% employmentHistory.forEach(function(history) { %>
+                                            <div class="history-wrapper">
+                                                <div class="history d-flex">
+                                                    <p class="mt-5"><b><i
+                                                                class="fa-solid fa-briefcase histroy-bag mx-2"></i>
+                                                            <%= history.Position %>
+                                                        </b></p>
+                                                    <img class="ms-2 histroy-img" id="exampleModalLabel"
+                                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                                        alt="Edit Icon">
+                                                </div>
+                                                <p>
+                                                    <%= history.formattedStartDate %> , <% if
                                                             (history.CurrentlyWorking===true) { %>
-                                        Present
-                                        <% } else { %>
-                                        <%= history.formattedEndDate %>
-                                        <% } %>
-                                    </p>
-                                    <p class="location">
-                                        <%= history.Location%>
-                                    </p>
-                                    <p>
-                                        <%= history.Description %>
-                                    </p>
-                                </div>
-                                <% }); %>
-                                <% } %>
+                                                            Present
+                                                            <% } else { %>
+                                                                <%= history.formattedEndDate %>
+                                                                    <% } %>
+                                                </p>
+                                                <p class="location">
+                                                    <%= history.Location%>
+                                                </p>
+                                                <p>
+                                                    <%= history.Description %>
+                                                </p>
+                                            </div>
+                                            <% }); %>
+                                                <% } %>
 
                             </div>
                             <div class="col-md-1 add-detail">
@@ -871,31 +886,32 @@
                                 <h3 class="text-dark">Education</h3>
 
                                 <% if (!userEducationHistory ||userEducationHistory.length===0) { %>
-                                <h6 class="mt-5">No qualifications added</h6>
-                                <% } else { %>
-                                <% userEducationHistory.forEach(function (education) { %>
-                                <div class="history-wrapper">
-                                    <div class="history d-flex">
-                                        <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i></b>
-                                            <%= education.Degree %>
-                                        </p>
-                                        <img class="ms-2 histroy-img"
-                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                            alt="Edit Icon">
-                                    </div>
-                                    <p>
-                                        <%=education.formattedStartYear %> - <%=education.formattedEndYear
+                                    <h6 class="mt-5">No qualifications added</h6>
+                                    <% } else { %>
+                                        <% userEducationHistory.forEach(function (education) { %>
+                                            <div class="history-wrapper">
+                                                <div class="history d-flex">
+                                                    <p class="mt-5"><b><i
+                                                                class="fa-solid fa-briefcase histroy-bag mx-2"></i></b>
+                                                        <%= education.Degree %>
+                                                    </p>
+                                                    <img class="ms-2 histroy-img"
+                                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                                        alt="Edit Icon">
+                                                </div>
+                                                <p>
+                                                    <%=education.formattedStartYear %> - <%=education.formattedEndYear
                                                             %>
-                                    </p>
-                                    <span class="location">
-                                        <%= education.Field %>
-                                    </span>
-                                    <span><strong>
-                                            <%= education.Institute %>
-                                        </strong></span>
-                                </div>
-                                <% }); %>
-                                <% } %>
+                                                </p>
+                                                <span class="location">
+                                                    <%= education.Field %>
+                                                </span>
+                                                <span><strong>
+                                                        <%= education.Institute %>
+                                                    </strong></span>
+                                            </div>
+                                            <% }); %>
+                                                <% } %>
 
 
                             </div>
@@ -976,33 +992,34 @@
                                 <h3 class="text-dark">Certification</h3>
 
                                 <% if (!getuserCertification ||getuserCertification.length===0) { %>
-                                <h6 class="mt-5">No certificates added</h6>
-                                <% } else { %>
-                                <% getuserCertification.forEach(function (Certificate) { %>
-                                <div class="history-wrapper">
-                                    <div class="history d-flex">
-                                        <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i>
-                                                <%= Certificate.Certificate%>
-                                            </b>
-                                        </p>
-                                        <img class="ms-2 histroy-img"
-                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                            alt="Edit Icon">
-                                    </div>
-                                    <h5>
-                                        <%= Certificate.Institute %>
-                                    </h5>
-                                    <p>
-                                        <%= Certificate.formattedStartYear %> , <%=
+                                    <h6 class="mt-5">No certificates added</h6>
+                                    <% } else { %>
+                                        <% getuserCertification.forEach(function (Certificate) { %>
+                                            <div class="history-wrapper">
+                                                <div class="history d-flex">
+                                                    <p class="mt-5"><b><i
+                                                                class="fa-solid fa-briefcase histroy-bag mx-2"></i>
+                                                            <%= Certificate.Certificate%>
+                                                        </b>
+                                                    </p>
+                                                    <img class="ms-2 histroy-img"
+                                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                                        alt="Edit Icon">
+                                                </div>
+                                                <h5>
+                                                    <%= Certificate.Institute %>
+                                                </h5>
+                                                <p>
+                                                    <%= Certificate.formattedStartYear %> , <%=
                                                             Certificate.formattedEndYear %>
-                                    </p>
-                                    <p class="location">
-                                        <%=Certificate.Description %>
-                                    </p>
-                                </div>
+                                                </p>
+                                                <p class="location">
+                                                    <%=Certificate.Description %>
+                                                </p>
+                                            </div>
 
-                                <% }); %>
-                                <% } %>
+                                            <% }); %>
+                                                <% } %>
                             </div>
                             <div class="col-md-1 add-detail">
                                 <img type="button" data-toggle="modal" data-target="#exampleModal_1"
@@ -1090,7 +1107,7 @@
 
 
         // ----------------------------  SELECT ONE FIELD OUT OF THREE  -----------------------------
-        const boxes=document.querySelectorAll('#EXP1');
+        const boxes = document.querySelectorAll('#EXP1');
 
         boxes.forEach(box=>{
             box.addEventListener('click', ()=>{
@@ -1127,7 +1144,8 @@
         })
  
 
-          
+
+
 
         // Get all the elements with the "seeking-hover" class
         const seekingBoxes = document.querySelectorAll('.seeking-hover');

@@ -125,6 +125,39 @@ router.post('/update/info', async (req, res) => {
   }
 })
 
+router.post('/update/info/seller', async (req, res) => {
+  try {
+    const userId = req.cookies.userId
+    console.log(userId);
+    const { Experiences, language} = req.body;
+    console.log(Experiences, language);
+    User.findByPk(userId, {
+      include: [
+        {
+          model: user_profile_seller,
+          include: user_skill_model,
+        },
+      ],
+    })
+      .then((user) => {
+        if (!user) {
+          // User found with the specified conditions
+          return res.status(404).json({ message: 'User not found' });
+        }
+        user.user_profile_seller.user_skill_model.Experiences = Experiences
+        user.user_profile_seller.user_skill_model.language = language
+        user.user_profile_seller.user_skill_model.save();
+        return res.redirect('/talent/profile')
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).render('505pg.ejs')
+  }
+})
+
 router.post('/talent/3350', async (req, res) => {
   const workingStatus = req.body.method;
   const userId = req.cookies.userId;
