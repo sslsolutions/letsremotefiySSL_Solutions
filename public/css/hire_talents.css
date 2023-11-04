@@ -1,23 +1,49 @@
-
 /* ------------------------------------ */
 
-.custom-label, .DOMAINS, .custom-label-btn, .DOMAINS-PART2{
+.custom-label,
+.DOMAINS,
+.custom-label-btn,
+.DOMAINS-PART2,
+.role-btn {
   padding: 7px 10px;
   margin: 3px 9px;
   border: 1PX solid rgb(153, 149, 149);
-   border-radius: 8px;
-   box-shadow: 10px 5px 5px rgb(230, 228, 228);
-   display: flex;
-   justify-content:center;
+  border-radius: 8px;
+  box-shadow: 10px 5px 5px rgb(230, 228, 228);
+  display: flex;
+  justify-content: center;
 }
-.custom-label:hover, .DOMAINS:hover, .DOMAINS-PART2:hover{
+
+.role-btn,
+.role-select {
+  padding: 4px 6px;
+  margin: 4px 5px;
+  border: 1PX solid rgb(153, 149, 149);
+  border-radius: 6px;
+  box-shadow: 10px 5px 5px rgb(230, 228, 228);
+  display: flex;
+  justify-content: center;
+  font-size: 14PX;
+}
+
+.custom-label:hover,
+.DOMAINS:hover,
+.DOMAINS-PART2:hover,
+.custom-label-btn:hover,
+.role-select:hover,
+.role-btn:hover {
   cursor: pointer;
   border: 1PX solid black;
 }
 
 
 
-.custom-label input, .DOMAINS input, .DOMAINS-PART2 input, .custom-label-btn input[type="checkbox"] {
+.custom-label input,
+.DOMAINS input,
+.DOMAINS-PART2 input,
+.custom-label-btn input,
+.role-select input,
+.role-btn input[type="checkbox"] {
   display: none;
 }
 
@@ -27,8 +53,9 @@
 
 .select2-container {
   border: 1px solid rgb(233, 233, 233);
-  color:black;
+  color: black;
 }
+
 .select2-search__field {
   width: 100%;
   padding: 8px;
@@ -39,13 +66,14 @@
 .select2-results__option {
   padding: 8px;
 }
+
 .select2-selection__choice:hover {
   background-color: #afb4b9;
 }
 
 /* -----------------------  LABLES  ------------------------------- */
 
-.HH{
+.HH {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0px;
@@ -72,46 +100,51 @@ input[type=submit]:hover {
   background: #000;
   border: 1PX solid RED;
 }
+
 /* -------------------------------      ANIMATIONS      ------------------------- */
-#PARENT{
+#PARENT {
   position: absolute;
-  
+
 }
 
-#CHILD{
+#CHILD {
   animation: MoveUpDown 3s linear infinite;
   position: relative;
   right: 0;
   bottom: 0;
 }
-@media(max-width:992px){
-  #HEI{
-      height: 790PX;
-      /* display: flex;
+
+@media(max-width:992px) {
+  #HEI {
+    height: 790PX;
+    /* display: flex;
       flex-direction: column;
       justify-content: start; */
   }
 }
-@media(max-width:768px){
-  #HEI{
-      height: 890PX;
-      /* display: flex;
+
+@media(max-width:768px) {
+  #HEI {
+    height: 890PX;
+    /* display: flex;
       flex-direction: column;
       justify-content: start; */
   }
 }
-@media(max-width:740px){
-  #HEI{
-      height: 850PX;
-      /* display: flex3
+
+@media(max-width:740px) {
+  #HEI {
+    height: 850PX;
+    /* display: flex3
       flex-direction: column;
       justify-content: start; */
   }
 }
-@media(max-width:576px){
-  #HEI{
-      height: 760PX;
-      /* display: flex;
+
+@media(max-width:576px) {
+  #HEI {
+    height: 760PX;
+    /* display: flex;
       flex-direction: column;
       justify-content: start; */
   }
@@ -120,9 +153,12 @@ input[type=submit]:hover {
 
 
 @keyframes MoveUpDown {
-  0%, 100% {
+
+  0%,
+  100% {
     bottom: 0;
   }
+
   50% {
     bottom: 30px;
   }

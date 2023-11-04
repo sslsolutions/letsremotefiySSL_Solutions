@@ -426,7 +426,7 @@ input{
 #radio-container label:hover, #radio-container-2 label:hover {
   background-color: #f0f0f0;
 }
-#ICON-BOXES input, #EXP1 input, #WORK-DIV input{
+#ICON-BOXES input, #EXP1 input, .WORK-TYPE input{
   display: none;
 }
 
@@ -449,13 +449,14 @@ input{
 
  
 }
-#EXP1:hover, #EXP2:hover, #EXP3:hover, #WORK-DIV:hover{
+#EXP1:hover, #EXP2:hover, #EXP3:hover, .WORK-TYPE:hover{
   border: 1PX solid black;
   /* color: blue; */
   background-color: rgb(243, 246, 244);
+  cursor: pointer;
 }
 
-#WORK-DIV{
+.WORK-TYPE{
   border: 1PX solid rgb(193, 193, 193) ;
   /* border: 2PX solid black; */
   display: flex;
