@@ -90,36 +90,7 @@
 
 
     <div class="slide-container-fluid swiper p-0 my-5">
-        <div class="slide-content">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <% for (let i = 0; i < profiles.length; i++) { %>
-                        <div class="swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-                                <div class="card-image">
-                                    <img src="images/16971731837780.png" alt="" class="card-img">
-                                </div>
-                            </div>
-                            <div class="card-content">
-                                <h4 class="name"><%= profiles[i].firstName %></h4>
-                                <p class="description">
-                                    <b style="color: red;">
-                                        
-                                    </b> Founder & CEO
-                                </p>
-                            </div>
-                        </div>
-                    <% } %>
-                    
-                    
-                    
-                </div>
-            </div>
-            <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div>
-            <div class="swiper-pagination"></div>
-        </div>
+      <%- include('Components/profile-images') %>
     </div>
     <!-- ----------------------------A Fully Integrated Solution to------------------------------ -->
 

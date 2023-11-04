@@ -182,4 +182,10 @@ router.post('/talent/3350', async (req, res) => {
   }
 });
 
+
+router.post('/skills/added', async (req, res)=>{
+
+})
+
+
 module.exports = router

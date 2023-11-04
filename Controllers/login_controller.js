@@ -88,6 +88,9 @@ router.post('/login', validator, async (req, res, next) => {
                     // Redirect to the buyer page
                     redirectPath = '/hire_talents'
                 }
+                else{
+                  return  res.status(500).send('Internal Server Error')
+                }
                 res.redirect(redirectPath)
             }
         } catch (error) {
