@@ -419,31 +419,32 @@
                                         What type of work are you interested in pursuing?
                                     </div>
                                     <div  style="width: 95%; display: flex; flex-wrap: wrap;">
-                                        <label  id="WORK-DIV">
-                                            <input type="radio" name="language" value="basic">
-                                           
-                                            <div>CRM</div>
+
+                                        <label class="WORK-TYPE">
+                                            <input type="checkbox" name="checkboxOption" value=""> Checkbox Option 2
                                         </label>
-                                        <label  id="WORK-DIV">
-                                            <input type="radio" name="language" value="basic">
-                                           
-                                            <div>PPC ADs</div>
+                                    
+                                        <label class="WORK-TYPE">
+                                            <input type="checkbox" name="checkboxOption" value=""> Checkbox Option 3
                                         </label>
-                                        <label  id="WORK-DIV">
-                                            <input type="radio" name="language" value="basic">
-                                           
-                                            <div>Social Media</div>
-                                        </label>
-                                        <label  id="WORK-DIV">
-                                            <input type="radio" name="language" value="basic">
-                                           
-                                            <div>Marketing</div>
-                                        </label>
-                                        <label  id="WORK-DIV">
-                                            <input type="radio" name="language" value="basic">
-                                           
-                                            <div>Content Creation</div>
-                                        </label>
+                                            
+                                            <label class="WORK-TYPE">
+                                                <input type="checkbox" name="checkboxOption" value="">CMR
+                                            </label>
+                                            <label class="WORK-TYPE">
+                                                <input type="checkbox" name="checkboxOption" value="">PPC ADs
+                                            </label>
+                                             <label class="WORK-TYPE">
+                                                <input type="checkbox" name="checkboxOption" value="">Social Media
+                                            </label>
+                                            <label class="WORK-TYPE">
+                                                <input type="checkbox" name="checkboxOption" value="">Content Creation
+                                            </label>
+                                             <label class="WORK-TYPE">
+                                                <input type="checkbox" name="checkboxOption" value="">Social Media
+                                            </label>
+
+                                  
                                        
                                         
 
@@ -556,6 +557,52 @@
         crossorigin="anonymous"></script>
 
     <script>
+                            // WORK-TYPE
+        // const work_type=document.querySelectorAll('.WORK-TYPE');
+
+        // work_type.forEach(work=>{
+        //     work.addEventListener('click',()=>{
+        //         const work_select=work.querySelector('input[type="checkbox"]');
+        //         if(work_select.checked){
+        //             alert('f')
+        //             work_select.checked=false;
+        //             work_select.classList.remove('active');
+        //             work_select.style.border="1px solid rgb(193, 193, 193)";
+        //             work_select.style.backgroundColor="white";
+        //         }
+        //         else{
+        //             alert('g')
+        //             work_select.checked=true;
+        //             work_select.classList.add('active');
+        //             work_select.style.border="1px solid black";
+        //             work_select.style.backgroundColor="red"
+        //         }
+        //     })
+        // })
+
+        const labels = document.querySelectorAll('.WORK-TYPE');
+
+        labels.forEach(label => {
+            label.addEventListener('click', () => {
+                const checkboxInput = label.querySelector('input[type="checkbox"]');
+                if (checkboxInput.checked) {
+                    checkboxInput.checked = false;
+                    label.classList.remove('active');
+                    label.style.border = '1px solid rgb(193, 193, 193)';
+                    label.style.backgroundColor = 'white';
+                } else {
+                    // If the checkbox input is not checked, select it
+                    label.classList.add('active');
+                    label.style.border = '1px solid black';
+                    label.style.backgroundColor = 'lightgray';
+                    checkboxInput.checked = true;
+                }
+            });
+        });
+
+
+
+
 
         // ----------------------------  SELECT ONE FIELD OUT OF THREE  -----------------------------
         function handleRadioSelection(containerClass, resultClass) {
