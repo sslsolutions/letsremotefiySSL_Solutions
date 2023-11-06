@@ -14,8 +14,8 @@
     <link href="css/talent-overview.css" rel="stylesheet" type="text/css">
     <!-- for search box -->
     <!-- <link href="css/create_profile.css" rel="stylesheet" type="text/css"> -->
-    <!--  -->
     <link rel="stylesheet" href="css/navbar.css">
+    <!-- FONT STYLE -->
     <link rel="stylesheet" href="css/fontstyle.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -34,117 +34,23 @@
     <!--  -->
     <!--  -->
     <nav class="navbar navbar-expand-lg bg-dark" id="NAV">
-        <div class="container-fluid bg-dark pt-3 pb-3">
-            <a class="navbar-brand text-white" href="#"><img width="200px" height="110px" class="img-fluid"
-                    src="images/Logo updeted.png" alt=""></a>
-            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item" id="HEADING">
-                        <a class="nav-link active text-light" aria-current="page" href="#" id="GETNOWNAV">
-                            <i class="bi bi-boxes"></i> <span>Overview</span>
-                        </a>
-                    </li>
-                    <li class="nav-item col-">
-                        <a class="nav-link  text-light" href="#" id="GETNOWNAV">
-                            <i class="fa-solid fa-network-wired"></i> Skill Test
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-light" href="#" id="GETNOWNAV">
-                            <i class="fa-solid fa-laptop"></i> Video Screening
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-light" href="#" id="GETNOWNAV">
-                            <i class="fa-solid fa-square-check"></i> Final Interview
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-light" href="#" id="GETNOWNAV">
-                            <i class="fa-solid fa-people-group"></i>
-                            Network
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link  text-light" href="#" id="GETNOWNAV">
-                            <div class="col-12 text-center justify-content-center">Valued By:</div>
-                            <div class="col-12  mt-2" id="IFLEXNAV">
-                                <!-- <span>
-                          <img class="img-fluid" width="60px" height="60px" src="images/2.png" alt="" />
-                      </span>
-                      <span>
-                          <img src="images/4.png" width="60px" height="60px" alt="" />
-                      </span>
-                      <span>
-                          <img src="images/3.png" width="60px" height="60px" alt="" />
-                      </span> -->
-                                <div><img width="100px" height="72px" class="img-fluid" src="images/SSL Group logo3.png"
-                                        alt=""></div>
-                                <!-- <img width="200px" height="145px" class="img-fluid" src="images/SSL Group logo3.png" alt=""> -->
-                            </div>
-
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-        </div>
+        <%- include('Components/talent-navbar'); %>
     </nav>
 
     <!-- ----------------------------       bottom   ------------------- -->
     <div class="container-fluid" id="HAR">
         <div class="row justify-content-around">
             <div class="col-lg-3" id="HIDDEN">
-                <div class="row">
-                    <div class="col-lg-3" id="h">
-                        <div class="row justify-content-around">
-                            <div class="col-12 mt-3">
-                                <img class="img-fluid" width="200px" height="38px" src="images/Logo updeted.png"
-                                    alt="" />
-                            </div>
-                            <div class="col-12 mt-5" id="GETNOW">
-                                <i class="bi bi-boxes"></i> <span class="SUBHEAD"> Overview</span>
-                            </div>
-                            <div class="col-12" id="GETNOW">
-
-                                <i class="fa-solid fa-network-wired"></i> <span class="SUBHEAD">Skill Test</span>
-                            </div>
-                            <div class="col-12" id="GETNOW">
-                                <i class="fa-solid fa-laptop"></i> <span class="SUBHEAD">Video Screening</span>
-                            </div>
-                            <div class="col-12" id="GETNOW">
-                                <i class="fa-solid fa-square-check"></i>
-                                <span class="SUBHEAD">Final Interview</span>
-                            </div>
-                            <div class="col-12" id="GETNOW">
-                                <i class="fa-solid fa-people-group"></i>
-                                <span class="SUBHEAD">Network</span>
-                            </div>
-                            <div id="MAR"></div>
-                            <div class="col-12 text-center" id="GETNOW"><span class="HEADING">Valued By:</span></div>
-                            <div class="col-10" id="IFLEX">
-                                <img width="170px" height="122px" class="img-fluid" src="images/SSL Group logo2.png"
-                                    alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <%- include('Components/talent-sidebar'); %>
             </div>
 
             <!---------------------------- RIGHT  ONE  ----------------------  -->
             <div class="col-lg-8  col-sm-11">
 
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-lg-12 col-11" id="j">
                         <!----------------------------  PART 2----------------------  -->
-                        <div class="row mt-5 " style="display: flex; justify-content: end;" id="PART1">
+                        <div class="row mt-3 " style="display: flex; justify-content: end;" id="PROFILE-IMG">
 
 
 
@@ -155,7 +61,7 @@
                             </div>
 
 
-                            <div class="col-lg-5 col-sm-6 my-5" id="MAIN" onclick="toggleSecondBox()">
+                            <div class="col-lg-4 col-sm-6 " id="MAIN" onclick="toggleSecondBox()">
                                 <span id="USER" class="mx-1">
                                     <div id="USER-IMG"><img height="50px" width="50px" src="images/1697173271091.png"
                                             alt=""></div>
@@ -166,9 +72,9 @@
                                 </span>
 
                                 <div id="PROFILE">
-                                    <div class="SMALL" id="GOTO"><a href=""><i class="fa-solid fa-user"></i>&nbsp;
+                                    <div class="XSMALL" id="GOTO"><a href=""><i class="fa-solid fa-user"></i>&nbsp;
                                             Go to Profile</a> </div>
-                                    <div class="SMALL" id="LOGOUT"><a href=""><i
+                                    <div class="XSMALL" id="LOGOUT"><a href=""><i
                                                 class="fa-solid fa-arrow-right-from-bracket"></i> &nbsp; Log Out</a>
                                     </div>
                                 </div>
@@ -181,7 +87,7 @@
                     </div>
 
 
-                    <div class="row justify-content-between my-5 pb-5" id="technical">
+                    <div class="row justify-content-between mb-5 pb-5" id="technical">
                         <div class="col-md-6 ml-2 mt-3 text-start">
                             <h4 class="mx-3" id="HEADING"> Technical Tests</h4>
 

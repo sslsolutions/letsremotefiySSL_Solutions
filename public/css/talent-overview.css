@@ -58,12 +58,29 @@
 }
 #GETNOWNAV{
     margin-top: 15px;
-    margin-bottom: px;
-    font-size: 18PX;
-    font-weight: 500;
+   padding: 5px 15px;
+    font-size: 16PX;
+    font-weight: 600;
     color: white;
-    /* font-family: sans-serif */
 
+}
+#GETNOWNAV:hover{
+    background-color: white;
+    color: rgb(175, 32, 34) ;
+}
+#GETNOWNAV-DISABLED{
+    margin-top: 15px;
+    padding: 5px 15px;
+     font-size: 16PX;
+     font-weight: 600;
+     color: lightgray;
+}
+#GETNOWNAV-TEXT{
+    margin-top: 15px;
+    padding: 5px 15px;
+     font-size: 18PX;
+     font-weight: 600;
+     color: white;
 }
 #NAV{
   display: none;
@@ -98,44 +115,47 @@
 
 
 #j{
-    /* border: 3px solid red; */
-    /* border-radius: 120px; */
-    /* height: 1250px; */
     width: 100%;
     margin-bottom: 50px;
   
 }
 
 #h{
-    margin-top: 25px;
+    margin-top: 15px;
     border-radius: 12px;
-    /* border: 2px solid black; */
-    height: 600px;
-    /* width: 100%; */
+    height: 622px;
     position: fixed;
     background: rgb(175, 32, 34);
   
 }
 #GETNOW{
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-size: 25PX;
-    /* font-weight: 500; */
+    margin: 8px 0px;
+    padding: 5px;
+    
+    font-size: 20PX;
     color: white;
-    /* font-family: sans-serif */
-
+    font-weight: 700;
 }
-#GETNOW span{
-    /* margin-top: 10px; */
-    /* margin-bottom: 5px; */
-    /* font-size: 25PX; */
-    /* font-weight: 500; */
-    color: white;
-    /* font-family: sans-serif */
-
+#GETNOW:hover{
+    background-color: white;
+    color: rgb(175, 32, 34);
 }
+
 #GETNOW i{
     margin-right: 18px;
+    font-size: 22px;
+}
+#GETNOW-DISABLE{
+    margin: 8px 0px;
+    padding: 5px;
+    font-size: 20PX;
+    color: lightgrey;
+    font-weight: 700;
+}
+#VALUE-TEXT{
+    /* font-size: 26PX; */
+    color: white;
+    /* font-weight: 500; */
 }
 #MAR{
     margin-top: 30PX;
@@ -154,6 +174,15 @@
   align-items: center;
 
 }
+#PROFILE-IMG{
+    background-color: WHITE;
+    border-radius: 12PX;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20PX;
+  
+  }
 #PART2{
     background-color: rgb(175, 32, 34);
     border-radius: 12px;
@@ -257,10 +286,10 @@
     border: 1px solid black;
 }
 #FIELDS-BOXES{
-    width: 90%; 
-    /* border: 1PX solid RED; */
+    width: 99%; 
+    border: 1PX solid RED;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .MINI-BOXES{
@@ -273,8 +302,8 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
 }
 .MINI-BOXES img{
-    height: 25PX;
-    width: 25PX;
+    height: 15PX;
+    width: 15PX;
 }
 
 #FAQ-ACCORDIANS{

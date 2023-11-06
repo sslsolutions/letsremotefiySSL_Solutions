@@ -6,16 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- STYLE  -->
+    <link rel="stylesheet" href="/css/networkprofile.css">
+    <!-- hire_talent -->
     <link rel="stylesheet" href="/css/hire_talents.css">
     <!-- FONT style -->
     <link href="/css/fontstyle.css" rel="stylesheet">
-    <!-- DETAILS STYLE -->
-    <link href="/css/details.css" rel="stylesheet" type="text/css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/networkprofile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Network Profile</title>
@@ -37,16 +37,17 @@
                         <div class="mobile-side mt-4">
                             <div class="container mt-3">
                                 <!-- <h5 class="pt-3 pb-5"><span><img class="left-logo" src="logo.png" alt=""></span></h5> -->
-                                <a href="/talent/overview" class=" style-none ">
+                                <a href="/talent/profile" style="text-decoration: none; color: white;">
                                     <div class="overview">
-                                        <i class="fa fa-th-large Overview-font" aria-hidden="true"></i>
-                                        <span>Overview</span>
+                                       <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Overview</span>
                                     </div>
                                 </a>
-                                <div class="overview">
-                                    <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Skill
-                                        Test</span>
-                                </div>
+
+                                <a href="/skill" style="text-decoration: none; color: white;">
+                                    <div class="overview">
+                                       <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Skill Test</span>
+                                    </div>
+                                </a>
                                 <div class="overview-disabeld">
                                     <i class="fa fa-desktop" aria-hidden="true"></i> <span> Video
                                         Screening</span>
@@ -77,19 +78,24 @@
 
     <div class="main-header container-fluid main py-3">
 
-        <div class="row">
-
+        <div class="row justify-content-evenly">
             <div class="col-lg-3 d-lg-block d-md-block  col-md-3">
 
                 <div class="left-side mt-2 d-none d-md-none d-lg-block">
                     <div class="container">
                         <h5 class="pt-3 pb-5"><span><img class="left-logo" src="/images/logo.png" alt=""></span></h5>
-                        <div class="overview">
-                            <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Overview</span>
-                        </div>
-                        <div class="overview">
-                            <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Skill Test</span>
-                        </div>
+
+                        <a href="/talent/profile" style="text-decoration: none; color: white;">
+                            <div class="overview">
+                               <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Overview</span>
+                            </div>
+                        </a>
+
+                        <a href="/skill" style="text-decoration: none; color: white;">
+                            <div class="overview">
+                               <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Skill Test</span>
+                            </div>
+                        </a>
                         <div class="overview-disabeld">
                             <i class="fa fa-desktop" aria-hidden="true"></i> <span> Video
                                 Screening</span>
@@ -114,7 +120,7 @@
                 </div>
 
             </div>
-            <div class="col-lg-9  col-md-12 right-section">
+            <div class="col-lg-8  col-md-12 right-section">
                 <nav class="container bg-light py-2" role="navigation">
                     <div class="dropdown">
                         <i class="fa fa-bell" aria-hidden="true"></i>
@@ -1099,7 +1105,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title" id="exampleModalLabel">Add Certificate</h5>
-                                                <button type="button " class="close" data-dismiss="modal"
+                                                <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
