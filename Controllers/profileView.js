@@ -77,9 +77,13 @@ router.get('/talent/profile', verifyToken, async (req, res) => {
     .then((user) => {
       if (user) {
         const user_image = user.user_profile_seller.avatar;
+        const userSkillsJSON = user.user_profile_seller.user_skill_model.skills;
+        const userSkillsArray = JSON.parse(userSkillsJSON);
+     console.log(userSkillsJSON);
         return res.render('networkprofile.ejs', {
           userDetails: user,
           user_image,
+          userSkillsJSON: userSkillsArray,
           employmentHistory: formattedEmploymentHistory,
           userEducationHistory: getUserEducationHistroy,
           getuserCertification:userCertificationData
@@ -129,8 +133,8 @@ router.post('/update/info/seller', async (req, res) => {
   try {
     const userId = req.cookies.userId
     console.log(userId);
-    const { Experiences, language} = req.body;
-    console.log(Experiences, language);
+    const { Experiences, language,skills} = req.body;
+    console.log(Experiences, language, skills);
     User.findByPk(userId, {
       include: [
         {
@@ -146,6 +150,8 @@ router.post('/update/info/seller', async (req, res) => {
         }
         user.user_profile_seller.user_skill_model.Experiences = Experiences
         user.user_profile_seller.user_skill_model.language = language
+        user.user_profile_seller.user_skill_model.skills = skills
+       
         user.user_profile_seller.user_skill_model.save();
         return res.redirect('/talent/profile')
       })
@@ -184,7 +190,12 @@ router.post('/talent/3350', async (req, res) => {
 
 
 router.post('/skills/added', async (req, res)=>{
-
+ try {
+  
+  
+ } catch (error) {
+  
+ }
 })
 
 
