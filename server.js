@@ -302,15 +302,13 @@ app.get('/blogs', (req, res)=>{
     res.render('blog.ejs')
 })
 
-app.get('/talent/overview',(req, res)=>{
+app.get('/talent/overview',verifyToken, (req, res)=>{
     res.render('talent-overview.ejs')
 })
-app.get('/skill',(req, res)=>{
+app.get('/skill', verifyToken, (req, res)=>{
     res.render('skill-test.ejs')
 })
-app.get('/nprofile',(req, res)=>{
-    res.render('networkprofile.ejs')
-})
+
 
 app.get('/404',(req, res)=>{
     res.render('404pg.ejs')
