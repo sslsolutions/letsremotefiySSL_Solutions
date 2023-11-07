@@ -6,16 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- STYLE  -->
+    <link rel="stylesheet" href="/css/networkprofile.css">
+    <!-- hire_talent -->
     <link rel="stylesheet" href="/css/hire_talents.css">
     <!-- FONT style -->
     <link href="/css/fontstyle.css" rel="stylesheet">
-    <!-- DETAILS STYLE -->
-    <link href="/css/details.css" rel="stylesheet" type="text/css">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/networkprofile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Network Profile</title>
@@ -87,7 +87,7 @@
                     <div class="container">
                         <h5 class="pt-3 pb-5"><span><img class="left-logo" src="/images/logo.png" alt=""></span></h5>
 
-                        <a href="/talent/overview" style="text-decoration: none; color: white;">
+                        <a href="/talent/profile" style="text-decoration: none; color: white;">
                             <div class="overview">
                                 <i class="fa fa-th-large Overview-font" aria-hidden="true"></i> <span>Overview</span>
                             </div>
@@ -747,28 +747,23 @@
                                                     <div class="col-sm-12 d-flex flex-wrap">
 
                                                         <label class="custom-label">
-                                                            <input type="checkbox" name="skills"
-                                                                value="React js ">
+                                                            <input type="checkbox" name="skills" value="React js ">
                                                             <img src="/images/node.js.png" alt=""> React Js
                                                         </label>
                                                         <label class="custom-label">
-                                                            <input type="checkbox" name="skills"
-                                                                value="Node Js">
+                                                            <input type="checkbox" name="skills" value="Node Js">
                                                             <img src="/images/node.js.png" alt=""> Node.js
                                                         </label>
                                                         <label class="custom-label">
-                                                            <input type="checkbox" name="skills"
-                                                                value="Express Js">
+                                                            <input type="checkbox" name="skills" value="Express Js">
                                                             <img src="/images/node.js.png" alt=""> Express Js
                                                         </label>
                                                         <label class="custom-label">
-                                                            <input type="checkbox" name="skills"
-                                                                value="Passport Js">
+                                                            <input type="checkbox" name="skills" value="Passport Js">
                                                             <img src="/images/node.js.png" alt=""> Passport JS
                                                         </label>
                                                         <label class="custom-label">
-                                                            <input type="checkbox" name="skills"
-                                                                value="MongoDB">
+                                                            <input type="checkbox" name="skills" value="MongoDB">
                                                             <img src="/images/node.js.png" alt=""> MongoDB
                                                         </label>
                                                         <!-- <div><span id="DOMAINS-BTN"><a href=""><img src="images/node.js.png" alt=""> Node .js</a></span></div> -->
@@ -982,74 +977,44 @@
                                                         </strong></span>
                                                 </div>
                                                 <% }); %>
-                                                    <% } %>
-
-
+                                            <% } %>
+                                        
+                                     
                                 </div>
                                 <div class="col-md-1 add-detail">
-                                    <img type="button" data-toggle="modal" data-target="#exampleModal_2"
+                                    <img type="button" data-toggle="modal" data-target="#exampleModal_1"
                                         src="https://letsremotify.com/static/add_icon-cca05673df8bbb51833a3f4e63d6e305f8c20560572f240ad90686413cdfb953.png"
                                         alt="">
                                     <!--model Start  -->
-                                    <div class="modal fade" id="exampleModal_2" tabindex="-1" role="dialog"
+                                    <div class="modal fade" id="exampleModal_1" tabindex="-1" role="dialog"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Add Qualification
-                                                    </h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel">Add Certificate</h5>
                                                     <button type="button" class="close" data-dismiss="modal"
                                                         aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-
-                                                    <form action="/talent/profile/addEducation" method="post">
+                                                    <form action="/talent/profile/addCertification" method="post">
                                                         <div class="form-group row">
-                                                            <label for="inputPassword"
-                                                                class="col-sm-2 col-form-label">Degree</label>
+                                                            <h6 for="inputPassword" class="col-sm-2 col-form-label">
+                                                                Certificate</h6>
                                                             <div class="col-sm-10">
                                                                 <input type="text" class="form-control"
-                                                                    id="inputPassword" placeholder="Degree"
-                                                                    name="Degree" required>
+                                                                    id="inputPassword" placeholder="Certificate name"
+                                                                    name="Certificate" required>
                                                             </div>
-                                                        </div>
-                                                        <br>
-                                                        <div class="form-group row">
-                                                            <label for="inputPassword"
-                                                                class="col-sm-2 col-form-label">Field</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                    id="inputPassword" placeholder="Field of study"
-                                                                    name="Field" required>
+                                                            <br>
+                                                            <br>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary">Save</button>
                                                             </div>
-                                                        </div>
-                                                        <br>
-                                                        <div class="form-group row">
-                                                            <label for="inputPassword"
-                                                                class="col-sm-2 col-form-label">Institute</label>
-                                                            <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                    id="inputPassword" placeholder="Institute"
-                                                                    name="Institute" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex date mt-3">
-                                                            <label for="">Starting year</label>
-                                                            <input type="month" class="form-control" name="StartYear"
-                                                                required>
-                                                            <label for="" class="ms-5">Ending year</label>
-                                                            <input type="month" class="form-control" name="EndYear"
-                                                                required>
-                                                        </div>
-                                                        <br>
-                                                        <br>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                data-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-primary">Save</button>
-                                                        </div>
                                                     </form>
                                                 </div>
                                             </div>
@@ -1179,116 +1144,116 @@
             </div>
         </div>
 
-</div>
-        <script>
+    </div>
+    <script>
 
 
-            // ----------------------------  SELECT ONE FIELD OUT OF THREE  -----------------------------
-            const boxes = document.querySelectorAll('#EXP1');
+        // ----------------------------  SELECT ONE FIELD OUT OF THREE  -----------------------------
+        const boxes = document.querySelectorAll('#EXP1');
 
-            boxes.forEach(box => {
-                box.addEventListener('click', () => {
-                    boxes.forEach(allBoxes => {
-                        allBoxes.classList.remove('active');
-                        allBoxes.style.border = '1px solid lightgray';
-                        allBoxes.style.backgroundColor = 'white'
-                    });
-                    box.classList.add('active');
-                    box.style.border = '1px solid gray'
-                    box.style.backgroundColor = 'lightgray'
-                })
-            })
-
-            // ---------------------- MULTIPLE BOXES SELECT  Tech stack(MODAL) --------------------
-
-            const boxes_multi = document.querySelectorAll('.custom-label');
-            boxes_multi.forEach(box_multi => {
-                box_multi.addEventListener('click', () => {
-                    const checkBox = box_multi.querySelector('input[type="checkbox"]');
-                    if (checkBox.checked) {
-                        checkBox.checked = false;
-                        box_multi.classList.remove('active');
-                        box_multi.style.border = '1PX solid rgb(153, 149, 149)';
-                        box_multi.style.backgroundColor = 'transparent';
-                    }
-                    else {
-                        checkBox.checked = true;
-                        box_multi.classList.add('active');
-                        box_multi.style.border = '1px solid gray';
-                        box_multi.style.backgroundColor = 'lightgray'
-                    }
+        boxes.forEach(box => {
+            box.addEventListener('click', () => {
+                boxes.forEach(allBoxes => {
+                    allBoxes.classList.remove('active');
+                    allBoxes.style.border = '1px solid lightgray';
+                    allBoxes.style.backgroundColor = 'white'
                 });
+                box.classList.add('active');
+                box.style.border = '1px solid gray'
+                box.style.backgroundColor = 'lightgray'
             })
+        })
 
-            // ---------------------- MULTIPLE BOXES SELECT  ROLES (MODAL) --------------------
+        // ---------------------- MULTIPLE BOXES SELECT  Tech stack(MODAL) --------------------
 
-            const role_btns = document.querySelectorAll('.role-select');
-            role_btns.forEach(sel_btn => {
-                sel_btn.addEventListener('click', () => {
-                    const role_checkBox = sel_btn.querySelector('input[type="checkbox"]');
-                    if (role_checkBox.checked) {
-                        role_checkBox.checked = false;
-                        sel_btn.classList.remove('active');
-                        sel_btn.style.border = '1PX solid rgb(153, 149, 149)';
-                        sel_btn.style.backgroundColor = 'transparent';
-                    }
-                    else {
-                        role_checkBox.checked = true;
-                        sel_btn.classList.add('active');
-                        sel_btn.style.border = '1px solid gray';
-                        sel_btn.style.backgroundColor = 'lightgray'
-                    }
-                });
-            })
-
-
-
-
-            // Get all the elements with the "seeking-hover" class
-            const seekingBoxes = document.querySelectorAll('.seeking-hover');
-
-            // Add a click event listener to each box
-            seekingBoxes.forEach(box => {
-                box.addEventListener('click', () => {
-                    // Remove the "active" class from all boxes
-                    seekingBoxes.forEach(box => {
-                        box.classList.remove('active');
-                    });
-
-                    // Add the "active" class to the clicked box
-                    box.classList.add('active');
-                });
-            });
-
-
-            const endDateInput = document.getElementById('end-date');
-            const currentlyWorkingCheckbox = document.getElementById('currently-working');
-            const label_date = document.getElementById('label_end');
-
-            currentlyWorkingCheckbox.addEventListener('change', function () {
-                if (currentlyWorkingCheckbox.checked) {
-                    endDateInput.style.display = 'none';
-                    label_date.style.display = 'none'
-                } else {
-                    endDateInput.style.display = 'block';
-                    label_date.style.display = 'block';
+        const boxes_multi = document.querySelectorAll('.custom-label');
+        boxes_multi.forEach(box_multi => {
+            box_multi.addEventListener('click', () => {
+                const checkBox = box_multi.querySelector('input[type="checkbox"]');
+                if (checkBox.checked) {
+                    checkBox.checked = false;
+                    box_multi.classList.remove('active');
+                    box_multi.style.border = '1PX solid rgb(153, 149, 149)';
+                    box_multi.style.backgroundColor = 'transparent';
+                }
+                else {
+                    checkBox.checked = true;
+                    box_multi.classList.add('active');
+                    box_multi.style.border = '1px solid gray';
+                    box_multi.style.backgroundColor = 'lightgray'
                 }
             });
+        })
 
-        </script>
+        // ---------------------- MULTIPLE BOXES SELECT  ROLES (MODAL) --------------------
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-            crossorigin="anonymous"></script>
+        const role_btns = document.querySelectorAll('.role-select');
+        role_btns.forEach(sel_btn => {
+            sel_btn.addEventListener('click', () => {
+                const role_checkBox = sel_btn.querySelector('input[type="checkbox"]');
+                if (role_checkBox.checked) {
+                    role_checkBox.checked = false;
+                    sel_btn.classList.remove('active');
+                    sel_btn.style.border = '1PX solid rgb(153, 149, 149)';
+                    sel_btn.style.backgroundColor = 'transparent';
+                }
+                else {
+                    role_checkBox.checked = true;
+                    sel_btn.classList.add('active');
+                    sel_btn.style.border = '1px solid gray';
+                    sel_btn.style.backgroundColor = 'lightgray'
+                }
+            });
+        })
+
+
+
+
+        // Get all the elements with the "seeking-hover" class
+        const seekingBoxes = document.querySelectorAll('.seeking-hover');
+
+        // Add a click event listener to each box
+        seekingBoxes.forEach(box => {
+            box.addEventListener('click', () => {
+                // Remove the "active" class from all boxes
+                seekingBoxes.forEach(box => {
+                    box.classList.remove('active');
+                });
+
+                // Add the "active" class to the clicked box
+                box.classList.add('active');
+            });
+        });
+
+
+        const endDateInput = document.getElementById('end-date');
+        const currentlyWorkingCheckbox = document.getElementById('currently-working');
+        const label_date = document.getElementById('label_end');
+
+        currentlyWorkingCheckbox.addEventListener('change', function () {
+            if (currentlyWorkingCheckbox.checked) {
+                endDateInput.style.display = 'none';
+                label_date.style.display = 'none'
+            } else {
+                endDateInput.style.display = 'block';
+                label_date.style.display = 'block';
+            }
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
 
 </body>
 

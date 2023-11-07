@@ -92,7 +92,9 @@ nav{
     font-weight: 700;
     font-size: 1.3rem;
     margin-left: 10px;
+    text-decoration: none;
 }
+
 
 .overview{
     margin-left: -15px;
@@ -100,13 +102,14 @@ nav{
     border-radius: 5px;
     padding: 9px;
     margin-bottom: 22px;
+    text-decoration: none;
 }
 
 .left-logo{
     width: 90%;
 }
 
-.overview:hover{
+.overview:hover, .overview a:hover{
     background-color: white;
     color: rgb(175, 32, 34);
 }
