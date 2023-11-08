@@ -104,6 +104,11 @@ HEADING, .HEADING, #HEADING{
     font-size: 42px;
     /* color: purple; */
 }
+.HEADING-2, #HEADING-2{
+    font-size: 4rem;
+    font-family: Helvetica;
+    font-weight: 500;
+}
 SUBHEAD, #SUBHEAD, .SUBHEAD{
     font-weight: 600;
     font-size: 24px;
@@ -177,9 +182,12 @@ h4{
     font-family: Arial, Helvetica, sans-serif,Lucida;
     
 }
-HEADING, .HEADING, #HEADING{
+.HEADING, #HEADING{
     font-size: 40px;
     /* color: purple; */
+}
+.HEADING-2, #HEADING-2{
+    font-size: 3.2rem;
 }
 SUBHEAD, #SUBHEAD, .SUBHEAD{
     font-weight: 600;
@@ -232,6 +240,9 @@ SUBHEAD, #SUBHEAD, .SUBHEAD{
         font-size: 36px;
         /* color: purple; */
     }
+    .HEADING-2, #HEADING-2{
+        font-size: 3.0rem;
+    }
     SUBHEAD, #SUBHEAD, .SUBHEAD{
         font-weight: 600;
         font-size: 18px;
@@ -282,9 +293,12 @@ SUBHEAD, #SUBHEAD, .SUBHEAD{
         font-family: Arial, Helvetica, sans-serif,Lucida;
         
     }
-    HEADING, .HEADING, #HEADING{
+    .HEADING, #HEADING{
         font-size: 28px;
         /* color: purple; */
+    }
+    .HEADING-2, #HEADING-2{
+        font-size: 2.8rem;
     }
     SUBHEAD, #SUBHEAD, .SUBHEAD{
         font-weight: 600;
@@ -307,6 +321,9 @@ SUBHEAD, #SUBHEAD, .SUBHEAD{
    
     HEADING, .HEADING, #HEADING{
         font-size: 24px;
+    }
+    .HEADING-2, #HEADING-2{
+        font-size: 2.6rem;
     }
     NUM1{
         font-size: 19PX;

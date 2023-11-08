@@ -32,6 +32,11 @@ user_skill_model.init({
         type: DataTypes.STRING,
         require: true
     },
+    interestedSkills: {
+        type:DataTypes.JSON(DataTypes.ARRAY(DataTypes.STRING)),
+        allowNull: true,   
+    },
+
     skills: {
         type:DataTypes.JSON(DataTypes.ARRAY(DataTypes.STRING)),
         allowNull: true,

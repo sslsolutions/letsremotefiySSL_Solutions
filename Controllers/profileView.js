@@ -10,8 +10,18 @@ const EmploymentHistory = require("../Models/employmentHistory");
 const moment = require('moment');
 const UserEducationHistory = require("../Models/userEducationHistory");
 const Certification = require("../Models/Certification");
+const { validationResult, body } = require('express-validator')
 
 
+const checkArrayLength =[
+  // Use the 'custom' validator to check the number of selected checkboxes
+  body('interestedSkills').custom(value => {
+    if (Array.isArray(value) && value.length <= 6) {
+      return true; // The validation passed
+    }
+    throw new Error('You can select a maximum of 6 checkboxes.'); // Validation failed
+  }),
+]
 router.get('/talent/profile', verifyToken, async (req, res) => {
   const userId = req.cookies.userId
 
@@ -41,7 +51,7 @@ router.get('/talent/profile', verifyToken, async (req, res) => {
 
   })
 
-  const userCertificationData= getuserCertification.map((certifications) => {
+  const userCertificationData = getuserCertification.map((certifications) => {
     const startYear = new Date(certifications.StartYear);
     const endYear = new Date(certifications.EndYear)
     const options = { year: 'numeric', month: 'long' };
@@ -79,14 +89,15 @@ router.get('/talent/profile', verifyToken, async (req, res) => {
         const user_image = user.user_profile_seller.avatar;
         const userSkillsJSON = user.user_profile_seller.user_skill_model.skills;
         const userSkillsArray = JSON.parse(userSkillsJSON);
-     console.log(userSkillsJSON);
+        const userInterstedSkills = JSON.parse(user.user_profile_seller.user_skill_model.interestedSkills)
         return res.render('networkprofile.ejs', {
           userDetails: user,
           user_image,
           userSkillsJSON: userSkillsArray,
+          userInterstedSkills: userInterstedSkills,
           employmentHistory: formattedEmploymentHistory,
           userEducationHistory: getUserEducationHistroy,
-          getuserCertification:userCertificationData
+          getuserCertification: userCertificationData
         })
       }
     }).catch((error) => {
@@ -95,6 +106,7 @@ router.get('/talent/profile', verifyToken, async (req, res) => {
 })
 //////////////////////////end//////////////////////
 router.post('/update/info', async (req, res) => {
+
   try {
     const userId = req.cookies.userId
     console.log(userId);
@@ -129,39 +141,40 @@ router.post('/update/info', async (req, res) => {
   }
 })
 
-router.post('/update/info/seller', async (req, res) => {
-  try {
-    const userId = req.cookies.userId
-    console.log(userId);
-    const { Experiences, language,skills} = req.body;
-    console.log(Experiences, language, skills);
-    User.findByPk(userId, {
-      include: [
-        {
-          model: user_profile_seller,
-          include: user_skill_model,
-        },
-      ],
-    })
-      .then((user) => {
-        if (!user) {
-          // User found with the specified conditions
-          return res.status(404).json({ message: 'User not found' });
-        }
-        user.user_profile_seller.user_skill_model.Experiences = Experiences
-        user.user_profile_seller.user_skill_model.language = language
-        user.user_profile_seller.user_skill_model.skills = skills
-       
-        user.user_profile_seller.user_skill_model.save();
-        return res.redirect('/talent/profile')
+router.post('/update/info/seller', checkArrayLength, async (req, res) => {
+
+    try {
+      const userId = req.cookies.userId
+      console.log(userId);
+      const { Experiences, language, skills, interestedSkills } = req.body;
+      console.log(Experiences, language, skills);
+      User.findByPk(userId, {
+        include: [
+          {
+            model: user_profile_seller,
+            include: user_skill_model,
+          },
+        ],
       })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
-  } catch (error) {
-    console.error(error);
-    return res.status(500).render('505pg.ejs')
-  }
+        .then((user) => {
+          if (!user) {
+            // User found with the specified conditions
+            return res.status(404).json({ message: 'User not found' });
+          }
+          user.user_profile_seller.user_skill_model.Experiences = Experiences
+          user.user_profile_seller.user_skill_model.language = language
+          user.user_profile_seller.user_skill_model.skills = skills
+          user.user_profile_seller.user_skill_model.interestedSkills = interestedSkills
+          user.user_profile_seller.user_skill_model.save();
+          return res.redirect('/talent/profile')
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    } catch (error) {
+      console.error(error);
+      return res.status(500).render('505pg.ejs')
+    }
 })
 
 router.post('/talent/3350', async (req, res) => {
@@ -187,16 +200,6 @@ router.post('/talent/3350', async (req, res) => {
     return res.status(500).json({ message: 'Internal Server Error' });
   }
 });
-
-
-router.post('/skills/added', async (req, res)=>{
- try {
-  
-  
- } catch (error) {
-  
- }
-})
 
 
 module.exports = router

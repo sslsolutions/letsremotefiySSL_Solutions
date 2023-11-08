@@ -15,6 +15,8 @@
     <link href="/css/fontstyle.css" rel="stylesheet">
     <!-- HOME STYLE -->
     <link href="/css/haris.css" rel="stylesheet">
+    <!-- email_section -->
+    <link href="/css/components_css/email_section.css" rel="stylesheet">
     <!-- FOOTER STYLE -->
     <link href="/css/blog.css" rel="stylesheet" type="text/css">
     <!-- <link rel="stylesheet" href="css/blog.css"> -->
@@ -45,6 +47,7 @@
 <body>
 
     <!-- -----------------------WORK REMOTLY--------------------->
+    <!-- NAVBAR  navbar.css+remix icon link navbar.js-->
     <nav class="header">
         <%- include('Components/navbar'); %>
     </nav>
@@ -1409,34 +1412,9 @@
                 </div>
             </div>
         </div>
-
-        <div class="container-fluid justify-content-center" style="display: flex; justify-content: center;">
-            <div class="row justify-content-center mt-5 mb-5" id="BEST">
-                <div class="col-lg-7 col-md-7 col-sm-10 text-center">
-                    <!-- <img class="img-fluid" src="images/Newsletter_img.png" alt=""> -->
-                    <H1 style="margin-top:18% ; color: white;">
-                        <heading> SSL SOLUTIONS is the best place
-                            to build your tech team.</heading>
-                    </H1>
-                    <!-- ---------------------input field------------------------- -->
-                    <!--  -->
-                </div>
-                <div class="row justify-content-center">
-
-                    <div class="col-lg-5 col-sm-11" id="MAIN">
-                        <div class="input-container">
-                            <i class="fas fa-envelope">&nbsp;&nbsp;&nbsp;&nbsp; </i> <input id="INNER" type="text"
-                                placeholder="Enter your Email" name="email">
-                        </div>
-                    </div>
-
-
-                    <!-- <div class="col-lg-5 col-sm-8"> <input type="" class="HH" name=""
-                            placeholder="&#xF32C;   Your Email"></div> -->
-
-                    <div id="COM" class="col-lg-2 col-md-3 col-sm-5 ">Send</div>
-                </div>
-            </div>
+<!-- email section style-email_section.css  -->
+        <div class="container-fluid d-flex justify-content-center">
+            <%- include('Components/email_section'); %>
         </div>
 
         <!-- <div style="height: 100px;"></div> -->

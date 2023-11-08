@@ -360,32 +360,8 @@ input::placeholder{
     text-align: center;
     font-family: bootstrap-icons;
  }
- #COM{
-    font-size: 20PX;
-    font-size: 500;
-    height: 50px;
-    /* border: 2px solid red; */
-    padding: 10px;
-    text-align: center; 
-    text-decoration: none;
-    background:  rgb(175, 32, 34);
-    border-radius: 12PX;
-    /* font-size: 18px; */
-    color: white;
- }
- #COM:hover{
-    background: black; 
-    cursor: pointer;
- }
- #BEST {
-    background-image: url('/images/Newsletter_img.png');
-    background-size: 100% 100%;
-    width: 1100PX;
-    height: 452PX;
-    display: flex;
-    justify-content: center;
 
-}
+ 
 #COM22{
     font-size: 20PX;
     font-size: 500;
@@ -427,23 +403,6 @@ input::placeholder{
      background: black; 
      cursor: pointer;
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  @media (max-width:991px) {

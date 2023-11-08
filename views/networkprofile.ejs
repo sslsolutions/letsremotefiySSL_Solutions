@@ -538,7 +538,9 @@
 
 
                                                 <div class="container-fluid">
-                                                    <form action="/update/info/seller" method="post">
+
+                                                    <form action="/update/info/seller" method="post" id="formtesting">
+
                                                         <!-- SELECT EXP VALUE -->
                                                         <div class="row justify-content-evenly">
                                                             <div class="col-lg-12 my-2">
@@ -612,56 +614,64 @@
                                                                 style="flex-wrap: wrap;">
 
                                                                 <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
+                                                                    <input type="checkbox" name="interestedSkills"
+                                                                        value=" Web Development">
                                                                     Web Development
                                                                 </label>
                                                                 <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
+                                                                    <input type="checkbox" name="interestedSkills"
+                                                                        value=" Mobile Development">
                                                                     Mobile Development
                                                                 </label>
                                                                 <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
+                                                                    <input type="checkbox" name="interestedSkills"
+                                                                        value=" Cloud Computing">
                                                                     Cloud Computing
                                                                 </label>
                                                                 <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
+                                                                    <input type="checkbox" name="interestedSkills"
+                                                                        value=" Block Chain">
                                                                     Block Chain
                                                                 </label>
                                                                 <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
+                                                                    <input type="checkbox" name="interestedSkills"
+                                                                        value="   AI/ML">
                                                                     AI/ML
                                                                 </label>
                                                                 <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
+                                                                    <input type="checkbox" name="interestedSkills"
+                                                                        value="  Web Development">
                                                                     Web Development
                                                                 </label>
                                                                 <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
+                                                                    <input type="checkbox" name="interestedSkills"
+                                                                        value=" Mobile Development">
                                                                     Mobile Development
                                                                 </label>
                                                                 <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
+                                                                    <input type="checkbox" name="interestedSkills"
+                                                                        value=" Cloud Computing">
                                                                     Cloud Computing
                                                                 </label>
                                                                 <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
+                                                                    <input type="checkbox" name="interestedSkills"
+                                                                        value="  AI/ML">
                                                                     AI/ML
                                                                 </label>
                                                                 <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
+                                                                    <input type="checkbox" name="interestedSkills"
+                                                                        value="  Block Chain">
                                                                     Block Chain
                                                                 </label>
-                                                                <label class="role-select">
-                                                                    <input type="checkbox" name="Option" value="">
-                                                                    AI/ML
-                                                                </label>
+
                                                             </div>
                                                         </div>
 
                                                         <div class="modal-footer my-1">
                                                             <button type="button" class="btn btn-secondary"
                                                                 data-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-primary">Save
+                                                            <button type="submit" id="btntest"
+                                                                class="btn btn-primary">Save
                                                                 changes</button>
                                                         </div>
                                                     </form>
@@ -703,28 +713,12 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-11 d-flex" style="flex-wrap: wrap; justify-content: start;">
-
-                                    <label class="role-btn">
-                                        <input type="checkbox" name="checkboxOption" value="NodeJS">
-                                        Web Development
-                                    </label>
-                                    <label class="role-btn">
-                                        <input type="checkbox" name="checkboxOption" value="" disabled>
-                                        Mobile Development
-                                    </label>
-                                    <label class="role-btn">
-                                        <input type="checkbox" name="checkboxOption" value="" disabled>
-                                        Cloud Computing
-                                    </label>
-                                    <label class="role-btn">
-                                        <input type="checkbox" name="checkboxOption" value="" disabled>
-                                        Block Chain
-                                    </label>
-                                    <label class="role-btn">
-                                        <input type="checkbox" name="checkboxOption" value="" disabled>
-                                        AI/ML
-                                    </label>
-
+                                    <% userInterstedSkills.forEach(skill=> { %>
+                                        <label class="role-btn">
+                                            <input type="checkbox" name="interestedSkills" value="<%= skill %>">
+                                            <%= skill %>
+                                        </label>
+                                        <% }) %>
 
                                 </div>
                             </div>
@@ -746,51 +740,57 @@
                                                 <div><img style="width: 15px; height: 19px;" src="/images/node.js.png" alt=""></div>
                                                 <div> Node.js</div>
                                             </label> -->
-                                    <% if (userSkillsJSON && userSkillsJSON.length > 0) { %>
-                                    <% userSkillsJSON.forEach(element => { %>
-                                    <label class="custom-label-btn">
-                                        <input type="checkbox" name="checkboxOption" value="" disabled>
-                                        <img src="/images/node.js.png" alt=""> <%= element %>
-                                    </label>
-                                    <% }) %>
-                                    <% } else { %>
-                                    <p>No skills data available.</p>
-                                    <% } %>
+                                    <% if (userSkillsJSON && userSkillsJSON.length> 0) { %>
+                                        <% userSkillsJSON.forEach(element=> { %>
+                                            <label class="custom-label-btn">
+                                                <input type="checkbox" name="checkboxOption" value="" disabled>
+                                                <img src="/images/node.js.png" alt="">
+                                                <%= element %>
+                                            </label>
+                                            <% }) %>
+                                                <% } else { %>
+                                                    <p>No skills data available.</p>
+                                                    <% } %>
+
+
+
                                 </div>
+
                                 <!-- Modal -->
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Tech stack</h5>
-                                                <button type="button" class="close" data-dismiss="modal" FF
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
                                             <form action="/update/info/seller" method="post">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Tech stack</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" FF
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
                                                 <div class="modal-body">
                                                     <div class="col-sm-12 d-flex flex-wrap">
+
+                                                        <label class="custom-label">
+                                                            <input type="checkbox" name="skills" value="React js ">
+                                                            <img src="/images/node.js.png" alt=""> React Js
+                                                        </label>
                                                         <label class="custom-label">
                                                             <input type="checkbox" name="skills" value="Node Js">
                                                             <img src="/images/node.js.png" alt=""> Node.js
                                                         </label>
                                                         <label class="custom-label">
-                                                            <input type="checkbox" name="skills" value="React Js">
-                                                            <img src="/images/node.js.png" alt=""> React Js
+                                                            <input type="checkbox" name="skills" value="Express Js">
+                                                            <img src="/images/node.js.png" alt=""> Express Js
                                                         </label>
                                                         <label class="custom-label">
                                                             <input type="checkbox" name="skills" value="Passport Js">
-                                                            <img src="/images/node.js.png" alt=""> Passport Js
+                                                            <img src="/images/node.js.png" alt=""> Passport JS
                                                         </label>
                                                         <label class="custom-label">
-                                                            <input type="checkbox" name="skills" value="Nest Js">
-                                                            <img src="/images/node.js.png" alt=""> Nest Js
-                                                        </label>
-                                                        <label class="custom-label">
-                                                            <input type="checkbox" name="skills" value="Ajax">
-                                                            <img src="/images/node.js.png" alt=""> Ajax
+                                                            <input type="checkbox" name="skills" value="MongoDB">
+                                                            <img src="/images/node.js.png" alt=""> MongoDB
                                                         </label>
                                                         <!-- <div><span id="DOMAINS-BTN"><a href=""><img src="images/node.js.png" alt=""> Node .js</a></span></div> -->
 
