@@ -110,10 +110,8 @@ router.put('/update-talent-profile/:id', async (req, res) => {
 router.post('/readytojoin', upload.single('Resume'), async (req, res) => {
 
   const userId = req.cookies.userId
-  console.log(userId);
   const userData = await user_profile_seller.findOne({ where: { UserId: userId } })
   // Check if userData exists and has a user field with an _id
-  console.log(userData);
   if (!userData || !userData.UserId || !userData.id) {
     return res.status(404).json({ message: 'User profile not found' });
   }

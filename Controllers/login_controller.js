@@ -86,12 +86,14 @@ router.post('/login', validator, async (req, res, next) => {
 
                 else if (existingUser.roles.includes('Buyer')) {
                     // Redirect to the buyer page
-                    redirectPath = '/hire_talents'
+                    redirectPath = '/buyer/hire_talent'
                 }
                 else{
                   return  res.status(500).send('Internal Server Error')
                 }
                 res.redirect(redirectPath)
+            
+
             }
         } catch (error) {
             console.error('Error:', error);

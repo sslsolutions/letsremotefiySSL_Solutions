@@ -5,6 +5,7 @@ const crypto = require('crypto');
 const EmploymentHistory = require('./employmentHistory');
 const UserEducationHistory = require('./userEducationHistory');
 const Certification = require('./Certification');
+const Buyer_Demanded_Skill = require('./buyer_demanded_skill');
 
 class User extends Model {
     static associations(model) {
@@ -67,6 +68,10 @@ User.hasOne(UserEducationHistory, {
     onUpdate: 'RESTRICT'
 })
 User.hasOne(Certification, {
+    onDelete: 'RESTRICT',
+    onUpdate: 'RESTRICT'
+})
+User.hasOne(Buyer_Demanded_Skill, {
     onDelete: 'RESTRICT',
     onUpdate: 'RESTRICT'
 })
