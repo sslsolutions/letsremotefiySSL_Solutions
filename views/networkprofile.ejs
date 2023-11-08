@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,15 +12,25 @@
     <link rel="stylesheet" href="/css/hire_talents.css">
     <!-- FONT style -->
     <link href="/css/fontstyle.css" rel="stylesheet">
+    <!-- DETAILS -->
+    <link rel="stylesheet" href="/css/details.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+      <!-- ----------------   CHATGPT     ----------- -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      <!--------------------------    CHATGPT------------- -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Network Profile</title>
-</head>
+
+     <!-- for fix form and Nav -->
+     <link href="/css/talent-overview.css" rel="stylesheet" type="text/css">
+     
+    </head>
 
 <body>
 
@@ -122,25 +133,40 @@
                 </div>
 
             </div>
+            
             <div class="col-lg-8  col-md-12 right-section">
-                <nav class="container bg-light py-2" role="navigation">
-                    <div class="dropdown">
-                        <i class="fa fa-bell" aria-hidden="true"></i>
-                        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                            <img id="displayImage" class="img-fluid profile rounded-circle"
-                                style="width: 44px; height: 44px;" src="data:image/jpeg;base64,<%= user_image %>">
-                            <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                            <li role="presentation text-center">
-                                <a role="menuitem" tabindex="-1" href="/talent/profile">Go to profile</a>
-                            </li>
-                            <li role="presentation text-center">
-                                <a role="menuitem" tabindex="-1" href="/logout">Logout</a>
-                            </li>
-                        </ul>
+
+               <div class="row justify-content-center">
+                <div class="col-lg-12 col-11" id="j">
+                    <!----------------------------  PART 2----------------------  -->
+                    <div class="row mt-3"  id="PROFILE-IMG">
+
+                        <div class="col-sm-1 col-3" id="G">
+                            <h3 style="color: gray;"><i class="bi bi-bell-fill text-center"></i></h3>
+                        </div>
+                        <div class="col-lg-4 col-8 " id="MAIN" onclick="toggleSecondBox()">
+                            <span id="USER" class="mx-1">
+                                <div id="USER-IMG"><img height="50px" width="50px" src="/images/1697173271091.png"
+                                        alt=""></div>
+                                <span class="XSMALL">Muhammad Haris
+                                    <span id="DROP-ICONS"><i class="fa-solid fa-caret-down"></i></span>
+                                    <div style="font-size: 12px; color: grey;">Software Developer</div>
+                                </span>
+                            </span>
+                            <div id="PROFILE">
+                                <div class="XSMALL" id="GOTO"><a href=""><i class="fa-solid fa-user"></i>&nbsp;
+                                        Go to Profile</a> </div>
+                                <div class="XSMALL" id="LOGOUT"><a href=""><i
+                                            class="fa-solid fa-arrow-right-from-bracket"></i> &nbsp; Log Out</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </nav>
+
+                </div>
+               </div>
+
+
                 <div class="bg">
                     <div class="profile-detail">
                         <img src="/images/Banner.jpg" alt="">
@@ -154,7 +180,7 @@
                                 <div class="d-flex">
                                     <h4><b>
                                             <%= userDetails.user_profile_seller.firstName %>
-                                                <%= userDetails.user_profile_seller.lastName %>
+                                            <%= userDetails.user_profile_seller.lastName %>
                                         </b></h4>
                                     <img type="button" data-toggle="modal" data-target="#exampleModalCenter"
                                         class="model-image" src="/images/edit_icon.png" alt="">
@@ -827,36 +853,35 @@
                                     <!-- <h6 class="mt-5">No employment details added</h6> -->
 
                                     <% if (!employmentHistory || employmentHistory.length===0) { %>
-                                        <p>no employment history added</p>
-                                        <% } else { %>
-                                            <% employmentHistory.forEach(function(history) { %>
-                                                <div class="history-wrapper">
-                                                    <div class="history d-flex">
-                                                        <p class="mt-5"><b><i
-                                                                    class="fa-solid fa-briefcase histroy-bag mx-2"></i>
-                                                                <%= history.Position %>
-                                                            </b></p>
-                                                        <img class="ms-2 histroy-img" id="exampleModalLabel"
-                                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                                            alt="Edit Icon">
-                                                    </div>
-                                                    <p>
-                                                        <%= history.formattedStartDate %> , <% if
+                                    <p>no employment history added</p>
+                                    <% } else { %>
+                                    <% employmentHistory.forEach(function(history) { %>
+                                    <div class="history-wrapper">
+                                        <div class="history d-flex">
+                                            <p class="mt-5"><b><i class="fa-solid fa-briefcase histroy-bag mx-2"></i>
+                                                    <%= history.Position %>
+                                                </b></p>
+                                            <img class="ms-2 histroy-img" id="exampleModalLabel"
+                                                src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                                alt="Edit Icon">
+                                        </div>
+                                        <p>
+                                            <%= history.formattedStartDate %> , <% if
                                                                 (history.CurrentlyWorking===true) { %>
-                                                                Present
-                                                                <% } else { %>
-                                                                    <%= history.formattedEndDate %>
-                                                                        <% } %>
-                                                    </p>
-                                                    <p class="location">
-                                                        <%= history.Location%>
-                                                    </p>
-                                                    <p>
-                                                        <%= history.Description %>
-                                                    </p>
-                                                </div>
-                                                <% }); %>
-                                                    <% } %>
+                                            Present
+                                            <% } else { %>
+                                            <%= history.formattedEndDate %>
+                                            <% } %>
+                                        </p>
+                                        <p class="location">
+                                            <%= history.Location%>
+                                        </p>
+                                        <p>
+                                            <%= history.Description %>
+                                        </p>
+                                    </div>
+                                    <% }); %>
+                                    <% } %>
 
                                 </div>
                                 <div class="col-md-1 add-detail">
@@ -950,6 +975,7 @@
                             <div class="row">
                                 <div class="col-md-11">
                                     <h3 class="text-dark">Education</h3>
+    
                                     <% if (!userEducationHistory ||userEducationHistory.length===0) { %>
                                         <h6 class="mt-5">No qualifications added</h6>
                                         <% } else { %>
@@ -965,8 +991,8 @@
                                                             alt="Edit Icon">
                                                     </div>
                                                     <p>
-                                                        <%=education.formattedStartYear %> -
-                                                            <%=education.formattedEndYear %>
+                                                        <%=education.formattedStartYear %> - <%=education.formattedEndYear
+                                                                %>
                                                     </p>
                                                     <span class="location">
                                                         <%= education.Field %>
@@ -976,110 +1002,65 @@
                                                         </strong></span>
                                                 </div>
                                                 <% }); %>
-                                            <% } %>
-                                        
-                                     
-                                </div>
-                              
-                            </div>
-                        </div>
-                    </div>
-                    <div class="work-update">
-                        <div class="work-bg">
-                            <div class="row">
-                                <div class="col-md-11">
-                                    <h3 class="text-dark">Certification</h3>
-                                    <% if (!getuserCertification ||getuserCertification.length===0) { %>
-                                        <h6 class="mt-5">No certificates added</h6>
-                                        <% } else { %>
-                                            <% getuserCertification.forEach(function (Certificate) { %>
-                                                <div class="history-wrapper">
-                                                    <div class="history d-flex">
-                                                        <p class="mt-5"><b><i
-                                                                    class="fa-solid fa-briefcase histroy-bag mx-2"></i>
-                                                                <%= Certificate.Certificate%>
-                                                            </b>
-                                                        </p>
-                                                        <img class="ms-2 histroy-img"
-                                                            src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
-                                                            alt="Edit Icon">
-                                                    </div>
-                                                    <h5>
-                                                        <%= Certificate.Institute %>
-                                                    </h5>
-                                                    <p>
-                                                        <%= Certificate.formattedStartYear %> , <%=
-                                                                Certificate.formattedEndYear %>
-                                                    </p>
-                                                    <p class="location">
-                                                        <%=Certificate.Description %>
-                                                    </p>
-                                                </div>
-
-                                                <% }); %>
                                                     <% } %>
+    
+    
                                 </div>
                                 <div class="col-md-1 add-detail">
-                                    <img type="button" data-toggle="modal" data-target="#exampleModal_1"
+                                    <img type="button" data-toggle="modal" data-target="#exampleModal_2"
                                         src="https://letsremotify.com/static/add_icon-cca05673df8bbb51833a3f4e63d6e305f8c20560572f240ad90686413cdfb953.png"
                                         alt="">
-
-                                    <div class="modal fade" id="exampleModal_1" tabindex="-1" role="dialog"
+                                    <!--model Start  education model -->
+                                    <div class="modal fade" id="exampleModal_2" tabindex="-1" role="dialog"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Add Certificate</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel">Add Qualification</h5>
                                                     <button type="button" class="close" data-dismiss="modal"
                                                         aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form action="/talent/profile/addCertification" method="post">
+    
+                                                    <form action="/talent/profile/addEducation" method="post">
                                                         <div class="form-group row">
-                                                            <h6 for="inputPassword" class="col-sm-2 col-form-label">
-                                                                Certificate</h6>
+                                                            <label for="inputPassword"
+                                                                class="col-sm-2 col-form-label">Degree</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                    id="inputPassword" placeholder="Certificate name"
-                                                                    name="Certificate" required>
+                                                                <input type="text" class="form-control" id="inputPassword"
+                                                                    placeholder="Degree" name="Degree" required>
                                                             </div>
                                                         </div>
                                                         <br>
                                                         <div class="form-group row">
-                                                            <h6 for="inputPassword" class="col-sm-2 col-form-label">
-                                                                Organization</h6>
+                                                            <label for="inputPassword"
+                                                                class="col-sm-2 col-form-label">Field</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                    id="inputPassword" placeholder="Organization name"
-                                                                    name="Organization" required>
+                                                                <input type="text" class="form-control" id="inputPassword"
+                                                                    placeholder="Field of study" name="Field" required>
                                                             </div>
                                                         </div>
                                                         <br>
                                                         <div class="form-group row">
-                                                            <h6 for="inputPassword" class="col-sm-2 col-form-label">
-                                                                Institute</h6>
+                                                            <label for="inputPassword"
+                                                                class="col-sm-2 col-form-label">Institute</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" class="form-control"
-                                                                    id="inputPassword" required
-                                                                    placeholder="Description" name="Institute">
+                                                                <input type="text" class="form-control" id="inputPassword"
+                                                                    placeholder="Institute" name="Institute" required>
                                                             </div>
                                                         </div>
                                                         <div class="d-flex date mt-3">
-                                                            <h6 for="">Starting year</h6>
-                                                            <input type="date" class="form-control" name="StartYear"
+                                                            <label for="">Starting year</label>
+                                                            <input type="month" class="form-control" name="StartYear"
                                                                 required>
-                                                            <h6 for="" class="ms-5">Ending year</h6>
-                                                            <input type="date" class="form-control" name="EndYear"
+                                                            <label for="" class="ms-5">Ending year</label>
+                                                            <input type="month" class="form-control" name="EndYear"
                                                                 required>
                                                         </div>
                                                         <br>
                                                         <br>
-                                                        <h5 for=""><strong>Description</strong></h5>
-                                                        <textarea class="mt-3" name="Description" id="" cols="50"
-                                                            rows="6" required></textarea>
-
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-secondary"
                                                                 data-dismiss="modal">Close</button>
@@ -1087,131 +1068,256 @@
                                                         </div>
                                                     </form>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
-
+                                    <!-- modal end -->
                                 </div>
                             </div>
                         </div>
+                        <div class="work-update">
+                            <div class="work-bg">
+                                <div class="row">
+                                       <!-- certificate -->
+                            <div class="col-md-11">
+                                <h3 class="text-dark">Certification</h3>
+
+                                <% if (!getuserCertification ||getuserCertification.length===0) { %>
+                                    <h6 class="mt-5">No certificates added</h6>
+                                    <% } else { %>
+                                        <% getuserCertification.forEach(function (Certificate) { %>
+                                            <div class="history-wrapper">
+                                                <div class="history d-flex">
+                                                    <p class="mt-5"><b><i
+                                                                class="fa-solid fa-briefcase histroy-bag mx-2"></i>
+                                                            <%= Certificate.Certificate%>
+                                                        </b>
+                                                    </p>
+                                                    <img class="ms-2 histroy-img"
+                                                        src="https://letsremotify.com/static/edit_icon-41ed5eadd725594663deb03d2eae27731c4b7e82ac26f7cbcfe147de622c2d7c.png"
+                                                        alt="Edit Icon">
+                                                </div>
+                                                <h5>
+                                                    <%= Certificate.Institute %>
+                                                </h5>
+                                                <p>
+                                                    <%= Certificate.formattedStartYear %> , <%=
+                                                            Certificate.formattedEndYear %>
+                                                </p>
+                                                <p class="location">
+                                                    <%=Certificate.Description %>
+                                                </p>
+                                            </div>
+
+                                            <% }); %>
+                                                <% } %>
+                            </div>
+                            <div class="col-md-1 add-detail">
+                                <img type="button" data-toggle="modal" data-target="#exampleModal_1"
+                                    src="https://letsremotify.com/static/add_icon-cca05673df8bbb51833a3f4e63d6e305f8c20560572f240ad90686413cdfb953.png"
+                                    alt="">
+                                <!--model Start  -->
+                                <div class="modal fade" id="exampleModal_1" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Add Certificatee</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="/talent/profile/addCertification" method="post">
+                                                    <div class="form-group row">
+                                                        <h6 for="inputPassword" class="col-sm-2 col-form-label">
+                                                            Certificate</h6>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Certificate name" name="Certificate"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group row">
+                                                        <h6 for="inputPassword" class="col-sm-2 col-form-label">
+                                                            Organization</h6>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                placeholder="Organization name" name="Organization"
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group row">
+                                                        <h6 for="inputPassword" class="col-sm-2 col-form-label">
+                                                            Institute</h6>
+                                                        <div class="col-sm-10">
+                                                            <input type="text" class="form-control" id="inputPassword"
+                                                                required placeholder="Description" name="Institute">
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex date mt-3">
+                                                        <h6 for="">Starting year</h6>
+                                                        <input type="date" class="form-control" name="StartYear"
+                                                            required>
+                                                        <h6 for="" class="ms-5">Ending year</h6>
+                                                        <input type="date" class="form-control" name="EndYear" required>
+                                                    </div>
+                                                    <br>
+                                                    <br>
+                                                    <h5 for=""><strong>Description</strong></h5>
+                                                    <textarea class="mt-3" name="Description" id="" cols="50" rows="6"
+                                                        required></textarea>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary">Save</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                        <!-- modal end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
-
-
                 </div>
+
+
             </div>
-        </div>
-
-    </div>
-    <script>
 
 
-        // ----------------------------  SELECT ONE FIELD OUT OF THREE  -----------------------------
-        const boxes = document.querySelectorAll('#EXP1');
+            <script>
 
-        boxes.forEach(box => {
-            box.addEventListener('click', () => {
-                boxes.forEach(allBoxes => {
-                    allBoxes.classList.remove('active');
-                    allBoxes.style.border = '1px solid lightgray';
-                    allBoxes.style.backgroundColor = 'white'
-                });
-                box.classList.add('active');
-                box.style.border = '1px solid gray'
-                box.style.backgroundColor = 'lightgray'
-            })
-        })
-
-        // ---------------------- MULTIPLE BOXES SELECT  Tech stack(MODAL) --------------------
-
-        const boxes_multi = document.querySelectorAll('.custom-label');
-        boxes_multi.forEach(box_multi => {
-            box_multi.addEventListener('click', () => {
-                const checkBox = box_multi.querySelector('input[type="checkbox"]');
-                if (checkBox.checked) {
-                    checkBox.checked = false;
-                    box_multi.classList.remove('active');
-                    box_multi.style.border = '1PX solid rgb(153, 149, 149)';
-                    box_multi.style.backgroundColor = 'transparent';
-                }
-                else {
-                    checkBox.checked = true;
-                    box_multi.classList.add('active');
-                    box_multi.style.border = '1px solid gray';
-                    box_multi.style.backgroundColor = 'lightgray'
-                }
-            });
-        })
-
-        // ---------------------- MULTIPLE BOXES SELECT  ROLES (MODAL) --------------------
-
-        const role_btns = document.querySelectorAll('.role-select');
-        role_btns.forEach(sel_btn => {
-            sel_btn.addEventListener('click', () => {
-                const role_checkBox = sel_btn.querySelector('input[type="checkbox"]');
-                if (role_checkBox.checked) {
-                    role_checkBox.checked = false;
-                    sel_btn.classList.remove('active');
-                    sel_btn.style.border = '1PX solid rgb(153, 149, 149)';
-                    sel_btn.style.backgroundColor = 'transparent';
-                }
-                else {
-                    role_checkBox.checked = true;
-                    sel_btn.classList.add('active');
-                    sel_btn.style.border = '1px solid gray';
-                    sel_btn.style.backgroundColor = 'lightgray'
-                }
-            });
-        })
-
-
-
-
-        // Get all the elements with the "seeking-hover" class
-        const seekingBoxes = document.querySelectorAll('.seeking-hover');
-
-        // Add a click event listener to each box
-        seekingBoxes.forEach(box => {
-            box.addEventListener('click', () => {
-                // Remove the "active" class from all boxes
-                seekingBoxes.forEach(box => {
-                    box.classList.remove('active');
-                });
-
-                // Add the "active" class to the clicked box
-                box.classList.add('active');
-            });
-        });
-
-
-        const endDateInput = document.getElementById('end-date');
-        const currentlyWorkingCheckbox = document.getElementById('currently-working');
-        const label_date = document.getElementById('label_end');
-
-        currentlyWorkingCheckbox.addEventListener('change', function () {
-            if (currentlyWorkingCheckbox.checked) {
-                endDateInput.style.display = 'none';
-                label_date.style.display = 'none'
-            } else {
-                endDateInput.style.display = 'block';
-                label_date.style.display = 'block';
+                // FOR PROFILE TOGGLE MODE
+                function toggleSecondBox() {
+            var profile = document.getElementById('PROFILE');
+            if (profile.style.display === 'none' || profile.style.display === '') {
+                profile.style.display = 'block';
             }
-        });
+            else {
+                profile.style.display = 'none';
+            }
 
-    </script>
+        }
+        // ==============
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
-        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-        crossorigin="anonymous"></script>
+
+                // ----------------------------  SELECT ONE FIELD OUT OF THREE  -----------------------------
+                const boxes = document.querySelectorAll('#EXP1');
+        
+                boxes.forEach(box=>{
+                    box.addEventListener('click', ()=>{
+                     boxes.forEach(allBoxes=>{
+                        allBoxes.classList.remove('active');
+                        allBoxes.style.border='1px solid lightgray';
+                        allBoxes.style.backgroundColor='white'
+                     });
+                     box.classList.add('active');
+                     box.style.border='1px solid gray'
+                     box.style.backgroundColor='lightgray'
+                    })
+                })
+        
+                // ---------------------- MULTIPLE BOXES SELECT  Tech stack(MODAL) --------------------
+        
+                const boxes_multi=document.querySelectorAll('.custom-label');
+                boxes_multi.forEach(box_multi=>{
+                    box_multi.addEventListener('click',()=>{
+                        const checkBox=box_multi.querySelector('input[type="checkbox"]');
+                        if(checkBox.checked){
+                            checkBox.checked=false;
+                            box_multi.classList.remove('active');
+                            box_multi.style.border='1PX solid rgb(153, 149, 149)';
+                            box_multi.style.backgroundColor='transparent';
+                        }
+                        else{
+                            checkBox.checked=true;
+                            box_multi.classList.add('active');
+                            box_multi.style.border='1px solid gray';
+                            box_multi.style.backgroundColor='lightgray'
+                        }
+                    });
+                })
+         
+                     // ---------------------- MULTIPLE BOXES SELECT  ROLES (MODAL) --------------------
+        
+                     const role_btns=document.querySelectorAll('.role-select');
+                     role_btns.forEach(sel_btn=>{
+                    sel_btn.addEventListener('click',()=>{
+                        const role_checkBox=sel_btn.querySelector('input[type="checkbox"]');
+                        if(role_checkBox.checked){
+                            role_checkBox.checked=false;
+                            sel_btn.classList.remove('active');
+                            sel_btn.style.border='1PX solid rgb(153, 149, 149)';
+                            sel_btn.style.backgroundColor='transparent';
+                        }
+                        else{
+                            role_checkBox.checked=true;
+                            sel_btn.classList.add('active');
+                            sel_btn.style.border='1px solid gray';
+                            sel_btn.style.backgroundColor='lightgray'
+                        }
+                    });
+                })
+        
+        
+        
+        
+                // Get all the elements with the "seeking-hover" class
+                const seekingBoxes = document.querySelectorAll('.seeking-hover');
+        
+                // Add a click event listener to each box
+                seekingBoxes.forEach(box => {
+                    box.addEventListener('click', () => {
+                        // Remove the "active" class from all boxes
+                        seekingBoxes.forEach(box => {
+                            box.classList.remove('active');
+                        });
+        
+                        // Add the "active" class to the clicked box
+                        box.classList.add('active');
+                    });
+                });
+        
+        
+                const endDateInput = document.getElementById('end-date');
+                const currentlyWorkingCheckbox = document.getElementById('currently-working');
+                const label_date = document.getElementById('label_end');
+        
+                currentlyWorkingCheckbox.addEventListener('change', function () {
+                    if (currentlyWorkingCheckbox.checked) {
+                        endDateInput.style.display = 'none';
+                        label_date.style.display = 'none'
+                    } else {
+                        endDateInput.style.display = 'block';
+                        label_date.style.display = 'block';
+                    }
+                });
+        
+            </script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+                integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+                integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+                crossorigin="anonymous"></script>
 
 </body>
 
