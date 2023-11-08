@@ -1,7 +1,6 @@
 #technical{
     background-color: white;
     border-radius: 12px;
-    /* border: 2px solid blue; */
     flex-wrap: wrap;
 }
 
@@ -28,7 +27,7 @@
 }
 .ARROW{
     
-    font-size: 24px;
+    font-size: 19px;
     color: rgb(175, 32, 34);
 }
 #BUTTON{

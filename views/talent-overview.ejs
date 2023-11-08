@@ -32,123 +32,28 @@
     <!--  -->
     <!--  -->
     <nav class="navbar navbar-expand-lg bg-dark" id="NAV">
-        <div class="container-fluid bg-dark pt-3 pb-3">
-            <a class="navbar-brand text-white" href="#"><img width="200px" height="110px" class="img-fluid"
-                    src="/images/Logo updeted.png" alt=""></a>
-            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item" id="HEADING">
-                        <a class="nav-link active text-light" aria-current="page" href="#" id="GETNOWNAV">
-                            <i class="bi bi-boxes"></i> <span>Overview</span>
-                        </a>
-                    </li>
-                    <li class="nav-item col-">
-                        <a class="nav-link  text-light" href="#" id="GETNOWNAV">
-                            <i class="fa-solid fa-network-wired"></i> Skill Test
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-light" href="#" id="GETNOWNAV">
-                            <i class="fa-solid fa-laptop"></i> Video Screening
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-light" href="#" id="GETNOWNAV">
-                            <i class="fa-solid fa-square-check"></i> Final Interview
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  text-light" href="#" id="GETNOWNAV">
-                            <i class="fa-solid fa-people-group"></i>
-                            Network
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link  text-light" href="#" id="GETNOWNAV">
-                            <div class="col-12 text-center justify-content-center">Valued By:</div>
-                            <div class="col-12  mt-2" id="IFLEXNAV">
-                                <!-- <span>
-                          <img class="img-fluid" width="60px" height="60px" src="/images/2.png" alt="" />
-                      </span>
-                      <span>
-                          <img src="/images/4.png" width="60px" height="60px" alt="" />
-                      </span>
-                      <span>
-                          <img src="/images/3.png" width="60px" height="60px" alt="" />
-                      </span> -->
-                                <div><img width="100px" height="72px" class="img-fluid" src="/images/SSL Group logo3.png"
-                                        alt=""></div>
-                                <!-- <img width="200px" height="145px" class="img-fluid" src="/images/SSL Group logo3.png" alt=""> -->
-                            </div>
-
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-        </div>
+        <%- include('Components/talent-navbar'); %>
     </nav>
 
     <!-- ----------------------------       bottom   ------------------- -->
     <div class="container-fluid" id="HAR">
         <div class="row justify-content-around">
             <div class="col-lg-3" id="HIDDEN">
-                <div class="row">
-                    <div class="col-lg-3" id="h">
-                        <div class="row justify-content-around">
-                            <div class="col-12 mt-3">
-                                <img width="240px" height="53px" class="img-fluid" src="/images/logo.png" alt="" />
-                            </div>
-                            <div class="col-12 mt-5" id="GETNOW">
-                                <i class="bi bi-boxes"></i> <span class=""> Overview</span>
-                            </div>
-                            <div class="col-12" id="GETNOW">
-
-                                <i class="fa-solid fa-network-wired"></i> <span class="">Skill Test</span>
-                            </div>
-                            <div class="col-12" id="GETNOW">
-                                <i class="fa-solid fa-laptop"></i> <span class="">Video Screening</span>
-                            </div>
-                            <div class="col-12" id="GETNOW">
-                                <i class="fa-solid fa-square-check"></i>
-                                <span class="">Final Interview</span>
-                            </div>
-                            <div class="col-12" id="GETNOW">
-                                <i class="fa-solid fa-people-group"></i>
-                                <span class="">Network</span>
-                            </div>
-                            <div id="MAR"></div>
-                            <div class="col-12 text-center" id="GETNOW"><span class="LARGE">Valued By:</span></div>
-                            <div class="col-10" id="IFLEX">
-                                <img width="170px" height="122px" class="img-fluid" src="/images/SSL Group logo2.png"
-                                    alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <%- include('Components/talent-sidebar'); %>
             </div>
 
             <!---------------------------- RIGHT  ONE  ----------------------  -->
             <div class="col-lg-8  col-sm-11">
 
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-lg-12 col-11" id="j">
                         <!----------------------------  PART 2----------------------  -->
-                        <div class="row mt-5 " style="display: flex; justify-content: end;" id="PART1">
+                        <div class="row mt-3"  id="PROFILE-IMG">
 
-                            <div class="col-sm-1">
+                            <div class="col-sm-2 col-3" >
                                 <h3 style="color: gray;"><i class="bi bi-bell-fill text-center"></i></h3>
                             </div>
-
-
-                            <div class="col-lg-5 col-sm-6 my-5" id="MAIN" onclick="toggleSecondBox()">
+                            <div class="col-md-4 col-8 " id="MAIN" onclick="toggleSecondBox()">
                                 <span id="USER" class="mx-1">
                                     <div id="USER-IMG"><img height="50px" width="50px" src="/images/1697173271091.png"
                                             alt=""></div>
@@ -158,9 +63,9 @@
                                     </span>
                                 </span>
                                 <div id="PROFILE">
-                                    <div class="SMALL" id="GOTO"><a href="/talent/profile"><i class="fa-solid fa-user"></i>&nbsp;
+                                    <div class="XSMALL" id="GOTO"><a href=""><i class="fa-solid fa-user"></i>&nbsp;
                                             Go to Profile</a> </div>
-                                    <div class="SMALL" id="LOGOUT"><a href="/logout"><i
+                                    <div class="XSMALL" id="LOGOUT"><a href=""><i
                                                 class="fa-solid fa-arrow-right-from-bracket"></i> &nbsp; Log Out</a>
                                     </div>
                                 </div>
@@ -300,15 +205,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-sm-9 mt-5 mb-5"><img class="img-fluid"
+                            <div class="col-lg-5 col-sm-9 mt-5 mb-5"><img class="img-fluid"
                                     src="/images/overview_poster-a9cb46fc486b66e8ddf55bdfacd18fb7a5d2f9c9e716169a6eb12b8db437a51d.png"
                                     alt=""></div>
 
                             <div class="row justify-content-center">
-                                <div class="col-sm-10 text-center mt-5 mb-2">
-                                    <h1>Discover Elite Talent: Your Key to Success</h1>
+                                <div class="col-sm-12 text-center mt-5 mb-2">
+                                    <h1 class="HEADING">Discover Elite Talent: Your Key to Success</h1>
                                 </div>
-                                <div id="LARGE" class="col-lg-10 text-center">
+                                <div id="LARGE" class="col-lg-12 text-center">
                                     Connecting with elite talent is key to success. With our platform, you’ll find
                                     professionals from all over the world who can help you reach your goals.
                                 </div>
@@ -316,13 +221,13 @@
                         </div>
 
                         <div class="row justify-content-evenly">
-                            <div class="col-md-4 col-9  justify-content-center" >
-                                <div class="row">
-                                    <div class="col-md-4 col-9  justify-content-center" id="FIELDS">
+                            <div class="col-md-4 col--sm-10   justify-content-center" >
+                                <div class="row justify-content-center">
+                                    <div class="col-md-11 col-9  justify-content-center" id="FIELDS">
                                         <div><img class="img-fluid" height="100px" width="100px" src="/images/1697173107163.png"
                                                 alt=""></div>
                                         <div class="LARGE">Gulam Qadir</div>
-                                        <div class="SMALL">Shopify Engineer</div>
+                                        <div class="SMALL">Shopify Developer</div>
                                         <div id="FIELDS-BOXES" class="mt-3">
                                             <div class="MINI-BOXES">
                                                 <img class="img-fluid" src="/images/angular.png" alt=""> <span
@@ -348,57 +253,62 @@
 
                             </div>
                             <!-- 2nd box -->
-                            <div class="col-md-3 col-9  justify-content-center" id="FIELDS">
-                                <div><img class="img-fluid" height="100px" width="100px" src="/images/16971731837789.png"
-                                        alt=""></div>
-                                <div class="LARGE">Fahad Shahbaz</div>
-                                <div class="SMALL">UI/UX Designer</div>
-                                <div id="FIELDS-BOXES" class="mt-3">
-                                    <div class="MINI-BOXES">
-                                        <img class="img-fluid" src="/images/angular.png" alt=""> <span
-                                            class="XXSMALL">Angular</span>
+                            <div class="col-md-4 col--sm-10   justify-content-center" >
+                                <div class="row justify-content-center">
+                                    <div class="col-md-11 col-9  justify-content-center" id="FIELDS">
+                                        <div><img class="img-fluid" height="100px" width="100px" src="/images/1697173107163.png"
+                                                alt=""></div>
+                                        <div class="LARGE">Gulam Qadir</div>
+                                        <div class="SMALL">Shopify Developer</div>
+                                        <div id="FIELDS-BOXES" class="mt-3">
+                                            <div class="MINI-BOXES">
+                                                <img class="img-fluid" src="/images/angular.png" alt=""> <span
+                                                    class="XXSMALL">Angular</span>
+                                            </div>
+                                            <div class="MINI-BOXES">
+                                                <img class="img-fluid" src="/images/angular.png" alt=""> <span
+                                                    class="XXSMALL">Angular</span>
+                                            </div>
+                                            <div class="MINI-BOXES">
+                                                <img class="img-fluid" src="/images/angular.png" alt=""> <span
+                                                    class="XXSMALL">Angular</span>
+                                            </div>
+                                        </div>
+                                        <div id="XSMALL" class="mt-4">
+                                            I am an experienced Senior Python Developer working in the software development industry for 8 years, developing multiple web-based applications using both Ruby on Rails and Python frameworks.
+                                        </div>
+        
                                     </div>
-                                    <div class="MINI-BOXES">
-                                        <img class="img-fluid" src="/images/angular.png" alt=""> <span
-                                            class="XXSMALL">Angular</span>
-                                    </div>
-                                    <div class="MINI-BOXES">
-                                        <img class="img-fluid" src="/images/angular.png" alt=""> <span
-                                            class="XXSMALL">Angular</span>
-                                    </div>
-                                </div>
-                                <div id="XSMALL" class="mt-4">
-                                    Zac Christian is experienced in developing, testing, and deploying applications
-                                    using a range of technologies such as HTML/CSS, JavaScript, Angular, Node.js, SQL,
-                                    Rails, and Ruby.
                                 </div>
 
                             </div>
                             <!-- 3rd box -->
-                            <div class="col-md-3 col-9  justify-content-center" id="FIELDS">
-                                <div><img class="img-fluid" height="100px" width="100px" src="/images/1697176097615.png"
-                                        alt="">
-                                </div>
-                                <div class="LARGE">Mughira Khalid</div>
-                                <div class="SMALL">Back-End Developer</div>
-                                <div id="FIELDS-BOXES" class="mt-3">
-                                    <div class="MINI-BOXES">
-                                        <img class="img-fluid" src="/images/angular.png" alt=""> <span
-                                            class="XXSMALL">Angular</span>
+                            <div class="col-md-4 col--sm-10   justify-content-center" >
+                                <div class="row justify-content-center">
+                                    <div class="col-md-11 col-9  justify-content-center" id="FIELDS">
+                                        <div><img class="img-fluid" height="100px" width="100px" src="/images/1697173107163.png"
+                                                alt=""></div>
+                                        <div class="LARGE">Gulam Qadir</div>
+                                        <div class="SMALL">Shopify Developer</div>
+                                        <div id="FIELDS-BOXES" class="mt-3">
+                                            <div class="MINI-BOXES">
+                                                <img class="img-fluid" src="/images/angular.png" alt=""> <span
+                                                    class="XXSMALL">Angular</span>
+                                            </div>
+                                            <div class="MINI-BOXES">
+                                                <img class="img-fluid" src="/images/angular.png" alt=""> <span
+                                                    class="XXSMALL">Angular</span>
+                                            </div>
+                                            <div class="MINI-BOXES">
+                                                <img class="img-fluid" src="/images/angular.png" alt=""> <span
+                                                    class="XXSMALL">Angular</span>
+                                            </div>
+                                        </div>
+                                        <div id="XSMALL" class="mt-4">
+                                            Having over 10 years of hands-on experience in web application development. Skilled in full stack of technologies, including Ruby and JavaScript frameworks, HTML, CSS, and relational databases.
+                                        </div>
+        
                                     </div>
-                                    <div class="MINI-BOXES">
-                                        <img class="img-fluid" src="/images/angular.png" alt=""> <span
-                                            class="XXSMALL">Angular</span>
-                                    </div>
-                                    <div class="MINI-BOXES">
-                                        <img class="img-fluid" src="/images/angular.png" alt=""> <span
-                                            class="XXSMALL">Angular</span>
-                                    </div>
-                                </div>
-                                <div id="XSMALL" class="mt-4">
-                                    Zac Christian is experienced in developing, testing, and deploying applications
-                                    using a range of technologies such as HTML/CSS, JavaScript, Angular, Node.js, SQL,
-                                    Rails, and Ruby.
                                 </div>
 
                             </div>
@@ -407,7 +317,7 @@
 
                         </div>
                         <div class="row justify-content-start  mt-5 text-center">
-                            <div class="col-sm-11 justify-content-center my-4" id="FAQ-ACCORDIANS">
+                            <div class="col-sm-12 justify-content-center my-4" id="FAQ-ACCORDIANS">
                                 <h1 class="my-5" id="HEADING">Curious? Explore Our FAQs</h1>
                                 <div id="LARGE" class="mb-3">Explore the following frequently asked questions to find
                                     relevant
