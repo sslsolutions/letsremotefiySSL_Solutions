@@ -349,8 +349,11 @@ a {
 #BUTTONMINE{
   padding: 13PX 17px;
   border: 1PX solid white;
-  background-color: RED;
+  background-color:  rgb(175, 32, 34);
   border-radius: 12px;
+}
+#BUTTONMINE:hover{
+  color: white;
 }
 #CONTACT{
   margin-right: 20PX;
