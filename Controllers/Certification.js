@@ -21,7 +21,9 @@ router.post('/addCertification', async(req, res)=>{
         }
     
      await Certification.create(addCertification)
-        res.status(200).redirect('/talent/profile')
+     req.flash('success', 'Buyer\'s demanded skill created successfully');
+    res.status(200).redirect('/talent/profile')
+      
 
     } catch (error) {
         throw error

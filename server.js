@@ -6,7 +6,7 @@ dotenv.config();
 const session = require('express-session')
 const path = require('path')
 const bodyParser = require('body-parser')
-const flash = require('connect-flash')
+const flash=require('express-flash')
 const cookieParser = require('cookie-parser')
 const user_profile_seller = require('./Models/user_profile_seller_models.js')
 
@@ -23,7 +23,7 @@ app.use(session({
     saveUninitialized: true,
 
 }))
-
+app.use(flash());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -43,6 +43,9 @@ const profileView=require('./Controllers/profileView.js')
 const empHistory=require('./Controllers/employmentHistory.js')
 const empEducationHistory=require('./Controllers/userEducationHistory.js')
 const CertificateHistory=require("./Controllers/Certification.js")
+const overviewProfile=require('./Controllers/talen_overview.js')
+const skillTest=require('./Controllers/skill_test.js')
+const hireTalent=require('./Controllers/hire_talent.js')
 /////////roles///////////// 
 var skills = [
     {
@@ -259,6 +262,10 @@ app.use('/', verifyToken, profileView)
 app.use('/talent/profile', empHistory)
 app.use('/talent/profile', empEducationHistory)
 app.use('/talent/profile', CertificateHistory)
+app.use('/', overviewProfile)
+app.use('/', skillTest)
+app.use('/buyer',hireTalent)
+
 // app.get('*', function(req, res, next){
 // 	if(req.cookies['token'] == null){
 // 		res.redirect('/');
@@ -312,12 +319,7 @@ app.get('/blogs', (req, res)=>{
     res.render('blog.ejs')
 })
 
-app.get('/talent/overview',verifyToken, (req, res)=>{
-    res.render('talent-overview.ejs')
-})
-app.get('/skill', verifyToken, (req, res)=>{
-    res.render('skill-test.ejs')
-})
+
 
 
 app.get('/404',(req, res)=>{
@@ -328,9 +330,6 @@ app.get('/505',(req, res)=>{
     res.render('505pg.ejs')
 })
 
-app.get('/seller/dashboard', verifyToken, (req, res)=>{
-    res.render('userDashboard.ejs')
-})
 
 app.listen(process.env.PORT, (req, res) => {
     console.log(`Listening to localhost ${process.env.PORT}`);
