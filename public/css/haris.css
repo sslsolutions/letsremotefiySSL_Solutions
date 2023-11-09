@@ -141,26 +141,7 @@
     cursor: pointer;
     color: white;
 }
-.boxupdated{
-    width: 300px;
-    height: 300px;
-    padding: 16PX 8PX 90PX 8PX ;
-    /* margin-left: 45PX; */
-    /* margin-right: 45PX; */
-    background: white;
-    border-radius: 28px;
-    transition: all .50s ease;
-    cursor: pointer;
-    border: 1px solid black;
-}
-.boxupdated:hover{
-    /* padding: 40px 40px 66px; */
-    background: black;
-    border-radius: 28px;
-    transition: all .50s ease;
-    cursor: pointer;
-    color: white;
-}
+
 
 .box1 img{
     margin-bottom: 20px;
@@ -185,19 +166,6 @@
 .box1 p:hover{
      color: white;
 }
-/* .box1 a{
-    display: inline-block;
-    font-size: 22px;
-    line-height: 1.273rem;
-    font-weight: 700;
-    padding: 7px 0;
-    color: black;
-    border-bottom: 2px solid #5d6c83;
-    transition: all .50s ease;
-}
-.box1 :hover{
-    color: black;
-} */
 .box1 i{
     margin-top: -20PX;
     vertical-align: middle;
@@ -208,6 +176,27 @@
 
 .box1 a:hover{
     border-bottom: 2px solid white;
+}
+
+.boxupdated{
+    width: 300px;
+    height: 300px;
+    padding: 16PX 8PX 90PX 8PX ;
+    /* margin-left: 45PX; */
+    /* margin-right: 45PX; */
+    background: white;
+    border-radius: 28px;
+    transition: all .50s ease;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.boxupdated:hover{
+    /* padding: 40px 40px 66px; */
+    background: black;
+    border-radius: 28px;
+    transition: all .50s ease;
+    cursor: pointer;
+    color: white;
 }
 
 #ICONS{
