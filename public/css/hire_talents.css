@@ -6,12 +6,13 @@
 .DOMAINS-PART2,
 .role-btn {
   padding: 7px 10px;
-  margin: 3px 9px;
+  margin: 9px 12px;
   border: 1PX solid rgb(153, 149, 149);
   border-radius: 8px;
   box-shadow: 10px 5px 5px rgb(230, 228, 228);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .role-btn,
@@ -46,6 +47,8 @@
 .role-btn input[type="checkbox"] {
   display: none;
 }
+
+
 
 
 
