@@ -41,8 +41,8 @@
             <!--------------------------------------        DIV # 2     --------------------------------------------------------------  -->
             <div class="col-lg-6 col-sm-11">
                 <form action="/">
-                    <div class="row  mt-4 justify-content-center"
-                        style="color: black; background-color: white; border-radius: 10px;">
+                <div class="row  mt-4 justify-content-center"
+                    style="color: black; background-color: white; border-radius: 10px;">
 
                         <div class="col-lg-10 mt-5">
                             <h3 class="SUBHEAD">What developers are you looking to hire?</h3>
@@ -57,12 +57,12 @@
 
 
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="Node.js">
-                                <img class="img-fluid mx-1" src="/images/node.js.png" alt=""> Node.js
+                                <input type="checkbox" name="checkboxOption" value="">
+                                <img src="/images/node.js.png" alt=""> Node.js
                             </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="React.js">
-                                <img class="img-fluid mx-1" src="/images/react.png" alt=""> React.js
+                                <input type="checkbox" name="checkboxOption" value="">
+                                <img src="/images/react.png" alt=""> React.js
                             </label>
                             <label class="DOMAINS">
                                 <input type="checkbox" name="skills" value="React Native">
@@ -73,8 +73,8 @@
                                 <img class="img-fluid mx-1" width="20px" height="20px" src="/images/pythone.png" alt=""> Python
                             </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="Angular">
-                                <img class="img-fluid mx-1" width="30px" height="28px" src="/images/angular.png" alt=""> Angular
+                                <input type="checkbox" name="checkboxOption" value="">
+                                <img src="/images/angular.png" alt=""> Angular
                             </label>
                             <label class="DOMAINS">
                                 <input type="checkbox" name="skills" value="PHP">
@@ -227,6 +227,32 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+        <script>
+            document.getElementById('submitForm').addEventListener('click', async () => {
+              const skillData = [];
+        
+              const checkboxOptions = document.querySelectorAll('input[name="desiredSkill"]:checked');
+              checkboxOptions.forEach((checkbox) => {
+                const textValue = checkbox.value;
+                const imgSrc = checkbox.previousElementSibling.getAttribute('src');
+                skillData.push({ btnname: textValue, img: imgSrc });
+              });
+        
+              const response = await fetch('/saveSkillData', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ skills: skillData }),
+              });
+        
+              if (response.ok) {
+                console.log('Data saved successfully.');
+              } else {
+                console.error('Failed to save data.');
+              }
+            });
+          </script>
         <script>
 
             // ----WHAT DEVELOPER ARE TYOU LOOKONG TO HIRE
