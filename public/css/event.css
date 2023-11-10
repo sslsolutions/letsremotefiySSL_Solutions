@@ -1,0 +1,19 @@
+h1{
+    color:blue;
+}
+#TEXT-BTN{
+    color: white;
+}
+#TEXT-BTN:hover{
+    color: rgb(219, 214, 214);
+}
+#LIVE-BTN{
+    background-color:  rgb(175, 32, 34);
+     color: white;
+     border-radius: 12PX;
+     padding: 10PX 27PX;
+     text-align: center;
+}
+#LIVE-BTN:hover{
+    background-color:  rgb(238, 75, 78);
+}
