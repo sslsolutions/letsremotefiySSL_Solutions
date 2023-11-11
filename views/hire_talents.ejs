@@ -40,73 +40,83 @@
 
             <!--------------------------------------        DIV # 2     --------------------------------------------------------------  -->
             <div class="col-lg-6 col-sm-11">
-                <form action="/">
+
                 <div class="row  mt-4 justify-content-center"
                     style="color: black; background-color: white; border-radius: 10px;">
 
-                        <div class="col-lg-10 mt-5">
-                            <h3 class="SUBHEAD">What developers are you looking to hire?</h3>
-                        </div>
-                        <div class="col-lg-10 mt-1 mb-2" id="XSMALL">Please choose your
-                            desired skills from the options below:
-                        </div>
+                    <div class="col-lg-10 mt-5">
+                        <h3 class="SUBHEAD">What developers are you looking to hire?</h3>
+                    </div>
+                    <div class="col-lg-10 mt-1 mb-2" id="XSMALL">Please choose your
+                        desired skills from the options below:
+                    </div>
 
-
+                    <form action="/client/hire_talent" method="post">
 
                         <div class="col-sm-11 d-flex flex-wrap">
 
 
                             <label class="DOMAINS">
-                                <input type="checkbox" name="checkboxOption" value="">
+                                <input type="checkbox" name="desiredSkill" value="Node.js">
                                 <img src="/images/node.js.png" alt=""> Node.js
                             </label>
+                           
+
                             <label class="DOMAINS">
-                                <input type="checkbox" name="checkboxOption" value="">
+                                <input type="checkbox" name="desiredSkill" value="React.js">
                                 <img src="/images/react.png" alt=""> React.js
                             </label>
+                          
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="React Native">
+                                <input type="checkbox" name="desiredSkill" value="React Native">
                                 <img class="img-fluid mx-1" src="/images/react.png" alt=""> React Native
                             </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="Python">
-                                <img class="img-fluid mx-1" width="20px" height="20px" src="/images/pythone.png" alt=""> Python
+                                <input type="checkbox" name="desiredSkill" value="Python">
+                                <img class="img-fluid mx-1" width="20px" height="20px" src="/images/pythone.png" alt="">
+                                Python
                             </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="checkboxOption" value="">
+                                <input type="checkbox" name="desiredSkill" value=" Angular">
                                 <img src="/images/angular.png" alt=""> Angular
                             </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="PHP">
+                                <input type="checkbox" name="desiredSkill" value="PHP">
                                 <img class="img-fluid mx-1" width="30px" height="15px" src="/images/php.png" alt=""> PHP
                             </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="JavaScript">
-                                <img class="img-fluid mx-1" width="19px" height="18px" src="/images/js.png" alt=""> JavaScript
+                                <input type="checkbox" name="desiredSkill" value="JavaScript">
+                                <img class="img-fluid mx-1" width="19px" height="18px" src="/images/js.png" alt="">
+                                JavaScript
                             </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="TypeScript">
-                                <img class="img-fluid mx-1" width="18px" height="22px" src="/images/ts.png" alt=""> TypeScript
+                                <input type="checkbox" name="desiredSkill" value="TypeScript">
+                                <img class="img-fluid mx-1" width="18px" height="22px" src="/images/ts.png" alt="">
+                                TypeScript
                             </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="AWS">
+                                <input type="checkbox" name="desiredSkill" value="AWS">
                                 <img class="img-fluid mx-1" width="29px" height="28px" src="/images/aws.png" alt=""> AWS
                             </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="postsql">
-                                <img class="img-fluid mx-1" width="20px" height="20px" src="/images/postsql.png" alt=""> PostSQL
+                                <input type="checkbox" name="desiredSkill" value="PostSQL">
+                                <img class="img-fluid mx-1" width="20px" height="20px" src="/images/postsql.png" alt="">
+                                PostSQL
                             </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="Java">
-                                <img class="img-fluid mx-1" width="26px" height="26px" src="/images/java.png" alt=""> Java </label>
+                                <input type="checkbox" name="desiredSkill" value="Java">
+                                <img class="img-fluid mx-1" width="26px" height="26px" src="/images/java.png" alt="">
+                                Java </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="Laravel">
-                                <img class="img-fluid mx-1" width="24px" height="23px" src="/images/laravel.png" alt=""> Laravel </label>
+                                <input type="checkbox" name="desiredSkill" value="Laravel">
+                                <img class="img-fluid mx-1" width="24px" height="23px" src="/images/laravel.png" alt="">
+                                Laravel </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="Java Android">
-                                <img class="img-fluid mx-1" width="" height="" src="/images/java-android.png" alt=""> Java Android </label>
+                                <input type="checkbox" name="desiredSkill" value="Java Android">
+                                <img class="img-fluid mx-1" width="" height="" src="/images/java-android.png" alt="">
+                                Java Android </label>
                             <label class="DOMAINS">
-                                <input type="checkbox" name="skills" value="Ruby on Rails">
+                                <input type="checkbox" name="desiredSkill" value="Ruby on Rails">
                                 <img class="img-fluid mx-1" width="26px" height="26px" src="/images/ruby.png" alt="">
                                 Ruby on Rails </label>
                         </div>
@@ -114,221 +124,222 @@
                             <h3 class="XLARGE">What developers are you looking to hire?</h3>
                         </div>
                         <div class="col-lg-10 mt-1 mb-2" id="XSMALL">Please choose your
-                            desired skills from the options below:</div>
+                            desired Role from the options below:
+                        </div>
                         <div class="col-sm-11 d-flex flex-wrap ">
-
-
                             <label class="DOMAINS-PART2">
-                                <input type="checkbox" name="role" value="UI/UX Designer">
-                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt=""> UI/UX Designer
+                                <input type="checkbox" name="desiredRole" value="UI/UX Designer">
+                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt="">
+                                UI/UX Designer
                             </label>
                             <label class="DOMAINS-PART2">
-                                <input type="checkbox" name="role" value="Product Manager">
-                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt=""> Product Manager
+                                <input type="checkbox" name="desiredRole" value="Product Manager">
+                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt="">
+                                Product Manager
                             </label>
                             <label class="DOMAINS-PART2">
-                                <input type="checkbox" name="role" value="Digital Marketer">
-                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt=""> Digital Marketer
+                                <input type="checkbox" name="desiredRole" value="Digital Marketer">
+                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt="">
+                                Digital Marketer
                             </label>
                             <label class="DOMAINS-PART2">
-                                <input type="checkbox" name="role" value="Project Manager">
-                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt=""> Project Manager
+                                <input type="checkbox" name="desiredRole" value="Project Manager">
+                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt="">
+                                Project Manager
                             </label>
                             <label class="DOMAINS-PART2">
-                                <input type="checkbox" name="role" value="Consulting">
-                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt=""> Consulting
+                                <input type="checkbox" name="desiredRole" value="Consulting">
+                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt="">
+                                Consulting
                             </label>
                             <label class="DOMAINS-PART2">
-                                <input type="checkbox" name="role" value="Agency">
-                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt=""> Agency
+                                <input type="checkbox" name="desiredRole" value="Agency">
+                                <img class="img-fluid mx-1" height="20px" width="20px" src="/images/bag.svg" alt="">
+                                Agency
                             </label>
                         </div>
 
-                        
-                             <!-- ---------------------------------------------- -->
+                        <!-- ---------------------------------------------- -->
+
 
 
                         <div class="row justify-content-center">
-                             <div class="col-sm-9 mt-5 mb-3">
+                            <div class="col-sm-9 mt-5 mb-3">
                                 <lable class="mb-3" style="color: black; font-weight: 600;">Select Skill</lable>
-                                <form method="post">
-                                    <select id="mySelect" name="skills" class="js-example-basic-multiple"
-                                        multiple="multiple"
-                                        style=" width: 100%; height: 90px; padding: 12px 20px; margin: 8px 0px;display: inline-block;
-                        border-radius: 4px;border: 1px solid rgb(233, 233, 233); box-sizing: border-box;cursor: pointer;">
-                                        <option value="Selenium">Selenium</option>
-                                        <option value="Ionic">Ionic</option>
-                                        <option value="IThree.js">IThree.js</option>
-                                        <option value="Bootstrap">Bootstrap</option>
-                                        <option value="Hadoop">Hadoop</option>
-                                        <option value="Kafka">Kafka</option>
-                                        <option value=".NET Developer">.NET Developer</option>
-                                        <option value="SQL">SQL</option>
-                                        <option value="MATLAB">MATLAB</option>
-                                        <option value="C++">C++</option>
-                                        <option value="Html5">Electron</option>
-                                        <option value="MVC">MVC</option>
-                                        <option value="Apache Solr">Apache Solr</option>
-                                        <option value="Grails">Grails</option>
-                                        <option value="Kubernetes">Kubernetes</option>
-                                        <option value="Golang">Golang</option>
-                                        <option value="Chatbot">Chatbot</option>
-                                        <option value="Computer Vision">Computer Vision</option>
-                                        <option value="SAP">SAP</option>
-                                        <option value="Scala">Scala</option>
-                                        <option value="Azure">Azure</option>
-                                        <option value="Scala">Scala</option>
-                                        <option value="Bash">Bash</option>
-                                        <option value="AWS Lambda">AWS Lambda</option>
-                                        <option value="NetSuite API">NetSuite API</option>
-                                        <option value="WordPress">WordPress</option>
-                                        <option value="ELK Stack">ELK Stack</option>
-                                        <option value="Redux">Redux</option>
-                                        <option value="Power BI">Power BI</option>
-                                        <option value="MERN">MERN</option>
-                                        <option value="Apache Airflow">Apache Airflow</option>
-                                        <option value="AWS CloudWatck">AWS CloudWatck</option>
-                                        <option value="Swift">Swift</option>
-                                        <option value="Objective-C">Objective-C</option>
-                                        <option value="Groovy">RESTfill API</option>
-                                        <option value="Adonis.js">Adonis.js</option>
-                                        <option value="Solidity">Solidity</option>
-                                        <!-- Add more options as needed -->
-                                    </select>
 
-                                </form>
+                                <select id="mySelect" name="desiredRole" class="js-example-basic-multiple"
+                                    multiple="multiple"
+                                    style=" width: 100%; height: 90px; padding: 12px 20px; margin: 8px 0px;display: inline-block;
+                        border-radius: 4px;border: 1px solid rgb(233, 233, 233); box-sizing: border-box;cursor: pointer;">
+                                    <option value="Selenium">Selenium</option>
+                                    <option value="Ionic">Ionic</option>
+                                    <option value="IThree.js">IThree.js</option>
+                                    <option value="Bootstrap">Bootstrap</option>
+                                    <option value="Hadoop">Hadoop</option>
+                                    <option value="Kafka">Kafka</option>
+                                    <option value=".NET Developer">.NET Developer</option>
+                                    <option value="SQL">SQL</option>
+                                    <option value="MATLAB">MATLAB</option>
+                                    <option value="C++">C++</option>
+                                    <option value="Html5">Electron</option>
+                                    <option value="MVC">MVC</option>
+                                    <option value="Apache Solr">Apache Solr</option>
+                                    <option value="Grails">Grails</option>
+                                    <option value="Kubernetes">Kubernetes</option>
+                                    <option value="Golang">Golang</option>
+                                    <option value="Chatbot">Chatbot</option>
+                                    <option value="Computer Vision">Computer Vision</option>
+                                    <option value="SAP">SAP</option>
+                                    <option value="Scala">Scala</option>
+                                    <option value="Azure">Azure</option>
+                                    <option value="Scala">Scala</option>
+                                    <option value="Bash">Bash</option>
+                                    <option value="AWS Lambda">AWS Lambda</option>
+                                    <option value="NetSuite API">NetSuite API</option>
+                                    <option value="WordPress">WordPress</option>
+                                    <option value="ELK Stack">ELK Stack</option>
+                                    <option value="Redux">Redux</option>
+                                    <option value="Power BI">Power BI</option>
+                                    <option value="MERN">MERN</option>
+                                    <option value="Apache Airflow">Apache Airflow</option>
+                                    <option value="AWS CloudWatck">AWS CloudWatck</option>
+                                    <option value="Swift">Swift</option>
+                                    <option value="Objective-C">Objective-C</option>
+                                    <option value="Groovy">RESTfill API</option>
+                                    <option value="Adonis.js">Adonis.js</option>
+                                    <option value="Solidity">Solidity</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+
+
                             </div>
                             <div class="col-sm-9 ">
                                 <div class="mt-2 mb-2">
                                     <lable style="color: black; font-weight: 600;">Full Name</lable>
-                                    <input type="text" class="HH" id="NAME" name="email" placeholder="Enter Your Name">
+                                    <input type="text" class="HH" id="NAME" name="fullName"
+                                        placeholder="Enter Your Name">
                                 </div>
                             </div>
                             <div class="col-sm-9">
                                 <div class="mt-2 mb-4">
                                     <lable style="color: black; font-weight: 600;">Company Name</lable>
-                                    <input type="text" class="HH" id="NAME" name="email"
+                                    <input type="text" class="HH" id="NAME" name="companyName"
                                         placeholder="Enter Your Company Name">
                                 </div>
                             </div>
-                            <div class="col-sm-7 mb-5">
-                                <input class="mt-1" type="submit" value="Continue">
-                            </div>
-                        </div>
 
-                    </div>
-                </form>
+                        </div>
+                        <div class="col-sm-7 mb-5">
+                            <input class="mt-1" type="submit" value="Continue">
+                        </div>
+                    </form>
+
+                </div>
+
             </div>
         </div>
-        </div>
+    </div>
 
 
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-        <script>
-            document.getElementById('submitForm').addEventListener('click', async () => {
-              const skillData = [];
-        
-              const checkboxOptions = document.querySelectorAll('input[name="desiredSkill"]:checked');
-              checkboxOptions.forEach((checkbox) => {
-                const textValue = checkbox.value;
-                const imgSrc = checkbox.previousElementSibling.getAttribute('src');
-                skillData.push({ btnname: textValue, img: imgSrc });
-              });
-        
-              const response = await fetch('/saveSkillData', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json',
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+        function submitForm() {
+            // Get the image source from the img tag
+            const nodeJsImageSrc = document.getElementById('nodeJsImage').src;
+    
+            // Set the value of a hidden input field with the image source
+            const hiddenInput = document.createElement('input');
+            hiddenInput.type = 'hidden';
+            hiddenInput.name = 'imageSrc';
+            hiddenInput.value = nodeJsImageSrc;
+    
+            // Append the hidden input field to the form
+            const form = document.getElementById('myForm');
+            form.appendChild(hiddenInput);
+    
+            // Submit the form
+            form.submit();
+        }
+    </script>
+    <script>
+
+        // ----WHAT DEVELOPER ARE TYOU LOOKONG TO HIRE
+        const boxes_multi = document.querySelectorAll('.DOMAINS');
+        boxes_multi.forEach(box_multi => {
+            box_multi.addEventListener('click', () => {
+                const checkBox = box_multi.querySelector('input[type="checkbox"]');
+                if (checkBox.checked) {
+                    checkBox.checked = false;
+                    box_multi.classList.remove('active');
+                    box_multi.style.border = '1px solid lightgray';
+                    box_multi.style.backgroundColor = 'transparent';
+                    // box_multi.style.color = 'black';
+                }
+                else {
+                    checkBox.checked = true;
+                    box_multi.classList.add('active');
+                    box_multi.style.border = '1px solid BLACK';
+                    box_multi.style.backgroundColor = 'lightgray';
+                    // box_multi.style.color = 'white';
+                }
+            });
+        })
+
+        // ----WHAT DEVELOPER ARE TYOU LOOKONG TO HIRE
+        const boxes = document.querySelectorAll('.DOMAINS-PART2');
+        boxes.forEach(box => {
+            box.addEventListener('click', () => {
+                const checkBox = box.querySelector('input[type="checkbox"]');
+                if (checkBox.checked) {
+                    checkBox.checked = false;
+                    box.classList.remove('active');
+                    box.style.border = '1px solid lightgray';
+                    box.style.backgroundColor = 'transparent';
+                }
+                else {
+                    checkBox.checked = true;
+                    box.classList.add('active');
+                    box.style.border = '1px solid BLACK'
+                    box.style.backgroundColor = 'lightgray'
+                }
+            });
+        })
+
+
+        // --------------------------------
+        $(document).ready(function () {
+            $('.js-example-basic-multiple').select2({
+                placeholder: 'Search or select options',
+                closeOnSelect: false,
+                allowClear: true
+            });
+        });
+        $(document).ready(function () {
+            // Make an AJAX request to fetch the JSON data
+            $.ajax({
+                url: '/url/api',
+                method: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    // Populate the EJS template with data
+                    $('#key1').text(data.password);
+                    $('#key2').text(data.email);
+                    // Populate additional elements as needed
                 },
-                body: JSON.stringify({ skills: skillData }),
-              });
-        
-              if (response.ok) {
-                console.log('Data saved successfully.');
-              } else {
-                console.error('Failed to save data.');
-              }
+                error: function (error) {
+                    console.error('Error:', error);
+                },
             });
-          </script>
-        <script>
+        });
 
-            // ----WHAT DEVELOPER ARE TYOU LOOKONG TO HIRE
-            const boxes_multi = document.querySelectorAll('.DOMAINS');
-            boxes_multi.forEach(box_multi => {
-                box_multi.addEventListener('click', () => {
-                    const checkBox = box_multi.querySelector('input[type="checkbox"]');
-                    if (checkBox.checked) {
-                        checkBox.checked = false;
-                        box_multi.classList.remove('active');
-                        box_multi.style.border = '1px solid lightgray';
-                        box_multi.style.backgroundColor = 'transparent';
-                        // box_multi.style.color = 'black';
-                    }
-                    else {
-                        checkBox.checked = true;
-                        box_multi.classList.add('active');
-                        box_multi.style.border = '1px solid BLACK';
-                        box_multi.style.backgroundColor = 'lightgray';
-                        // box_multi.style.color = 'white';
-                    }
-                });
-            })
+    </script>
 
-            // ----WHAT DEVELOPER ARE TYOU LOOKONG TO HIRE
-            const boxes = document.querySelectorAll('.DOMAINS-PART2');
-            boxes.forEach(box => {
-                box.addEventListener('click', () => {
-                    const checkBox = box.querySelector('input[type="checkbox"]');
-                    if (checkBox.checked) {
-                        checkBox.checked = false;
-                        box.classList.remove('active');
-                        box.style.border = '1px solid lightgray';
-                        box.style.backgroundColor = 'transparent';
-                    }
-                    else {
-                        checkBox.checked = true;
-                        box.classList.add('active');
-                        box.style.border = '1px solid BLACK'
-                        box.style.backgroundColor = 'lightgray'
-                    }
-                });
-            })
-
-
-            // --------------------------------
-            $(document).ready(function () {
-                $('.js-example-basic-multiple').select2({
-                    placeholder: 'Search or select options',
-                    closeOnSelect: false,
-                    allowClear: true
-                });
-            });
-            $(document).ready(function () {
-                // Make an AJAX request to fetch the JSON data
-                $.ajax({
-                    url: '/url/api',
-                    method: 'GET',
-                    dataType: 'json',
-                    success: function (data) {
-                        // Populate the EJS template with data
-                        $('#key1').text(data.password);
-                        $('#key2').text(data.email);
-                        // Populate additional elements as needed
-                    },
-                    error: function (error) {
-                        console.error('Error:', error);
-                    },
-                });
-            });
-
-        </script>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
