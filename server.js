@@ -264,7 +264,7 @@ app.use('/talent/profile', empEducationHistory)
 app.use('/talent/profile', CertificateHistory)
 app.use('/', overviewProfile)
 app.use('/', skillTest)
-app.use('/buyer',hireTalent)
+app.use('/client',hireTalent)
 
 // app.get('*', function(req, res, next){
 // 	if(req.cookies['token'] == null){
@@ -299,7 +299,7 @@ app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
 })
 
-app.get('/step_one', (req, res) => {
+app.get('/client/step_one', (req, res) => {
     res.render('step_one.ejs')
 })
 app.get('/step_two', (req, res) => {
