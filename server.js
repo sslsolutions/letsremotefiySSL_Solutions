@@ -293,8 +293,12 @@ app.get('/internship', (req, res) => {
     res.render('internship.ejs')
 })
 
-// -------------------------------------
 
+
+// -------------------------------------
+app.get('/software_engineer', (req, res) => {
+    res.render('hire_software_engineer.ejs')
+})
 app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
 })
