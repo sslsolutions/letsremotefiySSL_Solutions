@@ -1,41 +1,1393 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>event pg</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- STYLE -->
-    <link rel="stylesheet" href="/css/event.css">
-  </head>
-  <body>
-    <!-- NAVBAR ONLY FOR EVENT PG -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img id="IMG1" width="260px" height="50px" src="images/Logo updeted.png" />
-             </a>
-          <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- <li class="nav-item">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>event pg</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- REMIX-ICONS -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- STYLE -->
+  <link rel="stylesheet" href="/css/event.css">
+  <!--  LINKS OF FONT FAMILY  -->
+  <link rel="stylesheet" href="/css/fontstyle.css">
+  <!-- email_section -->
+  <link href="/css/components_css/email_section.css" rel="stylesheet" />
+  <!-- ----------------   CHATGPT     ----------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+  <!-- NAVBAR ONLY FOR EVENT PG -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img id="IMG1" width="260px" height="50px" src="images/Logo updeted.png" />
+      </a>
+      <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li> -->
-             
-            </ul>
-            <span class="navbar-text my-3 ms-3 me-4" id="TEXT-BTN">
-             <img width="25px" height="25px" src="/images/slack-logo-icon.png" alt=""> Join Our Community
-            </span>
-            <div class="navbar-text my-3 ms-3 me-5" id="LIVE-BTN">
-              live now
+
+        </ul>
+        <span class="navbar-text my-3 ms-3 me-4" id="TEXT-BTN">
+          <img width="25px" height="25px" src="/images/slack-logo-icon.png" alt=""> Join Our Community
+        </span>
+        <div class="navbar-text my-3 ms-3 me-5" id="LIVE-BTN">
+          live now
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <!-- CONTAINER NO 1 -->
+  <div class="container-fluid">
+    <div class="row text-light" style="background-image: url('/images/summit-banner.jpg'); background-size:cover;">
+      <div class="col-lg-6 justify-content-center ">
+        <div class="ms-4" id="FIRST-CONTAINER">
+          <div id="SMALL" class=""><b>13th - 14th October 2023</b></div>
+          <div class="HEADING-2">
+            <h1<b style="font-size: 60px;">GoRemote Summit:</b></h>
+          </div>
+          <div class="text-white mb-2 " id="SUBHEAD">Connect . Adapt . Transform</div>
+          <div id="SMALL" class="my-3">
+            #1 leading conference for remote work, catering to enterprises, SMEs, and remote professionals.
+          </div>
+          <div class="mt-2"><a href="" id="EVENT-BUTTON" class="SMALL">join the live event</a></div>
+        </div>
+      </div>
+      <div class="col-lg-6 m-0 p-0">
+        <img class="img-fluid" src="/images/summit.jpg.webp" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- TIMER  CON 2-->
+  <div class="container-fluid mt-5">
+    <div class="row justify-content-center mt-5">
+      <div class="col-11 mt-5">
+        <div class="SUBHEAD ">
+          GoRemote Summit
+        </div>
+        <div class="HEADING">
+          <h1>Countdown:</h1>
+        </div>
+        <div class="LARGE">
+          Mark your calendar for two days of inspiring sessions and valuable insights.
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- timer -->
+  <div class="container-fluid mt-3 mb-5">
+    <div id="countdown-container" class="row">
+
+      <div class="col-3 d-flex flex-column text-center ">
+
+
+        <div class="countdown-label" id="LARGE">Day</div>
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="countdown-card" id="days-ten">
+            <div id="days-ten-digit">0</div>
+          </div>
+
+          <div class="countdown-card" id="days-unit">
+            <div id="days-unit-digit">0</div>
+          </div>
+          <div>:</div>
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="col-3 d-flex flex-column text-center">
+        <div class="countdown-label" id="LARGE">Hour</div>
+
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="countdown-card" id="hours-ten">
+            <div id="hours-ten-digit">0</div>
+          </div>
+
+          <div class="countdown-card" id="hours-unit">
+            <div id="hours-unit-digit">0</div>
+          </div>
+          <div>:</div>
+        </div>
+
+
+
+
+      </div>
+
+
+      <div class="col-3 d-flex flex-column text-center">
+
+        <div class="countdown-label" id="LARGE">Minute</div>
+
+        <div class="d-flex justify-content-center  align-items-center">
+          <div class="countdown-card" id="minutes-ten">
+            <div id="minutes-ten-digit">0</div>
+          </div>
+
+          <div class="countdown-card" id="minutes-unit">
+            <div id="minutes-unit-digit">0</div>
+          </div>
+          <div>:</div>
+        </div>
+      </div>
+
+      <div class="col-3 d-flex flex-column text-center justify-content-center">
+        <div class="countdown-label" id="LARGE">Second</div>
+
+        <div class="d-flex justify-content-center align-items-center">
+
+          <div class="countdown-card" id="seconds-ten">
+            <div id="seconds-ten-digit">0</div>
+          </div>
+
+          <div class="countdown-card" id="seconds-unit">
+            <div id="seconds-unit-digit">0</div>
+          </div>
+          <div>:</div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <!-- Modern Services and Industries  CON 3  -->
+
+  <div class="container-fluid mb-5">
+    <div class="row justify-content-center" id="MODERN-CONTAINER">
+      <div class="col-sm-11 text-white mt-5">
+        <div class="mt-5">
+          <h4 id="SUBHEAD" class="text-white">Explore Cutting-Edge Horizons at Go Remote Summit:</h4>
+        </div>
+        <div>
+          <h1 class="HEADING text-whte">Modern Services and Industries</h1>
+        </div>
+        <p id="XSMALL">Join us at the GoRemote Summit to explore the innovative world of modern industries and services.
+          Our summit brings together thought leaders to discuss the latest trends in dynamic fields like AI, ML,
+          Blockchain, and DevSecOps. Don’t miss this opportunity to stay updated!</p>
+      </div>
+      <div class="col-sm-11 mt-4">
+        <p class="HEADING-SUBH text-white">Discussion Areas</p>
+      </div>
+      <div class="col-sm-11 ">
+        <div class="row justify-content-between">
+          <!-- 1 -->
+          <div class="col-lg-3 col-sm-5 my-2">
+            <div class="col-12 px-3 py-3" id="MODERN-BOX">
+              <!-- 44 42 -->
+              <div class="py-2"><img  class="img-fluid" src="/images/ai.svg" alt=""></div>
+              <div class=" py-2 SMALL-HEAD"><b>AI & <br> Machine Learning</b></div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="col-lg-3 col-sm-5 my-2">
+            <div class="col-12 p-3" id="MODERN-BOX">
+              <!-- 46 46 -->
+              <div class="py-2"><img  class="img-fluid" src="/images/block.svg" alt=""></div>
+              <div class=" py-2 SMALL-HEAD"><b>Blockchain & <br>
+                  WEB 3.0</b></div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="col-lg-3 col-sm-5 my-2">
+            <div class="col-12 p-3" id="MODERN-BOX">
+              <!-- 49 49 -->
+              <div class="py-2"><img  class="img-fluid" src="/images/growth-tool.svg" alt=""></div>
+              <div class=" py-2 SMALL-HEAD"><b>10x <br>
+                  Growth Tools</b></div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="col-lg-3 col-sm-5 my-2">
+            <div class="col-12 p-3" id="MODERN-BOX">
+              <div class="py-2"><img  class="img-fluid" src="/images/cyber.svg" alt=""></div>
+              <div class=" py-2 SMALL-HEAD"><b>Cyber security <br>
+                  & Privacy</b></div>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="col-lg-3 col-sm-5 my-2">
+            <div class="col-12 px-3 py-3" id="MODERN-BOX">
+              <div class="py-2"><img  class="img-fluid" src="/images/vr.svg" alt=""></div>
+              <div class=" py-2 SMALL-HEAD"><b>AR & <br> VR</b></div>
+            </div>
+          </div>
+          <!-- 6 -->
+          <div class="col-lg-3 col-sm-5 my-2">
+            <div class="col-12 p-3" id="MODERN-BOX">
+              <div class="py-2"><img  class="img-fluid" src="/images/data-analysis.svg" alt=""></div>
+              <div class=" py-2 SMALL-HEAD"><b>Data <br> Analysis
+                  Insights</b></div>
+            </div>
+          </div>
+          <!-- 7 -->
+          <div class="col-lg-3 col-sm-5 my-2">
+            <div class="col-12 p-3" id="MODERN-BOX">
+              <div class="py-2"><img  class="img-fluid" src="/images/remote.svg" alt=""></div>
+              <div class="py-2"><b class="SMALL-HEAD">Remote <br> Hirings</b></div>
+            </div>
+          </div>
+          <!-- 8 -->
+          <div class="col-lg-3 col-sm-5 my-2">
+            <div class="col-12 p-3" id="MODERN-BOX">
+              <div class="py-2"><img  class="img-fluid" src="/images/cyber-security.svg" alt=""></div>
+              <div class=" py-2 SMALL-HEAD"><b>The Digital <br> Nomad
+                  Lifestyle</b></div>
+            </div>
+          </div>
+
+          <div class="col-sm-11 d-flex justify-content-center my-5">
+            <div class="mt-2"><a href="" id="EVENT-BUTTON" class="SMALL">Register Now</a></div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- A Virtual Gathering CON 4 -->
+
+  <div class="container-fluid">
+    <div class="row my-5 justify-content-center">
+      <div class="col-lg-6">
+        <div class="row justify-content-center">
+          <div class="col-lg-11">
+            <div class="SUBHEAD">
+              Introducing Go Remote Summit
+            </div>
+            <diV>
+              <h1 class="HEADING"
+                style="font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; font-weight: 600;">
+                A Virtual Gathering for Remote Work Enthusiasts!
+              </h1>
+            </diV>
+            <p id="SMALL" class=" my-2" style="line-height: 30px;">In today’s digital age, remote work offers endless
+              possibilities, accompanied by a myriad of tools and products designed to enhance productivity. At Go
+              Remote Summit, we aim to connect and unite remote professionals from all corners of the globe, providing a
+              platform to candidly discuss the challenges we face, including remote team dynamics, reduced visibility,
+              and well-being.</p>
+            <p id="SMALL" style="line-height: 30px;">Let’s come together, share our experiences, and forge meaningful
+              connections to navigate the ever-changing landscape of remote work. It’s time to reconnect, learn, and
+              grow together at Go Remote Summit!</p>
+            <div class="col-sm-11 d-flex justify-content-center my-5">
+              <div class="mt-2"><a href="" id="EVENT-BUTTON" class="SMALL">Get Access</a></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-6 m-0 p-0">
+        <img class="img-fluid" src="/images/virtual-gathering-980x862.jpg.webp" alt="">
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- ---------What is the event about? 5--------- -->
+  <div class="container-fluid mb-4">
+    <div class="row justify-content-center">
+      <div class="col-sm-11 mt-5 justify-content-center">
+        <div class="row mt-5">
+          <div class="col-sm-12">
+            <div class="SUBHEAD">
+              Conference format
+            </div>
+            <div class="HEADING">
+              <h1 style="font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; font-weight: 700;">What is
+                the event about?</h1>
+            </div>
+          </div>
+          <!-- SECTION NO 1 OF TWO BOXES -->
+          <div class="col-sm-12 my-3">
+            <div class="row">
+              <!-- 1  BOX -->
+              <div class="col-lg-8 my-1">
+                <div class="row">
+                  <div class="col-lg-11" id="BC-IMG">
+                    <div class="row p-5">
+                      <div class="col-sm-10  HEADING-TEXT text-white">
+                        Strategies for Team and Business Growth:
+                      </div>
+                      <div class="col-sm-10 XSMALL-2 text-white">
+                        Get Actionable Insights and Strategies for Building & Scaling your team
+                        and Business.
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            
+              <!-- 2 -->
+              <div class="col-lg-4 my-1" id="BC-IMG">
+                <div class="row p-5">
+                  <div class="col-sm-11  HEADING-TEXT text-white">
+                    Collaboration:
+                  </div>
+                  <div class="col-sm-10 XSMALL-2 text-white">
+                    Find Partnership Opportunities in
+                    Remote Work Sphere
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- SECTION NO 2 OF TWO BOXES -->
+          <div class="col-sm-12 my-3">
+            <div class="row">
+              <!-- 1  BOX -->
+              <div class="col-lg-4 my-1" id="BC-IMG">
+                <div class="row p-5">
+                  <div class="col-sm-11  HEADING-TEXT text-white">
+                    Remote Work:
+                  </div>
+                  <div class="col-sm-10 XSMALL-2 text-white">
+                    Stay on top of the latest trends in tech
+                    & remote work
+                  </div>
+                </div>
+              </div>
+              <!-- 2  BOX -->
+              <div class="col-lg-8 my-1">
+                <div class="row justify-content-end">
+                  <div class="col-lg-11" id="BC-IMG">
+                    <div class="row p-5">
+                      <div class="col-sm-10 HEADING-TEXT text-white">
+                        Thriving in Remote <br> Work:
+                      </div>
+                      <div class="col-sm-10 XSMALL-2 text-white">
+                        Learn how to deal with remote work challenges, maintain a good work-life balance,
+                        and live mindfully when working remotely
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ENDS -->
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-sm-12 my-3">
+            <div class="row">
+              <!-- 1 box -->
+              <div class="col-lg-4 my-2">
+                <div class="row">
+                  <div class="col-sm-10" id="BC-IMG">
+                    <div class="row p-5">
+                      <div class="col-sm-12  HEADING-TEXT text-white">
+                        Empowering Growth
+                      </div>
+                      <div class="col-sm-12 XSMALL-2 text-white">
+                        Explore new tools to improve myself or
+                        my business in distributed work
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- 2 box -->
+              <div class="col-lg-4 my-2">
+                <div class="row justify-content-center">
+                  <div class="col-sm-10" id="BC-IMG">
+                    <div class="row p-5">
+                      <div class="col-sm-12  HEADING-TEXT text-white">
+                         Distributed Work Tools:
+                      </div>
+                      <div class="col-sm-12 XSMALL-2 text-white">
+                        Explore new tools to improve myself or
+                        my business in distributed work
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- 3 box -->
+              <div class="col-lg-4 my-2">
+                <div class="row justify-content-end">
+                  <div class="col-sm-10" id="BC-IMG">
+                    <div class="row p-5">
+                      <div class="col-sm-12  HEADING-TEXT text-white">
+                        Conversations on Trends:
+                      </div>
+                      <div class="col-sm-12 XSMALL-2 text-white">
+                        Engage in curated conversations
+about emerging trends and topics related
+to remote work.
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+      </div>
+    </div>
+  </div>
+
+
+  <!--  Inspiring Voices  6 -->
+  <div class="container-fluid mt-5" style="margin-bottom: 80px;">
+    <div class="row justify-content-center mt-5">
+      <div class="col-sm-11 mt-5">
+        <div class="row">
+          <div class="col-sm-12">
+            <h4 class="SUBHEAD">Inspiring Voices </h4>
+          </div>
+          <div class="col-sm-12 mb-4">
+            <h1 class="HEADING">Inspiring Voices Who Work Remotely</h1>
+          </div>
+          <div class="row " style="display: flex; justify-content: space-evenly; flex-wrap: wrap;">
+            <!-- 1 -->
+            <div class="card my-2" style="width: 18rem;" style="border:10px solid blue">
+              <img style=" filter: grayscale(100%);" src="/images/saba-480x447.png.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid" src="/images/Logo_03-2-480x223.png" alt="">
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Saba El-Hilo</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">SVP Engineering and Data – Unbounce</div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/goncalo-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Logo_01-2-480x223.png"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Goncalo Hall</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">CEO – NomadX</div>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/seun-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Logo_04-1-480x223.png"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Seun Agbede</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">Global Head of People – Branch</div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/maxine-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <img width="110px" height="51px" class="img-fluid"
+                  src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/pick-my-brain-480x223.png.webp"
+                  alt="">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Maxine</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">CEO – Pick my brain</div>
+              </div>
+            </div>
+            <!-- 5 -->
+            <div class="card my-2" style="width: 18rem;" style="border:10px solid blue">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/nadia-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Logo_02-2-480x223.png"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Nadia Harris</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">Founder – Remote Work Advocate</div>
+              </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/jordan-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Remote-Club_logo-480x223.png.webp"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Jordan Carroll</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">Founder – The Remote Job Club</div>
+              </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/lili-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Commsor_logo-1-480x223.png.webp"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Lili Kovari</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">xCommsor</div>
+              </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/alex-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <img width="110px" height="51px" class="img-fluid"
+                  src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/jobgether-480x223.png.webp"
+                  alt="">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Alex Hernandez</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">Co-Founder – Jobgether</div>
+              </div>
+            </div>
+            <!-- 9 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/seun-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Logo_04-1-480x223.png"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Seun Agbede</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">Global Head of People – Branch</div>
+              </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/maxine-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <img width="110px" height="51px" class="img-fluid"
+                  src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/pick-my-brain-480x223.png.webp"
+                  alt="">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Maxine</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">CEO – Pick my brain</div>
+              </div>
+            </div>
+            <!-- 11 -->
+            <div class="card my-2" style="width: 18rem;" style="border:10px solid blue">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/nadia-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Logo_02-2-480x223.png"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Nadia Harris</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">Founder – Remote Work Advocate</div>
+              </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/jordan-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Remote-Club_logo-480x223.png.webp"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Jordan Carroll</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">Founder – The Remote Job Club</div>
+              </div>
+            </div>
+            <!-- 13 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/nami-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/fbn-480x223.png.webp"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Nami Mufti</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">VP – FBN, Inc.</div>
+              </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/amanda-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <img width="110px" height="51px" class="img-fluid"
+                  src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/catalyst-480x223.png.webp"
+                  alt="">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Amanda Slavin</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">Founder – CatalystCreativ</div>
+              </div>
+            </div>
+            <!-- 15 -->
+            <div class="card my-2" style="width: 18rem;" style="border:10px solid blue">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/usman-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Logo_07-480x223.png"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Usamam Asif</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">CEO/ Founder – Devsinc</div>
+              </div>
+            </div>
+            <!-- 16 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/nami-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/fbn-480x223.png.webp"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Nami Mufti</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">VP – FBN, Inc.</div>
+              </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/mehroz-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <img width="110px" height="51px" class="img-fluid"
+                  src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/source/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Logo_06-1-480x223.png"
+                  alt="">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">M. Mahroz</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">CEO & Co-Founder – letsremotify</div>
+              </div>
+            </div>
+            <!-- 18 -->
+            <div class="card my-2" style="width: 18rem;" style="border:10px solid blue">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/10/image-85-480x447.png"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/ihorizon-480x223.png.webp"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Suhad Abu</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">Director of Service Development and Delivery – iHorizons</div>
+              </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="card my-2" style="width: 18rem;">
+              <img style=" filter: grayscale(100%);"
+                src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/09/jordan-480x447.png.webp"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <div><img width="110px" height="51px" class="img-fluid"
+                    src="https://cdn-kjgaj.nitrocdn.com/yuthKZGrswxMvLyQTbjtvyugGkvANPUK/assets/images/optimized/rev-f131c79/letsremotify.com/wp-content/uploads/2023/08/Remote-Club_logo-480x223.png.webp"
+                    alt=""></div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="SMALL-HEAD text-center">Jordan Carroll</div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class=" mx-1 LINKEDIN-ICON"><a href="/"><i class="bi bi-linkedin"></i></a></div>
+                    <a href="">
+                      <div style="border: 1px solid  lightgray; padding: 4px 7px; border-radius: 50%;"><img width="18px"
+                          height="18px" class="img-fluid" src="/images/pick-icon.svg" alt=""></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="XXSMALL mt-2">Founder – The Remote Job Club</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--  Agenda   -->
+  <div class="container-fluid" style="margin-bottom: 200px;">
+    <div class="row justify-content-center">
+      <div class="col-sm-9">
+        <div class="row">
+          <div class="col-sm-12 my-4">
+            <h1 class="HEADING"><b>Agenda</b></h1>
+          </div>
+          <div class="col-lg-4 col-sm-6 SMALL-HEAD" onclick="box(1)">
+            <p class="SMALL-HEAD" id="DAT-1">Day 01</p>
+          </div>
+          <div class="col-lg-4 col-sm-6 SMALL-HEAD" onclick="box(2)">
+            <p class="SMALL-HEAD" id="DAY-2">Day 02</p>
+          </div>
+          <div class="col-sm-12">
+            <div style="width: 100%; border: 1px solid rgb(193, 193, 193);"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2 col-md-5 LARGE text-center" style="color: rgb(175, 32, 34); ">(PT)</div>
+          <div class="col-lg-4 col-md-5 LARGE text-center" style="color:  rgb(175, 32, 34); ">(PKT)</div>
+        </div>
+        <!--  TABLE FOR DAY NO 1 -->
+        <div class="col-row" id="CONTAINER-HIDE-1">
+          <div class="col-sm-12 my-5">
+            
+        <!-- 1 -->
+        <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">Opening ceremony – Welcome Keynote + Overview</div>
+        </div>
+        <!-- 2 -->
+        <div class="row d-flex justify-content-center mt-5 align-items-center">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">How to build a strong culture in distributed teams</div>
+        </div>
+        <!-- 3 -->
+        <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">Explore how AI is driving the development of new work models and enhancing remote work experiences.</div>
+        </div>
+        <!-- 4 -->
+        <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">Wellness Session</div>
+        </div>
+         <!-- 5 -->
+         <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">The No Application Remote Job Search Strategy</div>
+        </div>
+         <!-- 6 -->
+         <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">Unlocking Global Talent: Leveraging Remote Work to Build Diverse and Inclusive Teams</div>
+        </div>
+         <!-- 7 -->
+         <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">Ensuring secure remote access and data protection</div>
+        </div>
+         <!-- 8 -->
+         <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">The integration of AI-driven automation in remote work processes.</div>
+        </div>
+         <!-- 9 -->
+         <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">Day 1 Closing Remarks</div>
+        </div>
+
+          </div>
+        </div>
+         <!--  TABLE FOR DAY NO 2 -->
+         <div class="col-row" id="CONTAINER-HIDE-2">
+          <div class="col-sm-12 my-5">
+            
+        <!-- 1 -->
+        <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">11:00 – 11:45 AMAM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">11:00 – 11:45 PM</div>
+          <div class="col-lg-6 SMALL-HEAD">Navigating the Future of Work</div>
+        </div>
+        <!-- 2 -->
+        <div class="row d-flex justify-content-center mt-5 align-items-center">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">12:00 – 12:45 PM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">12:00 – 12:45 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">Forging Connection and Meaningful Work in the Remote and Flex Work Era</div>
+        </div>
+        <!-- 3 -->
+        <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">01:00 – 01:30 PM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">01:00 – 01:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">Navigating the Remote Work-Life Integration</div>
+        </div>
+        <!-- 4 -->
+        <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">10:00 – 10:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">Wellness Session</div>
+        </div>
+         <!-- 5 -->
+         <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">02:30 – 03:00 PM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">03:00 – 03:30 AM</div>
+          <div class="col-lg-6 SMALL-HEAD">Discover Yourself through Remote Work</div>
+        </div>
+         <!-- 6 -->
+         <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">04:00 – 04:30 PM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">04:00 – 04:30 PM</div>
+          <div class="col-lg-6 SMALL-HEAD">Bridging the Gap: Human-AI Collaboration and the Democratization of Generative AI</div>
+        </div>
+         <!-- 7 -->
+         <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">04:30 – 05:30 PM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">04:30 – 05:30 PM</div>
+          <div class="col-lg-6 SMALL-HEAD">A Global Safety Net for Remote Teams and Digital Nomads</div>
+        </div>
+         <!-- 8 -->
+         <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">5:30 – 06:30 PM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">5:30 – 06:30 PM</div>
+          <div class="col-lg-6 SMALL-HEAD">Beyond Boundaries: Navigating Cross-Cultural Remote Collaborationdiv>
+        </div>
+         <!-- 9 -->
+         <div class="row d-flex justify-content-center mt-5">
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">6:30 – 07:30 PM</div>
+          <div class="col-lg-3 col-sm-5 SMALL-HEAD">6:30 – 07:30 PM</div>
+          <div class="col-lg-6 SMALL-HEAD">Closing Remarks</div>
+        </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--  Go Remote Summit is Made For   -->
+  <div class="container-fluid"
+    style="   background-image: url(/images/GoRemote-Summit-1.webp);  background-size: cover;">
+    <div class="row text-center text-white justify-content-center">
+      <div class="my-5"></div>
+      <div class="col-sm-12 mt-5 SMALL-HEAD" style=" color: rgb(175, 32, 34)"><h4>Is this for me?</h4></div>
+      <div class="col-sm-12">
+        <h1 class="HEADING">Go Remote Summit is Made For</h1>
+      </div>
+      <div class="col-sm-11 my-5">
+        <div class="row mb-5">
+          <div class="col-lg-4 my-2">
+            <div class="mt-5 mb-3"><img class="img-fluid" src="/images/remote-professionals.svg" alt=""></div>
+            <div class="LARGE-2 my-2">For All Remote Professionals</div>
+            <div class="XXSMALL mb-5">
+              Whether you’re new to remote work or a seasoned
+              remote worker, join us for a refreshing experience to
+              thrive in the remote work environment
+            </div>
+          </div>
+          <div class="col-lg-4 my-2">
+            <div class="mt-5 mb-3"><img class="img-fluid" src="/images/hr-focus.svg" alt=""></div>
+            <div class="LARGE-2 my-2">HR & L&D Focus</div>
+            <div class="XXSMALL mb-5">
+              Discover the biggest challenges and best
+              practices in remote work for HR, People Operations,
+              and Learning & Development professionals.
+            </div>
+          </div>
+          <div class="col-lg-4 my-2">
+            <div class="mt-5 mb-3"><img class="img-fluid" src="/images/leaders.svg" alt=""></div>
+            <div class="LARGE-2 my-2">
+              Leaders in Remote Work</div>
+            <div class="XXSMALL mb-5">
+              Gain valuable insights and direct advice
+              from successful founders and CEOs leading
+              remote companies.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Partners -->
+  <div class="container-fluid" style="background-color: white;">
+    <div class="row justify-content-center">
+      <div class="col-sm-10 mt-5">
+
+        <div class="row justify-content-between">
+          <div class="col-sm-12 text-center my-5">
+            <h1 class="HEADING-TEXT">Our Partners
+            </h1>
+          </div>
+         <div class="row justify-content-between mb-5">
+           <!-- 1 -->
+           <div class="col-md-4 my-2 d-flex justify-content-center">
+            <div><img class="img-fluid" src="/images/Logos_07-480x220.png" alt=""></div>
+          </div>
+          <!-- 2 -->
+          <div class="col-md-4 my-2 d-flex justify-content-center">
+            <div><img class="img-fluid" src="/images/wwr-480x220.webp" alt=""></div>
+          </div>
+          <!-- 3 -->
+          <div class="col-md-4 my-2 d-flex justify-content-center">
+            <div><img class="img-fluid" src="/images/lets-part-480x220.png" alt=""></div>
+          </div>
+          <!--  -->
+           <!-- 4 -->
+           <div class="col-md-4 my-2 d-flex justify-content-center">
+            <div><img class="img-fluid" src="/images/Logos_06-480x220.png" alt=""></div>
+          </div>
+          <!-- 5 -->
+          <div class="col-md-4 my-2 d-flex justify-content-center">
+            <div><img class="img-fluid" src="/images/test-partt-480x220.png" alt=""></div>
+          </div>
+          <!-- 6 -->
+          <div class="col-md-4 my-2 d-flex justify-content-center">
+            <div><img class="img-fluid" src="/images/dev-parr-480x220.png" alt=""></div>
+          </div>
+          <!-- 7 -->
+          <div class="col-md-4 my-2 d-flex justify-content-center">
+            <div><img class="img-fluid" src="/images/rwa-480x220.png" alt=""></div>
+          </div>
+          <!-- 8 -->
+          <div class="col-md-4 my-2 d-flex justify-content-center">
+            <div><img class="img-fluid" src="/images/safety-480x220.png" alt=""></div>
+          </div>
+          <!-- 9 -->
+          <div class="col-md-4 my-2 d-flex justify-content-center">
+            <div><img class="img-fluid" src="/images/job-480x220.png" alt=""></div>
+          </div>
+          
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--  Not an Ordinary Virtual Conference.  -->
+  <div class="container-fluid" >
+    <div class="row justify-content-center">
+      <div class="col-sm-10">
+        <div class="row text-center" style=" background-color: rgb(233, 240, 255);">
+          <div class="col-sm-12 mt-5">
+            <h4 class="SUBHEAD mt-5">Go Remote Summit</h4>
+          </div>
+          <div class="col-sm-12 my-3">
+            <h1 class="HEADING-TEXT">Not an Ordinary Virtual Conference.</h1>
+          </div>
+          <div class="col-sm-12 LARGE-2 mb-5">
+            Join us as we share our struggles, discuss our relationships with
+remote teams, address decreased visibility, and explore the importance of wellbeing.
+Let’s come together and make a difference!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- ---------------------------------------------------------- Curious?-------------------- -->
+
+    <div class="container-fluid" style="background-image:url(images/Background.png); background-size: 100% 100%;">
+      <div class="container-fluid mt-5" style="display: flex; justify-content: center; margin-top: 50px;">
+          <div class="row text-center" id="CCOLOR" style="width: 85%; margin-top: 90px;">
+              <h4 class="SUBHEAD">
+                  Curious?
+              </h4>
+
+              <h1>
+                  <haeding>Explore Our FAQs</haeding>
+              </h1>
+              <p id="XLARGE">
+                  Our platform empowers numerous companies to operate seamlessly, and they
+                  are
+                  vocal advocates of our service.
+              </p>
+          </div>
+      </div>
+
+      <!-- -----------------------------------------ACCORDIANS----------------------------------- -->
+
+
+      <div class="container-fluid mb-5">
+          <div class="row justify-content-center">
+
+              <div class="col-md-8 ">
+                  <div class="accordion accordion-flush" id="accordionFlushExample">
+                      <div class="accordion-item" style="border: 1px solid black; margin-top:10px; width: 100%;">
+                          <h2 class="accordion-header" id="flush-headingOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                  aria-controls="flush-collapseOne">
+                                  <h5 id="SMALL">What is SSL SOLUTIONS?</h5>
+                              </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body" id="SMALL">SSL SOLUTIONS is an exclusive community
+                                  comprising elite
+                                  remote software developers, designers, marketers, project managers, product
+                                  managers, and other tech professionals. Our platform provides talented
+                                  software
+                                  developers with opportunities to collaborate with U.S. companies</div>
+                          </div>
+                      </div>
+                      <div class="accordion-item" style="border: 1px solid black; margin-top:10px;">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                  aria-controls="flush-collapseTwo">
+                                  <h5 id="SMALL">How many interview rounds are typically involved in the
+                                      hiring
+                                      process
+                                      before
+                                      selection?</h5>
+                              </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body" id="SMALL">After signing up and uploading a resume,
+                                  you have
+                                  to
+                                  clear a
+                                  few assessments and pass out interviews to make yourself eligible for a wide
+                                  range
+                                  of jobs available based on your skills.</div>
+                          </div>
+                      </div>
+                      <div class="accordion-item" style="border: 1px solid black; margin-top:10px;">
+                          <h2 class="accordion-header" id="flush-headingThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                  aria-controls="flush-collapseThree">
+                                  <h5 id="SMALL">"Which categories of tech talent does SSL SOLUTIONS recruit?"
+                                  </h5>
+                              </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse"
+                              aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body" id="SMALL">We don't limit ourselves to a specific
+                                  set of
+                                  skills;
+                                  we're
+                                  actively recruiting from a pool of over 100 specialized professionals across
+                                  various
+                                  domains. These include Python, React/Node, Rails, Angular, Swift, React
+                                  Native,
+                                  Android, Java, Golang, PHP, Vue, UI/UX, Design, AI/ML, and many more</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+<!-- email section style-email_section.css  -->
+      <div class="container-fluid d-flex justify-content-center">
+          <%- include('Components/email_section'); %>
+      </div>
+
+      <!-- <div style="height: 100px;"></div> -->
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script>
+    // TIME DAY 1 AND DAY 2
+    function box(val){
+      var box1=document.getElementById('CONTAINER-HIDE-1');
+      var box2=document.getElementById('CONTAINER-HIDE-2');
+      var text1=document.getElementById('DAT-1');
+      var text2=document.getElementById('DAT-2');
+      if(val==1){
+        box1.style.display='block';
+        box2.style.display='none';
+      }
+      if(val==2){
+        box1.style.display='none';
+        box2.style.display='block';
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+    // Set the target date for the countdown
+    var targetDate = new Date('2023-12-31 23:59:59').getTime();
+
+    // Update the countdown every second
+    var countdownInterval = setInterval(function () {
+      var currentDate = new Date().getTime();
+      var timeLeft = targetDate - currentDate;
+
+      if (timeLeft <= 0) {
+        clearInterval(countdownInterval);
+        for (var i = 0; i < 8; i++) {
+          document.getElementById("days-ten-digit").innerHTML = "0";
+          document.getElementById("days-unit-digit").innerHTML = "0";
+          document.getElementById("hours-ten-digit").innerHTML = "0";
+          document.getElementById("hours-unit-digit").innerHTML = "0";
+          document.getElementById("minutes-ten-digit").innerHTML = "0";
+          document.getElementById("minutes-unit-digit").innerHTML = "0";
+          document.getElementById("seconds-ten-digit").innerHTML = "0";
+          document.getElementById("seconds-unit-digit").innerHTML = "0";
+        }
+      } else {
+        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("days-ten-digit").innerHTML = Math.floor(days / 10);
+        document.getElementById("days-unit-digit").innerHTML = days % 10;
+        document.getElementById("hours-ten-digit").innerHTML = Math.floor(hours / 10);
+        document.getElementById("hours-unit-digit").innerHTML = hours % 10;
+        document.getElementById("minutes-ten-digit").innerHTML = Math.floor(minutes / 10);
+        document.getElementById("minutes-unit-digit").innerHTML = minutes % 10;
+        document.getElementById("seconds-ten-digit").innerHTML = Math.floor(seconds / 10);
+        document.getElementById("seconds-unit-digit").innerHTML = seconds % 10;
+      }
+    }, 1000); // Update every 1 second
+  </script>
+</body>
+
 </html>

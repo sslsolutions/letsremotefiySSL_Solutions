@@ -15,6 +15,14 @@
     <link href="/css/fontstyle.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+           <!-- CND For Ajax  select country and timer-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+  />
+  <!-- select tim end -->
+  <!-- date -->
+  <!-- end -->
     <title>step-two</title>
     <style>
         body {
@@ -80,7 +88,7 @@
                                     <div class="row">
                                         <div class="col-md-12 col-lg-8  ">
                                             <div class="calendar-container">
-                                                <header class="calendar-header">
+                                                <!-- <header class="calendar-header">
                                                     <p class="calendar-current-date"></p>
                                                     <div class="calendar-navigation">
                                                         <span id="calendar-prev"
@@ -90,9 +98,9 @@
                                                             class="material-symbols-rounded fa fa-arrow-right">
                                                         </span>
                                                     </div>
-                                                </header>
+                                                </header> -->
 
-                                                <div class="calendar-body">
+                                                <!-- <div class="calendar-body">
                                                     <ul class="calendar-weekdays">
                                                         <li>Sun</li>
                                                         <li>Mon</li>
@@ -104,94 +112,503 @@
                                                     </ul>
                                                  
                                                     <ul class="calendar-dates"></ul>
-                                                </div>
+                                                </div> -->
                                                 <h6 class="text-zone">Time zone</h6>
-                                                <div class="drop-list w-100">
-                                                    <div class="dropdown dropup">
-                                                        <span class="M-time dropdown-toggle" data-toggle="dropdown">
-                                                            <i class="fa fa-globe" aria-hidden="true"></i>
-                                                            <span id="timeText">Mountain Time - US & Canada
-                                                                (3:51am)</span>
-                                                        </span>
-                                                        <div class="container dropdown-menu list">
-                                                            <div class="search text-center">
-                                                                <input type="text" placeholder="Search">
-                                                            </div>
-                                                            <div class="container">
-                                                                <span>Time Zone</span>
-                                                                <span class="btn btn-outline-danger switch-btn">Let
-                                                                    See</span>
-                                                                <h5>US/Canada</h5>
-                                                                    <!-- Time zone options -->
-                                                                    <option value="-12:00"> (GMT -12:00) Eniwetok,
-                                                                        Kwajalein
-                                                                    </option>
-                                                                    <option value="-11:00"> (GMT -11:00) Midway Island,
-                                                                        Samoa</option>
-                                                                    <option value="-10:00"> (GMT -10:00) Hawaii</option>
-                                                                    <option value="-09:50"> (GMT -9:30) Taiohae</option>
-                                                                    <option value="-09:00"> (GMT -9:00) Alaska</option>
-                                                                    <option value="-08:00"> (GMT -8:00) Pacific Time
-                                                                    </option>
-                                                                    <option value="-07:00"> (GMT -7:00) Mountain Time
-                                                                    </option>
-                                                                    <option value="-06:00"> (GMT -6:00) Central Time
-                                                                    </option>
-                                                                    <option value="-05:00"> (GMT -5:00) Eastern Time
-                                                                    </option>
-                                                                    <option value="-04:50"> (GMT -4:30) Caracas</option>
-                                                                    <option value="-04:00"> (GMT -4:00) Atlantic Time
-                                                                    </option>
-                                                                    <option value="-03:50"> (GMT -3:30) Newfoundland
-                                                                    </option>
-                                                                    <option value="-03:00"> (GMT -3:00) Brazil</option>
-                                                                    <option value="-02:00"> (GMT -2:00) Mid-Atlantic
-                                                                    </option>
-                                                                    <option value="-01:00"> (GMT -1:00) Azores</option>
-                                                                    <option value="+01:00"> (GMT +1:00) Brussels
-                                                                    </option>
-                                                                    <option value="+02:00"> (GMT +2:00) Kaliningrad
-                                                                    </option>
-                                                                    <option value="+03:00"> (GMT +3:00) Baghdad</option>
-                                                                    <option value="+03:50"> (GMT +3:30) Tehran</option>
-                                                                    <option value="+04:00"> (GMT +4:00) Abu Dhabi
-                                                                    </option>
-                                                                    <option value="+04:50"> (GMT +4:30) Kabul</option>
-                                                                    <option value="+05:00"> (GMT +5:00) Ekaterinburg
-                                                                    </option>
-                                                                    <option value="+05:50"> (GMT +5:30) Bombay</option>
-                                                                    <option value="+05:75"> (GMT +5:45) Kathmandu
-                                                                    </option>
-                                                                    <option value="+06:00"> (GMT +6:00) Almaty</option>
-                                                                    <option value="+06:50"> (GMT +6:30) Yangon</option>
-                                                                    <option value="+07:00"> (GMT +7:00) Bangkok</option>
-                                                                    <option value="+08:00"> (GMT +8:00) Beijing</option>
-                                                                    <option value="+08:75"> (GMT +8:45) Eucla</option>
-                                                                    <option value="+09:00"> (GMT +9:00) Tokyo</option>
-                                                                    <option value="+09:50"> (GMT +9:30) Adelaide
-                                                                    </option>
-                                                                    <option value="+10:00"> (GMT +10:00) Eastern
-                                                                    </option>
-                                                                    <option value="+10:50"> (GMT +10:30) Lord</option>
-                                                                    <option value="+11:00"> (GMT +11:00) Magadan
-                                                                    </option>
-                                                                    <option  value="+11:50"> (GMT +11:30) Norfolk Island
-                                                                    </option>
-                                                                    <option value="+12:00"> (GMT +12:00) Auckland
-                                                                    </option>
-                                                                    <option value="+12:75"> (GMT +12:45) Chatham
-                                                                    </option>
-                                                                    <option value="+13:00"> (GMT +13:00) Apia</option>
-                                                                    <option value="+14:00"> (GMT +14:00) Tokelau
-                                                                    </option>  
-                                                            </div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
+                                                <select
+                                                id="countryTimeZones"
+                                                name="countryTimeZones"
+                                                class="js-example-basic-single" style="width: 80%;"
+                                              >
+                                                <option value="afghanistan">
+                                                  (GMT+04:30) Afghanistan
+                                                </option>
+                                                <option value="armenia">(GMT+04:00) Armenia</option>
+                                                <option value="azerbaijan">
+                                                  (GMT+04:00) Azerbaijan
+                                                </option>
+                                                <option value="bahrain">(GMT+03:00) Bahrain</option>
+                                                <option value="bangladesh">
+                                                  (GMT+06:00) Bangladesh
+                                                </option>
+                                                <option value="bhutan">(GMT+06:00) Bhutan</option>
+                                                <option value="brunei">(GMT+08:00) Brunei</option>
+                                                <option value="cambodia">
+                                                  (GMT+07:00) Cambodia
+                                                </option>
+                                                <option value="china">(GMT+08:00) China</option>
+                                                <option value="cyprus">(GMT+02:00) Cyprus</option>
+                                                <option value="georgia">(GMT+04:00) Georgia</option>
+                                                <option value="india">(GMT+05:30) India</option>
+                                                <option value="indonesia_central">
+                                                  (GMT+08:00) Indonesia (Central)
+                                                </option>
+                                                <option value="indonesia_east">
+                                                  (GMT+09:00) Indonesia (East)
+                                                </option>
+                                                <option value="indonesia_west">
+                                                  (GMT+07:00) Indonesia (West)
+                                                </option>
+                                                <option value="iran">(GMT+03:30) Iran</option>
+                                                <option value="iraq">(GMT+03:00) Iraq</option>
+                                                <option value="israel">(GMT+02:00) Israel</option>
+                                                <option value="japan">(GMT+09:00) Japan</option>
+                                                <option value="jordan">(GMT+03:00) Jordan</option>
+                                                <option value="kazakhstan_east">
+                                                  (GMT+06:00) Kazakhstan (East)
+                                                </option>
+                                                <option value="kazakhstan_west">
+                                                  (GMT+05:00) Kazakhstan (West)
+                                                </option>
+                                                <option value="kuwait">(GMT+03:00) Kuwait</option>
+                                                <option value="kyrgyzstan">
+                                                  (GMT+06:00) Kyrgyzstan
+                                                </option>
+                                                <option value="laos">(GMT+07:00) Laos</option>
+                                                <option value="lebanon">(GMT+02:00) Lebanon</option>
+                                                <option value="malaysia">
+                                                  (GMT+08:00) Malaysia
+                                                </option>
+                                                <option value="maldives">
+                                                  (GMT+05:00) Maldives
+                                                </option>
+                                                <option value="mongolia">
+                                                  (GMT+08:00) Mongolia
+                                                </option>
+                                                <option value="myanmar">(GMT+06:30) Myanmar</option>
+                                                <option value="nepal">(GMT+05:45) Nepal</option>
+                                                <option value="north_korea">
+                                                  (GMT+09:00) North Korea
+                                                </option>
+                                                <option value="oman">(GMT+04:00) Oman</option>
+                                                <option value="pakistan">
+                                                  (GMT+05:00) Pakistan
+                                                </option>
+                                                <option value="palestine">
+                                                  (GMT+02:00) Palestine
+                                                </option>
+                                                <option value="philippines">
+                                                  (GMT+08:00) Philippines
+                                                </option>
+                                                <option value="qatar">(GMT+03:00) Qatar</option>
+                                                <option value="saudi_arabia">
+                                                  (GMT+03:00) Saudi Arabia
+                                                </option>
+                                                <option value="singapore">
+                                                  (GMT+08:00) Singapore
+                                                </option>
+                                                <option value="south_korea">
+                                                  (GMT+09:00) South Korea
+                                                </option>
+                                                <option value="sri_lanka">
+                                                  (GMT+05:30) Sri Lanka
+                                                </option>
+                                                <option value="syria">(GMT+02:00) Syria</option>
+                                                <option value="taiwan">(GMT+08:00) Taiwan</option>
+                                                <option value="tajikistan">
+                                                  (GMT+05:00) Tajikistan
+                                                </option>
+                                                <option value="thailand">
+                                                  (GMT+07:00) Thailand
+                                                </option>
+                                                <option value="turkey">(GMT+03:00) Turkey</option>
+                                                <option value="turkmenistan">
+                                                  (GMT+05:00) Turkmenistan
+                                                </option>
+                                                <option value="united_arab_emirates">
+                                                  (GMT+04:00) United Arab Emirates
+                                                </option>
+                                                <option value="uzbekistan">
+                                                  (GMT+05:00) Uzbekistan
+                                                </option>
+                                                <option value="vietnam">(GMT+07:00) Vietnam</option>
+                                                <option value="yemen">(GMT+03:00) Yemen</option>
+                                                <option value="(GMT+01:00) Albania">
+                                                  (GMT+01:00) Albania
+                                                </option>
+                                                <option value="(GMT+01:00) Andorra">
+                                                  (GMT+01:00) Andorra
+                                                </option>
+                                                <option value="(GMT+02:00) Austria">
+                                                  (GMT+02:00) Austria
+                                                </option>
+                                                <option value="(GMT+02:00) Belarus">
+                                                  (GMT+02:00) Belarus
+                                                </option>
+                                                <option value="(GMT+01:00) Belgium">
+                                                  (GMT+01:00) Belgium
+                                                </option>
+                                                <option value="(GMT+01:00) Bosnia and Herzegovina">
+                                                  (GMT+01:00) Bosnia and Herzegovina
+                                                </option>
+                                                <option value="(GMT+02:00) Bulgaria">
+                                                  (GMT+02:00) Bulgaria
+                                                </option>
+                                                <option value="(GMT+01:00) Croatia">
+                                                  (GMT+01:00) Croatia
+                                                </option>
+                                                <option value="(GMT+02:00) Cyprus">
+                                                  (GMT+02:00) Cyprus
+                                                </option>
+                                                <option value="(GMT+02:00) Czech Republic">
+                                                  (GMT+02:00) Czech Republic
+                                                </option>
+                                                <option value="(GMT+01:00) Denmark">
+                                                  (GMT+01:00) Denmark
+                                                </option>
+                                                <option value="(GMT+01:00) Estonia">
+                                                  (GMT+01:00) Estonia
+                                                </option>
+                                                <option value="(GMT+02:00) Finland">
+                                                  (GMT+02:00) Finland
+                                                </option>
+                                                <option value="(GMT+01:00) France">
+                                                  (GMT+01:00) France
+                                                </option>
+                                                <option value="(GMT+01:00) Germany">
+                                                  (GMT+01:00) Germany
+                                                </option>
+                                                <option value="(GMT+02:00) Greece">
+                                                  (GMT+02:00) Greece
+                                                </option>
+                                                <option value="(GMT+01:00) Hungary">
+                                                  (GMT+01:00) Hungary
+                                                </option>
+                                                <option value="(GMT+00:00) Iceland">
+                                                  (GMT+00:00) Iceland
+                                                </option>
+                                                <option value="(GMT) Ireland">(GMT) Ireland</option>
+                                                <option value="(GMT) Italy">(GMT) Italy</option>
+                                                <option value="(GMT+02:00) Kosovo">
+                                                  (GMT+02:00) Kosovo
+                                                </option>
+                                                <option value="(GMT+02:00) Latvia">
+                                                  (GMT+02:00) Latvia
+                                                </option>
+                                                <option value="(GMT+02:00) Liechtenstein">
+                                                  (GMT+02:00) Liechtenstein
+                                                </option>
+                                                <option value="(GMT+01:00) Lithuania">
+                                                  (GMT+01:00) Lithuania
+                                                </option>
+                                                <option value="(GMT+01:00) Luxembourg">
+                                                  (GMT+01:00) Luxembourg
+                                                </option>
+                                                <option value="(GMT+01:00) Malta">
+                                                  (GMT+01:00) Malta
+                                                </option>
+                                                <option value="(GMT+01:00) Moldova">
+                                                  (GMT+01:00) Moldova
+                                                </option>
+                                                <option value="(GMT+02:00) Monaco">
+                                                  (GMT+02:00) Monaco
+                                                </option>
+                                                <option value="(GMT+01:00) Montenegro">
+                                                  (GMT+01:00) Montenegro
+                                                </option>
+                                                <option value="(GMT+01:00) Netherlands">
+                                                  (GMT+01:00) Netherlands
+                                                </option>
+                                                <option value="(GMT+01:00) North Macedonia">
+                                                  (GMT+01:00) North Macedonia
+                                                </option>
+                                                <option value="(GMT+01:00) Norway">
+                                                  (GMT+01:00) Norway
+                                                </option>
+                                                <option value="(GMT+01:00) Poland">
+                                                  (GMT+01:00) Poland
+                                                </option>
+                                                <option value="(GMT+00:00) Portugal">
+                                                  (GMT+00:00) Portugal
+                                                </option>
+                                                <option value="(GMT+02:00) Romania">
+                                                  (GMT+02:00) Romania
+                                                </option>
+                                                <option value="(GMT+01:00) San Marino">
+                                                  (GMT+01:00) San Marino
+                                                </option>
+                                                <option value="(GMT+01:00) Serbia">
+                                                  (GMT+01:00) Serbia
+                                                </option>
+                                                <option value="(GMT+01:00) Slovakia">
+                                                  (GMT+01:00) Slovakia
+                                                </option>
+                                                <option value="(GMT+01:00) Slovenia">
+                                                  (GMT+01:00) Slovenia
+                                                </option>
+                                                <option value="(GMT+01:00) Spain">
+                                                  (GMT+01:00) Spain
+                                                </option>
+                                                <option value="(GMT+01:00) Sweden">
+                                                  (GMT+01:00) Sweden
+                                                </option>
+                                                <option value="(GMT+01:00) Switzerland">
+                                                  (GMT+01:00) Switzerland
+                                                </option>
+                                                <option value="(GMT+02:00) Ukraine">
+                                                  (GMT+02:00) Ukraine
+                                                </option>
+                                                <option value="(GMT) United Kingdom">
+                                                  (GMT) United Kingdom
+                                                </option>
+                                                <option value="(GMT+02:00) Vatican City">
+                                                  (GMT+02:00) Vatican City
+                                                </option>
+                                                <option value="(GMT) Algeria">(GMT) Algeria</option>
+                                                <option value="(GMT) Angola">(GMT) Angola</option>
+                                                <option value="(GMT+02:00) Benin">
+                                                  (GMT+02:00) Benin
+                                                </option>
+                                                <option value="(GMT) Botswana">
+                                                  (GMT) Botswana
+                                                </option>
+                                                <option value="(GMT) Burkina Faso">
+                                                  (GMT) Burkina Faso
+                                                </option>
+                                                <option value="(GMT) Burundi">(GMT) Burundi</option>
+                                                <option value="(GMT) Cabo Verde">
+                                                  (GMT) Cabo Verde
+                                                </option>
+                                                <option value="(GMT+02:00) Cameroon">
+                                                  (GMT+02:00) Cameroon
+                                                </option>
+                                                <option value="(GMT) Central African Republic">
+                                                  (GMT) Central African Republic
+                                                </option>
+                                                <option value="(GMT+02:00) Chad">
+                                                  (GMT+02:00) Chad
+                                                </option>
+                                                <option value="(GMT+02:00) Comoros">
+                                                  (GMT+02:00) Comoros
+                                                </option>
+                                                <option value="(GMT) Congo (Brazzaville)">
+                                                  (GMT) Congo (Brazzaville)
+                                                </option>
+                                                <option value="(GMT+02:00) Congo (Kinshasa)">
+                                                  (GMT+02:00) Congo (Kinshasa)
+                                                </option>
+                                                <option value="(GMT) Djibouti">
+                                                  (GMT) Djibouti
+                                                </option>
+                                                <option value="(GMT) Egypt">(GMT) Egypt</option>
+                                                <option value="(GMT) Equatorial Guinea">
+                                                  (GMT) Equatorial Guinea
+                                                </option>
+                                                <option value="(GMT) Eritrea">(GMT) Eritrea</option>
+                                                <option value="(GMT+02:00) Eswatini">
+                                                  (GMT+02:00) Eswatini
+                                                </option>
+                                                <option value="(GMT+02:00) Ethiopia">
+                                                  (GMT+02:00) Ethiopia
+                                                </option>
+                                                <option value="(GMT) Gabon">(GMT) Gabon</option>
+                                                <option value="(GMT) Gambia">(GMT) Gambia</option>
+                                                <option value="(GMT) Ghana">(GMT) Ghana</option>
+                                                <option value="(GMT) Guinea">(GMT) Guinea</option>
+                                                <option value="(GMT) Guinea-Bissau">
+                                                  (GMT) Guinea-Bissau
+                                                </option>
+                                                <option value="(GMT) Ivory Coast">
+                                                  (GMT) Ivory Coast
+                                                </option>
+                                                <option value="(GMT+02:00) Kenya">
+                                                  (GMT+02:00) Kenya
+                                                </option>
+                                                <option value="(GMT) Lesotho">(GMT) Lesotho</option>
+                                                <option value="(GMT) Liberia">(GMT) Liberia</option>
+                                                <option value="(GMT) Libya">(GMT) Libya</option>
+                                                <option value="(GMT+02:00) Madagascar">
+                                                  (GMT+02:00) Madagascar
+                                                </option>
+                                                <option value="(GMT+02:00) Malawi">
+                                                  (GMT+02:00) Malawi
+                                                </option>
+                                                <option value="(GMT) Mali">(GMT) Mali</option>
+                                                <option value="(GMT) Mauritania">
+                                                  (GMT) Mauritania
+                                                </option>
+                                                <option value="(GMT+02:00) Mauritius">
+                                                  (GMT+02:00) Mauritius
+                                                </option>
+                                                <option value="(GMT) Morocco">(GMT) Morocco</option>
+                                                <option value="(GMT) Mozambique">
+                                                  (GMT) Mozambique
+                                                </option>
+                                                <option value="(GMT+02:00) Namibia">
+                                                  (GMT+02:00) Namibia
+                                                </option>
+                                                <option value="(GMT+02:00) Niger">
+                                                  (GMT+02:00) Niger
+                                                </option>
+                                                <option value="(GMT+02:00) Nigeria">
+                                                  (GMT+02:00) Nigeria
+                                                </option>
+                                                <option value="(GMT+02:00) Rwanda">
+                                                  (GMT+02:00) Rwanda
+                                                </option>
+                                                <option value="(GMT+02:00) Sao Tome and Principe">
+                                                  (GMT+02:00) Sao Tome and Principe
+                                                </option>
+                                                <option value="(GMT) Senegal">(GMT) Senegal</option>
+                                                <option value="(GMT) Seychelles">
+                                                  (GMT) Seychelles
+                                                </option>
+                                                <option value="(GMT) Sierra Leone">
+                                                  (GMT) Sierra Leone
+                                                </option>
+                                                <option value="(GMT) Somalia">(GMT) Somalia</option>
+                                                <option value="(GMT) South Africa">
+                                                  (GMT) South Africa
+                                                </option>
+                                                <option value="(GMT) South Sudan">
+                                                  (GMT) South Sudan
+                                                </option>
+                                                <option value="(GMT+02:00) Sudan">
+                                                  (GMT+02:00) Sudan
+                                                </option>
+                                                <option value="(GMT) Tanzania">
+                                                  (GMT) Tanzania
+                                                </option>
+                                                <option value="(GMT+02:00) Togo">
+                                                  (GMT+02:00) Togo
+                                                </option>
+                                                <option value="(GMT+03:00) Tunisia">
+                                                  (GMT+03:00) Tunisia
+                                                </option>
+                                                <option value="(GMT+02:00) Uganda">
+                                                  (GMT+02:00) Uganda
+                                                </option>
+                                                <option value="(GMT+02:00) Zambia">
+                                                  (GMT+02:00) Zambia
+                                                </option>
+                                                <option value="(GMT+02:00) Zimbabwe">
+                                                  (GMT+02:00) Zimbabwe
+                                                </option>
+                                                <option value="(GMT-09:00) Alaska">
+                                                  (GMT-09:00) Alaska
+                                                </option>
+                                                <option value="(GMT-07:00) Arizona">
+                                                  (GMT-07:00) Arizona
+                                                </option>
+                                                <option
+                                                  value="(GMT-05:00) Central Time (US & Canada)"
+                                                >
+                                                  (GMT-05:00) Central Time (US & Canada)
+                                                </option>
+                                                <option
+                                                  value="(GMT-06:00) Chihuahua, La Paz, Mazatlan"
+                                                >
+                                                  (GMT-06:00) Chihuahua, La Paz, Mazatlan
+                                                </option>
+                                                <option
+                                                  value="(GMT-07:00) Mountain Time (US & Canada)"
+                                                >
+                                                  (GMT-07:00) Mountain Time (US & Canada)
+                                                </option>
+                                                <option
+                                                  value="(GMT-08:00) Pacific Time (US & Canada)"
+                                                >
+                                                  (GMT-08:00) Pacific Time (US & Canada)
+                                                </option>
+                                                <option value="(GMT-07:00) Saskatchewan">
+                                                  (GMT-07:00) Saskatchewan
+                                                </option>
+                    
+                                                <!-- South American Countries -->
+                                                <option value="(GMT-03:00) Argentina, Buenos Aires">
+                                                  (GMT-03:00) Argentina, Buenos Aires
+                                                </option>
+                                                <option value="(GMT-03:00) Brasilia">
+                                                  (GMT-03:00) Brasilia
+                                                </option>
+                                                <option value="(GMT-05:00) Bogota, Lima, Quito">
+                                                  (GMT-05:00) Bogota, Lima, Quito
+                                                </option>
+                                                <option value="(GMT-04:00) Caracas">
+                                                  (GMT-04:00) Caracas
+                                                </option>
+                                                <option value="(GMT-04:00) Georgetown">
+                                                  (GMT-04:00) Georgetown
+                                                </option>
+                                                <option value="(GMT-03:00) Greenland">
+                                                  (GMT-03:00) Greenland
+                                                </option>
+                                                <option
+                                                  value="(GMT-05:00) Eastern Time (US & Canada)"
+                                                >
+                                                  (GMT-05:00) Eastern Time (US & Canada)
+                                                </option>
+                                                <option value="(GMT-04:00) Manaus">
+                                                  (GMT-04:00) Manaus
+                                                </option>
+                                                <option value="(GMT-04:00) Santiago">
+                                                  (GMT-04:00) Santiago
+                                                </option>
+                                                <option value="(GMT-03:00) Montevideo">
+                                                  (GMT-03:00) Montevideo
+                                                </option>
+                                                <option value="(GMT+12:00) Fiji">
+                                                  (GMT+12:00) Fiji
+                                                </option>
+                                                <option value="(GMT+12:00) Marshall Islands">
+                                                  (GMT+12:00) Marshall Islands
+                                                </option>
+                                                <option value="(GMT+12:00) Nauru">
+                                                  (GMT+12:00) Nauru
+                                                </option>
+                                                <option value="(GMT+12:00) Tuvalu">
+                                                  (GMT+12:00) Tuvalu
+                                                </option>
+                                                <option value="(GMT+11:00) New Caledonia">
+                                                  (GMT+11:00) New Caledonia
+                                                </option>
+                                                <option value="(GMT+11:00) Solomon Islands">
+                                                  (GMT+11:00) Solomon Islands
+                                                </option>
+                                                <option value="(GMT+11:00) Vanuatu">
+                                                  (GMT+11:00) Vanuatu
+                                                </option>
+                                                <option value="(GMT+11:00) Norfolk Island">
+                                                  (GMT+11:00) Norfolk Island
+                                                </option>
+                                                <option value="(GMT+10:00) Guam, Port Moresby">
+                                                  (GMT+10:00) Guam, Port Moresby
+                                                </option>
+                                                <option value="(GMT+10:00) Papua New Guinea">
+                                                  (GMT+10:00) Papua New Guinea
+                                                </option>
+                                                <option value="(GMT+10:00) Palau">
+                                                  (GMT+10:00) Palau
+                                                </option>
+                                                <option value="(GMT+10:00) Truk">
+                                                  (GMT+10:00) Truk
+                                                </option>
+                                                <option value="(GMT+10:00) Yap">
+                                                  (GMT+10:00) Yap
+                                                </option>
+                                                <option value="(GMT+10:00) Funafuti">
+                                                  (GMT+10:00) Funafuti
+                                                </option>
+                                                <option value="(GMT+10:00) Wake Island">
+                                                  (GMT+10:00) Wake Island
+                                                </option>
+                                                <option value="(GMT+10:00) Chuuk">
+                                                  (GMT+10:00) Chuuk
+                                                </option>
+                                                <option value="(GMT+10:00) Saipan">
+                                                  (GMT+10:00) Saipan
+                                                </option>
+                                                <option value="(GMT+10:00) Pohnpei">
+                                                  (GMT+10:00) Pohnpei
+                                                </option>
+                                                <option value="(GMT+10:00) Kosrae">
+                                                  (GMT+10:00) Kosrae
+                                                </option>
+                                              </select>
+                                              <div class="mt-4">
+                                                <label>Day</label>
+  <input type="date" id="" name="">
+                                              </div>
+                                                
                                             </div>
 
                                         </div>
@@ -237,128 +654,148 @@
     </div>
 
     <script>
-
         let date = new Date();
         let year = date.getFullYear();
         let month = date.getMonth();
-
+  
         const day = document.querySelector(".calendar-dates");
-
-        const currdate = document
-            .querySelector(".calendar-current-date");
-
-        const prenexIcons = document
-            .querySelectorAll(".calendar-navigation span");
-
+  
+        const currdate = document.querySelector(".calendar-current-date");
+  
+        const prenexIcons = document.querySelectorAll(
+          ".calendar-navigation span"
+        );
+  
         // Array of month names
         const months = [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
         ];
-
+  
         // Function to generate the calendar
         const manipulate = () => {
-
-            // Get the first day of the month
-            let dayone = new Date(year, month, 1).getDay();
-
-            // Get the last date of the month
-            let lastdate = new Date(year, month + 1, 0).getDate();
-            // Get the day of the last date of the month
-            let dayend = new Date(year, month, lastdate).getDay();
-
-            // Get the last date of the previous month
-            let monthlastdate = new Date(year, month, 0).getDate();
-
-            // Variable to store the generated calendar HTML
-            let lit = "";
-
-            // Loop to add the last dates of the previous month
-            for (let i = dayone; i > 0; i--) {
-                lit +=
-                    `<li class="inactive">${monthlastdate - i + 1}</li>`;
-            }
-
-            // Loop to add the dates of the current month
-            for (let i = 1; i <= lastdate; i++) {
-                // Check if the current date is today
-                let isToday = i === date.getDate()
-                    && month === new Date().getMonth()
-                    && year === new Date().getFullYear()
-                    ? "active"
-                    : "";
-                lit += `<li class="${isToday}">${i}</li>`;
-            }
-
-            // Loop to add the first dates of the next month
-            for (let i = dayend; i < 6; i++) {
-                lit += `<li class="inactive">${i - dayend + 1}</li>`
-            }
-
-            // Update the text of the current date element 
-            // with the formatted current month and year
-            currdate.innerText = `${months[month]} ${year}`;
-
-            // update the HTML of the dates element 
-            // with the generated calendar
-            day.innerHTML = lit;
-        }
-
+          // Get the first day of the month
+          let dayone = new Date(year, month, 1).getDay();
+  
+          // Get the last date of the month
+          let lastdate = new Date(year, month + 1, 0).getDate();
+  
+          // Get the day of the last date of the month
+          let dayend = new Date(year, month, lastdate).getDay();
+  
+          // Get the last date of the previous month
+          let monthlastdate = new Date(year, month, 0).getDate();
+  
+          // Variable to store the generated calendar HTML
+          let lit = "";
+  
+          // Loop to add the last dates of the previous month
+          for (let i = dayone; i > 0; i--) {
+            lit += `<li class="inactive">${monthlastdate - i + 1}</li>`;
+          }
+  
+          // Loop to add the dates of the current month
+          for (let i = 1; i <= lastdate; i++) {
+            // Check if the current date is today
+            let isToday =
+              i === date.getDate() &&
+              month === new Date().getMonth() &&
+              year === new Date().getFullYear()
+                ? "active"
+                : "";
+            lit += `<li class="${isToday}">${i}</li>`;
+          }
+  
+          // Loop to add the first dates of the next month
+          for (let i = dayend; i < 6; i++) {
+            lit += `<li class="inactive">${i - dayend + 1}</li>`;
+          }
+  
+          // Update the text of the current date element
+          // with the formatted current month and year
+          currdate.innerText = `${months[month]} ${year}`;
+  
+          // update the HTML of the dates element
+          // with the generated calendar
+          day.innerHTML = lit;
+        };
+  
         manipulate();
-
+  
         // Attach a click event listener to each icon
-        prenexIcons.forEach(icon => {
-
-            // When an icon is clicked
-            icon.addEventListener("click", () => {
-
-                // Check if the icon is "calendar-prev"
-                // or "calendar-next"
-                month = icon.id === "calendar-prev" ? month - 1 : month + 1;
-                
-                // Check if the month is out of range
-                if (month < 0 || month > 11) {
-                    // Set the date to the first day of the 
-                    // month with the new year
-                    date = new Date(year, month, new Date().getDate());
-                    // Set the year to the new year
-                    year = date.getFullYear();
-                    // Set the month to the new month
-                    month = date.getMonth();
-                }
-
-                else {
-
-                    // Set the date to the current date
-                    date = new Date();
-                }
-
-                // Call the manipulate function to 
-                // update the calendar display
-                manipulate();
-            });
+        prenexIcons.forEach((icon) => {
+          // When an icon is clicked
+          icon.addEventListener("click", () => {
+            // Check if the icon is "calendar-prev"
+            // or "calendar-next"
+            month = icon.id === "calendar-prev" ? month - 1 : month + 1;
+  
+            // Check if the month is out of range
+            if (month < 0 || month > 11) {
+              // Set the date to the first day of the
+              // month with the new year
+              date = new Date(year, month, new Date().getDate());
+  
+              // Set the year to the new year
+              year = date.getFullYear();
+  
+              // Set the month to the new month
+              month = date.getMonth();
+            } else {
+              // Set the date to the current date
+              date = new Date();
+            }
+  
+            // Call the manipulate function to
+            // update the calendar display
+            manipulate();
+          });
         });
-
-
-
-    </script>
+      </script>
+       <!-- ME -->
+    <!-- JavaScript to interact with the select element and initialize Select2 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <!-- Include Select2 JS -->
+        <script>
+            // Your array of country and time zone options
+            var countryTimeZones = [
+              // Add your options here
+            ];
+      
+            // Initialize Select2
+            $(document).ready(function () {
+              $("#countryTimeZones").select2({
+                data: countryTimeZones,
+                placeholder: "Search for a country",
+                allowClear: true,
+              });
+            });
+      
+            // Event listener for selecting an option
+            $("#countryTimeZones").on("select2:select", function (e) {
+              var selectedTimeZone = e.params.data.id;
+              // alert("Selected Time Zone: " + selectedTimeZone);
+            });
+          </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>

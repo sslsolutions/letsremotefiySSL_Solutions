@@ -1,0 +1,118 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(248, 249, 254);
+}
+
+#WORKH-SOFT{
+    display: flex;
+    /* margin-top: 80PX; */
+    justify-content: center;
+    position: relative;
+    background-image: url('/images/design.png');
+    background-size: 100% 100%;
+    color: white;
+    /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
+    /* line-height: normal; */
+
+}
+
+.FRONT-END-BOXES{
+    border: 1px solid lightgray; 
+    padding: 8px 14px;
+     margin: 5px 8px 15px 8px;
+     border-radius: 8PX;
+     text-decoration: none;
+     background-color: white;
+     color: black;
+}
+.FRONT-END-BOXES:hover{
+    border: 1px solid black;
+}
+.FRONT-END-TEXT{
+    text-decoration: none;
+    color: black;
+    margin: 0px 88px 0px 3px;
+}
+
+/* /----------------------* DOST SECTION --------------------------*/ */
+
+.card-circle-images{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: gray;
+}
+.placed-img{
+    width: 40px;
+    height: 40px;
+}
+
+.cards{
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cards a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.match-tagline{
+    background-color: purple;
+    color: white;
+}
+
+@media only screen and (max-width: 991px) {
+    .match-text-area{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+/* <!-- Reasons to Select Letsremotify --> */
+#SOFT-BOX{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: black;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid black;
+}
+/* #SOFT-BOX:hover{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+} */
+
+
+/* - */
+.CLICK-BOXES{
+    padding: 15PX 25PX;
+    margin: 10PX 5PX;
+    /* border: 1PX solid black; */
+    border-radius: 8px;
+}
+
+/*  */
+#FIELD-2, #FIELD-3, #FIELD-4, #FIELD-5 ,#FIELD-6{
+    display: none;
+}
+#FIELD-BOX1{
+    display: none;
+}
+
+#GROUP-IMAGE{
+    background-image: url('/images/Community-Section-1.png');
+    background-size: cover;
+}
+

@@ -64,19 +64,32 @@ All pages of Buyer
 }
 H3, h4, h5,h1{
     font-family: Arial, Helvetica, sans-serif,Lucida;
-    /* color: blue; */
+
 }
 
 .XSMALL, #XSMALL{
     font-size: 16PX;
     /* color: brown; */
 }
+.XSMALL-2, #XSMALL-2{
+    font-size: 14PX;
+    font-weight: 700;
+    font-family: "Gordita Regular",Helvetica,Arial,Lucida,sans-serif;
+    /* color: brown; */
+}
 .XXSMALL, #XXSMALL{
     font-size: 14PX;
+    
+    font-family: "Gordita Regular",Helvetica,Arial,Lucida,sans-serif;
     /* color: brown; */
 }
 #SMALL, SP, .SMALL{
     font-size: 18px;
+    /* color: red; */
+}
+SMALL-HEAD,#SMALL-HEAD, .SMALL-HEAD{
+    font-size: 18px;
+    font-family: Helvetica Rounded;
     /* color: red; */
 }
 #XLARGE, .XLARGE{
@@ -91,6 +104,18 @@ H3, h4, h5,h1{
     /* font-weight: 500; */
     /* letter-spacing: .3px; */
     font-family: Arial, sans-serif,Lucida, Helvetica Rounded , var(--Godita--bold);
+    /* font-family: "Gordita Regular",Helvetica,Arial,Lucida,sans-serif; */
+}
+#LARGE-2, HP-2, .LARGE-2{
+    font-size: 22PX;
+    font-family: "Gordita Regular",Helvetica,Arial,Lucida,sans-serif;
+    /* color: blue; */
+}
+.LARGE-3,#LARGE-3{
+    line-height: 32px;
+    font-weight: 600;
+    font-size: 22px;
+    font-family: "Gordita Regular",Helvetica,Arial,Lucida,sans-serif;
 }
 
 h4{
@@ -104,6 +129,16 @@ HEADING, .HEADING, #HEADING{
     font-size: 42px;
     /* color: purple; */
 }
+HEADING-SUBH, .HEADING-SUBH, #HEADING-SUBH{
+    font-size: 30px;
+    /* color: yellow; */
+}
+HEADING-TEXT, .HEADING-TEXT, #HEADING-TEXT{
+    font-size: 30px;
+    font-family: "Gordita Regular",Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 700;
+    line-height: 34px;
+}
 .HEADING-2, #HEADING-2{
     font-size: 4rem;
     font-family: Helvetica;
@@ -114,9 +149,10 @@ SUBHEAD, #SUBHEAD, .SUBHEAD{
     font-size: 24px;
     color: rgb(175, 32, 34);
     /* color: rgb(8, 252, 118); */
-    font-family: Arial, Helvetica, sans-serif,Lucida;
-    
+    font-family: Arial, Helvetica, sans-serif,Lucida; 
 }
+
+
 
 @font-face {
     font-family: Helvetica Rounded;
@@ -163,7 +199,9 @@ h1{
 }
 #SMALL, SP, .SMALL{
     font-size: 16px;
-    /* color: red; */
+}
+SMALL-HEAD,#SMALL-HEAD, .SMALL-HEAD{
+    font-size: 16px;
 }
 #XLARGE, .XLARGE{
     font-size: 22PX;
@@ -188,6 +226,10 @@ h4{
 }
 .HEADING-2, #HEADING-2{
     font-size: 3.2rem;
+}
+HEADING-SUBH, .HEADING-SUBH, #HEADING-SUBH{
+    font-size: 26px;
+    /* color: yellow; */
 }
 SUBHEAD, #SUBHEAD, .SUBHEAD{
     font-weight: 600;
@@ -219,6 +261,9 @@ SUBHEAD, #SUBHEAD, .SUBHEAD{
         font-size: 15px;
         /* color: red; */
     }
+    SMALL-HEAD, #SMALL-HEAD, .SMALL-HEAD{
+        font-size: 15px;
+    }
     #XLARGE, .XLARGE{
         font-size: 20PX;
         /* color:rgb(24, 174, 243); */
@@ -242,6 +287,9 @@ SUBHEAD, #SUBHEAD, .SUBHEAD{
     }
     .HEADING-2, #HEADING-2{
         font-size: 3.0rem;
+    }
+    HEADING-SUBH, .HEADING-SUBH, #HEADING-SUBH{
+        font-size: 24px;
     }
     SUBHEAD, #SUBHEAD, .SUBHEAD{
         font-weight: 600;
@@ -274,7 +322,9 @@ SUBHEAD, #SUBHEAD, .SUBHEAD{
     }
     #SMALL, SP, .SMALL{
         font-size: 14px;
-        /* color: red; */
+    }
+    SMALL-HEAD,#SMALL-HEAD, .SMALL-HEAD{
+        font-size: 14px;
     }
     #XLARGE, .XLARGE{
         font-size: 18PX;
@@ -300,10 +350,12 @@ SUBHEAD, #SUBHEAD, .SUBHEAD{
     .HEADING-2, #HEADING-2{
         font-size: 2.8rem;
     }
+    HEADING-SUBH, .HEADING-SUBH, #HEADING-SUBH{
+        font-size: 22px;
+    }
     SUBHEAD, #SUBHEAD, .SUBHEAD{
         font-weight: 600;
         font-size: 16px;
-        /* color: rgb(8, 252, 118); */
         font-family: Arial, Helvetica, sans-serif,Lucida;
         
     }

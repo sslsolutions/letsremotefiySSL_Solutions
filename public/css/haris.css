@@ -20,6 +20,9 @@
     width: 100%;
     height: auto;
 }
+#FOR-MARGIN{
+    margin: 400PX 10PX;
+}
 
 /* =================================        991     ========================================= */
 
@@ -311,7 +314,7 @@
 
 
   #WORK1 {
-    font-weight: 900;
+    /* font-weight: 900; */
     /* display: flex; */
     margin-top: 60PX;
     /* font-size: var(--paragraph--size); */
@@ -396,13 +399,8 @@
     /* line-height: normal; */
 
 }
-#REMOTLY h1{
-    /* font-weight: 700;   */
-    /* font-size: var(--h-font);   */
-    /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
-}
+
 #REMOTLY p{
-    /* font-size: var(--text--18size); */
     margin-top: 10PX; 
     margin-bottom: 20PX;  
     line-height: var(--line--height); 

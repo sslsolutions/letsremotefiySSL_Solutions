@@ -1,6 +1,14 @@
-h1{
-    color:blue;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
+body{
+    background-color: rgb(248, 249, 254);
+}
+
+
 #TEXT-BTN{
     color: white;
 }
@@ -16,4 +24,108 @@ h1{
 }
 #LIVE-BTN:hover{
     background-color:  rgb(238, 75, 78);
+}
+
+/* ----------FIRST CONTAINER */
+#FIRST-CONTAINER{
+    margin: 70px;
+}
+#EVENT-BUTTON{
+    color: white;
+    padding: 12PX 16PX;
+    background-color:  rgb(175, 32, 34) ;
+    border-radius: 8px;
+    text-decoration: none;
+
+}
+
+/* --------TIMER SECTION---------- */
+#countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+
+.countdown-card {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    /* width: 80px; */
+    margin: 5px;
+    /* border: 2px solid red; */
+}
+
+.countdown-label {
+    font-size: 18px;
+}
+
+.colon {
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+/* -------  MODERN CONTAINER  ----------- */
+#MODERN-CONTAINER{
+    background-image: url(/images/GoRemote-Summit-1.webp); 
+    background-size: cover;
+    /* margin-bottom: 200PX; */
+}
+#MODERN-CONTAINER p{
+    line-height: var(--line--height);
+}
+
+#MODERN-BOX{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: black;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid white;
+}
+#MODERN-BOX:hover{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+
+/* <!-- A Virtual Gathering   4--> */
+
+#BC-IMG{
+    background-image: url(/images/GoRemote-Summit-1.webp); 
+    background-size: cover;
+    border-radius: 12PX;
+}
+
+
+/* <!--  Inspiring Voices  6 --> */
+.LINKEDIN-ICON i{
+    height: 400px;
+    width: 400px;
+    border: 1px solid  lightgray;
+    border-radius: 50%;
+    padding: 7px 8px;
+
+
+}
+
+/* <!--  TABLE FOR DAY --> */
+
+#DAT-1 ,#DAY-2{
+    color: rgb(193, 193, 193);
+    border-bottom: 2PX solid transparent;
+    text-align: center;
+}
+#DAT-1:hover ,#DAY-2:hover{
+    color: black;
+    border-bottom: 2PX solid rgb(175, 32, 34);
+}
+
+
+#CONTAINER-HIDE-2{
+    display: none;
 }
