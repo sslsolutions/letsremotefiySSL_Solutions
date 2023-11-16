@@ -92,12 +92,7 @@ body{
     background-color: black;
     border: 1px solid white;
 }
-#SVG{
-    color: BLUE;
-}
-#SVG:hover{
-    color: GREEN;
-}
+
 /* <!-- A Virtual Gathering   4--> */
 
 #BC-IMG{
