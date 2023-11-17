@@ -303,6 +303,13 @@ app.get('/software_engineer', (req, res) => {
         trajectory: trajectory
     })
 })
+app.get('/hire-designer', (req, res) => {
+    res.render('hire_a_designer.ejs',{
+        technologies: technologies,
+        skills: skills,
+        trajectory: trajectory
+    })
+})
 app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
 })

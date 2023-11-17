@@ -1,0 +1,6 @@
+#CLIENT-IMG{
+    height: 150PX;
+    width: 150PX;
+    border: 2PX solid RED;
+    border-radius: 50%;
+}
