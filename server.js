@@ -242,12 +242,11 @@ app.get('/', async  (req, res) =>{
             profiles: allUserProfiles,
        
         });
-        
+
     } catch (error) {
         console.error(error);
         res.render('505pg.ejs')
     }
-  
 });
 //////skills
 
@@ -339,8 +338,8 @@ app.get('/jobs', (req, res) => {
     res.render('Jobs.ejs')
 })
 
-app.get('/blogs', (req, res)=>{
-    res.render('blog.ejs')
+app.get('/blogs', function (req, res) {
+    res.render('Blogg-test.ejs')
 })
 
 

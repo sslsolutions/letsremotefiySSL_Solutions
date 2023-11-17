@@ -3,9 +3,9 @@ const dotenv = require('dotenv')
 dotenv.config();
 const verifyToken = (req, res, next) => {
   const token = req.cookies.token;
-  // if (!token) {
-  //   return res.redirect('/login'); // Redirect to the login page if no token
-  // }
+  if (!token) {
+    return res.redirect('/login'); // Redirect to the login page if no token
+  }
 
   jwt.verify(token, process.env.JWT_SCERET_KEY, (err, decoded) => {
     if (err) {
@@ -18,7 +18,7 @@ const verifyToken = (req, res, next) => {
 }
 const restricted = (roles) => {
   return (req, res, next) => {
-    if (!roles.includes(req.user.roles)){
+    if (!roles.includes(req.user.roles == "Buyer")){
       res.status(403).json({ message: 'You do not have access to this route' });
     } else {
       next();
