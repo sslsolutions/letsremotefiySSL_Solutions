@@ -292,9 +292,6 @@ app.get('/internship', (req, res) => {
     res.render('internship.ejs')
 })
 
-<<<<<<< HEAD
-// -------------------------------------
-=======
 
 
 // -------------------------------------
@@ -312,11 +309,17 @@ app.get('/hire-designer', (req, res) => {
         trajectory: trajectory
     })
 })
+app.get('/hire-project-manager', (req, res) => {
+    res.render('hire_a_project_manager.ejs',{
+        technologies: technologies,
+        skills: skills,
+        trajectory: trajectory
+    })
+})
 app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
 })
 
->>>>>>> 0308e622b5fd2a557bef0249135417616288aa24
 app.get('/client/step_one', (req, res) => {
     res.render('step_one.ejs')
 })

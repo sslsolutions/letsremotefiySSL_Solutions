@@ -9,6 +9,9 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="css/login.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/navbar.css">
+     <!-- FONT style -->
+     <link href="/css/fontstyle.css" rel="stylesheet">
+
     <title>Login</title>
 </head>
 
@@ -16,12 +19,12 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-lg-5 mt-3" id="IMG1">
+            <div class="col-lg-5 col-sm-12 mt-3 justify-content-center">
                 <div class="contant-form">
-                    <H2 class="text-center">Welcome Back!</H2>
+                    <H2 class="text-center LARGE">Welcome Back!</H2>
                     <div class="text-center">
                         <P>
-                        <h5>Enter your credentials to access your account.</h5>
+                        <h5 class="SUBHEAD">Enter your credentials to access your account.</h5>
                         </P>
                     </div>
                     <% if(typeof alert !='undefined' ) { %>
@@ -33,8 +36,8 @@
                                 <% } %>
                                     <form action="/login" method="post">
                                         <!--  return validate means it take the T/F value of function then give to action it gives F value & action didnt respond -->
-                                        <div class="mt-5 mb-4">
-                                            <lable style="color: black; font-weight: 600;">Email <span
+                                        <div class="mt-5 mb-4" >
+                                            <lable class="XSMALL-2">Email <span
                                                     style="color: red;">*</span></lable>
                                             <input type="email" class="HH" id="email" name="email"
                                                 placeholder="Your Email">
@@ -43,7 +46,7 @@
 
 
                                         <div class="mb-5">
-                                            <lable style="color: black; font-weight: 600;">Password <span
+                                            <lable class="XSMALL-2">Password <span
                                                     style="color: red;">*</span></lable>
                                             <!-- <input type="" class="HH" name="" placeholder="&#xF32C;   Your Email"> -->
                                             <input type="password" class="HH" id="password" name="password"
@@ -51,11 +54,11 @@
 
                                             <span id="EMAILERROR" style="color: red; align-self: last;"><a
                                                     href="/forgetpassword" data-toggle="modal"
-                                                    data-target="#forgotPasswordModal">Forget Password?</a></span>
+                                                    data-target="#forgotPasswordModal"  class="XSMALL-2">Forget Password?</a></span>
                                         </div>
 
                                         <input class="mt-1" type="submit" value="Login">
-                                        <div class="text-center mt-3" style="font-weight: 500; font-size: 18px;">New
+                                        <div class="text-center mt-3"  id="XSMALL-2">New
                                             here ? <a href="signup">SignUp </a> for free
                                         </div>
                                     </form>

@@ -69,6 +69,7 @@ body{
     color: white;
 }
 
+
 @media only screen and (max-width: 991px) {
     .match-text-area{
         display: flex;
@@ -77,6 +78,7 @@ body{
         justify-content: center;
         text-align: center;
     }
+    
 }
 /* <!-- Reasons to Select Letsremotify --> */
 #SOFT-BOX{
@@ -100,8 +102,12 @@ body{
 .CLICK-BOXES{
     padding: 15PX 25PX;
     margin: 10PX 5PX;
-    /* border: 1PX solid black; */
+    border: 1PX solid transparent;
     border-radius: 8px;
+}
+.CLICK-BOXES:hover{
+    cursor: pointer;
+    border: 1PX solid lightgrey;
 }
 
 /*  */
@@ -112,8 +118,29 @@ body{
     display: none;
 }
 
-#GROUP-IMAGE{
-    background-image: url('/images/Community-Section-1.png');
-    background-size: cover;
-}
 
+
+#GROUP-IMAGE{
+    border: none;
+    background-image: url('/images/Community-Section-1.png');
+    background-size:100% 100%;
+    /* border: 2px solid black; */
+}
+#FOR-MARGIN{
+    margin: 350PX 10PX;
+}
+@media (max-width: 991px) {
+    /* Adjust for screens less than 992px (tablet screens) */
+    .slider-item {
+        flex: 0 0 calc(100% / 3); 
+    }
+    #GROUP-IMAGE{
+        /* border: 2px solid green; */
+        background-image: url('');
+      
+    }
+    #FOR-MARGIN{
+        margin: 10PX 4PX;
+    }
+     
+}
