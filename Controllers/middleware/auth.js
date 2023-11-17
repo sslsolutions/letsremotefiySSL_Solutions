@@ -18,7 +18,7 @@ const verifyToken = (req, res, next) => {
 }
 const restricted = (roles) => {
   return (req, res, next) => {
-    if (!roles.includes(req.user.roles)){
+    if (!roles.includes(req.user.roles == "Buyer")){
       res.status(403).json({ message: 'You do not have access to this route' });
     } else {
       next();
