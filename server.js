@@ -24,11 +24,10 @@ app.use(session({
 
 }))
 app.use(flash());
-app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
 
 app.use(cors({
-    origin: 'http://localhost:8080',
+    origin: 'http://localhost:8080/',
     credentials: true
 }))
 
@@ -293,6 +292,9 @@ app.get('/internship', (req, res) => {
     res.render('internship.ejs')
 })
 
+<<<<<<< HEAD
+// -------------------------------------
+=======
 
 
 // -------------------------------------
@@ -314,6 +316,7 @@ app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
 })
 
+>>>>>>> 0308e622b5fd2a557bef0249135417616288aa24
 app.get('/client/step_one', (req, res) => {
     res.render('step_one.ejs')
 })
@@ -340,9 +343,9 @@ app.get('/blogs', (req, res)=>{
 
 
 
-app.get('/404',(req, res)=>{
-    res.render('404pg.ejs')
-})
+// app.get('/404',(req, res)=>{
+//     res.render('404pg.ejs')
+// })
 
 app.get('/505',(req, res)=>{
     res.render('505pg.ejs')

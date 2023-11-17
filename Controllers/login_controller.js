@@ -74,7 +74,6 @@ router.post('/login', validator, async (req, res, next) => {
                 // Attempt to find the user's profile
                 // const userProfile = await user_profile_seller.findOne({where:{ user: id }});
                 const userProfile = await user_profile_seller.findOne({ where: { UserId: existingUser.id } });
-             
                 if (userProfile && existingUser.roles.includes('Seller')) {
                     redirectPath='/talent/profile'
                 }
@@ -91,6 +90,7 @@ router.post('/login', validator, async (req, res, next) => {
                 else{
                   return  res.status(500).send('Internal Server Error')
                 }
+
                 res.redirect(redirectPath)
             
 
