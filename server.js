@@ -34,7 +34,7 @@ app.use(cors({
 var router = require('./Controllers/contact_controller.js')
 const signup = require('./Controllers/signup_controller.js')
 const login = require('./Controllers/login_controller.js')
-const { verifyToken, restricted } = require('./Controllers/middleware/auth.js')
+// const { verifyToken, restricted } = require('./Controllers/middleware/auth.js')
 const userProfileSeller = require('./Controllers/user_profile_seller.js')
 const logout = require('./Controllers/logout.js')
 const forgetPassword = require('./Controllers/forgetPassword.js')
@@ -256,7 +256,7 @@ app.use('/', login)
 app.use('/', logout)
 app.use('/', forgetPassword)
 app.use('/', userProfileSeller)
-app.use('/', verifyToken, profileView)
+app.use('/', profileView)
 app.use('/talent/profile', empHistory)
 app.use('/talent/profile', empEducationHistory)
 app.use('/talent/profile', CertificateHistory)
@@ -339,10 +339,8 @@ app.get('/jobs', (req, res) => {
 })
 
 app.get('/blogs', function (req, res) {
-    res.render('Blogg-test.ejs')
+    res.render('Blog-test.ejs')
 })
-
-
 
 
 // app.get('/404',(req, res)=>{

@@ -1,5 +1,5 @@
 const express = require('express')
-const { verifyToken } = require('./middleware/auth')
+// const { verifyToken } = require('./middleware/auth')
 const Buyer_Demanded_Skill = require('../Models/buyer_demanded_skill')
 const router = express.Router()
 
@@ -11,14 +11,14 @@ const Buyer_Step_One = require('../Models/buyer_step_one');
 const storage = multer.memoryStorage(); // This stores the file as a buffer
 const upload = multer({ storage: storage });
 
-router.get('/hire_talent', verifyToken, async (req, res) => {
+router.get('/hire_talent', async (req, res) => {
   res.render('hire_talents.ejs')
 })
 
-router.get('/step_one', verifyToken, (req, res) => {
+router.get('/step_one', (req, res) => {
   res.render('step_one.ejs')
 })
-router.get('/step_two', verifyToken, (req, res) => {
+router.get('/step_two', (req, res) => {
   res.render('step_two.ejs')
 })
 router.post('/hire_talent', async (req, res) => {

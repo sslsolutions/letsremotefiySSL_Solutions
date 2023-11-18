@@ -1,12 +1,12 @@
 const express = require('express')
-const { verifyToken } = require('./middleware/auth')
+// const { verifyToken } = require('./middleware/auth')
 const User = require('../Models/User')
 const user_profile_seller = require('../Models/user_profile_seller_models')
 const user_skill_model = require('../Models/user_skill_model')
 const router = express.Router()
 
 
-router.get('/talent/overview', verifyToken, async (req, res) => {
+router.get('/talent/overview', async (req, res) => {
 
     try {
         const userId = req.cookies.userId
