@@ -293,6 +293,12 @@ app.get('/internship', (req, res) => {
 
 
 
+app.get('/overview',(req, res)=>{
+    res.render('skill-test.ejs')
+})
+
+
+
 // -------------------------------------
 app.get('/software_engineer', (req, res) => {
     res.render('hire_software_engineer.ejs',{
@@ -343,9 +349,9 @@ app.get('/blogs', function (req, res) {
 })
 
 
-// app.get('/404',(req, res)=>{
-//     res.render('404pg.ejs')
-// })
+app.get('/404',(req, res)=>{
+    res.render('404pg.ejs')
+})
 
 app.get('/505',(req, res)=>{
     res.render('505pg.ejs')

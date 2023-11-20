@@ -42,8 +42,6 @@
 .link-light:hover .animation-line {
     width: 100%;
     background-color: rgb(175, 32, 34);
-<<<<<<< HEAD
-=======
 }
 
 
@@ -58,5 +56,4 @@
 #SOCIAL-ICONS a:hover{
     color: RED;
     background-color:grey
->>>>>>> 3b1fe814d2ede77af73168688b71ddf62ebecf15
 }
