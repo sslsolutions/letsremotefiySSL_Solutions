@@ -22,7 +22,7 @@ const checkArrayLength =[
     throw new Error('You can select a maximum of 6 checkboxes.'); // Validation failed
   }),
 ]
-router.get('/talent/profile', verifyToken, async (req, res) => {
+router.get('/talent/profile', async (req, res) => {
   const userId = req.cookies.userId
 
   /////////////getting the useremloyement history ////////////

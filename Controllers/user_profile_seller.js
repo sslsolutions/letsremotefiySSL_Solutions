@@ -9,14 +9,14 @@ const multer = require('multer')
 const path = require('path')
 const bcrypt = require('bcryptjs')
 const user_model = require("../Models/User")
-const { verifyToken, restricted } = require("./middleware/auth")
+// const { verifyToken, restricted } = require("./middleware/auth")
 const user_skill_model = require("../Models/user_skill_model")
 dotenv.config();
 
 router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json())
 
-router.get('/createProfile', verifyToken, async (req, res, next) => {
+router.get('/createProfile', async (req, res, next) => {
   const encodedEmail = req.query.email;
   const isEmailValid = decodeURIComponent(encodedEmail)
   res.render('create_profile.ejs', { userEmail: isEmailValid });
@@ -144,10 +144,6 @@ router.post('/readytojoin', upload.single('Resume'), async (req, res) => {
   }
   res.redirect('/talent/profile')
 })
-
-
-
-
 
 
 module.exports = router
