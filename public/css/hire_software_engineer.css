@@ -142,5 +142,45 @@ body{
     #FOR-MARGIN{
         margin: 10PX 4PX;
     }
+    #FIXED-SCROLE{
+        display: none;
+    }
      
+}
+
+/* scrole bar */
+#MAIN-SCROLE{
+    /* background-color: lightblue; */
+    /* border: 2px solid green; */
+    background-color: white;
+    
+    /* height: 600PX; */
+    width: 100%;
+    /* overflow: auto; */
+    display: flex;
+    justify-content: space-between;
+
+}
+.ATEXT a{
+    text-decoration: none;
+    color: lightslategray;
+    cursor: pointer;
+
+}
+#FIXED-SCROLE{
+    width: 200PX;
+    height: 99%;
+    /* border: 2PX solid black; */
+    /* position: fixed; */
+    /* margin-top: 500PX; */
+}
+
+#SLIDER-SCROLE{
+    overflow: auto;
+    overflow-y: hidden;
+    /* border: 2PX solid RED; */
+    /* background-color: rgb(220, 230, 173); */
+    height: 600px;
+    width: 80%;
+    overflow: auto;
 }

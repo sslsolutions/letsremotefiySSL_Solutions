@@ -31,9 +31,6 @@ All pages of Buyer
 
 }
 
-/* html * {
-     font-family: Nunito, serif; 
-  } */
 :root{
     --Main--color: rgb(175, 32, 34);
     --text--18size:18px;
@@ -83,6 +80,7 @@ H3, h4, h5,h1{
     font-family: "Gordita Regular",Helvetica,Arial,Lucida,sans-serif;
     /* color: brown; */
 }
+
 #SMALL, SP, .SMALL{
     font-size: 18px;
     /* color: red; */
