@@ -31,12 +31,12 @@
     </nav>
     <br><hr>
     
-    <div class="container-fluid bg-light p-5">
-        <div class="row m-3">
-            <div class="col-lg-5 col-md-12 col-sm-12 p-5">
+    <div class="container-fluid bg-light mt-5 pt-3">
+        <div class="row justify-content-evenly m-3">
+            <div class="col-lg-6 col-sm-10">
                 <h4 class="SUBHEAD">SSL Solutions Blogs:</h4>
-                <h1 class="HEADING">The Go-To Source for Software Development and Tech Talent Insights</h1>
-                <p class="justify-content text-justify" id="LARGE">We cover topics of remote work tips and
+                <h1 class="HEADING">Software Development and Tech Talent Insights</h1>
+                <p class="justify-content-center text-justify" id="SMALL">We cover topics of remote work tips and
                     tricks, success stories, IT
                     outsourcing, hiring offshore development teams, distributed teams, and resources. Whether
                     you’re just getting started
@@ -44,7 +44,7 @@
                     blog has something for everyone.
                 </p>
             </div>
-            <div class="col-lg-7 col-md-12 col-sm-12 p-2">
+            <div class="col-lg-4 col-sm-9 mt-3">
                 <img class="img-fluid"
                     src="https://letsremotify.com/wp-content/uploads/2023/08/blog-banner-980x738.jpg.webp" alt="">
             </div>
@@ -229,43 +229,20 @@
                     <h5>See All Blogs&#8594;</h5>
                 </a>
             </div>
-            <div class="col-lg-4 col-md-6 p-2">
-                <div class="card bg-light border border-light">
-                    <img src="https://letsremotify.com/wp-content/uploads/2023/08/24-400x250.jpg.webp"
-                        class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" id="LARGE">Charting Your Course as a Node.js Developer in 2023</h5>
-                        <p class="card-text" id="SMALL">by EMILY JOHNSON</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 p-2">
-                <div class="card bg-light border border-light">
-                    <img src="https://letsremotify.com/wp-content/uploads/2023/08/20-400x250.jpg.webp"
-                        class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" id="LARGE">Web3: Revolutionizing the Internet for a Decentralized Future</h5>
-                        <p class="card-text" id="SMALL">by EMILY JOHNSON</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 p-2">
-                <div class="card bg-light border border-light">
-                    <img src="https://letsremotify.com/wp-content/uploads/2023/07/15-1-400x250.jpg.webp"
-                        class="card-img-top img-fluid" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" id="LARGE">Mitigating AI Bias: Fostering Trust in Machine Learning</h5>
-                        <p class="card-text" id="SMALL">by EMILY JOHNSON</p>
-                    </div>
-                </div>
-            </div>
+         
+        
+        
         </div>
     </div>
+    <!-- CARDS COMPONENTT -->
+<div class="container-fluid mb-5" style="background-color: white;">
+    <%- include('Components/cards'); %>
+</div>
 
-    
-    <footer class="bg-dark text-center p-2">
-        <%- include('Components/footor'); %>
-    </footer>
+    <!-- FOOTER -->
+<footer class="text-center p-2" style="background-color: black;" >
+    <%- include('Components/footor'); %>
+</footer>
        <!-- NAVBAR JS -->
        <script src="js/NAVBAR.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

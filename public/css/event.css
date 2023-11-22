@@ -129,3 +129,17 @@ body{
 #CONTAINER-HIDE-2{
     display: none;
 }
+
+#EVENT-ICONS{
+    font-size: 20PX;
+    padding: 5PX 6PX;
+    border: 2PX solid lightgray;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+}
+
+#EVENT-ICONS:hover{
+    background-color: white;
+    color: black;
+}

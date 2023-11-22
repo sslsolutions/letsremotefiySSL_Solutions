@@ -3,15 +3,17 @@ const router = express.Router()
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
+const cookie=require('cookie-parser')
 dotenv.config();
 
 // var  sweetalert = require('sweetalert2');
-const { check, body, validationResult, cookie } = require('express-validator');
+const { check, body, validationResult } = require('express-validator');
 const user_model = require('../Models/User');
 const bodyParser = require('body-parser');
 const user_profile_seller = require('../Models/user_profile_seller_models')
 const { verifyToken, restricted } = require('../Controllers/middleware/auth');
 const user_skill_model = require('../Models/user_skill_model');
+const cookieParser = require('cookie-parser');
 router.use(bodyParser.urlencoded({ extended: true }))
 
 
@@ -67,9 +69,9 @@ router.post('/login', validator, async (req, res, next) => {
                 };
                 res.cookie('token', token, { httpOnly: true });
                 // req.session.userId = existingUser.id;
-                res.cookie('userId', existingUser.id)
+              res.cookie('userId', existingUser.id)
+        // console.log( res.cookie('userId', existingUser.id));
                 // var lastVisit = cookies.get('LastVisit', { signed: true })
-                // console.log(existingUser.id);
                 let redirectPath;
                 // Attempt to find the user's profile
                 // const userProfile = await user_profile_seller.findOne({where:{ user: id }});

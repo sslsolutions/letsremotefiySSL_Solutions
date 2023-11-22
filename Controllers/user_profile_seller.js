@@ -65,7 +65,7 @@ router.post('/createProfile', upload.single('profileImage'), async (req, res) =>
     avatar: profileImage
   }
   try {
-
+console.log(userProfile);
     await user_profile_seller.create(userProfile);
   } catch (error) {
     console.log(error);
@@ -110,6 +110,7 @@ router.put('/update-talent-profile/:id', async (req, res) => {
 router.post('/readytojoin', upload.single('Resume'), async (req, res) => {
 
   const userId = req.cookies.userId
+  console.log(userId);
   const userData = await user_profile_seller.findOne({ where: { UserId: userId } })
   // Check if userData exists and has a user field with an _id
   if (!userData || !userData.UserId || !userData.id) {
