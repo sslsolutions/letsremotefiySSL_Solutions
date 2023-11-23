@@ -497,7 +497,8 @@
     padding: 15px 0px 0px 20px;
     width: 90%;
     /* background-image: url(images/design-01.png); */
-    background-color: rgb(175, 32, 34);
+    /* background-color: rgb(175, 32, 34); */
+    background-image: url('/images/design-01.png');
     background-size: 100% 100%;
     color: white;
     border-radius: 8px;
@@ -647,7 +648,7 @@
    
  }
  #EXPLORE2 a:hover{
-      background:rgb(175, 32, 34);;
+      background:rgb(175, 32, 34);
       color: white;
   }
   .NONE{
@@ -1025,4 +1026,13 @@
   /* -------------------  RANDOM POPUPS   --------------------- */
   
   
-
+/* ---------------------------      CAREER PAGE --------------- */
+.CLICK-TEXT{
+    color: lightslategrey;
+    border-bottom: 2px solid transparent;
+}
+.CLICK-TEXT:hover{
+    color: black;
+    border-bottom: 2px solid rgb(175, 32, 34);
+    
+}

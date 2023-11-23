@@ -284,6 +284,12 @@ app.get('/pricing', (req, res) => {
 app.get('/event', (req, res) => {
     res.render('event.ejs')
 })
+app.get('/career', (req, res) => {
+    res.render('career.ejs')
+})
+app.get('/apply-as', (req, res) => {
+    res.render('apply-as-talent.ejs')
+})
 app.get('/news', (req, res) => {
     res.render('newsletter.ejs')
 })
