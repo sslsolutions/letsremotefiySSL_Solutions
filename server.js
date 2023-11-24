@@ -362,6 +362,9 @@ app.get('/404',(req, res)=>{
 app.get('/505',(req, res)=>{
     res.render('505pg.ejs')
 })
+app.get('/under', (req, res)=>{
+    res.render('underReview.ejs')
+})
 
 
 app.listen(process.env.PORT, (req, res) => {
