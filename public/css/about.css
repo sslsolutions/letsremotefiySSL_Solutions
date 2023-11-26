@@ -59,10 +59,12 @@
    padding: 20px 25px;
    border-radius: 14px;
     background: rgb(175, 32, 34);
+    border: 2PX solid transparent;
   
 }
 #REMOTLY a:hover{
-    background: black; 
+    background: black;
+    border: 2PX solid white; 
 }
 #JOIN{
     margin-top: 25PX; 

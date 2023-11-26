@@ -281,6 +281,9 @@ app.get('/pricing', (req, res) => {
     })
 })
 // ZAHEER DONT REMOVE THE SLUGS THEY ARE FOR TEMPORARY USAGE
+app.get('/testing', (req, res) => {
+    res.render('testing.ejs')
+})
 app.get('/event', (req, res) => {
     res.render('event.ejs')
 })

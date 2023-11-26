@@ -65,41 +65,25 @@ body{
 .BOX-DIV img{
     margin: 10px 0px;
     /* justify-self: start; */
+    /* border: 2px solid red; */
     /* align-items: start; */
 }
 .BOX-DIV h5{
-    /* font-size: 26px; */
-    /* font-weight: 600; */
     align-self: center;
-    /* margin-bottom: 10px; */
     color:black;
 }
-/* .BOX-DIV h3:hover{
-    color:white;
-} */
 
 .BOX-DIV p{
-    /* font-size: var(--p-font); */
-    /* font-weight: 400; */
     align-self: center;
     color: black;
     line-height: 30px;
-    /* margin-bottom: 20px; */
 }
-/* .BOX-DIV p:hover{
-     color: white;
-} */
 .BOX-DIV i{
-    /* margin-top: -20PX; */
     vertical-align: middle;
-    /* font-size: 30px; */
     color: white;
     margin-left: 5px;
 }
 
-/* .BOX-DIV a:hover{
-    border-bottom: 2px solid white;
-} */
 
 
 /* <!-- Placement Process --> */
