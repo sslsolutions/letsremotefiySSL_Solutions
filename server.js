@@ -273,6 +273,11 @@ app.use('/client',hireTalent)
 // });
 
 
+app.get('/verify', (req, res) => {
+    res.render('verify-page.ejs')
+})
+
+
 app.get('/pricing', (req, res) => {
     res.render('pricing.ejs', {
         technologies: technologies,
