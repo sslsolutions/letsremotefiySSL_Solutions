@@ -328,6 +328,13 @@ app.get('/hire-designer', (req, res) => {
         trajectory: trajectory
     })
 })
+app.get("/hire-digital-marketers", (req, res) => {
+  res.render("Hire_Digital_Marketer.ejs", {
+    technologies: technologies,
+    skills: skills,
+    trajectory: trajectory,
+  });
+});
 app.get('/hire-project-manager', (req, res) => {
     res.render('hire_a_project_manager.ejs',{
         technologies: technologies,
@@ -335,8 +342,25 @@ app.get('/hire-project-manager', (req, res) => {
         trajectory: trajectory
     })
 })
+app.get("/hire-buisness-consultants", (req, res) => {
+  res.render("Hire_Buisness_Consultant.ejs", {
+    technologies: technologies,
+    skills: skills,
+    trajectory: trajectory,
+  });
+});
+app.get("/hire-AI-Engineers", (req, res) => {
+  res.render("Hire_AI_Engineers.ejs", {
+    technologies: technologies,
+    skills: skills,
+    trajectory: trajectory,
+  });
+});
 app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
+})
+app.get('/SalesForce-Consulting', (req, res) => {
+    res.render('SalesForce.ejs')
 })
 
 app.get('/client/step_one', (req, res) => {
