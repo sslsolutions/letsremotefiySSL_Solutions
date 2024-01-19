@@ -356,12 +356,36 @@ app.get("/hire-AI-Engineers", (req, res) => {
     trajectory: trajectory,
   });
 });
+app.get("/hire-devops-engineer", (req, res) => {
+  res.render("Devops-hiring.ejs", {
+    technologies: technologies,
+    skills: skills,
+    trajectory: trajectory,
+  });
+});
 app.get('/hire_talents', (req, res) => {
     res.render('hire_talents.ejs')
 })
 app.get('/SalesForce-Consulting', (req, res) => {
     res.render('SalesForce.ejs')
 })
+app.get("/AI-Ml-Consulting", (req, res) => {
+  res.render("AI-ML-Consulting.ejs");
+});
+app.get("/iot-Consulting", (req, res) => {
+  res.render("Iot-Consulting.ejs");
+});
+app.get("/data-sciences", (req, res) => {
+  res.render("Data-Science.ejs");
+});
+app.get("/cloud-computing", (req, res) => {
+  res.render("Cloud-Computing.ejs");
+});
+app.get("/blockchain", (req, res) => {
+  res.render("Blockchain.ejs");
+});
+
+
 
 app.get('/client/step_one', (req, res) => {
     res.render('step_one.ejs')
