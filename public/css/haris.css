@@ -128,7 +128,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    width: 350px;
+    /* width: 350px; */
     height: 300px;
     padding: 16PX 8PX 90PX 8PX ;
     /* margin-left: 45PX; */
@@ -243,11 +243,11 @@
     }
   }  */
   
-#REMOTLY h1 {
+/* #REMOTLY h1 { */
     /* font-size: var(--h-font); */
     /* font-family: var(--subheading--font); */
     /* font-family: 'Gordita Regular',Helvetica,Arial,Lucida,sans-serif; */
-}
+/* } */
 
 #REMOTLY p {
     /* font-size: var(--text--18size); */
@@ -372,14 +372,14 @@
     /* line-height: normal; */
 
 }
-#AWORK{
+/* #AWORK{ */
     /* display: flex; */
     /* margin-top: 60PX; */
     /* justify-content: space-between; */
     /* font-family: 'Gordita Regular',Arial, Helvetica, sans-serif; */
     /* line-height: normal; */
 
-}
+/* } */
 #AWORK{
     display: flex;
     margin-top: 60PX;
@@ -416,7 +416,7 @@
     /* padding: 40PX;  */
 }
 
-#IMG1{
+/* #IMG1{ */
     /* background-image: url(images/Group.jpg); */
     /* background-size: auto; */
     /* animation: MoveUpDown 3.5s linear infinite; */
@@ -424,7 +424,7 @@
     /* left: 0; */
     /* right: 0px; */
     /* bottom: 500px; */
-}
+/* } */
 
 /* @keyframes MoveUpDown {
     0%, 100% {
@@ -515,11 +515,11 @@
 
 /* <!-- ============================================Seamless Talent Solutions===================================================== --> */
 
-#CCOLOR p{
+/* #CCOLOR p{ */
     /* font-size: 22px; */
     /* width: 40%; */
     
-}
+/* } */
 
 #CCOLOR h4{
     color: rgb(175, 32, 34);;
