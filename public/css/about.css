@@ -1,8 +1,3 @@
-
-
-
-
-
 #NAV{
     color: blueviolet;
     
@@ -15,7 +10,6 @@
     /* line-height: normal; */
 
 }
-
 
 #WORKH{
     display: flex;
@@ -51,20 +45,24 @@
     line-height: var(--line--height); 
     
 }
-#REMOTLY a{
-    margin-top: 20px;
-   text-decoration: none;
-   color:var(--color) ;
-   font-size: var(--text--size);
-   padding: 20px 25px;
-   border-radius: 14px;
+#join-btn{
+        border-radius: 5px;
+}
+#join-btn a{
+  text-decoration: none;
+    color: var(--color);
+    display: flex;
+    height: 100%;
+    padding: 13px 55px;
+    border-radius: 0px;
     background: rgb(175, 32, 34);
     border: 2PX solid transparent;
-  
+}
+#join-btn:hover{
+    cursor: pointer;
 }
 #REMOTLY a:hover{
-    background: black;
-    border: 2PX solid white; 
+    background: black; 
 }
 #JOIN{
     margin-top: 25PX; 
