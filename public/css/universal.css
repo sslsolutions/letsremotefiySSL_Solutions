@@ -1,4 +1,3 @@
-
 .animated-button1 {
   display: inline-block;
   -webkit-transform: translate(0%, 0%);
@@ -147,6 +146,19 @@
   position: relative;
   overflow: hidden;
   display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #c41921;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.animated-buttonRed > a{
+  color: white;
+  text-decoration: none;
+}
+.animated-buttonRed:hover {
+  background: black !important;
+  cursor: pointer !important;
 }
 
 .animated-buttonRed span {
@@ -222,7 +234,6 @@
   }
 }
 
-
 .floating {
   animation-name: floating;
   animation-duration: 3s;
@@ -244,18 +255,16 @@
   }
 }
 
-
-
-#join-btn a{
+#join-btn a {
   text-decoration: none;
-    color: var(--color);
-    display: flex;
-    height: 100%;
-    padding: 13px 55px;
-    border-radius: 0px;
-    background: rgb(175, 32, 34);
-    border: 2PX solid transparent;
+  color: var(--color);
+  display: flex;
+  height: 100%;
+  padding: 13px 55px;
+  border-radius: 0px;
+  background: rgb(175, 32, 34);
+  border: 2px solid transparent;
 }
-#join-btn:hover{
-    cursor: pointer;
+#join-btn:hover {
+  cursor: pointer;
 }
